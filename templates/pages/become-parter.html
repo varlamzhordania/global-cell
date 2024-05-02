@@ -1,0 +1,130 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+
+<form method="post">
+    {% csrf_token %}
+
+    <h6 class="text-md font-bold dark:text-white mb-3">Cellular Partner personal information</h6>
+    <div class="grid gap-6 mb-6 md:grid-cols-2">
+        <div>
+            <label for="first_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">First Name</label>
+            <input type="text" name="first_name" id="first_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="First Name" required />
+        </div>
+        <div>
+            <label for="middle_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Middle Name</label>
+            <input type="text" name="middle_name" id="middle_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Middle Name" />
+        </div>
+        <div>
+            <label for="last_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Last Name</label>
+            <input type="text" name="last_name" id="last_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Last Name" required />
+        </div>
+        <div>
+            <label for="phone" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Personal Phone</label>
+            <input type="text" name="phone" id="phone" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Phone" required />
+        </div>
+        <div>
+            <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email address</label>
+            <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Email" required />
+        </div>
+        <div>
+            <label for="country" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Country</label>
+            <input type="text" name="country" id="country" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Country" required />
+        </div>
+    </div>
+    <h6 class="text-md font-bold dark:text-white mb-3">Payment Receiving  Methods  </h6>
+    <div class="grid gap-6 mb-6 md:grid-cols-2">
+        <div>
+            <label for="account_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Account Name</label>
+            <input type="text" name="account_name" id="account_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Account Name" />
+        </div>
+        <div>
+            <label for="account_number" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Account Number</label>
+            <input type="text" name="account_number" id="account_number" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Account Number" />
+        </div>
+        <div>
+            <label for="bank_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Bank Name</label>
+            <input type="text" name="bank_name" id="bank_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Bank Name" />
+        </div>
+        <div>
+            <label for="swift_number" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Swift Number</label>
+            <input type="text" name="swift_number" id="swift_number" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Swift Number" />
+        </div>
+        <div>
+            <label for="iban_number" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">IBAN Number</label>
+            <input type="text" name="iban_number" id="iban_number" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="IBAN Number" />
+        </div>
+        <div>
+            <label for="currency" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Currency</label>
+            <select id="currency" name="currency" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                <option selected>Choose a currency</option>
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="AUD">AUD</option>
+                <option value="GBP">GBP</option>
+            </select>
+        </div>
+    </div>
+    <h6 class="text-md font-bold dark:text-white mb-3">Digital Banking</h6>
+    <div class="grid gap-6 mb-6 md:grid-cols-2">
+        <div>
+            <label for="digital_payment_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Digital Payments Name</label>
+            <input type="text" name="digital_payment_name" id="digital_payment_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Digital Payments Name" />
+        </div>
+        <div>
+            <label for="digital_payment_id" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Digital Payments ID</label>
+            <input type="text" name="digital_payment_id" id="digital_payment_id" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Digital Payments ID" />
+        </div>
+    </div>
+    <h6 class="text-md font-bold dark:text-white mb-3">Android Information</h6>
+    <div class="grid gap-6 mb-6 md:grid-cols-2">
+        <div>
+            <label for="sim_number" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">SIM Number</label>
+            <input type="text" name="sim_number" id="sim_number" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="SIM Number" />
+        </div>
+        <div>
+            <label for="mobile_carrier" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Mobile Carrier</label>
+            <input type="text" name="mobile_carrier" id="mobile_carrier" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Mobile Carrier" />
+        </div>
+        <div>
+            <label for="plan_mode" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Plan Mode</label>
+            <input type="text" name="plan_mode" id="plan_mode" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Plan Mode" />
+        </div>
+        <div>
+            <label for="minutes_plan_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Minutes Plan Name</label>
+            <input type="text" name="minutes_plan_name" id="minutes_plan_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Minutes Plan Name" />
+        </div>
+        <div>
+            <label for="cost_of_plan" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Cost of Plan</label>
+            <input type="text" name="cost_of_plan" id="cost_of_plan" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Cost of Plan" />
+        </div>
+        <div>
+            <label for="plan_length" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Plan Length</label>
+            <input type="text" name="plan_length" id="plan_length" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Plan Length" />
+        </div>
+        <div>
+            <label for="minutes_plan_unlimited" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Minutes Plan Unlimited</label>
+            <input type="text" name="minutes_plan_unlimited" id="minutes_plan_unlimited" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Minutes Plan Unlimited" />
+        </div>
+        <div>
+            <label for="total_minute_plan" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Total Minute Plan</label>
+            <input type="text" name="total_minute_plan" id="total_minute_plan" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Total Minute Plan" />
+        </div>
+    </div>
+    <h6 class="text-md font-bold dark:text-white mb-3">Login Information</h6>
+    <div class="grid gap-6 mb-6 md:grid-cols-2">
+        <div>
+            <label for="username" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Username</label>
+            <input type="text" name="username" id="username" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Username" required />
+        </div>
+        <div>
+            <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Password</label>
+            <input type="password" name="password" id="password" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Password" required />
+        </div>
+    </div>
+
+    <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
+    <span class="block mt-3">Already a partner? <a class="text-blue-700" href="{% url "partner_login" %}">Login</a></span>
+</form>
+
+{% endblock content %}
