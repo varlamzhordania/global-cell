@@ -1,0 +1,170 @@
+{% load i18n %}
+
+<section class="bg-background reverse py-10">
+    <div class="container my-20">
+        <div class="grid grid-cols-1 lg:grid-cols-2">
+            <div class="col-span-1">
+                <article class="prose lg:prose-xl">
+                    <h3 class="text-highlight font-bold !text-5xl !mb-4">{% translate 'FAQ' %}</h3>
+                    <p class="body1 !text-slate-400">
+                        {% blocktranslate %}
+                            Welcome to our FAQ section! Here, we've compiled a list of commonly asked questions to
+                            provide
+                            you with quick and helpful answers. Whether you're curious about our products, services, or
+                            policies, you'll likely find the information you need below. If you don't see your question
+                            listed, feel free to reach out to our support team, and we'll be happy to assist you
+                            further.
+                            Browse through the questions and click on each one to reveal the answer.
+                        {% endblocktranslate %}
+                    </p>
+                    <a class="btn btn-primary lg:w-1/3">{% translate 'Contact Us' %}</a>
+                </article>
+            </div>
+            <div class="col-span-1">
+                <div id="accordion-open" data-accordion="collapse">
+                    <h2 id="accordion-open-heading-1">
+                        <button type="button"
+                                class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3"
+                                data-accordion-target="#accordion-open-body-1" aria-expanded="true"
+                                aria-controls="accordion-open-body-1"
+                        >
+                            <span class="flex items-center">
+                                <svg class="w-5 h-5 me-2 shrink-0" fill="currentColor"
+                                     viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path
+                                        fill-rule="evenodd"
+                                        d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
+                                        clip-rule="evenodd"></path></svg>
+                                {% blocktranslate %}
+                                    How does Global Cellular Partners revolutionize international calls?
+                                {% endblocktranslate %}
+                            </span>
+                            <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
+                                 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-width="2" d="M9 5 5 1 1 5"/>
+                            </svg>
+                        </button>
+                    </h2>
+                    <div id="accordion-open-body-1" class="hidden" aria-labelledby="accordion-open-heading-1">
+                        <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+                            <p class="mb-2 text-gray-500 dark:text-gray-400">
+                                {% blocktranslate %}
+                                    Global Cellular Partners revolutionizes international calls by utilizing a network
+                                    of over 100 cellular partners worldwide. Through interconnected Android devices, we
+                                    provide seamless connectivity and affordable communication solutions, allowing users
+                                    to make international calls at local call rates.
+                                {% endblocktranslate %}
+                            </p>
+                        </div>
+                    </div>
+                    <h2 id="accordion-open-heading-2">
+                        <button type="button"
+                                class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 rounded-t-0 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3"
+                                data-accordion-target="#accordion-open-body-2" aria-expanded="false"
+                                aria-controls="accordion-open-body-2"
+                        >
+                            <span class="flex items-center">
+                                <svg class="w-5 h-5 me-2 shrink-0" fill="currentColor"
+                                     viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path
+                                        fill-rule="evenodd"
+                                        d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
+                                        clip-rule="evenodd"></path></svg>
+                                {% blocktranslate %}
+                                    What is the earning potential for cellular partners with Global Cellular Partners?
+                                {% endblocktranslate %}
+                            </span>
+                            <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="false"
+                                 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-width="2" d="M9 5 5 1 1 5"/>
+                            </svg>
+                        </button>
+                    </h2>
+                    <div id="accordion-open-body-2" class="hidden" aria-labelledby="accordion-open-heading-2">
+                        <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+                            <p class="mb-2 text-gray-500 dark:text-gray-400">
+                                {% blocktranslate %}
+                                    Cellular partners have the potential to earn up to $2000 a month with zero
+                                    investment and zero labor required. By contributing their unused Android devices to
+                                    our network, partners can earn revenue for every minute of call traffic that passes
+                                    through their phones.
+                                {% endblocktranslate %}
+                            </p>
+                        </div>
+                    </div>
+                    <h2 id="accordion-open-heading-3">
+                        <button type="button"
+                                class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 rounded-t-0 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3"
+                                data-accordion-target="#accordion-open-body-3" aria-expanded="false"
+                                aria-controls="accordion-open-body-3"
+                        >
+                            <span class="flex items-center">
+                                <svg class="w-5 h-5 me-2 shrink-0" fill="currentColor"
+                                     viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path
+                                        fill-rule="evenodd"
+                                        d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
+                                        clip-rule="evenodd"></path></svg>
+                                {% blocktranslate %}
+                                    How does the technology behind Global Cellular Partners work?
+                                {% endblocktranslate %}
+                            </span>
+                            <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="false"
+                                 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-width="2" d="M9 5 5 1 1 5"/>
+                            </svg>
+                        </button>
+                    </h2>
+                    <div id="accordion-open-body-3" class="hidden" aria-labelledby="accordion-open-heading-3">
+                        <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+                            <p class="mb-2 text-gray-500 dark:text-slate-400">
+                                {% blocktranslate %}
+                                    Our technology works by routing international calls through our VoIP servers to
+                                    specific Android devices in our cellular partners network. These devices, located in
+                                    the destination countries, establish local calls and facilitate seamless
+                                    communication between our clients and local partners.
+                                {% endblocktranslate %}
+                            </p>
+                        </div>
+                    </div>
+                    <h2 id="accordion-open-heading-4">
+                        <button type="button"
+                                class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-gray-200 rounded-b-0 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3"
+                                data-accordion-target="#accordion-open-body-4" aria-expanded="false"
+                                aria-controls="accordion-open-body-4"
+                        >
+                            <span class="flex items-center">
+                                <svg class="w-5 h-5 me-2 shrink-0" fill="currentColor"
+                                     viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path
+                                        fill-rule="evenodd"
+                                        d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
+                                        clip-rule="evenodd"></path></svg>
+                                {% blocktranslate %}
+                                    What are the benefits of joining Global Cellular Partners as a cellular partner?
+                                {% endblocktranslate %}
+                            </span>
+                            <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="false"
+                                 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-width="2" d="M9 5 5 1 1 5"/>
+                            </svg>
+                        </button>
+                    </h2>
+                    <div id="accordion-open-body-4" class="hidden" aria-labelledby="accordion-open-heading-4">
+                        <div class="p-5 border rounded-b-xl border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+                            <p class="mb-2 text-gray-500 dark:text-gray-400">
+                                {% blocktranslate %}
+                                    Joining Global Cellular Partners offers several benefits, including passive income
+                                    generation, flexibility to work from anywhere, no upfront investment required, and
+                                    easy setup. Partners can earn money effortlessly by letting their unused Android
+                                    phones work for them.
+                                {% endblocktranslate %}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>

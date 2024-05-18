@@ -1,11 +1,15 @@
 from django.http import HttpResponse
 from django.shortcuts import redirect
+from django.conf import settings
 
 
-def unauthenticated_user(view_func, redirect_url="/"):
+def unauthenticated_user(view_func, redirect_url=None):
     def wrapper_func(request, *args, **kwargs):
         if request.user.is_authenticated:
-            return redirect(redirect_url)
+            if redirect_url:
+                return redirect(redirect_url)
+            else:
+                return redirect(settings.LOGIN_REDIRECT_URL)
         else:
             return view_func(request, *args, **kwargs)
 

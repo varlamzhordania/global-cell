@@ -7,14 +7,14 @@ from .models import User
 class CustomUserAdmin(UserAdmin):
     model = User
     list_display = (
-        "id", "username", "email", "is_staff", "is_superuser", "is_active", "date_joined",
+        "id", "username", "email", "wallet", "is_staff", "is_superuser", "is_active", "date_joined",
         "last_login")
     list_filter = ("is_staff", "is_active", "groups")
     readonly_fields = ("date_joined", "last_login", "last_ip")
     fieldsets = (
         (None, {"fields": ("username", "password")}),
         ("Personal Information",
-         {"fields": ("first_name", "middle_name", "last_name", "email", "phone_number",)}),
+         {"fields": ("first_name", "middle_name", "last_name", "email", "phone_number","wallet")}),
         ("Permissions", {"fields": ("is_staff", "is_superuser", "is_active", "groups", "user_permissions")}),
         ("Security", {"fields": ("date_joined", "last_login", "last_ip")}),
     )

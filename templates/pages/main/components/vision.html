@@ -1,0 +1,115 @@
+{% load i18n %}
+{% load static %}
+
+<section class="bg-background reverse py-10">
+    <div class="container my-20">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-5">
+            <div class="col-span-1">
+                <div class="flex flex-col items-center justify-start h-full w-full gap-3">
+                    <h3 class="text-9xl font-bold text-highlight">
+                        {% translate 'Our Vision' %}
+                    </h3>
+{#                    <p class="body1 !text-lg !text-slate-400">#}
+{#                        Lorem ipsum dolor sit amet consectetur adipiscing, elit id curae lectus eu integer morbi, etiam#}
+{#                        condimentum dis euismod suscipit. Malesuada pellentesque vehicula nec habitant imperdiet#}
+{#                        dapibus, venenatis quisque fusce habitasse.#}
+{#                    </p>#}
+                </div>
+
+            </div>
+            <div class="col-span-1">
+                <div class="flex flex-col gap-y-10">
+                    <div class="grid gap-2">
+                        <div class="size-14 bg-primary/20 rounded-full flex justify-center items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                 stroke-linejoin="round" class="lucide lucide-line-chart">
+                                <path d="M3 3v18h18"/>
+                                <path d="m19 9-5 5-4-4-3 3"/>
+                            </svg>
+                        </div>
+                        <h4 class="h4 !text-white">{% translate 'Connecting the World:' %}</h4>
+                        <p class="body1 !text-slate-400">
+                            {% blocktranslate %}
+                                At Global Cellular Partners, our vision extends beyond borders. We're tirelessly working
+                                towards building a global network of cellular partners spanning over 100 countries. This
+                                expansive reach ensures that communication knows no bounds, offering widespread coverage
+                                and
+                                accessibility to our users worldwide.
+                            {% endblocktranslate %}
+                        </p>
+                    </div>
+                    <div class="grid gap-2">
+                        <div class="size-14 bg-primary/20 rounded-full flex justify-center items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                 stroke-linejoin="round" class="lucide lucide-line-chart">
+                                <path d="M3 3v18h18"/>
+                                <path d="m19 9-5 5-4-4-3 3"/>
+                            </svg>
+                        </div>
+                        <h4 class="h4 !text-white">{% translate 'Revolutionizing Connectivity:' %}</h4>
+                        <p class="body1 !text-slate-400">
+                            {% blocktranslate %}
+                                We believe in the power of untapped potential. By unlocking the earning power of unused
+                                Android devices, we're not just revitalizing technology, but also transforming lives.
+                                Through the collective contribution of our partners, we're breathing new life into
+                                devices,
+                                while simultaneously extending our digital footprint across the globe.
+                            {% endblocktranslate %}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-span-1">
+                <div class="flex flex-col gap-y-10">
+                    <div class="grid gap-2">
+                        <div class="size-14 bg-primary/20 rounded-full flex justify-center items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                 stroke-linejoin="round" class="lucide lucide-line-chart">
+                                <path d="M3 3v18h18"/>
+                                <path d="m19 9-5 5-4-4-3 3"/>
+                            </svg>
+                        </div>
+                        <h4 class="h4 !text-white">{% translate 'Seamless Communication: ' %}</h4>
+                        <p class="body1 !text-slate-400">
+                            {% blocktranslate %}
+                                In a world where distances shrink and connections grow stronger, affordability shouldn't
+                                be
+                                a barrier. Our interconnected network of Android devices forms the backbone of seamless
+                                digital connectivity. This enables us to offer international call termination services
+                                at
+                                local rates, empowering users to stay connected with their loved ones without worrying
+                                about
+                                hefty bills.
+                            {% endblocktranslate %}
+                        </p>
+                    </div>
+                    <div class="grid gap-2">
+                        <div class="size-14 bg-primary/20 rounded-full flex justify-center items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                 stroke-linejoin="round" class="lucide lucide-line-chart">
+                                <path d="M3 3v18h18"/>
+                                <path d="m19 9-5 5-4-4-3 3"/>
+                            </svg>
+                        </div>
+                        <h4 class="h4 !text-white">{% translate 'Empowering Partners:' %}</h4>
+                        <p class="body1 !text-slate-400">
+                            {% blocktranslate %}
+                                At the heart of our mission lies a commitment to empowerment. Our cellular partners play
+                                a
+                                pivotal role in our ecosystem, earning revenue for every minute of call traffic routed
+                                through their unused devices. This innovative model not only enriches our partners
+                                financially but also champions the sustainable utilization of technology resources,
+                                paving
+                                the way for a brighter, more connected future.
+                            {% endblocktranslate %}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

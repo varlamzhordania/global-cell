@@ -1,0 +1,60 @@
+{% load static %}
+{% load i18n %}
+
+<section class="bg-background py-10">
+    <div class="container my-20" id="about-section">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 items-center">
+            <div class="col-span-1">
+                <article class="prose lg:prose-xl">
+                    <h2 class="text-highlight !text-7xl">
+                        {% translate 'Global Cell' %}
+                    </h2>
+                    <p class="body1">
+                        {% blocktranslate %}
+                            At Global Cellular Partners, we lead the charge in telecommunications innovation, leveraging
+                            cutting-edge technology to transform international communication. Our unique approach
+                            harnesses
+                            the
+                            power of unused Android devices, breathing new life into them as integral components of our
+                            global
+                            network. By seamlessly connecting clients worldwide to local call rates through our digital
+                            infrastructure, we ensure affordable and accessible communication for all.
+                        {% endblocktranslate %}
+
+                    </p>
+                    <p class="body1">
+                        {% blocktranslate %}
+                            At the heart of our mission is a commitment to unlocking earning potential while promoting
+                            sustainable technology use. Our Cellular Partners program empowers individuals to earn
+                            passive
+                            income effortlessly, with no investment or labor required. Through this program,
+                            participants
+                            can
+                            earn up to $2000 a month, simply by allowing their unused Android devices to contribute to
+                            our
+                            network.
+                        {% endblocktranslate %}
+
+                    </p>
+                    <p class="body1">
+                        {% blocktranslate %}
+                            Join us at Global Cellular Partners and become part of a transformative movement towards
+                            affordable,
+                            convenient, and sustainable international communication. Together, we're connecting the
+                            world,
+                            one
+                            call at a time.
+                        {% endblocktranslate %}
+                    </p>
+                    
+                </article>
+            </div>
+            <div class="col-span-1">
+                <div>
+                    <img src="{% static 'img/global-map-2.png' %}" alt="global map world"/>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>

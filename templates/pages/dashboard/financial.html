@@ -1,0 +1,547 @@
+{% extends 'layouts/dashboard.html' %}
+{% load i18n %}
+{% load custom_filters %}
+{% block breadcrumb %}
+    <nav class="flex" aria-label="Breadcrumb">
+        <ol class="breadcrumbs">
+            <li class="inline-flex items-center">
+                <a href="{% url 'main:dashboard' %}"
+                   class="breadcrumbs-item">
+                    {% translate 'Dashboard' %}
+                </a>
+            </li>
+            <li aria-current="page">
+                <div class="flex items-center">
+                    <svg class="rtl:rotate-180 w-3 h-3 text-gray-400 mx-1" aria-hidden="true"
+                         xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="m1 9 4-4-4-4"/>
+                    </svg>
+                    <span class="breadcrumbs-item active">
+                        {% translate 'Financial' %}
+                    </span>
+                </div>
+            </li>
+        </ol>
+    </nav>
+{% endblock %}
+{% block content %}
+    {% include 'pages/dashboard/components/apex_chart.html' %}
+    <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-4 gap-4">
+        <section class="col-span-1 lg:col-span-1 xl:col-span-1 order-last lg:order-2 xl:order-2 2xl:order-first">
+            <div class="card h-[calc(100vh-8rem)] overflow-y-auto primary-scrollbar">
+                <div class="card-content !p-3 flex-col gap-3">
+                    <h4 class="h4 dark:text-gray-200">Bank Accounts :</h4>
+                    <div class="card w-full mt-1  border-2 border-dashed border-black/80 hover:border-black dark:border-gray-300 dark:hover:border-gray-100 cursor-pointer group">
+                        <div class="card-content !p-0  w-full">
+                            <button id="bank-account-btn"
+                                    class="!p-12 w-full h-full flex !justify-center !items-center bg-transparent text-gray-300 group-hover:text-gray-100"
+                                    data-modal-target="bank-account-modal" data-modal-toggle="bank-account-modal">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                     stroke-linejoin="round" class="lucide lucide-plus size-10">
+                                    <path d="M5 12h14"/>
+                                    <path d="M12 5v14"/>
+                                </svg>
+                            </button>
+                            <!-- Bank Account modal -->
+                            <div id="bank-account-modal" tabindex="-1" aria-hidden="true"
+                                 class="hidden modal">
+                                <div class="modal-content-wrapper">
+                                    <!-- Modal content -->
+                                    <div class="modal-content">
+                                        <!-- Modal header -->
+                                        <div class="modal-header">
+                                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+                                                Add Bank Account
+                                            </h3>
+                                            <button type="button"
+                                                    class="modal-btn-close"
+                                                    data-modal-hide="bank-account-modal">
+                                                <svg class="w-3 h-3" aria-hidden="true"
+                                                     xmlns="http://www.w3.org/2000/svg"
+                                                     fill="none" viewBox="0 0 14 14">
+                                                    <path stroke="currentColor" stroke-linecap="round"
+                                                          stroke-linejoin="round"
+                                                          stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                                                </svg>
+                                                <span class="sr-only">Close modal</span>
+                                            </button>
+                                        </div>
+                                        <!-- Modal body -->
+                                        <div class="modal-body">
+                                            <form enctype="multipart/form-data" method="post"
+                                                  action=".">
+                                                {% csrf_token %}
+                                                <div class="grid grid-cols-1 lg:grid-cols-2 gap-3">
+                                                    <div class="col-span-1 lg:col-span-1">
+                                                        <label for="id_{{ form.account_name.name }}"
+                                                               class="form-label">{{ form.account_name.label }}</label>
+                                                        {{ form.account_name }}
+                                                        <small class="text-xs body1">{{ form.account_name.help_text }}</small>
+                                                        <small class="text-xs text-red-700">{{ form.account_name.errors }}</small>
+                                                    </div>
+                                                    <div class="col-span-1 lg:col-span-1">
+                                                        <label for="id_{{ form.bank_name.name }}"
+                                                               class="form-label">{{ form.bank_name.label }}</label>
+                                                        {{ form.bank_name }}
+                                                        <small class="text-xs body1">{{ form.bank_name.help_text }}</small>
+                                                        <small class="text-xs text-red-700">{{ form.bank_name.errors }}</small>
+                                                    </div>
+                                                    <div class="col-span-1 lg:col-span-1">
+                                                        <label for="id_{{ form.country.name }}"
+                                                               class="form-label">{{ form.country.label }}</label>
+                                                        {{ form.country }}
+                                                        <small class="text-xs body1">{{ form.country.help_text }}</small>
+                                                        <small class="text-xs text-red-700">{{ form.country.errors }}</small>
+                                                    </div>
+                                                    <div class="col-span-1 lg:col-span-1">
+                                                        <label for="id_{{ form.account_number.name }}"
+                                                               class="form-label">{{ form.account_number.label }}</label>
+                                                        {{ form.account_number }}
+                                                        <small class="text-xs body1">{{ form.account_number.help_text }}</small>
+                                                        <small class="text-xs text-red-700">{{ form.account_number.errors }}</small>
+                                                    </div>
+                                                    <div class="col-span-1 lg:col-span-2">
+                                                        <label for="id_{{ form.swift_number.name }}"
+                                                               class="form-label">{{ form.swift_number.label }}</label>
+                                                        {{ form.swift_number }}
+                                                        <small class="text-xs body1">{{ form.swift_number.help_text }}</small>
+                                                        <small class="text-xs text-red-700">{{ form.swift_number.errors }}</small>
+                                                    </div>
+                                                    <div class="col-span-1 lg:col-span-2">
+                                                        <label for="id_{{ form.iban_number.name }}"
+                                                               class="form-label">{{ form.iban_number.label }}</label>
+                                                        {{ form.iban_number }}
+                                                        <small class="text-xs body1">{{ form.iban_number.help_text }}</small>
+                                                        <small class="text-xs text-red-700">{{ form.iban_number.errors }}</small>
+                                                    </div>
+                                                </div>
+                                                <button id="bank-account-submit" type="submit" style="display: none;">
+                                                    Submit
+                                                </button>
+                                            </form>
+
+                                        </div>
+                                        <!-- Modal footer -->
+                                        <div class="modal-footer">
+                                            <button onclick="document.getElementById('bank-account-submit').click()"
+                                                    type="button"
+                                                    class="btn btn-primary" role="button">
+                                                Submit
+                                            </button>
+                                            <button data-modal-hide="bank-account-modal" type="button"
+                                                    class="btn btn-dark">
+                                                Cancel
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% for item in queryset %}
+                        <div class="card bank-card">
+                            <div class="card-content">
+                                <div class="flex flex-row justify-start items-center gap-1">
+                                    <div class="flex -space-x-4 rtl:space-x-reverse">
+                                        <span class="w-8 h-8 bg-white/90 border-2 border-white rounded-full dark:border-gray-300"></span>
+                                        <span class="w-8 h-8 bg-white/80 border-2 border-white rounded-full dark:border-gray-300"></span>
+                                        <span class="w-8 h-8 bg-white/70 border-2 border-white rounded-full dark:border-gray-300"></span>
+                                    </div>
+                                    <h5 class="h5 !text-white capitalize">
+                                        {{ item.account_name|default:"N/A" }}
+                                    </h5>
+                                </div>
+                                <h6 class="h4 !text-gray-300 font-extrabold">{{ item.get_account_number_display }}</h6>
+                                <div class="flex w-full justify-between items-center">
+                                    <div class="flex flex-col gap-1">
+                                        <span class="text-sm text-slate-300 font-bold">Bank</span>
+                                        <span class="text-sm text-slate-100">{{ item.bank_name }}</span>
+                                    </div>
+                                    <div class="flex flex-col gap-1">
+                                        <span class="text-sm text-slate-300 font-bold">Country</span>
+                                        <div class="flex justify-start items-start gap-1">
+                                            <span class="fi fi-{{ item.country.short_name|default:"N/A"|slice:2|lower }}"></span>
+                                            <span class="text-sm text-slate-100 font-bold">{{ item.country.short_name|default:"N/A" }}</span>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    {% endfor %}
+
+                    <div class="card bank-card">
+                        <div class="card-content">
+                            <div class="flex flex-row justify-start items-center gap-1">
+                                <div class="flex -space-x-4 rtl:space-x-reverse">
+                                    <span class="w-8 h-8 bg-white/90 border-2 border-white rounded-full dark:border-gray-300"></span>
+                                    <span class="w-8 h-8 bg-white/80 border-2 border-white rounded-full dark:border-gray-300"></span>
+                                    <span class="w-8 h-8 bg-white/70 border-2 border-white rounded-full dark:border-gray-300"></span>
+                                </div>
+                                <h5 class="h5 !text-white capitalize">
+                                    National Bank
+                                </h5>
+                            </div>
+                            <h6 class="h4 !text-gray-300 font-extrabold">6037 **** **** **** 0552</h6>
+                            <div class="flex w-full justify-between items-center">
+                                <div class="flex flex-col gap-1">
+                                    <span class="text-sm text-slate-300 font-bold">Bank</span>
+                                    <span class="text-sm text-slate-100">Saderat</span>
+                                </div>
+                                <div class="flex flex-col gap-1">
+                                    <span class="text-sm text-slate-300 font-bold">Country</span>
+                                    <div class="flex justify-start items-start gap-1">
+                                        <span class="fi fi-ir "></span>
+                                        <span class="text-sm text-slate-100 font-bold">IR</span>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="card bank-card">
+                        <div class="card-content">
+                            <div class="flex flex-row justify-start items-center gap-1">
+                                <div class="flex -space-x-4 rtl:space-x-reverse">
+                                    <span class="w-8 h-8 bg-white/90 border-2 border-white rounded-full dark:border-gray-300"></span>
+                                    <span class="w-8 h-8 bg-white/80 border-2 border-white rounded-full dark:border-gray-300"></span>
+                                    <span class="w-8 h-8 bg-white/70 border-2 border-white rounded-full dark:border-gray-300"></span>
+                                </div>
+                                <h5 class="h5 !text-white capitalize">
+                                    National Bank
+                                </h5>
+                            </div>
+                            <h6 class="h4 !text-gray-300 font-extrabold">6037 **** **** **** 0552</h6>
+                            <div class="flex w-full justify-between items-center">
+                                <div class="flex flex-col gap-1">
+                                    <span class="text-sm text-slate-300 font-bold">Bank</span>
+                                    <span class="text-sm text-slate-100">Saderat</span>
+                                </div>
+                                <div class="flex flex-col gap-1">
+                                    <span class="text-sm text-slate-300 font-bold">Country</span>
+                                    <div class="flex justify-start items-start gap-1">
+                                        <span class="fi fi-ir "></span>
+                                        <span class="text-sm text-slate-100 font-bold">IR</span>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+        <section class="col-span-1 lg:col-span-2 xl:col-span-2 flex flex-col lg:order-1 xl:order-1 2xl:order-2 gap-3">
+            {% include 'pages/dashboard/components/line_chart.html' %}
+            <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                    const options = {
+                        chart: {
+                            height: "100%",
+                            maxWidth: "100%",
+                            type: "line",
+                            fontFamily: "Poppins ,Inter, sans-serif",
+                            dropShadow: {
+                                enabled: false,
+                            },
+                            toolbar: {
+                                show: false,
+                            },
+                        },
+                        tooltip: {
+                            enabled: true,
+                            x: {
+                                show: false,
+                            },
+                        },
+                        dataLabels: {
+                            enabled: false,
+                        },
+                        stroke: {
+                            width: 6,
+                        },
+                        grid: {
+                            show: true,
+                            strokeDashArray: 4,
+                            padding: {
+                                left: 2,
+                                right: 2,
+                                top: -26
+                            },
+                        },
+                        series: [
+                            {
+                                name: "{% translate 'Earning' %}",
+                                data: [6500, 6418, 6456, 6526, 6356, 6456],
+                                color: "#5fce3c",
+                            },
+                            {
+                                name: "{% translate 'Withdrawal' %}",
+                                data: [6456, 6356, 6526, 6332, 6418, 6500],
+                                color: "#dc4f4f",
+                            },
+                        ],
+                        legend: {
+                            show: true
+                        },
+                        stroke: {
+                            curve: 'smooth'
+                        },
+                        xaxis: {
+                            categories: ['01 Feb', '02 Feb', '03 Feb', '04 Feb', '05 Feb', '06 Feb', '07 Feb'],
+                            labels: {
+                                show: true,
+                                style: {
+                                    fontFamily: "Poppins , Inter, sans-serif",
+                                    cssClass: 'text-xs font-normal fill-gray-500 dark:fill-gray-400'
+                                }
+                            },
+                            axisBorder: {
+                                show: false,
+                            },
+                            axisTicks: {
+                                show: false,
+                            },
+                        },
+                        yaxis: {
+                            show: false,
+                        },
+                    }
+
+                    if (document.getElementById("line-chart") && typeof ApexCharts !== 'undefined') {
+                        const chart = new ApexCharts(document.getElementById("line-chart"), options);
+                        chart.render();
+                    }
+                })
+            </script>
+            <div class="card">
+                <div class="card-content">
+                    <div class="overflow-x-auto w-full">
+                        <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                            <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                            <tr>
+                                <th scope="col" class="px-4 py-3">{% translate 'Date' %}</th>
+                                <th scope="col" class="px-4 py-3">{% translate 'Activity' %}</th>
+                                <th scope="col" class="px-4 py-3">{% translate 'Description' %}</th>
+                                <th scope="col" class="px-4 py-3" align="center">{% translate 'Amount' %}</th>
+                                <th scope="col" class="px-4 py-3" align="center">{% translate 'Bank' %}</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr class="border-b dark:border-gray-700">
+                                <th scope="row"
+                                    class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    5/18/2024
+                                </th>
+                                <td class="px-4 py-3">
+                            <span class="badge badge-info capitalize p-2 flex justify-start items-center gap-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                     stroke-linejoin="round" class="lucide lucide-move-down size-4"><path
+                                        d="M8 18L12 22L16 18"/><path d="M12 2V22"/></svg>
+                                Withdrawal
+                            </span>
+                                </td>
+                                <td class="px-4 py-3">Pending</td>
+                                <td class="px-4 py-3">
+                                    <span class="text-blue-500 font-bold">$640</span>
+                                </td>
+                                <td class="px-4 py-3">
+                                    <p class="font-extrabold">****** 7891
+                                    <p/>
+                                </td>
+                            </tr>
+                            <tr class="border-b dark:border-gray-700">
+                                <th scope="row"
+                                    class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    5/15/2024
+                                </th>
+                                <td class="px-4 py-3">
+                            <span class="badge badge-success capitalize p-2 flex justify-start items-center gap-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                     stroke-linejoin="round" class="lucide lucide-move-up size-4"><path
+                                        d="M8 6L12 2L16 6"/><path
+                                        d="M12 2V22"/></svg>
+                                Earning
+                            </span>
+
+                                </td>
+                                <td class="px-4 py-3">Monthly Earning</td>
+                                <td class="px-4 py-3">
+                                    <span class="text-green-500 font-bold">$540</span>
+                                </td>
+                                <td class="px-4 py-3">
+                                    <p class="font-extrabold">Wallet
+                                    <p/>
+                                </td>
+                            </tr>
+                            <tr class="border-b dark:border-gray-700">
+                                <th scope="row"
+                                    class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    5/18/2024
+                                </th>
+                                <td class="px-4 py-3">
+                            <span class="badge badge-danger capitalize p-2 flex justify-start items-center gap-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                     stroke-linejoin="round" class="lucide lucide-move-down size-4"><path
+                                        d="M8 18L12 22L16 18"/><path d="M12 2V22"/></svg>
+                                Withdrawal
+                            </span>
+                                </td>
+                                <td class="px-4 py-3">withdrawed your earning from wallet to bank account</td>
+                                <td class="px-4 py-3">
+                                    <span class="text-red-500 font-bold">$140</span>
+                                </td>
+                                <td class="px-4 py-3">
+                                    <p class="font-extrabold">6037 **** **** 0552
+                                    <p/>
+                                </td>
+                            </tr>
+                            <tr class="border-b dark:border-gray-700">
+                                <th scope="row"
+                                    class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    5/15/2024
+                                </th>
+                                <td class="px-4 py-3">
+                            <span class="badge badge-success capitalize p-2 flex justify-start items-center gap-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                     stroke-linejoin="round" class="lucide lucide-move-up size-4"><path
+                                        d="M8 6L12 2L16 6"/><path
+                                        d="M12 2V22"/></svg>
+                                Earning
+                            </span>
+
+                                </td>
+                                <td class="px-4 py-3">Monthly Earning</td>
+                                <td class="px-4 py-3">
+                                    <span class="text-green-500 font-bold">$540</span>
+                                </td>
+                                <td class="px-4 py-3">
+                                    <p class="font-extrabold">Wallet
+                                    <p/>
+                                </td>
+                            </tr>
+                            <tr class="border-b dark:border-gray-700">
+                                <th scope="row"
+                                    class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    5/18/2024
+                                </th>
+                                <td class="px-4 py-3">
+                            <span class="badge badge-danger capitalize p-2 flex justify-start items-center gap-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                     stroke-linejoin="round" class="lucide lucide-move-down size-4"><path
+                                        d="M8 18L12 22L16 18"/><path d="M12 2V22"/></svg>
+                                Withdrawal
+                            </span>
+                                </td>
+                                <td class="px-4 py-3">withdrawed your earning from wallet to bank account</td>
+                                <td class="px-4 py-3">
+                                    <span class="text-red-500 font-bold">$140</span>
+                                </td>
+                                <td class="px-4 py-3">
+                                    <p class="font-extrabold">6037 **** **** 0552
+                                    <p/>
+                                </td>
+                            </tr>
+                            <tr class="border-b dark:border-gray-700">
+                                <th scope="row"
+                                    class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    5/15/2024
+                                </th>
+                                <td class="px-4 py-3">
+                            <span class="badge badge-success capitalize p-2 flex justify-start items-center gap-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                     stroke-linejoin="round" class="lucide lucide-move-up size-4"><path
+                                        d="M8 6L12 2L16 6"/><path
+                                        d="M12 2V22"/></svg>
+                                Earning
+                            </span>
+
+                                </td>
+                                <td class="px-4 py-3">Monthly Earning</td>
+                                <td class="px-4 py-3">
+                                    <span class="text-green-500 font-bold">$540</span>
+                                </td>
+                                <td class="px-4 py-3">
+                                    <p class="font-extrabold">Wallet
+                                    <p/>
+                                </td>
+                            </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="col-span-1  lg:col-span-1  xl:col-span-1 order-first lg:order-last xl:order-last 2xl:order-last">
+            <div class="card">
+                <div class="card-content">
+                    <h3 class="text-4xl font-extrabold !text-highlight">{% translate 'Digital Wallet' %}</h3>
+                    <div class="flex flex-col gap-2 justify-start items-start">
+                        <h6 class="h6 !text-slate-400">{% translate 'Current Amount :' %}</h6>
+                        <h6 class="h5 font-bold !text-gray-100">{{ request.user.get_wallet_display }}</h6>
+                    </div>
+                    <button class="btn btn-primary w-full text-xl font-bold capitalize" role="button"
+                            data-modal-target="wallet-transfer-modal" data-modal-toggle="wallet-transfer-modal">
+                        {% translate 'Withdrawal' %}
+                    </button>
+                    <!-- Transfer modal -->
+                    <div id="wallet-transfer-modal" tabindex="-1" aria-hidden="true"
+                         class="hidden modal">
+                        <div class="modal-content-wrapper">
+                            <!-- Modal content -->
+                            <div class="modal-content">
+                                <!-- Modal header -->
+                                <div class="modal-header">
+                                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+                                        Transfer your Money
+                                    </h3>
+                                    <button type="button"
+                                            class="modal-btn-close"
+                                            data-modal-hide="wallet-transfer-modal">
+                                        <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                             fill="none" viewBox="0 0 14 14">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                  stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                                        </svg>
+                                        <span class="sr-only">Close modal</span>
+                                    </button>
+                                </div>
+                                <!-- Modal body -->
+                                <div class="modal-body">
+                                    <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                                        This Feature is unavailable right now
+                                    </p>
+                                </div>
+                                <!-- Modal footer -->
+                                <div class="modal-footer">
+                                    <button data-modal-hide="wallet-transfer-modal" type="button"
+                                            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                        I accept
+                                    </button>
+                                    <button data-modal-hide="wallet-transfer-modal" type="button"
+                                            class="py-2.5 px-5 ms-3 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
+                                        Decline
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+{% endblock %}

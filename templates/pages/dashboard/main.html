@@ -1,0 +1,21 @@
+{% extends 'layouts/dashboard.html' %}
+{% load i18n %}
+{% block breadcrumb %}
+    <nav class="flex" aria-label="Breadcrumb">
+        <ol class="breadcrumbs">
+            <li aria-current="page">
+                <div class="flex items-center">
+                    <span class="breadcrumbs-item active">
+                        {% translate 'Dashboard' %}
+                    </span>
+                </div>
+            </li>
+        </ol>
+    </nav>
+{% endblock %}
+{% block content %}
+    <h1>Main Dashboard</h1>
+    <div class="h-full">
+        test
+    </div>
+{% endblock %}

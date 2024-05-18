@@ -1,0 +1,132 @@
+[
+    {
+        "model": "main.country",
+        "pk": 1,
+        "fields": {
+            "name": "United States",
+            "short_name": "USA",
+            "currency_name": "US Dollar",
+            "currency_sign": "$",
+            "equivalent_to_dollar": 1.0,
+            "is_supported": true,
+            "phone_prefix": "1"
+        }
+    },
+    {
+        "model": "main.country",
+        "pk": 2,
+        "fields": {
+            "name": "United Kingdom",
+            "short_name": "UK",
+            "currency_name": "Pound Sterling",
+            "currency_sign": "£",
+            "equivalent_to_dollar": 0.72,
+            "is_supported": true,
+            "phone_prefix": "44"
+        }
+    },
+    {
+        "model": "main.country",
+        "pk": 3,
+        "fields": {
+            "name": "Canada",
+            "short_name": "CAN",
+            "currency_name": "Canadian Dollar",
+            "currency_sign": "$",
+            "equivalent_to_dollar": 1.21,
+            "is_supported": true,
+            "phone_prefix": "1"
+        }
+    },
+    {
+        "model": "main.country",
+        "pk": 4,
+        "fields": {
+            "name": "Germany",
+            "short_name": "GER",
+            "currency_name": "Euro",
+            "currency_sign": "€",
+            "equivalent_to_dollar": 0.82,
+            "is_supported": true,
+            "phone_prefix": "49"
+        }
+    },
+    {
+        "model": "main.country",
+        "pk": 5,
+        "fields": {
+            "name": "Australia",
+            "short_name": "AUS",
+            "currency_name": "Australian Dollar",
+            "currency_sign": "$",
+            "equivalent_to_dollar": 1.31,
+            "is_supported": true,
+            "phone_prefix": "61"
+        }
+    },
+    {
+        "model": "main.country",
+        "pk": 6,
+        "fields": {
+            "name": "Japan",
+            "short_name": "JPN",
+            "currency_name": "Japanese Yen",
+            "currency_sign": "¥",
+            "equivalent_to_dollar": 109.56,
+            "is_supported": true,
+            "phone_prefix": "81"
+        }
+    },
+    {
+        "model": "main.country",
+        "pk": 7,
+        "fields": {
+            "name": "China",
+            "short_name": "CHN",
+            "currency_name": "Chinese Yuan",
+            "currency_sign": "¥",
+            "equivalent_to_dollar": 6.46,
+            "is_supported": true,
+            "phone_prefix": "86"
+        }
+    },
+    {
+        "model": "main.country",
+        "pk": 8,
+        "fields": {
+            "name": "India",
+            "short_name": "IND",
+            "currency_name": "Indian Rupee",
+            "currency_sign": "₹",
+            "equivalent_to_dollar": 73.11,
+            "is_supported": true,
+            "phone_prefix": "91"
+        }
+    },
+    {
+        "model": "main.country",
+        "pk": 9,
+        "fields": {
+            "name": "Brazil",
+            "short_name": "BRA",
+            "currency_name": "Brazilian Real",
+            "currency_sign": "R$",
+            "equivalent_to_dollar": 5.24,
+            "is_supported": true,
+            "phone_prefix": "55"
+        }
+    },
+    {
+        "model": "main.country",
+        "pk": 10,
+        "fields": {
+            "name": "South Africa",
+            "short_name": "SA",
+            "currency_name": "South African Rand",
+            "currency_sign": "R",
+            "equivalent_to_dollar": 14.35,
+            "is_supported": true,
+            "phone_prefix": "27"
+        }
+    }
+]

@@ -1,0 +1,208 @@
+{% extends 'layouts/dashboard.html' %}
+{% load i18n %}
+{% load static %}
+{% block breadcrumb %}
+    <nav class="flex" aria-label="Breadcrumb">
+        <ol class="breadcrumbs">
+            <li class="inline-flex items-center">
+                <a href="{% url 'main:dashboard' %}"
+                   class="breadcrumbs-item">
+                    {% translate 'Dashboard' %}
+                </a>
+            </li>
+            <li aria-current="page">
+                <div class="flex items-center">
+                    <svg class="rtl:rotate-180 w-3 h-3 text-gray-400 mx-1" aria-hidden="true"
+                         xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="m1 9 4-4-4-4"/>
+                    </svg>
+                    <span class="breadcrumbs-item active">
+                        {% translate 'Settings' %}
+                    </span>
+                </div>
+            </li>
+        </ol>
+    </nav>
+{% endblock %}
+{% block content %}
+    <div class="relative w-full bg-gradient-to-tl from-primary-400 to-primary-700 rounded-md">
+        <div class="absolute w-full h-full top-0 left-0 bg-repeat"
+             style="background-image: url('{% static 'img/pattern.svg' %}')"></div>
+        <div class="container block relative h-72">
+            <div class="py-10">
+                <h1 class="h1 !text-white">Settings Page</h1>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-4 gap-3 w-full mt-8 lg:mt-10">
+                <section class="card col-span-1 lg:col-span-1 h-fit">
+                    <div class="card-content">
+                        <div class="mx-auto">
+                            <div class="relative inline-flex items-center justify-center size-24 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600">
+                                <span class="font-medium text-gray-600 dark:text-gray-300 text-4xl uppercase">{{ request.user.get_initials_name }}</span>
+                            </div>
+                        </div>
+                        <div class="w-full">
+                            <h3 class="!text-slate-300 text-center w-full font-bold capitalize mb-1">{{ request.user.get_full_name }}</h3>
+                            <h4 class="text-sm !text-slate-300 text-center w-full capitalize">{{ request.user.email }}</h4>
+                        </div>
+                        <div class="w-full border-t py-2 border-gray-600">
+                            <div class="flex justify-center items-center gap-2 mt-3 bg-gray-700 p-3 rounded-md">
+                                <h3 class="text-sm !text-slate-300 capitalize font-bold">{% translate 'Joined since :' %}</h3>
+                                <h4 class="text-sm !text-slate-300 capitalize">{{ request.user.date_joined|date }}</h4>
+                            </div>
+                            <div class="flex justify-center items-center gap-2 mt-3 bg-gray-700 p-3 rounded-md">
+                                <h3 class="text-sm !text-slate-300 capitalize font-bold">{% translate 'Last login :' %}</h3>
+                                <h4 class="text-sm !text-slate-300 capitalize">{{ request.user.last_login|date }}</h4>
+                            </div>
+                            <div class="flex justify-center items-center gap-2 mt-3 bg-green-600 font-bold p-3 rounded-md">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                     stroke-linejoin="round" class="lucide lucide-shield-check">
+                                    <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/>
+                                    <path d="m9 12 2 2 4-4"/>
+                                </svg>
+                                ACTIVE
+                            </div>
+                        </div>
+                        <div class="w-full border-t py-2 border-gray-600">
+
+                        </div>
+
+                    </div>
+                </section>
+                <section class="col-span-1 lg:col-span-3">
+                    <div class="flex flex-col gap-3">
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="mb-4 border-b border-gray-200 dark:border-gray-700 w-full">
+                                    <ul class="flex flex-wrap -mb-px text-base font-medium text-center"
+                                        id="settings-tab"
+                                        data-tabs-toggle="#default-styled-tab-content"
+                                        data-tabs-active-classes="text-primary hover:text-primary dark:text-primary dark:hover:text-primary border-primary dark:border-primary"
+                                        data-tabs-inactive-classes="dark:border-transparent text-gray-500 hover:text-gray-600 dark:text-gray-400 border-gray-100 hover:border-gray-300 dark:border-gray-700 dark:hover:text-gray-300"
+                                        role="tablist">
+                                        <li class="me-2" role="presentation">
+                                            <button class="inline-block p-4 border-b-2 rounded-t-lg" id="profile-tab"
+                                                    data-tabs-target="#profile" type="button" role="tab"
+                                                    aria-controls="profile"
+                                                    aria-selected="false">
+                                                {% translate 'Profile' %}
+                                            </button>
+                                        </li>
+                                        <li class="me-2" role="presentation">
+                                            <button class="inline-block p-4 border-b-2 rounded-t-lg"
+                                                    id="change-password-tab"
+                                                    data-tabs-target="#change-password" type="button" role="tab"
+                                                    aria-controls="change-password"
+                                                    aria-selected="false">
+                                                {% translate 'Change Password' %}
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div id="settings-tab" class="w-full">
+                                    <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="profile"
+                                         role="tabpanel"
+                                         aria-labelledby="profile-tab">
+                                        <form class="w-full" action="{% url "accounts:profile" %}" method="post"
+                                              enctype="multipart/form-data">
+                                            {% csrf_token %}
+                                            <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-4">
+                                                <div class="col-span-1 md:col-span-1">
+                                                    <label for="id_{{ user_form.first_name.name }}"
+                                                           class="form-label">{{ user_form.first_name.label }}</label>
+                                                    {{ user_form.first_name }}
+                                                    <small class="text-xs body1">{{ user_form.first_name.help_text }}</small>
+                                                    <small class="text-xs text-red-700">{{ user_form.first_name.errors }}</small>
+                                                </div>
+                                                <div class="col-span-1 md:col-span-1">
+                                                    <label for="id_{{ user_form.last_name.name }}"
+                                                           class="form-label">{{ user_form.last_name.label }}</label>
+                                                    {{ user_form.last_name }}
+                                                    <small class="text-xs body1">{{ user_form.last_name.help_text }}</small>
+                                                    <small class="text-xs text-red-700">{{ user_form.last_name.errors }}</small>
+                                                </div>
+                                                <div class="col-span-1 md:col-span-1">
+                                                    <label for="id_{{ user_form.middle_name.name }}"
+                                                           class="form-label">{{ user_form.middle_name.label }}</label>
+                                                    {{ user_form.middle_name }}
+                                                    <small class="text-xs body1">{{ user_form.middle_name.help_text }}</small>
+                                                    <small class="text-xs text-red-700">{{ user_form.middle_name.errors }}</small>
+                                                </div>
+                                                <div class="col-span-1 md:col-span-1">
+                                                    <label for="id_{{ user_form.phone_number.name }}"
+                                                           class="form-label">{{ user_form.phone_number.label }}</label>
+                                                    {{ user_form.phone_number }}
+                                                    <small class="text-xs body1">{{ user_form.phone_number.help_text }}</small>
+                                                    <small class="text-xs text-red-700">{{ user_form.phone_number.errors }}</small>
+                                                </div>
+                                                <div class="col-span-1 md:col-span-2">
+                                                    <button class="btn btn-primary" role="button" type="submit">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                             viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                             stroke-width="2"
+                                                             stroke-linecap="round" stroke-linejoin="round"
+                                                             class="lucide lucide-save">
+                                                            <path d="M15.2 3a2 2 0 0 1 1.4.6l3.8 3.8a2 2 0 0 1 .6 1.4V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"/>
+                                                            <path d="M17 21v-7a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1v7"/>
+                                                            <path d="M7 3v4a1 1 0 0 0 1 1h7"/>
+                                                        </svg>
+                                                        {% translate 'Save changes' %}
+                                                    </button>
+                                                </div>
+
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="change-password"
+                                         role="tabpanel"
+                                         aria-labelledby="change-password-tab">
+                                        <form class="w-full" action="{% url 'accounts:change_password' %}"
+                                              enctype="multipart/form-data" method="post">
+                                            {% csrf_token %}
+                                            <div class="w-full grid grid-cols-1 gap-4">
+                                                <div class="col-span-1 md:col-span-1">
+                                                    <label for="id_{{ password_form.old_password.name }}"
+                                                           class="form-label">{{ password_form.old_password.label }}</label>
+                                                    {{ password_form.old_password }}
+                                                    <small class="text-xs body1">{{ password_form.old_password.help_text }}</small>
+                                                    <small class="text-xs text-red-700">{{ password_form.old_password.errors }}</small>
+                                                </div>
+                                                <div class="col-span-1 md:col-span-1">
+                                                    <label for="id_{{ password_form.new_password1.name }}"
+                                                           class="form-label">{{ password_form.new_password1.label }}</label>
+                                                    {{ password_form.new_password1 }}
+                                                    <small class="text-xs body1">{{ password_form.new_password1.help_text }}</small>
+                                                    <small class="text-xs text-red-700">{{ password_form.new_password1.errors }}</small>
+                                                </div>
+                                                <div class="col-span-1 md:col-span-1">
+                                                    <label for="id_{{ password_form.new_password2.name }}"
+                                                           class="form-label">{{ password_form.new_password2.label }}</label>
+                                                    {{ password_form.new_password2 }}
+                                                    <small class="text-xs body1">{{ password_form.new_password2.help_text }}</small>
+                                                    <small class="text-xs text-red-700">{{ password_form.new_password2.errors }}</small>
+                                                </div>
+                                                <div class="col-span-1">
+                                                    <button class="btn btn-primary" role="button" type="submit">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                             viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                             stroke-width="2" stroke-linecap="round"
+                                                             stroke-linejoin="round" class="lucide lucide-shield">
+                                                            <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/>
+                                                        </svg>
+                                                        {% translate 'Change password' %}
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,133 @@
+{% load custom_filters %}
+{% load i18n %}
+
+{% url 'main:dashboard' as dashboard %}
+{% url 'main:phones' as phones %}
+{% url 'main:phones_create' as phones_create %}
+{% url 'main:phones_list' as phones_list %}
+{% url 'main:financial' as financial %}
+
+{% url 'main:settings' as settings %}
+
+{% is_active phones phones_create phones_list as phones_paths %}
+
+
+<aside id="default-sidebar"
+       class="fixed top-0 left-0 md:relative z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0"
+       aria-label="Sidenav">
+    <div class="overflow-y-auto primary-scrollbar flex flex-col gap-5 py-5 px-3 h-full bg-white border-r border-gray-200 dark:bg-gray-800 dark:border-gray-700">
+        <h3 class="uppercase text-primary font-bold text-3xl text-center">{% translate 'Global Cell' %}</h3>
+        <ul class="space-y-2 border-t border-t-gray-700 pt-4">
+            <li>
+                <a href="{{ dashboard }}"
+                   class="dropdown-item {% if request.path == dashboard %}dark:text-white bg-gray-100 dark:bg-gray-700 {% else %}dark:text-white/75 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-700 {% endif %}">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                         class="lucide lucide-layout-grid">
+                        <rect width="7" height="7" x="3" y="3" rx="1"/>
+                        <rect width="7" height="7" x="14" y="3" rx="1"/>
+                        <rect width="7" height="7" x="14" y="14" rx="1"/>
+                        <rect width="7" height="7" x="3" y="14" rx="1"/>
+                    </svg>
+                    <span class="ml-3">{% translate 'Dashboard' %}</span>
+                </a>
+            </li>
+            <li>
+                <button type="button"
+                        class="dropdown-item justify-between group {% if phones_paths %}dark:text-white bg-gray-100 dark:bg-gray-700{% else %}dark:focus:bg-gray-700 dark:focus:text-white focus-within:bg-gray-100 dark:text-white/75 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white{% endif %}"
+                        aria-controls="dropdown-pages" data-collapse-toggle="dropdown-pages"
+                        {% if phones_paths %}aria-expanded="true"{% endif %}>
+                    <div class="flex justify-start items-center gap-0 ">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                             class="lucide lucide-tablet-smartphone ">
+                            <rect width="10" height="14" x="3" y="8" rx="2"/>
+                            <path d="M5 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2h-2.4"/>
+                            <path d="M8 18h.01"/>
+                        </svg>
+                        <span class="flex-1 ml-3 text-left whitespace-nowrap">{% translate 'Phones' %}</span>
+                    </div>
+                    <svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                              d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                              clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+                <ul id="dropdown-pages" class="
+                        {% if phones_paths %}{% else %}hidden{% endif %} py-2 space-y-2">
+                    <li>
+                        <a href="{{ phones_create }}"
+                           class="dropdown-child  {% if request.path == phones_create %}dark:bg-gray-950{% else %}dark:bg-gray-900{% endif %}">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                 stroke-linejoin="round" class="lucide lucide-plus">
+                                <path d="M5 12h14"/>
+                                <path d="M12 5v14"/>
+                            </svg>
+                            {% translate 'Add' %}
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ phones_list }}"
+                           class="dropdown-child {% if request.path == phones_list %}dark:bg-gray-950{% else %}dark:bg-gray-900{% endif %}">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                 stroke-linejoin="round" class="lucide lucide-clipboard-list">
+                                <rect width="8" height="4" x="8" y="2" rx="1" ry="1"/>
+                                <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>
+                                <path d="M12 11h4"/>
+                                <path d="M12 16h4"/>
+                                <path d="M8 11h.01"/>
+                                <path d="M8 16h.01"/>
+                            </svg>
+                            {% translate 'List' %}
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="{{ financial }}"
+                   class="dropdown-item {% if request.path == financial %}dark:text-white bg-gray-100 dark:bg-gray-700  {% else %}dark:text-white/75 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-700 {% endif %}">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                         class="lucide lucide-landmark">
+                        <line x1="3" x2="21" y1="22" y2="22"/>
+                        <line x1="6" x2="6" y1="18" y2="11"/>
+                        <line x1="10" x2="10" y1="18" y2="11"/>
+                        <line x1="14" x2="14" y1="18" y2="11"/>
+                        <line x1="18" x2="18" y1="18" y2="11"/>
+                        <polygon points="12 2 20 7 4 7"/>
+                    </svg>
+                    <span class="ml-3">{% translate 'Financial' %}</span>
+                </a>
+            </li>
+            <li>
+                <a href="{{ settings }}"
+                   class="dropdown-item {% if request.path == settings %}dark:text-white bg-gray-100 dark:bg-gray-700  {% else %}dark:text-white/75 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-700 {% endif %}">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                         class="lucide lucide-settings">
+                        <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/>
+                        <circle cx="12" cy="12" r="3"/>
+                    </svg>
+                    <span class="ml-3">{% translate 'Settings' %}</span>
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'accounts:logout' %}"
+                   class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white/75 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                         class="lucide lucide-log-out">
+                        <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
+                        <polyline points="16 17 21 12 16 7"/>
+                        <line x1="21" x2="9" y1="12" y2="12"/>
+                    </svg>
+                    <span class="ml-3">Exit</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+</aside>

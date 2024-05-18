@@ -1,3 +1,4 @@
+from django.core.validators import MinValueValidator, MaxValueValidator, RegexValidator
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 from django.contrib.auth import get_user_model
@@ -29,6 +30,13 @@ class Country(models.Model):
         help_text=_("A short unique abbreviation for the country."),
         blank=False,
         null=False
+    )
+    phone_prefix = models.CharField(
+        max_length=5,
+        verbose_name=_("Country Phone Prefix"),
+        blank=True,
+        null=True,
+        help_text=_("The phone number prefix for the country.")
     )
     currency_name = models.CharField(
         max_length=50,
@@ -70,7 +78,8 @@ class PaymentMethod(BaseModel):
         get_user_model(),
         on_delete=models.CASCADE,
         related_name='payment_methods',
-        blank=False, null=False
+        blank=False,
+        null=False
     )
     account_name = models.CharField(
         max_length=100,
@@ -82,7 +91,14 @@ class PaymentMethod(BaseModel):
         max_length=50,
         verbose_name=_("Account Number"),
         null=False,
-        blank=False
+        blank=False,
+        validators=[
+            RegexValidator(
+                regex='^\d{10,50}$',
+                message=_("Account number must be between 10 and 50 digits."),
+                code='invalid_account_number'
+            )
+        ]
     )
     bank_name = models.CharField(
         max_length=100,
@@ -91,31 +107,63 @@ class PaymentMethod(BaseModel):
         blank=False
     )
     swift_number = models.CharField(
-        max_length=50,
+        max_length=11,
         verbose_name=_("SWIFT Number"),
         null=True,
-        blank=True
+        blank=True,
+        validators=[
+            RegexValidator(
+                regex='^[A-Z0-9]{8,11}$',
+                message=_("SWIFT number must be between 8 and 11 characters."),
+                code='invalid_swift_number'
+            )
+        ]
     )
     iban_number = models.CharField(
-        max_length=50,
+        max_length=34,
         verbose_name=_("IBAN Number"),
         null=True,
-        blank=True
+        blank=True,
+        validators=[
+            RegexValidator(
+                regex='^[A-Z0-9]{15,34}$',
+                message=_("IBAN number must be between 15 and 34 characters."),
+                code='invalid_iban_number'
+            )
+        ]
     )
     country = models.ForeignKey(
-        Country,
+        'Country',
         verbose_name=_("Country"),
         related_name="payment_methods",
         on_delete=models.SET_NULL,
         blank=True,
-        null=True, )
+        null=True,
+    )
 
     class Meta:
         verbose_name = _("Payment Method")
         verbose_name_plural = _("Payment Methods")
+        indexes = [
+            models.Index(fields=['account_number']),
+        ]
+        ordering = ['user', 'bank_name']
+        unique_together = (('user', 'account_number'),)
 
     def __str__(self):
-        return f"{self.user}'s Payment Method"
+        return f"{self.user}'s Payment Method at {self.bank_name}"
+
+    @property
+    def get_account_number_display(self):
+        account_number_length = len(self.account_number)
+        if account_number_length <= 4:
+            # If account number is very short, just return it as is (should be rare given the regex validator).
+            return self.account_number
+        # Show the first 4 and last 4 digits, mask the middle part
+        # start = self.account_number[:4]
+        end = self.account_number[-4:]
+        masked = '*' * (account_number_length - 4)
+        return f"{masked} {end}"
 
 
 # class DigitalBanking(models.Model):
@@ -159,8 +207,8 @@ class Device(BaseModel):
     mobile_carrier = models.CharField(
         max_length=100,
         verbose_name=_("Mobile Carrier"),
-        null=True,
-        blank=True
+        null=False,
+        blank=False
     )
     plan_payment = models.CharField(
         max_length=50,
@@ -170,20 +218,24 @@ class Device(BaseModel):
     plan_name = models.CharField(
         max_length=100,
         verbose_name=_("Plan Name"),
-        null=True,
-        blank=True
+        null=False,
+        blank=False
     )
     plan_cost = models.DecimalField(
         max_digits=10,
         decimal_places=2,
         verbose_name=_("Plan Cost"),
-        null=True,
-        blank=True
+        help_text=_("Plan cost Based on USD Dollar ($)"),
+        null=False,
+        blank=False,
+        default=0
     )
     plan_length = models.PositiveSmallIntegerField(
         verbose_name=_("Plan Length (Months)"),
         null=True,
-        blank=True
+        blank=True,
+        default=1,
+        validators=[MinValueValidator(1), MaxValueValidator(12)]
     )
     is_unlimited_minutes = models.BooleanField(
         verbose_name=_("Unlimited Minutes"),
@@ -192,7 +244,8 @@ class Device(BaseModel):
     total_minutes = models.PositiveIntegerField(
         verbose_name=_("Total Minutes"),
         null=True,
-        blank=True
+        blank=True,
+        default=0,
     )
     is_verified = models.BooleanField(verbose_name="Verified", default=False)
     is_active = models.BooleanField(verbose_name=_("Is Active"), default=False)
@@ -200,6 +253,7 @@ class Device(BaseModel):
     class Meta:
         verbose_name = _("Device")
         verbose_name_plural = _("Devices")
+        ordering = ["-created_at"]
 
     def __str__(self):
         return f"{self.user}'s Device"
