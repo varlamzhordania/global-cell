@@ -1,9 +1,22 @@
 from django import forms
-from main.models import Device, PaymentMethod
+from main.models import Device, PaymentMethod, Notification, Country
 from django.utils.translation import gettext_lazy as _
+
+from django.contrib.auth import get_user_model
+
+
+class NotificationForm(forms.ModelForm):
+    class Meta:
+        model = Notification
+        fields = ['user', 'device', 'payment_method', 'title', 'message', 'has_seen', 'is_active']
 
 
 class PaymentMethodForm(forms.ModelForm):
+    country = forms.ModelChoiceField(
+        queryset=Country.objects.filter(is_supported=True), required=True, widget=forms.Select(
+            attrs={"class": "form-select"}
+        ), )
+
     class Meta:
         model = PaymentMethod
         fields = '__all__'
@@ -13,19 +26,19 @@ class PaymentMethodForm(forms.ModelForm):
                 attrs={"class": "form-control", "placeholder": _("Enter the name of the account")}
             ),
             "account_number": forms.NumberInput(
-                attrs={"class": "form-control", "placeholder": _("Enter the name of the account")}
+                attrs={"class": "form-control", "placeholder": _("Enter the name of the account"),
+                       "autocomplete": "off"}
             ),
             "bank_name": forms.TextInput(
                 attrs={"class": "form-control", "placeholder": _("Enter the name of the account")}
             ),
             "swift_number": forms.NumberInput(
-                attrs={"class": "form-control", "placeholder": _("Enter the name of the account")}
+                attrs={"class": "form-control", "placeholder": _("Enter the name of the account"),
+                       "autocomplete": "off"}
             ),
             "iban_number": forms.NumberInput(
-                attrs={"class": "form-control", "placeholder": _("Enter the name of the account")}
-            ),
-            "country": forms.Select(
-                attrs={"class": "form-select"}
+                attrs={"class": "form-control", "placeholder": _("Enter the name of the account"),
+                       "autocomplete": "off"}
             ),
         }
 

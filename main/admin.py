@@ -1,11 +1,46 @@
 from django.contrib import admin
-from .models import Device, Country, PaymentMethod
 from django.utils.html import format_html
 from django.shortcuts import redirect
 from django.urls import path
+from django.contrib.auth import get_user_model
+
+from .models import Device, Country, PaymentMethod, Notification
+from .forms import NotificationForm
 
 
 # Register your models here.
+
+@admin.register(Notification)
+class NotificationAdmin(admin.ModelAdmin):
+    list_display = ('id', 'user', 'title', 'has_seen', 'is_active', 'priority', 'created_at', 'updated_at',)
+    list_filter = ('has_seen', 'is_active', 'priority', 'created_at', 'updated_at',)
+    search_fields = ('id', 'title', 'user',)
+
+
+class NotificationInline(admin.StackedInline):
+    model = Notification
+    form = NotificationForm
+    min_num = 0
+    extra = 1
+
+    def formfield_for_foreignkey(self, db_field, request, **kwargs):
+        if db_field.name == "user" or db_field.name == "device" or db_field.name == "payment_method":
+            obj_id = request.resolver_match.kwargs.get('object_id')
+            if obj_id:
+                payment_method = PaymentMethod.objects.filter(pk=obj_id).first()
+                if payment_method:
+                    if db_field.name == "user":
+                        kwargs["queryset"] = get_user_model().objects.filter(id=payment_method.user.id)
+                    if db_field.name == "device":
+                        kwargs["queryset"] = Device.objects.filter(user=payment_method.user)
+                else:
+                    devices = Device.objects.filter(pk=obj_id).first()
+                    if devices:
+                        if db_field.name == "user":
+                            kwargs["queryset"] = get_user_model().objects.filter(id=devices.user.id)
+                        if db_field.name == "payment_method":
+                            kwargs["queryset"] = PaymentMethod.objects.filter(user=devices.user)
+        return super().formfield_for_foreignkey(db_field, request, **kwargs)
 
 
 @admin.register(PaymentMethod)
@@ -13,6 +48,7 @@ class PaymentMethodAdmin(admin.ModelAdmin):
     list_display = ('id', 'user', 'account_name', 'account_number', 'bank_name', 'is_active', 'action')
     list_filter = ("is_active",)
     search_fields = ("id", 'user__username', 'account_number')
+    inlines = [NotificationInline]
 
     def action(self, obj):
         if obj.is_active:
@@ -66,3 +102,4 @@ class DeviceAdmin(admin.ModelAdmin):
     )
     list_filter = ('is_unlimited_minutes', 'is_verified', 'is_active',)
     search_fields = ("id", 'user', 'sim_number')
+    inlines = [NotificationInline]

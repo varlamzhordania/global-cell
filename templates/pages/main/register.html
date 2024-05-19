@@ -1,0 +1,63 @@
+{% extends 'layouts/base.html' %}
+{% load i18n %}
+{% block content %}
+    <section class="bg-background py-10">
+        <div class="container my-20 flex justify-center items-center">
+            <div class="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-xl xl:p-0 dark:bg-gray-800 dark:border-gray-700">
+                <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
+                    <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
+                        {% translate 'Create an account' %}
+                    </h1>
+                    <form method="post" enctype="multipart/form-data" class="space-y-4 md:space-y-6"
+                          action=".">
+                        {% csrf_token %}
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                            <div class="col-span-1 md:col-span-2">
+                                <label for="id_{{ form.email.name }}" class="form-label">{{ form.email.label }}</label>
+                                {{ form.email }}
+                                <small class="text-xs body1">{{ form.email.help_text }}</small>
+                                <small class="text-xs text-red-600">{{ form.email.errors }}</small>
+                            </div>
+                            <div class="col-span-1 md:col-span-1">
+                                <label for="id_{{ form.first_name.name }}"
+                                       class="form-label">{{ form.first_name.label }}</label>
+                                {{ form.first_name }}
+                                <small class="text-xs body1">{{ form.first_name.help_text }}</small>
+                                <small class="text-xs text-red-600">{{ form.first_name.errors }}</small>
+                            </div>
+                            <div class="col-span-1 md:col-span-1">
+                                <label for="id_{{ form.last_name.name }}"
+                                       class="form-label">{{ form.last_name.label }}</label>
+                                {{ form.last_name }}
+                                <small class="text-xs body1">{{ form.last_name.help_text }}</small>
+                                <small class="text-xs text-red-600">{{ form.last_name.errors }}</small>
+                            </div>
+                            <div class="col-span-1 md:col-span-2">
+                                <label for="id_{{ form.password1.name }}" class="form-label">{{ form.password1.label }}</label>
+                                {{ form.password1 }}
+                                <small class="text-xs body1">{{ form.password1.help_text }}</small>
+                                <small class="text-xs text-red-600">{{ form.password1.errors }}</small>
+                            </div>
+                            <div class="col-span-1 md:col-span-2">
+                                <label for="id_{{ form.password2.name }}"
+                                       class="form-label">{{ form.password2.label }}</label>
+                                {{ form.password2 }}
+                                <small class="text-xs body1">{{ form.password2.help_text }}</small>
+                                <small class="text-xs text-red-600">{{ form.password2.errors }}</small>
+                            </div>
+                        </div>
+                        <button type="submit" role="button" class="btn btn-primary w-full">
+                            {% translate 'Sign in' %}
+                        </button>
+                        <p class="text-sm font-light text-gray-500 dark:text-gray-400">
+                            {% blocktranslate %}
+                                Already have an account?
+                            {% endblocktranslate %}
+                            <a href="{% url 'accounts:login' %}" class="link-primary">{% translate 'Sign In' %}</a>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

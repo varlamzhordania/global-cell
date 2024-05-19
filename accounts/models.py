@@ -34,7 +34,7 @@ class User(AbstractUser):
     @property
     def get_initials_name(self):
         if not self.first_name or not self.last_name:
-            return self.username
+            return self.username[0:2]
         return f"{self.first_name[0]}{self.last_name[0]}"
 
     @property

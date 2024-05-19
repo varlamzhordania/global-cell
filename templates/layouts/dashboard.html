@@ -43,8 +43,11 @@
                 </svg>
             </button>
             <div class="border-2 dark:border-gray-700 dark:bg-gray-600 p-1 px-3 rounded-md flex justify-center items-center">
-                {{ request.user.get_wallet_display }}
+                {% blocktrans with fund=request.user.get_wallet_display %}
+                    Wallet : {{ fund }}
+                {% endblocktrans %}
             </div>
+
         </div>
         <div>
             <div class="flex justify-center p-4 space-x-4 w-full lg:flex bg-white dark:bg-gray-800 z-20 border-r border-gray-200 dark:border-gray-700">
@@ -110,7 +113,7 @@
             </div>
         </div>
     </section>
-    <section class="w-full px-4 pt-2 pb-1">
+    <section class="w-full px-4 pt-2 pb-0">
         {% block breadcrumb %}
         {% endblock %}
     </section>

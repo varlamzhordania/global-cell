@@ -7,18 +7,18 @@ def is_admin(user):
 
 
 def fancy_message(request, body, level="info"):
+    level_mapping = {
+        "success": messages.SUCCESS,
+        "error": messages.ERROR,
+        "warning": messages.WARNING,
+        "info": messages.INFO,
+    }
     if isinstance(body, dict):
         for field_name, error_list in body.items():
             for error in error_list:
-                messages.add_message(
-                    request,
-                    messages.ERROR if level == "error" else messages.SUCCESS if level == "success" else messages.WARNING if level == "warning" else messages.INFO,
-                    f"{field_name}: {error}"
-                )
+                messages.add_message(request, level_mapping[level], f"{field_name}: {error}")
     elif isinstance(body, str):
-        messages.add_message(
-            request,
-            messages.ERROR if level == "error" else messages.SUCCESS if level == "success" else messages.WARNING if level == "warning" else messages.INFO, body)
+        messages.add_message(request, level_mapping[level], body)
     else:
         raise ValueError("Unsupported message body type")
 

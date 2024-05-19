@@ -13,6 +13,36 @@
         scroll-behavior: smooth;
     }
 
+    table {
+        @apply
+        w-full text-sm text-left text-gray-500 dark:text-gray-400 rounded-lg
+    }
+
+    thead {
+        @apply
+        text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400
+    }
+
+    thead tr th {
+        @apply
+        px-4 py-3
+    }
+
+    tbody tr {
+        @apply
+        border-b dark:border-gray-700
+    }
+
+    tbody tr th {
+        @apply
+        px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white
+    }
+
+    tbody tr td {
+        @apply
+        px-4 py-3
+    }
+
 }
 
 
@@ -26,6 +56,11 @@
     .bg-background.reverse {
         @apply
         bg-gradient-to-b from-[#030C1A] to-black
+    }
+
+    .link-primary {
+        @apply
+        text-sm font-medium text-primary-600 hover:underline dark:text-primary-500
     }
 
     .btn {
@@ -126,16 +161,16 @@
         @apply
         inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse
     }
-    .breadcrumbs-item{
+
+    .breadcrumbs-item {
         @apply
         inline-flex items-center text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-400 dark:hover:text-white
     }
-    .breadcrumbs-item.active{
+
+    .breadcrumbs-item.active {
         @apply
         ms-1 text-gray-500 md:ms-2 dark:text-gray-400
     }
-
-
 
 
     .paginator-link {

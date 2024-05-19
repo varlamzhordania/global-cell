@@ -28,7 +28,7 @@
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                               d="m1 9 4-4-4-4"/>
                     </svg>
-                   <span class="breadcrumbs-item active">
+                    <span class="breadcrumbs-item active">
                         {% translate 'List' %}
                     </span>
                 </div>
@@ -41,8 +41,8 @@
         <div class="card-content">
             <div class="w-full">
                 <!-- Start coding here -->
-                <div class="bg-white dark:bg-gray-800 relative shadow-md sm:rounded-lg">
-                    <div class="flex flex-col md:flex-row items-center justify-between space-y-3 md:space-y-0 md:space-x-4 p-4">
+                <div class="bg-white dark:bg-gray-800 relative sm:rounded-lg">
+                    <div class="flex flex-col md:flex-row items-center justify-between space-y-3 md:space-y-0 md:space-x-4 py-4">
                         <div class="w-full md:w-1/2">
                             <form class="flex items-center" action="." method="get"
                                   enctype="application/x-www-form-urlencoded">
@@ -92,15 +92,21 @@
                                         aria-labelledby="actionsDropdownButton">
                                         <li>
                                             <a href="#"
-                                               class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Mass
-                                                Edit</a>
+                                               class="flex gap-2 justify-start items-center py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                     viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                     class="lucide lucide-file-text">
+                                                    <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/>
+                                                    <path d="M14 2v4a2 2 0 0 0 2 2h4"/>
+                                                    <path d="M10 9H8"/>
+                                                    <path d="M16 13H8"/>
+                                                    <path d="M16 17H8"/>
+                                                </svg>
+                                                CSV REPORT
+                                            </a>
                                         </li>
                                     </ul>
-                                    <div class="py-1">
-                                        <a href="#"
-                                           class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Delete
-                                            all</a>
-                                    </div>
                                 </div>
                                 <button id="filterDropdownButton" data-dropdown-toggle="filterDropdown"
                                         class="w-full md:w-auto flex items-center justify-center py-2 px-4 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
@@ -121,76 +127,98 @@
                                 <div id="filterDropdown"
                                      class="z-10 hidden w-48 p-3 bg-white rounded-lg shadow dark:bg-gray-700">
                                     <h6 class="mb-3 text-sm font-medium text-gray-900 dark:text-white">Choose
-                                        brand</h6>
-                                    <ul class="space-y-2 text-sm" aria-labelledby="filterDropdownButton">
-                                        <li class="flex items-center">
-                                            <input id="apple" type="checkbox" value=""
-                                                   class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
-                                            <label for="apple"
-                                                   class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100">Apple
-                                                (56)</label>
-                                        </li>
-                                        <li class="flex items-center">
-                                            <input id="fitbit" type="checkbox" value=""
-                                                   class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
-                                            <label for="fitbit"
-                                                   class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100">Microsoft
-                                                (16)</label>
-                                        </li>
-                                        <li class="flex items-center">
-                                            <input id="razor" type="checkbox" value=""
-                                                   class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
-                                            <label for="razor"
-                                                   class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100">Razor
-                                                (49)</label>
-                                        </li>
-                                        <li class="flex items-center">
-                                            <input id="nikon" type="checkbox" value=""
-                                                   class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
-                                            <label for="nikon"
-                                                   class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100">Nikon
-                                                (12)</label>
-                                        </li>
-                                        <li class="flex items-center">
-                                            <input id="benq" type="checkbox" value=""
-                                                   class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
-                                            <label for="benq"
-                                                   class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100">BenQ
-                                                (74)</label>
-                                        </li>
-                                    </ul>
+                                        filter</h6>
+                                    <form action="." method="get" enctype="application/x-www-form-urlencoded">
+                                        <ul class="space-y-2 text-sm" aria-labelledby="filterDropdownButton">
+                                            <li class="flex items-center">
+                                                <input id="is_verified" name="is_verified" type="checkbox" value="True" {% if is_verified %}checked{% endif %}
+                                                       class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                                                <label for="is_verified"
+                                                       class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100">
+                                                    Verified
+                                                </label>
+                                            </li>
+                                            <li class="flex items-center">
+                                                <input id="is_unlimited_minutes" name="is_unlimited_minutes" value="True" {% if is_unlimited_minutes %}checked{% endif %}
+                                                       type="checkbox"
+                                                       class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                                                <label for="is_unlimited_minutes"
+                                                       class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100">
+                                                    Unlimited Minutes
+                                                </label>
+                                            </li>
+                                            <li class="flex items-center">
+                                                <input id="plan_payment" name="plan_payment" type="radio" {% if plan_payment == "post_paid" %}checked{% endif %}
+                                                       value="post_paid"
+                                                       class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                                                <label for="plan_payment"
+                                                       class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100">
+                                                    Post Paid
+                                                </label>
+                                            </li>
+                                            <li class="flex items-center">
+                                                <input id="plan_payment" name="plan_payment" type="radio" {% if plan_payment == "pre_paid" %}checked{% endif %}
+                                                       value="pre_paid"
+                                                       class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                                                <label for="apple"
+                                                       class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100">
+                                                    Pre Paid
+                                                </label>
+                                            </li>
+                                            <li class="flex items-center">
+                                                <input id="is_active" name="is_active" type="radio" value="True" {% if is_active == "True" %}checked{% endif %} 
+                                                       class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                                                <label for="is_active"
+                                                       class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100">
+                                                    Status : Active
+                                                </label>
+                                            </li>
+                                            <li class="flex items-center">
+                                                <input id="is_active" name="is_active" type="radio" value="False" {% if is_active == "False" %}checked{% endif %}
+                                                       class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                                                <label for="apple"
+                                                       class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100">
+                                                    Status : DeActive
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <button class="btn btn-primary w-full !text-xs py-2" role="button" type="submit">Filter</button>
+                                            </li>                                            <li>
+                                                <a href="{% url 'main:phones_list' %}" class="btn btn-dark w-full !text-xs py-2" role="button" >Clear</a>
+                                            </li>
+                                        </ul>
+                                    </form>
+
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="overflow-x-auto">
-                        <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-                            <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                        <table>
+                            <thead>
                             <tr>
-                                <th scope="col" class="px-4 py-3">{% translate 'SIM' %}</th>
-                                <th scope="col" class="px-4 py-3">{% translate 'Carrier' %}</th>
-                                <th scope="col" class="px-4 py-3" align="center">{% translate 'Payment' %}</th>
-                                <th scope="col" class="px-4 py-3" align="center">{% translate 'Plan Length' %}</th>
-                                <th scope="col" class="px-4 py-3"
-                                    align="center">{% translate 'Unlimited Minutes' %}</th>
-                                <th scope="col" class="px-4 py-3" align="center">{% translate 'Verified' %}</th>
-                                <th scope="col" class="px-4 py-3" align="center">{% translate 'Active' %}</th>
-                                <th scope="col" class="px-4 py-3">
+                                <th scope="col">{% translate 'SIM' %}</th>
+                                <th scope="col" >{% translate 'Carrier' %}</th>
+                                <th scope="col" align="center">{% translate 'Payment' %}</th>
+                                <th scope="col" align="center">{% translate 'Plan Length' %}</th>
+                                <th scope="col" align="center">{% translate 'Unlimited Minutes' %}</th>
+                                <th scope="col" align="center">{% translate 'Verified' %}</th>
+                                <th scope="col" align="center">{% translate 'Status' %}</th>
+                                <th scope="col">
                                     <span class="sr-only">{% translate 'Actions' %}</span>
                                 </th>
                             </tr>
                             </thead>
                             <tbody>
                             {% for item in queryset %}
-                                <tr class="border-b dark:border-gray-700">
-                                    <th scope="row"
-                                        class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                <tr>
+                                    <th scope="row">
                                         {{ item.sim_number }}
                                     </th>
-                                    <td class="px-4 py-3">{{ item.mobile_carrier }}</td>
-                                    <td class="px-4 py-3" align="center">{{ item.get_plan_payment_display }}</td>
-                                    <td class="px-4 py-3" align="center">{{ item.plan_length|add_text:"Month" }}</td>
-                                    <td class="px-4 py-3" align="center">
+                                    <td>{{ item.mobile_carrier }}</td>
+                                    <td align="center">{{ item.get_plan_payment_display }}</td>
+                                    <td align="center">{{ item.plan_length|add_text:"Month" }}</td>
+                                    <td align="center">
                                         {% if item.is_unlimited_minutes %}
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -210,53 +238,65 @@
                                             </svg>
                                         {% endif %}
                                     </td>
-                                    <td class="px-4 py-3" align="center">
+                                    <td align="center">
                                         {% if item.is_verified %}
                                             <span class="badge badge-success capitalize">VERIFIED</span>
                                         {% else %}
                                             <span class="badge badge-danger capitalize">UNVERFIED</span>
                                         {% endif %}
                                     </td>
-                                    <td class="px-4 py-3" align="center">
+                                    <td align="center">
                                         {% if item.is_active %}
-                                            <span class="badge badge-success capitalize">ACTIVE</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                 stroke-linecap="round" stroke-linejoin="round"
+                                                 class="lucide lucide-circle-check text-primary-400">
+                                                <circle cx="12" cy="12" r="10"/>
+                                                <path d="m9 12 2 2 4-4"/>
+                                            </svg>
                                         {% else %}
-                                            <span class="badge badge-danger capitalize">DEACTIVE</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                 stroke-linecap="round" stroke-linejoin="round"
+                                                 class="lucide lucide-circle-check ">
+                                                <circle cx="12" cy="12" r="10"/>
+                                                <path d="m9 12 2 2 4-4"/>
+                                            </svg>
                                         {% endif %}
                                     </td>
-                                    <td class="px-4 py-3 flex items-center justify-end">
-                                        <button id="record-{{ item.id }}-dropdown-button"
-                                                data-dropdown-toggle="record-{{ item.id }}-dropdown"
-                                                class="inline-flex items-center p-0.5 text-sm font-medium text-center text-gray-500 hover:text-gray-800 rounded-lg focus:outline-none dark:text-gray-400 dark:hover:text-gray-100"
-                                                type="button">
-                                            <svg class="w-5 h-5" aria-hidden="true" fill="currentColor"
-                                                 viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z"/>
-                                            </svg>
-                                        </button>
-                                        <div id="record-{{ item.id }}-dropdown"
-                                             class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600">
-                                            <ul class="py-1 text-sm text-gray-700 dark:text-gray-200"
-                                                aria-labelledby="record-{{ item.id }}-dropdown-button">
-                                                <li>
-                                                    <a href="#"
-                                                       class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Show</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#"
-                                                       class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Edit</a>
-                                                </li>
-                                            </ul>
-                                            <div class="py-1">
-                                                <a href="#"
-                                                   class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Delete</a>
-                                            </div>
-                                        </div>
-                                    </td>
+                                    {#                                    <td class="px-4 py-3 flex items-center justify-end">#}
+                                    {#                                        <button id="record-{{ item.id }}-dropdown-button"#}
+                                    {#                                                data-dropdown-toggle="record-{{ item.id }}-dropdown"#}
+                                    {#                                                class="inline-flex items-center p-0.5 text-sm font-medium text-center text-gray-500 hover:text-gray-800 rounded-lg focus:outline-none dark:text-gray-400 dark:hover:text-gray-100"#}
+                                    {#                                                type="button">#}
+                                    {#                                            <svg class="w-5 h-5" aria-hidden="true" fill="currentColor"#}
+                                    {#                                                 viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">#}
+                                    {#                                                <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z"/>#}
+                                    {#                                            </svg>#}
+                                    {#                                        </button>#}
+                                    {#                                        <div id="record-{{ item.id }}-dropdown"#}
+                                    {#                                             class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600">#}
+                                    {#                                            <ul class="py-1 text-sm text-gray-700 dark:text-gray-200"#}
+                                    {#                                                aria-labelledby="record-{{ item.id }}-dropdown-button">#}
+                                    {#                                                <li>#}
+                                    {#                                                    <a href="#"#}
+                                    {#                                                       class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Show</a>#}
+                                    {#                                                </li>#}
+                                    {#                                                <li>#}
+                                    {#                                                    <a href="#"#}
+                                    {#                                                       class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Edit</a>#}
+                                    {#                                                </li>#}
+                                    {#                                            </ul>#}
+                                    {#                                            <div class="py-1">#}
+                                    {#                                                <a href="#"#}
+                                    {#                                                   class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Delete</a>#}
+                                    {#                                            </div>#}
+                                    {#                                        </div>#}
+                                    {#                                    </td>#}
                                 </tr>
                             {% empty %}
-                                <tr class="border-b dark:border-gray-700">
-                                    <td colspan="12" class="px-4 py-3 text-center">
+                                <tr>
+                                    <td colspan="12" class="text-center">
                                         <div class="text-gray-500 dark:text-gray-400">
                                             {% blocktrans %}You don't have any phones yet.{% endblocktrans %}
                                             <a href="{% url 'main:phones_create' %}"

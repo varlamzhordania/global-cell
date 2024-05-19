@@ -1,7 +1,8 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from django.utils.translation import gettext as _
+from django.views.decorators.http import require_POST
 
 from core.utils import fancy_message
 from accounts.forms import UserForm, PasswordChangeForm
@@ -53,13 +54,25 @@ def phones_create(request, *args, **kwargs):
 def phones_list(request, *args, **kwargs):
     page = request.GET.get("page", 1)
     search = request.GET.get("search", None)
+    is_verified = request.GET.get("is_verified", None)
+    is_unlimited_minutes = request.GET.get("is_unlimited_minutes", None)
+    plan_payment = request.GET.get("plan_payment", None)
+    is_active = request.GET.get("is_active", None)
 
     queryset = Device.objects.filter(user=request.user)
 
     if search is not None:
         queryset = queryset.filter(sim_number__icontains=search)
+    if is_verified is not None:
+        queryset = queryset.filter(is_verified=is_verified)
+    if is_unlimited_minutes is not None:
+        queryset = queryset.filter(is_unlimited_minutes=is_unlimited_minutes)
+    if plan_payment is not None:
+        queryset = queryset.filter(plan_payment=plan_payment)
+    if is_active is not None:
+        queryset = queryset.filter(is_active=is_active)
 
-    paginator = Paginator(queryset, 1)
+    paginator = Paginator(queryset, 10)
 
     try:
         devices = paginator.page(page)
@@ -71,26 +84,50 @@ def phones_list(request, *args, **kwargs):
     my_context = {
         "Title": _("Phones List"),
         "queryset": devices,
-        "search": search,
         "page": page,
+        "search": search,
+        "is_verified": is_verified,
+        "is_unlimited_minutes": is_unlimited_minutes,
+        "plan_payment": plan_payment,
+        "is_active": is_active,
+
     }
 
     return render(request, "pages/dashboard/phones_list.html", my_context)
 
 
+@login_required
 def financial_view(request, *args, **kwargs):
     if request.method == "POST":
-        form = PaymentMethodForm(request.POST)
+        pm_id = request.POST.get("pm-id", None)
+        if pm_id:
+            pm_obj = get_object_or_404(PaymentMethod, pk=pm_id, user=request.user)
+            data = {
+                "id": pm_obj.id,
+                "account_name": pm_obj.account_name,
+                "account_number": pm_obj.account_number,
+                "bank_name": pm_obj.bank_name,
+                "swift_number": request.POST.get("swift_number", None),
+                "iban_number": request.POST.get("iban_number", None),
+            }
+            form = PaymentMethodForm(instance=pm_obj, data=data)
+            success_message = _("Bank Account {bank_name} updated successfully")
+        else:
+            form = PaymentMethodForm(request.POST)
+            success_message = _("Bank Account {bank_name} was added successfully")
+
         if form.is_valid():
             payment = form.save(commit=False)
-            payment.user = request.user
+            if not pm_id:
+                payment.user = request.user
             payment.save()
-            fancy_message(request, _(f"Bank Account {payment.bank_name} was added successfully"), level="success")
+            fancy_message(request, success_message.format(bank_name=payment.bank_name), level="success")
             return redirect("main:financial")
         else:
-            fancy_message(request, _(f"Please makesure your have fill the form correctly"), level="error")
+            fancy_message(request, _("Please make sure you have filled the form correctly"), level="error")
     else:
         form = PaymentMethodForm()
+
     queryset = PaymentMethod.objects.filter(user=request.user)
     my_context = {
         "Title": _("Manage your financial"),
@@ -98,6 +135,14 @@ def financial_view(request, *args, **kwargs):
         "form": form,
     }
     return render(request, "pages/dashboard/financial.html", my_context)
+
+
+@login_required
+def delete_payment_method_view(request, pk, *args, **kwargs):
+    queryset = get_object_or_404(PaymentMethod, pk=pk, user=request.user)
+    queryset.delete()
+    fancy_message(request, _(f"Bank Account {queryset.bank_name} was deleted successfully"), level="success")
+    return redirect("main:financial")
 
 
 @login_required
@@ -111,4 +156,3 @@ def settings_view(request, *args, **kwargs):
         "password_form": password_form,
     }
     return render(request, "pages/dashboard/settings.html", my_context)
-

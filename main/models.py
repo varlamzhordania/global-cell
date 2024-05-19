@@ -145,7 +145,7 @@ class PaymentMethod(BaseModel):
         verbose_name = _("Payment Method")
         verbose_name_plural = _("Payment Methods")
         indexes = [
-            models.Index(fields=['account_number']),
+            models.Index(fields=['user', 'account_number']),
         ]
         ordering = ['user', 'bank_name']
         unique_together = (('user', 'account_number'),)
@@ -155,15 +155,26 @@ class PaymentMethod(BaseModel):
 
     @property
     def get_account_number_display(self):
-        account_number_length = len(self.account_number)
-        if account_number_length <= 4:
-            # If account number is very short, just return it as is (should be rare given the regex validator).
-            return self.account_number
-        # Show the first 4 and last 4 digits, mask the middle part
-        # start = self.account_number[:4]
-        end = self.account_number[-4:]
-        masked = '*' * (account_number_length - 4)
-        return f"{masked} {end}"
+        return self.mask_number(self.account_number)
+
+    @property
+    def get_swift_number_display(self):
+        return self.mask_number(self.swift_number)
+
+    @property
+    def get_iban_number_display(self):
+        return self.mask_number(self.iban_number)
+
+    def mask_number(self, number):
+        if not number:
+            return ""
+        length = len(number)
+        if length <= 4:
+            return number
+        start = number[:4]
+        end = number[-4:]
+        masked = '*' * (length - 8)
+        return f"{start}{masked}{end}"
 
 
 # class DigitalBanking(models.Model):
@@ -203,7 +214,7 @@ class Device(BaseModel):
         related_name="devices",
         on_delete=models.CASCADE
     )
-    sim_number = PhoneNumberField(verbose_name=_("SIM Number"), blank=False, null=False, unique=True)
+    sim_number = PhoneNumberField(verbose_name=_("SIM Number"), blank=False, null=False)
     mobile_carrier = models.CharField(
         max_length=100,
         verbose_name=_("Mobile Carrier"),
@@ -247,6 +258,15 @@ class Device(BaseModel):
         blank=True,
         default=0,
     )
+    earned = models.DecimalField(
+        max_digits=10,
+        decimal_places=2,
+        verbose_name=_("Earned"),
+        help_text=_("Total earned"),
+        default=0,
+        validators=[MinValueValidator(0)],
+        blank=True,
+    )
     is_verified = models.BooleanField(verbose_name="Verified", default=False)
     is_active = models.BooleanField(verbose_name=_("Is Active"), default=False)
 
@@ -254,6 +274,76 @@ class Device(BaseModel):
         verbose_name = _("Device")
         verbose_name_plural = _("Devices")
         ordering = ["-created_at"]
+        unique_together = (("user", "sim_number", "is_active"),)
 
     def __str__(self):
         return f"{self.user}'s Device"
+
+
+class Notification(BaseModel):
+    class PriorityChoices(models.TextChoices):
+        LOW = "Low", _("Low")
+        MEDIUM = "Medium", _("Medium")
+        HIGH = "High", _("High")
+
+    user = models.ForeignKey(
+        get_user_model(),
+        related_name="notifications",
+        on_delete=models.CASCADE
+    )
+    device = models.ForeignKey(
+        Device,
+        on_delete=models.CASCADE,
+        related_name="notifications",
+        verbose_name=_("Device"),
+        blank=True,
+        null=True,
+        help_text=_("If the notification related to this device")
+    )
+    payment_method = models.ForeignKey(
+        PaymentMethod,
+        on_delete=models.CASCADE,
+        related_name="notifications",
+        verbose_name=_("Bank Account"),
+        blank=True,
+        null=True,
+        help_text=_("If the notification related to this bank account")
+    )
+    title = models.CharField(max_length=255, verbose_name=_("Title"), blank=False, null=False)
+    message = models.TextField(verbose_name=_("Message"), blank=False, null=False)
+    has_seen = models.BooleanField(
+        verbose_name=_("Has Seen"),
+        default=False,
+        help_text=_("Has User Seen Notification?")
+    )
+    is_active = models.BooleanField(verbose_name=_("Visibility"), default=True)
+    priority = models.CharField(
+        max_length=20,
+        choices=PriorityChoices.choices,
+        default=PriorityChoices.MEDIUM,
+        verbose_name=_("Priority")
+    )
+
+    class Meta:
+        verbose_name = _("Notification")
+        verbose_name_plural = _("Notifications")
+        ordering = ['-created_at']
+        indexes = [
+            models.Index(fields=['user', 'has_seen']),
+            models.Index(fields=['is_active', 'priority']),
+        ]
+
+    def __str__(self):
+        return f"{self.id} - {self.title}"
+
+    def mark_as_seen(self):
+        self.has_seen = True
+        self.save(update_fields=['has_seen'])
+
+    def mark_as_unseen(self):
+        self.has_seen = False
+        self.save(update_fields=['has_seen'])
+
+    def soft_delete(self):
+        self.is_active = False
+        self.save(update_fields=['is_active'])

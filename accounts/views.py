@@ -6,7 +6,7 @@ from django.utils.translation import gettext as _
 
 from core.utils import fancy_message
 
-from .forms import UserForm, PasswordChangeForm
+from .forms import UserForm, PasswordChangeForm, CustomUserCreationForm
 from .decorators import unauthenticated_user
 
 
@@ -30,6 +30,27 @@ def login_view(request, *args, **kwargs):
         "Title": _("Sign In")
     }
     return render(request, "pages/main/login.html", my_context)
+
+
+@unauthenticated_user
+def register_view(request):
+    if request.method == 'POST':
+        form = CustomUserCreationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            fancy_message(
+                request,
+                _('Congratulations! You have successfully registered your account.'),
+                level="success"
+            )
+            return redirect('accounts:login')
+    else:
+        form = CustomUserCreationForm()
+    my_context = {
+        "Title": _("Sign Up"),
+        "form": form
+    }
+    return render(request, "pages/main/register.html", my_context)
 
 
 @login_required
