@@ -7,7 +7,7 @@ services:
       context: ./web
     volumes:
       - ./web/:/home/global-cell/web
-      - ./cert/:/home/global-cell
+      - ./cert/:/home/global-cell/cert
     command: >
       bash -c "python manage.py makemigrations && python manage.py migrate && gunicorn -c conf/gunicorn_conf.py core.wsgi:application"
     expose:

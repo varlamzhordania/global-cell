@@ -1,9 +1,9 @@
-# pythonpath = '/home/campaign/backend'
+# pythonpath = '/home/global-cell/backend'
 bind = '0.0.0.0:8000'
 workers = 5
 timeout = 120
-certfile = '/home/campaign/cert.crt'
-keyfile = '/home/campaign/private.key'
+certfile = '/home/global-cell/cert/cert.crt'
+keyfile = '/home/global-cell/cert/private.key'
 # Access log - records incoming HTTP requests
 #accesslog = "/var/log/gunicorn/gunicorn.access.log"
 # Error log - records Gunicorn server goings-on
