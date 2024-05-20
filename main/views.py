@@ -3,25 +3,39 @@ from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from django.utils.translation import gettext as _
 from django.views.decorators.http import require_POST
+from django.core.cache import cache
 
 from core.utils import fancy_message
 from accounts.forms import UserForm, PasswordChangeForm
+from settings.models import Page, Slide
 
 from .models import Device, Country, PaymentMethod
 from .forms import DeviceForm, PaymentMethodForm
 
 
 def home_view(request, *args, **kwargs):
+    page_data = cache.get("home_page")
+
+    if page_data is not None:
+        page = page_data
+    else:
+        page = Page.objects.filter(type=Page.TypeChoices.HOME).first()
+        cache.set('home_page', page, 900)
+
     my_context = {
         "Title": _("Welcome To Global Cell"),
+        "page": page,
     }
     return render(request, "pages/main/home.html", my_context)
 
 
 @login_required
 def dashboard_view(request, *args, **kwargs):
+    slides = Slide.objects.filter(is_active=True)
+
     my_context = {
-        "Title": _("Dashboard")
+        "Title": _("Dashboard"),
+        "slides": slides,
     }
     return render(request, "pages/dashboard/main.html", my_context)
 

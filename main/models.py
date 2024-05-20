@@ -2,6 +2,9 @@ from django.core.validators import MinValueValidator, MaxValueValidator, RegexVa
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 from django.contrib.auth import get_user_model
+from django.utils.deconstruct import deconstructible
+from django.utils import timezone
+
 from phonenumber_field.modelfields import PhoneNumberField
 
 
@@ -12,6 +15,18 @@ class BaseModel(models.Model):
 
     class Meta:
         abstract = True
+
+
+@deconstructible
+class UploadPath:
+    def __init__(self, folder, sub_path):
+        self.folder = folder
+        self.sub_path = sub_path
+
+    def __call__(self, instance, filename):
+        timestamp = timezone.now().strftime("%Y%m%d_%H%M%S")
+        extension = filename.split(".")[-1]
+        return f"{self.folder}/{self.sub_path}/{timestamp}.{extension}"
 
 
 class Country(models.Model):

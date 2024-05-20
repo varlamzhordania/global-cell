@@ -1,20 +1,57 @@
 {% load static %}
+{% load i18n %}
+{% load custom_filters %}
+{% get_current_language as CURRENT_LANGUAGE %}
+{% get_available_languages as AVAILABLE_LANGUAGES %}
+{% get_language_info_list for AVAILABLE_LANGUAGES as languages %}
 
 <!DOCTYPE html>
-<html lang="en" class="dark primary-scrollbar ">
-
+<html lang="{{ CURRENT_LANGUAGE }}" style="overflow-x: hidden"
+      dir="{% if CURRENT_LANGUAGE == 'ar' %}rtl{% else %}ltr{% endif %}" class="dark primary-scrollbar ">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ Title }}</title>
+    {% with seo=page.page_seo %}
+        {% if seo %}
+            <!-- SEO Title -->
+            <title>{{ seo.seo_title }}</title>
+
+            <!-- SEO Description -->
+            <meta name="description" content=" {{ seo.seo_description }}">
+
+            <!-- Canonical URL -->
+            <link rel="canonical" href="{{ seo.seo_canonical }}">
+
+            <!-- Keywords Meta Tag (if needed) -->
+            <meta name="keywords" content="{{ seo.seo_keywords }}">
+
+            <!-- Open Graph (OG) Tags for Social Media Sharing -->
+            <meta property="og:title" content="{{ seo.seo_title }}">
+            <meta property="og:description" content="{{ seo.seo_description }}">
+            <meta property="og:url" content="{{ seo.seo_canonical }}">
+            {#            <meta property="og:image" content="{% static 'your-og-image.jpg' %}">#}
+
+            <!-- Twitter Card Tags for Twitter Sharing (if needed) -->
+            <meta name="twitter:card" content="summary">
+            <meta name="twitter:title" content="{{ seo.seo_title }}">
+            <meta name="twitter:description" content="{{ seo.seo_description }}">
+            {#            <meta name="twitter:image" content="{% static 'your-twitter-image.jpg' %}">#}
+            <script type="application/ld+json">
+                {{ seo.json_ld_data|safe }}
+            </script>
+        {% else %}
+            <title>{% trans Title %}</title>
+        {% endif %}
+
+    {% endwith %}
 
     <link rel="stylesheet" href="{% static 'src/output.css' %}">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
           rel="stylesheet">
 </head>
 
-<body>
+<body class="overflow-x-hidden">
 {% include 'layouts/components/toast.html' %}
 {% include 'layouts/components/navbar.html' %}
 {% block content %}

@@ -3,8 +3,10 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.http import require_POST
 from django.utils.translation import gettext as _
+from django.core.cache import cache
 
 from core.utils import fancy_message
+from settings.models import Page
 
 from .forms import UserForm, PasswordChangeForm, CustomUserCreationForm
 from .decorators import unauthenticated_user
@@ -26,8 +28,17 @@ def login_view(request, *args, **kwargs):
         else:
             fancy_message(request, _('Email and password is required.'), level="error")
 
+    page_data = cache.get("login_page")
+
+    if page_data is not None:
+        page = page_data
+    else:
+        page = Page.objects.filter(type=Page.TypeChoices.SIGNIN).first()
+        cache.set('login_page', page, 900)
+
     my_context = {
-        "Title": _("Sign In")
+        "Title": _("Sign In"),
+        "page": page
     }
     return render(request, "pages/main/login.html", my_context)
 
@@ -46,9 +57,19 @@ def register_view(request):
             return redirect('accounts:login')
     else:
         form = CustomUserCreationForm()
+
+    page_data = cache.get("register_page")
+
+    if page_data is not None:
+        page = page_data
+    else:
+        page = Page.objects.filter(type=Page.TypeChoices.SIGNUP).first()
+        cache.set('register_page', page, 900)
+
     my_context = {
         "Title": _("Sign Up"),
-        "form": form
+        "form": form,
+        "page": page,
     }
     return render(request, "pages/main/register.html", my_context)
 

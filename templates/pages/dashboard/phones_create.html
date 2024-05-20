@@ -17,7 +17,7 @@
                           d="m1 9 4-4-4-4"/>
                 </svg>
                 <a
-                   class="breadcrumbs-item ms-2">
+                        class="breadcrumbs-item ms-2">
                     {% translate 'Phones' %}
                 </a>
             </li>
@@ -28,7 +28,7 @@
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                               d="m1 9 4-4-4-4"/>
                     </svg>
-                   <span class="breadcrumbs-item active">
+                    <span class="breadcrumbs-item active">
                         {% translate 'Create' %}
                     </span>
                 </div>
@@ -96,7 +96,11 @@
                                                     </button>
                                                 </li>
                                             {% empty %}
-                                                <li>no country supported</li>
+                                                <li>
+                                                    <p class="px-4 py-2">
+                                                        {% translate 'No country supported yet' %}
+                                                    <p/>
+                                                </li>
                                             {% endfor %}
 
 

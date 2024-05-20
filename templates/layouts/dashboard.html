@@ -6,7 +6,7 @@
 {% get_language_info_list for AVAILABLE_LANGUAGES as languages %}
 
 <!DOCTYPE html>
-<html lang="en" class="dark primary-scrollbar">
+<html lang="{{ CURRENT_LANGUAGE }}" style="overflow-x: hidden" dir="{% if CURRENT_LANGUAGE == 'ar' %}rtl{% else %}ltr{% endif %}" class="dark primary-scrollbar ">
 
 <head>
     <meta charset="UTF-8">
@@ -30,7 +30,7 @@
 {% include 'layouts/components/sidebar.html' %}
 <div class="flex flex-col gap-2 w-full h-dvh max-h-dvh overflow-y-auto primary-scrollbar">
     <section class="w-full bg-white dark:bg-gray-800  flex justify-between items-center">
-        <div class="p-4">
+        <div class="p-4 flex justify-between items-center gap-2 w-full">
             <button data-drawer-target="default-sidebar" data-drawer-toggle="default-sidebar"
                     aria-controls="default-sidebar"
                     type="button"

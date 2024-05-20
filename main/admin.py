@@ -8,8 +8,6 @@ from .models import Device, Country, PaymentMethod, Notification
 from .forms import NotificationForm
 
 
-# Register your models here.
-
 @admin.register(Notification)
 class NotificationAdmin(admin.ModelAdmin):
     list_display = ('id', 'user', 'title', 'has_seen', 'is_active', 'priority', 'created_at', 'updated_at',)

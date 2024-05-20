@@ -4,14 +4,14 @@
     <div class="container my-10">
         <article class="prose lg:prose-xl text-center w-full mx-auto">
             <h3 class="text-white font-bold ">{% translate 'Join the Movement' %}</h3>
-            <p class="text-slate-300">
+            <p class="text-slate-300 text-lg">
                 {% blocktranslate %}
                     Are you ready to be part of a global revolution in communication? Join us as a cellular partner and
                     contribute your unused Android devices to our network. Together, we can redefine the way the world
                     communicates, making international calling more convenient, affordable, and accessible for everyone.
                 {% endblocktranslate %}
             </p>
-        <a class="btn btn-white w-1/3 mx-auto " role="button" href="#">{% translate 'Join Now' %}</a>
+        <a class="btn btn-white w-1/3 mx-auto " role="button" href="{% url 'main:dashboard' %}">{% translate 'Join Now' %}</a>
         </article>
     </div>
 </section>

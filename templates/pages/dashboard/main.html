@@ -1,21 +1,27 @@
 {% extends 'layouts/dashboard.html' %}
+{% load static %}
 {% load i18n %}
-{% block breadcrumb %}
-    <nav class="flex" aria-label="Breadcrumb">
-        <ol class="breadcrumbs">
-            <li aria-current="page">
-                <div class="flex items-center">
-                    <span class="breadcrumbs-item active">
-                        {% translate 'Dashboard' %}
-                    </span>
-                </div>
-            </li>
-        </ol>
-    </nav>
-{% endblock %}
 {% block content %}
-    <h1>Main Dashboard</h1>
-    <div class="h-full">
-        test
+    <div class="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-3 gap-4">
+        <section class="col-span-1 lg:col-span-3 xl:col-span-2">
+            {% include 'pages/dashboard/components/slider.html' with data=slides %}
+        </section>
+        <section class="col-span-1 lg:col-span-1 card h-fit">
+            <div class="card-content prose lg:prose-xl !justify-center !items-center !gap-0">
+                <div class="aspect-square">
+                    <img src="{% static 'img/phone.svg' %}" alt="{% trans 'Add picture' %}" class="w-full h-full"/>
+                </div>
+                <h3 class="text-white !mt-0">
+                    {% trans 'Add Your Phone' %}
+                </h3>
+                <p class="body1 text-center">
+                    {% blocktranslate %}
+                        Please fill out the form carefully. Ensure all information is correct. Once submitted, our
+                        support team will review your submission and approve if everything is in order.
+                    {% endblocktranslate %}
+                </p>
+                <a href="{% url 'main:phones_create' %}" class="btn btn-primary">Add Phone</a>
+            </div>
+        </section>
     </div>
 {% endblock %}
