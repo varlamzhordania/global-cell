@@ -1,0 +1,160 @@
+{% load i18n %}
+<div>
+    <button type="button" data-dropdown-toggle="notification-dropdown"
+            class="relative inline-flex justify-center p-2 text-gray-500 rounded cursor-pointer dark:hover:text-white dark:text-gray-400 hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-600">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+             class="lucide lucide-bell">
+            <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/>
+            <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/>
+        </svg>
+        {% if unseen_notifications.exists %}
+            <span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-red-500" id="notification-bullet"></span>
+        {% endif %}
+
+    </button>
+    <!-- Dropdown -->
+    <div class="notification-dropdown" id="notification-dropdown">
+        <div class="w-full flex justify-between items-center mb-4">
+            <span class="text-base font-medium text-black dark:text-gray-300">{% trans 'Notifications' %}</span>
+            <button class="bg-transparent text-gray-200 dark:text-gray-300" id="notifications-mark-all">
+                {% trans 'Mark all as read' %}
+            </button>
+        </div>
+        <div class="!border-t-0 w-full">
+            <ul class="flex flex-wrap px-2 -mb-px text-sm font-medium text-center" id="notification-tab"
+                data-tabs-toggle="#default-tab-content" role="tablist"
+                data-tabs-active-classes="text-primary hover:text-primary dark:text-primary-400 dark:hover:text-primary-500 border-primary dark:border-primary-400"
+                data-tabs-inactive-classes="dark:border-transparent text-gray-500 hover:text-gray-600 dark:text-gray-400 border-gray-100 hover:border-gray-300 dark:border-gray-700 dark:hover:text-gray-300"
+            >
+                <li class="me-2" role="presentation">
+                    <button class="inline-block px-4 py-2 border-b-2 rounded-t-lg" id="inbox-tab"
+                            data-tabs-target="#inbox" type="button" role="tab" aria-controls="inbox"
+                            aria-selected="false">
+                        Inbox
+                    </button>
+                </li>
+            </ul>
+        </div>
+        <div id="notification-tab-content" class="dark:!border-gray-600">
+            <div class="hidden rounded-lg bg-gray-50 py-1 dark:bg-transparent" id="inbox"
+                 role="tabpanel"
+                 aria-labelledby="inbox-tab">
+                <ul class="h-64 flex flex-col justify-start items-start overflow-y-auto primary-scrollbar w-full"
+                    role="none">
+                    {% for notification in notifications %}
+                        <li data-id="{{ notification.id }}"
+                            class="flex flex-row gap-2 justify-start items-center w-full border-b border-gray-600 px-2 py-3 {% if not notification.has_seen %}notification-not-seen{% endif %} hover:bg-gray-600">
+                            <div class="p-1 border rounded-full bg-primary-200 text-black">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                     viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                     class="lucide lucide-megaphone">
+                                    <path d="m3 11 18-5v12L3 14v-3z"/>
+                                    <path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/>
+                                </svg>
+                            </div>
+                            <div class="flex flex-col gap-1 justify-start items-start">
+                                <div class="flex items-start justify-start gap-1">
+                                    <span class="text-base">{{ notification.message }}</span>
+                                    <span class="h-2 w-2 rounded-full bg-info !bg-{{ notification.status|lower }}"></span>
+                                </div>
+                                <span class="text-sm text-gray-300 dark:text-gray-400">{{ notification.get_time_since_created }}</span>
+                            </div>
+                        </li>
+                    {% empty %}
+                        <li class="flex flex-row gap-2 justify-center items-center w-full border-b border-gray-600 px-2 py-3 hover:bg-gray-600">
+                            <p class="text-base w-full text-center">{% trans 'Your Inbox Is Empty' %}</p>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const csrftoken = '{{ csrf_token }}';
+        const notSeenNotifications = document.querySelectorAll(".notification-not-seen");
+        const markAllSeen = document.getElementById("notifications-mark-all");
+
+        const fetchRequest = async (url, method, body = null) => {
+            const headers = {
+                "X-CSRFToken": csrftoken,
+            };
+
+            const options = {
+                method: method,
+                headers: headers,
+            };
+
+            if (body) {
+                const formData = new FormData()
+                Object.keys(body).forEach(key => {
+                    formData.append(key, body[key])
+                })
+                options.body = formData;
+            }
+
+            try {
+                const response = await fetch(url, options);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                return await response.json();
+            } catch (error) {
+                console.error(`Fetch error: ${error.message}`);
+                return {success: false};
+            }
+        };
+
+        const markNotificationAsSeen = async (id) => {
+            const url = '{% url "settings:notification_seen" %}';
+            const response = await fetchRequest(url, "POST", {id: id});
+            return response.success;
+        };
+
+        const markAllNotificationsAsSeen = async () => {
+            const url = '{% url "settings:notification_all_seen" %}';
+            const response = await fetchRequest(url, "POST");
+            return response.success;
+        };
+
+        const checkUnseenNotificationExist = () => {
+            const els = document.querySelectorAll(".notification-not-seen")
+            return els.length
+        }
+
+        markAllSeen.addEventListener("click", async () => {
+            const success = await markAllNotificationsAsSeen();
+            if (success) {
+                notSeenNotifications.forEach(item => {
+                    item.classList.remove("notification-not-seen");
+                });
+                if (checkUnseenNotificationExist() <= 0) {
+
+                    document.getElementById("notification-bullet").classList.add("hidden")
+                }
+            } else {
+                console.error("Failed to mark all notifications as seen.");
+            }
+        });
+
+
+        notSeenNotifications.forEach(item => {
+            item.addEventListener("click", async (e) => {
+                const id = e.currentTarget.getAttribute("data-id");
+                const success = await markNotificationAsSeen(id);
+                if (success) {
+                    item.classList.remove("notification-not-seen");
+                    if (checkUnseenNotificationExist() <= 0) {
+                        document.getElementById("notification-bullet").classList.add("hidden")
+                    }
+                } else {
+                    console.error("Failed to mark notification as seen.");
+                }
+            });
+        });
+    });
+</script>

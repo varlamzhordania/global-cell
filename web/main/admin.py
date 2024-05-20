@@ -4,15 +4,10 @@ from django.shortcuts import redirect
 from django.urls import path
 from django.contrib.auth import get_user_model
 
-from .models import Device, Country, PaymentMethod, Notification
+from settings.models import Notification
+
+from .models import Device, Country, PaymentMethod
 from .forms import NotificationForm
-
-
-@admin.register(Notification)
-class NotificationAdmin(admin.ModelAdmin):
-    list_display = ('id', 'user', 'title', 'has_seen', 'is_active', 'priority', 'created_at', 'updated_at',)
-    list_filter = ('has_seen', 'is_active', 'priority', 'created_at', 'updated_at',)
-    search_fields = ('id', 'title', 'user',)
 
 
 class NotificationInline(admin.StackedInline):
@@ -47,6 +42,11 @@ class PaymentMethodAdmin(admin.ModelAdmin):
     list_filter = ("is_active",)
     search_fields = ("id", 'user__username', 'account_number')
     inlines = [NotificationInline]
+    fieldsets = (
+        ('General', {"fields": ('user', 'country', 'is_active')}),
+        ('Bank Information', {"fields": ('bank_name', 'account_name', 'account_number')}),
+        ('International Information', {"fields": ('swift_number', 'iban_number')}),
+    )
 
     def action(self, obj):
         if obj.is_active:
@@ -101,3 +101,8 @@ class DeviceAdmin(admin.ModelAdmin):
     list_filter = ('is_unlimited_minutes', 'is_verified', 'is_active',)
     search_fields = ("id", 'user', 'sim_number')
     inlines = [NotificationInline]
+    fieldsets = (
+        ('General', {"fields": ('user', 'is_verified', 'is_active')}),
+        ('SIM Information', {"fields": ('sim_number', 'mobile_carrier')}),
+        ('Plan', {"fields": ('plan_name', 'plan_payment', 'plan_cost', 'plan_length', 'is_unlimited_minutes')}),
+    )

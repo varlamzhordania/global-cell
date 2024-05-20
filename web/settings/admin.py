@@ -2,10 +2,16 @@ from django.contrib import admin
 
 from parler.admin import TranslatableStackedInline, TranslatableAdmin
 
-from .models import Page, Seo, Slide
+from .models import Page, Seo, Slide, Notification
 
 
 # Register your models here.
+
+@admin.register(Notification)
+class NotificationAdmin(admin.ModelAdmin):
+    list_display = ('id', 'user', 'message', 'has_seen', 'is_active', 'priority', 'status', 'created_at', 'updated_at',)
+    list_filter = ('has_seen', 'is_active', 'priority', 'status', 'created_at', 'updated_at',)
+    search_fields = ('id', 'message', 'user',)
 
 
 @admin.register(Slide)
@@ -36,5 +42,5 @@ class PageAdmin(TranslatableAdmin):
     list_filter = ["type", "is_active", "created_at", "updated_at"]
     inlines = [SeoStackedInline]
     fieldsets = (
-        ('General', {"fields": ('type', 'video', 'video_poster','is_active')}),
+        ('General', {"fields": ('type', 'video', 'video_poster', 'is_active')}),
     )

@@ -1,14 +1,16 @@
 from django import forms
-from main.models import Device, PaymentMethod, Notification, Country
 from django.utils.translation import gettext_lazy as _
-
 from django.contrib.auth import get_user_model
+
+from settings.models import Notification
+
+from .models import Device, PaymentMethod, Country
 
 
 class NotificationForm(forms.ModelForm):
     class Meta:
         model = Notification
-        fields = ['user', 'device', 'payment_method', 'title', 'message', 'has_seen', 'is_active']
+        fields = ['user', 'device', 'payment_method', 'message', 'has_seen', 'is_active']
 
 
 class PaymentMethodForm(forms.ModelForm):

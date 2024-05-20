@@ -29,6 +29,7 @@ urlpatterns = i18n_patterns(
     path('admin/', admin.site.urls),
     path('', include('main.urls', namespace="main")),
     path('', include('accounts.urls', namespace="accounts")),
+    path('', include('settings.urls', namespace="settings")),
     path(
         "reset_password/",
         auth_views.PasswordResetView.as_view(
