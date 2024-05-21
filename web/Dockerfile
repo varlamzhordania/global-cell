@@ -1,13 +1,13 @@
 FROM python:3.11
 
-WORKDIR /home/global-cell
+WORKDIR /home/global-cell/web
 
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
 RUN apt-get update
 
-COPY ./requirements.txt /home/global-cell
+COPY ./requirements.txt /home/global-cell/web
 
 RUN pip install --upgrade pip
 
