@@ -1,0 +1,17 @@
+{% load i18n %}
+{% load static %}
+<div class="card-content prose lg:prose-xl !justify-center !items-center !gap-0">
+    <div class="aspect-square w-72">
+        <img src="{% static 'img/phone.svg' %}" alt="{% trans 'Add picture' %}" class="w-full h-full"/>
+    </div>
+    <h3 class="text-white">
+        {% trans 'Add Your Phone' %}
+    </h3>
+    <p class="body1 text-center">
+        {% blocktranslate %}
+            Please fill out the form carefully. Ensure all information is correct. Once submitted, our
+            support team will review your submission and approve if everything is in order.
+        {% endblocktranslate %}
+    </p>
+    <a href="{% url 'main:phones_create' %}" class="btn btn-primary">Add Phone</a>
+</div>

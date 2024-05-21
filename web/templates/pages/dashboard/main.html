@@ -7,21 +7,7 @@
             {% include 'pages/dashboard/components/slider.html' with data=slides %}
         </section>
         <section class="col-span-1 lg:col-span-1 card h-fit">
-            <div class="card-content prose lg:prose-xl !justify-center !items-center !gap-0">
-                <div class="aspect-square">
-                    <img src="{% static 'img/phone.svg' %}" alt="{% trans 'Add picture' %}" class="w-full h-full"/>
-                </div>
-                <h3 class="text-white !mt-0">
-                    {% trans 'Add Your Phone' %}
-                </h3>
-                <p class="body1 text-center">
-                    {% blocktranslate %}
-                        Please fill out the form carefully. Ensure all information is correct. Once submitted, our
-                        support team will review your submission and approve if everything is in order.
-                    {% endblocktranslate %}
-                </p>
-                <a href="{% url 'main:phones_create' %}" class="btn btn-primary">Add Phone</a>
-            </div>
+            {% include 'pages/dashboard/components/add_phone.html' %}
         </section>
     </div>
 {% endblock %}
