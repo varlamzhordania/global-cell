@@ -6,8 +6,11 @@
 {% get_language_info_list for AVAILABLE_LANGUAGES as languages %}
 
 <!DOCTYPE html>
-<html lang="{{ CURRENT_LANGUAGE }}" style="overflow-x: hidden"
-      dir="{% if CURRENT_LANGUAGE == 'ar' %}rtl{% else %}ltr{% endif %}" class="dark primary-scrollbar ">
+{% if CURRENT_LANGUAGE == 'ar' %}
+<html lang="{{ CURRENT_LANGUAGE }}" style="overflow-x: hidden" dir="rtl" class="rtl dark primary-scrollbar ">
+{% else %}
+<html lang="{{ CURRENT_LANGUAGE }}" style="overflow-x: hidden" dir="ltr" class="ltr dark primary-scrollbar ">
+{% endif %}
 
 <head>
     <meta charset="UTF-8">
@@ -43,7 +46,7 @@
                           d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"></path>
                 </svg>
             </button>
-            <div class="border-2 dark:border-gray-700 dark:bg-gray-600 p-1 px-3 rounded-md flex justify-center items-center">
+            <div class="border-2 dark:border-gray-700 dark:bg-gray-600 p-1 px-3 rounded-md hidden md:flex justify-center items-center">
                 {% blocktrans with fund=request.user.get_wallet_display %}
                     Wallet : {{ fund }}
                 {% endblocktrans %}
@@ -51,7 +54,7 @@
 
         </div>
         <div>
-            <div class="flex justify-center p-4 space-x-4 w-full lg:flex bg-white dark:bg-gray-800 z-20 border-r border-gray-200 dark:border-gray-700">
+            <div class="flex justify-center p-4 gap-2 w-full lg:flex bg-white dark:bg-gray-800 z-20">
                 {% include 'layouts/components/notification.html' %}
                 <div>
                     <a href="{% url 'main:settings' %}" data-tooltip-target="tooltip-settings"
@@ -111,7 +114,6 @@
                         </ul>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>

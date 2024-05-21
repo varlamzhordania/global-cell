@@ -1,43 +1,61 @@
 import logging
-from django.db import transaction
-from django.views.decorators.http import require_POST
-from django.contrib.auth.decorators import login_required
+from rest_framework.generics import ListAPIView
+from rest_framework import status
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework.permissions import IsAuthenticated
 from django.shortcuts import get_object_or_404
-from django.http import JsonResponse
+from django.db import transaction
 
 from .models import Notification
+from .serializers import NotificationSerializer
 
 logger = logging.getLogger(__name__)
 
 
-@require_POST
-@login_required
-def notification_seen_view(request):
-    id = request.POST.get('id')
-    print(request.POST)
-    if not id:
-        return JsonResponse({'success': False, 'error': 'No ID provided'}, status=400)
+class NotificationList(ListAPIView):
+    permission_classes = [IsAuthenticated]
+    serializer_class = NotificationSerializer
 
-    try:
-        notification = get_object_or_404(Notification, id=id, user=request.user)
-        notification.mark_as_seen()
-        return JsonResponse({'success': True}, status=200)
-    except Notification.DoesNotExist:
-        return JsonResponse({'success': False, 'error': 'Notification not found'}, status=404)
-    except Exception as e:
-        logger.error(f"Error marking notification as seen: {e}")
-        return JsonResponse({'success': False, 'error': 'Internal server error'}, status=500)
+    def get_queryset(self):
+        return Notification.objects.filter(user=self.request.user, is_active=True)
 
 
-@require_POST
-@login_required
-@transaction.atomic
-def notification_all_seen_view(request):
-    try:
-        notifications = Notification.objects.filter(user=request.user, has_seen=False)
-        if notifications.exists():
-            notifications.update(has_seen=True)
-        return JsonResponse({'success': True}, status=200)
-    except Exception as e:
-        logger.error(f"Error marking all notifications as seen: {e}")
-        return JsonResponse({'success': False, 'error': 'Internal server error'}, status=500)
+class NotificationSeenView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def post(self, request):
+        notification_id = request.data.get('id')
+        if not notification_id:
+            return Response({'success': False, 'error': 'No ID provided'}, status=status.HTTP_400_BAD_REQUEST)
+
+        try:
+            notification = get_object_or_404(Notification, id=notification_id, user=request.user)
+            notification.mark_as_seen()
+            return Response({'success': True}, status=status.HTTP_200_OK)
+        except Notification.DoesNotExist:
+            return Response({'success': False, 'error': 'Notification not found'}, status=status.HTTP_404_NOT_FOUND)
+        except Exception as e:
+            logger.error(f"Error marking notification as seen: {e}")
+            return Response(
+                {'success': False, 'error': 'Internal server error'},
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR
+            )
+
+
+class NotificationAllSeenView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    @transaction.atomic
+    def post(self, request):
+        try:
+            notifications = Notification.objects.filter(user=request.user, has_seen=False)
+            if notifications.exists():
+                notifications.update(has_seen=True)
+            return Response({'success': True}, status=status.HTTP_200_OK)
+        except Exception as e:
+            logger.error(f"Error marking all notifications as seen: {e}")
+            return Response(
+                {'success': False, 'error': 'Internal server error'},
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR
+            )

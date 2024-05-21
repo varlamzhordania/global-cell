@@ -40,33 +40,11 @@
             <div class="hidden rounded-lg bg-gray-50 py-1 dark:bg-transparent" id="inbox"
                  role="tabpanel"
                  aria-labelledby="inbox-tab">
-                <ul class="h-64 flex flex-col justify-start items-start overflow-y-auto primary-scrollbar w-full"
-                    role="none">
-                    {% for notification in notifications %}
-                        <li data-id="{{ notification.id }}"
-                            class="flex flex-row gap-2 justify-start items-center w-full border-b border-gray-600 px-2 py-3 {% if not notification.has_seen %}notification-not-seen{% endif %} hover:bg-gray-600">
-                            <div class="p-1 border rounded-full bg-primary-200 text-black">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                     viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                     class="lucide lucide-megaphone">
-                                    <path d="m3 11 18-5v12L3 14v-3z"/>
-                                    <path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/>
-                                </svg>
-                            </div>
-                            <div class="flex flex-col gap-1 justify-start items-start">
-                                <div class="flex items-start justify-start gap-1">
-                                    <span class="text-base">{{ notification.message }}</span>
-                                    <span class="h-2 w-2 rounded-full bg-info !bg-{{ notification.status|lower }}"></span>
-                                </div>
-                                <span class="text-sm text-gray-300 dark:text-gray-400">{{ notification.get_time_since_created }}</span>
-                            </div>
-                        </li>
-                    {% empty %}
-                        <li class="flex flex-row gap-2 justify-center items-center w-full border-b border-gray-600 px-2 py-3 hover:bg-gray-600">
-                            <p class="text-base w-full text-center">{% trans 'Your Inbox Is Empty' %}</p>
-                        </li>
-                    {% endfor %}
+                <ul class="notification-wrapper"
+                    role="none" id="notification-inbox">
+                    <li class="notification-wrapper-empty">
+                        <p class="text-base w-full text-center">{% trans 'Your Inbox Is Empty' %}</p>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -76,12 +54,16 @@
 <script>
     document.addEventListener("DOMContentLoaded", () => {
         const csrftoken = '{{ csrf_token }}';
-        const notSeenNotifications = document.querySelectorAll(".notification-not-seen");
+        let notSeenNotifications = null
         const markAllSeen = document.getElementById("notifications-mark-all");
+        const notificationInbox = document.getElementById("notification-inbox");
+
 
         const fetchRequest = async (url, method, body = null) => {
             const headers = {
                 "X-CSRFToken": csrftoken,
+                "Content-Type": "application/json",
+                "Accept": "application/json",
             };
 
             const options = {
@@ -90,11 +72,7 @@
             };
 
             if (body) {
-                const formData = new FormData()
-                Object.keys(body).forEach(key => {
-                    formData.append(key, body[key])
-                })
-                options.body = formData;
+                options.body = JSON.stringify(body);
             }
 
             try {
@@ -106,6 +84,72 @@
             } catch (error) {
                 console.error(`Fetch error: ${error.message}`);
                 return {success: false};
+            }
+        };
+
+        const renderNotification = (notification) => {
+            const notificationItem = document.createElement("li");
+            const priority = {
+                Low:"info",
+                Medium:"warning",
+                High:"danger",
+            }
+            notificationItem.dataset.id = notification.id;
+            notificationItem.className = `notification-wrapper-item ${notification.has_seen ? '' : 'notification-not-seen'}`;
+            notificationItem.innerHTML = `
+                <div class="relative p-1 border rounded-full bg-primary-200 text-black mt-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-megaphone">
+                        <path d="m3 11 18-5v12L3 14v-3z"/>
+                        <path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/>
+                    </svg>
+                    <span class="absolute -top-[4px] -left-[5px] rtl:-top-[4px] rtl:-right-[5px] h-2 w-2 rounded-full notification-priority ${notification.status.toLowerCase()}"></span>
+                </div>
+                <div class="flex flex-col gap-1 justify-start items-start">
+                    <div class="flex items-start justify-start gap-1">
+                        <span class="text-sm">${notification.message}</span>
+                    </div>
+                    <div class="flex flex-row gap-1 justify-start items-center">
+                        <span class="text-sm text-gray-300 dark:text-gray-400">${notification.time_since}</span>
+                        <div class="w-[1px] h-4 bg-gray-400"></div>
+                        <span class="badge badge-${priority[notification.priority]}">${notification.priority}</span>
+                    </div>
+                </div>
+        `;
+
+            if (!notification.has_seen) {
+                notificationItem.addEventListener("click", async (e) => {
+                    const id = e.currentTarget.getAttribute("data-id");
+                    const success = await markNotificationAsSeen(id);
+                    if (success) {
+                        notificationItem.classList.remove("notification-not-seen");
+                        if (checkUnseenNotificationExist() <= 0) {
+                            document.getElementById("notification-bullet").classList.add("hidden")
+                        }
+                    } else {
+                        console.error("Failed to mark notification as seen.");
+                    }
+                });
+            }
+
+            return notificationItem;
+        };
+
+        const loadInbox = async () => {
+            const url = '{% url "settings:notification_list" %}';
+            const response = await fetchRequest(url, "GET");
+
+            if (response && response.length > 0) {
+                notificationInbox.innerHTML = ''
+                response.forEach(notification => {
+                    const notificationItem = renderNotification(notification);
+                    notificationInbox.appendChild(notificationItem);
+                });
+
+            } else {
+                const emptyMessage = document.createElement("li");
+                emptyMessage.className = "notification-wrapper-empty";
+                emptyMessage.innerHTML = `<p class="text-base w-full text-center">{% trans 'Your Inbox Is Empty' %}</p>`;
+                notificationInbox.appendChild(emptyMessage);
             }
         };
 
@@ -126,9 +170,13 @@
             return els.length
         }
 
+
+        loadInbox()
+
         markAllSeen.addEventListener("click", async () => {
             const success = await markAllNotificationsAsSeen();
             if (success) {
+                notSeenNotifications = document.querySelectorAll(".notification-not-seen");
                 notSeenNotifications.forEach(item => {
                     item.classList.remove("notification-not-seen");
                 });
@@ -139,22 +187,6 @@
             } else {
                 console.error("Failed to mark all notifications as seen.");
             }
-        });
-
-
-        notSeenNotifications.forEach(item => {
-            item.addEventListener("click", async (e) => {
-                const id = e.currentTarget.getAttribute("data-id");
-                const success = await markNotificationAsSeen(id);
-                if (success) {
-                    item.classList.remove("notification-not-seen");
-                    if (checkUnseenNotificationExist() <= 0) {
-                        document.getElementById("notification-bullet").classList.add("hidden")
-                    }
-                } else {
-                    console.error("Failed to mark notification as seen.");
-                }
-            });
         });
     });
 </script>

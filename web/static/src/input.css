@@ -188,6 +188,42 @@
         hidden z-50 my-4 text-base list-none bg-white rounded-lg divide-y divide-gray-100 shadow dark:bg-gray-700 w-96 px-4 py-2
     }
 
+    .notification-wrapper {
+        @apply
+        h-64 flex flex-col justify-start items-start overflow-y-auto primary-scrollbar w-full
+    }
+
+    .notification-wrapper-item {
+        @apply
+        flex flex-row gap-2 justify-start items-start w-full border-b border-gray-600 px-3 py-3 hover:bg-gray-600
+    }
+
+    .notification-wrapper-empty {
+        @apply
+        flex flex-row gap-2 justify-center items-center w-full border-b border-gray-600 px-2 py-3 hover:bg-gray-600
+    }
+
+    .notification-priority {
+        @apply
+        bg-info
+    }
+    .notification-priority.success {
+        @apply
+        bg-success
+    }
+    .notification-priority.error {
+        @apply
+        bg-danger
+    }
+    .notification-priority.warning {
+        @apply
+        bg-warning
+    }
+    .notification-priority.info {
+        @apply
+        bg-info
+    }
+
     .notification-not-seen {
         @apply
         bg-gray-200 dark:bg-gray-600 cursor-pointer

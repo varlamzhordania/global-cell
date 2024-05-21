@@ -27,6 +27,7 @@ from .views import set_language
 
 urlpatterns = i18n_patterns(
     path('admin/', admin.site.urls),
+    path('api-auth/', include('rest_framework.urls')),
     path('', include('main.urls', namespace="main")),
     path('', include('accounts.urls', namespace="accounts")),
     path('', include('settings.urls', namespace="settings")),

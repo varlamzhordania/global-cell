@@ -48,8 +48,8 @@ def phones_create(request, *args, **kwargs):
             device = form.save(commit=False)
             device.user = request.user
             device.save()
-            fancy_message(request, _(f"Device {device} was add successfully"), level="success")
-            return redirect("main:phones")
+            fancy_message(request, _(f"Device {device.sim_number} was add successfully"), level="success")
+            return redirect("main:phones_list")
         else:
             fancy_message(request, _(f"Please makesure your have fill the form correctly"), level="error")
     else:

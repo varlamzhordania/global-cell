@@ -8,16 +8,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-20 22:40+0400\n"
-"PO-Revision-Date: 2024-05-18 18:03+0000\n"
+"POT-Creation-Date: 2024-05-21 12:50+0400\n"
+"PO-Revision-Date: 2024-05-21 12:51+0000\n"
 "Last-Translator:   <admin@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
-"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 "X-Translated-Using: django-rosetta 0.10.0\n"
 
 #: .\accounts\forms.py:12
@@ -137,7 +136,7 @@ msgstr ""
 msgid "Email and password is required."
 msgstr ""
 
-#: .\accounts\views.py:40 .\settings\models.py:45
+#: .\accounts\views.py:40 .\settings\models.py:132
 #: .\templates\pages\main\register.html:56
 msgid "Sign In"
 msgstr ""
@@ -146,7 +145,7 @@ msgstr ""
 msgid "Congratulations! You have successfully registered your account."
 msgstr ""
 
-#: .\accounts\views.py:70 .\settings\models.py:46
+#: .\accounts\views.py:70 .\settings\models.py:133
 msgid "Sign Up"
 msgstr ""
 
@@ -162,36 +161,36 @@ msgstr ""
 msgid "You have been logged out."
 msgstr ""
 
-#: .\core\settings\settings.py:123
+#: .\core\settings\settings.py:125
 msgid "English"
 msgstr ""
 
-#: .\core\settings\settings.py:124
+#: .\core\settings\settings.py:126
 msgid "French"
 msgstr ""
 
-#: .\core\settings\settings.py:125
+#: .\core\settings\settings.py:127
 msgid "Spanish"
 msgstr ""
 
-#: .\core\settings\settings.py:126
+#: .\core\settings\settings.py:128
 msgid "Arabic"
 msgstr ""
 
-#: .\main\forms.py:26 .\main\forms.py:29 .\main\forms.py:33 .\main\forms.py:36
-#: .\main\forms.py:40
+#: .\main\forms.py:28 .\main\forms.py:31 .\main\forms.py:35 .\main\forms.py:38
+#: .\main\forms.py:42
 msgid "Enter the name of the account"
 msgstr ""
 
-#: .\main\forms.py:53
+#: .\main\forms.py:55
 msgid "Enter the name of the company"
 msgstr ""
 
-#: .\main\forms.py:57
+#: .\main\forms.py:59
 msgid "Enter the name of the plan"
 msgstr ""
 
-#: .\main\forms.py:60
+#: .\main\forms.py:62
 msgid "Enter the cost of the plan "
 msgstr ""
 
@@ -203,7 +202,7 @@ msgstr ""
 msgid "Date Updated"
 msgstr ""
 
-#: .\main\models.py:14 .\main\models.py:286
+#: .\main\models.py:14 .\main\models.py:287
 msgid "Is Active"
 msgstr ""
 
@@ -295,128 +294,92 @@ msgstr ""
 msgid "IBAN number must be between 15 and 34 characters."
 msgstr ""
 
-#: .\main\models.py:160
-msgid "Payment Method"
+#: .\main\models.py:158 .\templates\pages\dashboard\phones_list.html:205
+msgid "Verified"
 msgstr ""
 
 #: .\main\models.py:161
+msgid "Payment Method"
+msgstr ""
+
+#: .\main\models.py:162
 msgid "Payment Methods"
 msgstr ""
 
-#: .\main\models.py:224
+#: .\main\models.py:225
 msgid "Post Paid"
 msgstr ""
 
-#: .\main\models.py:225
+#: .\main\models.py:226
 msgid "Pre Paid"
 msgstr ""
 
-#: .\main\models.py:232
+#: .\main\models.py:233
 msgid "SIM Number"
 msgstr ""
 
-#: .\main\models.py:235
+#: .\main\models.py:236
 msgid "Mobile Carrier"
 msgstr ""
 
-#: .\main\models.py:241
+#: .\main\models.py:242
 msgid "Plan Payment"
 msgstr ""
 
-#: .\main\models.py:246
+#: .\main\models.py:247
 msgid "Plan Name"
 msgstr ""
 
-#: .\main\models.py:253
+#: .\main\models.py:254
 msgid "Plan Cost"
 msgstr ""
 
-#: .\main\models.py:254
+#: .\main\models.py:255
 msgid "Plan cost Based on USD Dollar ($)"
 msgstr ""
 
-#: .\main\models.py:260
+#: .\main\models.py:261
 msgid "Plan Length (Months)"
 msgstr ""
 
-#: .\main\models.py:267 .\templates\pages\dashboard\phones_list.html:204
+#: .\main\models.py:268 .\templates\pages\dashboard\phones_list.html:204
 msgid "Unlimited Minutes"
 msgstr ""
 
-#: .\main\models.py:271
+#: .\main\models.py:272
 msgid "Total Minutes"
 msgstr ""
 
-#: .\main\models.py:279
+#: .\main\models.py:280
 msgid "Earned"
 msgstr ""
 
-#: .\main\models.py:280
+#: .\main\models.py:281
 msgid "Total earned"
 msgstr ""
 
-#: .\main\models.py:289 .\main\models.py:313
+#: .\main\models.py:290 .\settings\models.py:35
 msgid "Device"
 msgstr ""
 
-#: .\main\models.py:290
+#: .\main\models.py:291
 msgid "Devices"
 msgstr ""
 
-#: .\main\models.py:300
-msgid "Low"
+#: .\main\signals.py:20
+#, python-format
+msgid ""
+"Your new phone with SIM number '%(sim_number)s' will be reviewed soon by our"
+" support team."
 msgstr ""
+"ستتم مراجعة هاتفك الجديد الذي يحمل رقم SIM '%(sim_number)s' قريبًا بواسطة "
+"فريق الدعم لدينا."
 
-#: .\main\models.py:301
-msgid "Medium"
-msgstr ""
-
-#: .\main\models.py:302
-msgid "High"
-msgstr ""
-
-#: .\main\models.py:316
-msgid "If the notification related to this device"
-msgstr ""
-
-#: .\main\models.py:322
-msgid "Bank Account"
-msgstr ""
-
-#: .\main\models.py:325
-msgid "If the notification related to this bank account"
-msgstr ""
-
-#: .\main\models.py:327 .\settings\models.py:13
-msgid "Title"
-msgstr ""
-
-#: .\main\models.py:328
-msgid "Message"
-msgstr ""
-
-#: .\main\models.py:330
-msgid "Has Seen"
-msgstr ""
-
-#: .\main\models.py:332
-msgid "Has User Seen Notification?"
-msgstr ""
-
-#: .\main\models.py:334
-msgid "Visibility"
-msgstr ""
-
-#: .\main\models.py:339
-msgid "Priority"
-msgstr ""
-
-#: .\main\models.py:343
-msgid "Notification"
-msgstr ""
-
-#: .\main\models.py:344
-msgid "Notifications"
+#: .\main\signals.py:35
+#, python-format
+msgid ""
+"Your new bank account '%(account_name)s' will be reviewed soon by our "
+"support team."
 msgstr ""
 
 #: .\main\views.py:26
@@ -433,7 +396,7 @@ msgstr ""
 
 #: .\main\views.py:51
 #, python-brace-format
-msgid "Device {device} was add successfully"
+msgid "Device {device.sim_number} was add successfully"
 msgstr ""
 
 #: .\main\views.py:54
@@ -476,120 +439,202 @@ msgstr ""
 msgid "Settings"
 msgstr ""
 
-#: .\settings\models.py:15
-msgid "Short Description"
+#: .\settings\models.py:16
+msgid "Low"
+msgstr ""
+
+#: .\settings\models.py:17
+msgid "Medium"
 msgstr ""
 
 #: .\settings\models.py:18
-msgid "A short description of the slide"
+msgid "High"
+msgstr ""
+
+#: .\settings\models.py:21
+msgid "Success"
+msgstr ""
+
+#: .\settings\models.py:22
+msgid "Error"
 msgstr ""
 
 #: .\settings\models.py:23
+#, fuzzy
+#| msgid "Earnings"
+msgid "Warning"
+msgstr "الأرباح"
+
+#: .\settings\models.py:24
+msgid "Info"
+msgstr ""
+
+#: .\settings\models.py:38
+msgid "If the notification related to this device"
+msgstr ""
+
+#: .\settings\models.py:44
+msgid "Bank Account"
+msgstr ""
+
+#: .\settings\models.py:47
+msgid "If the notification related to this bank account"
+msgstr ""
+
+#: .\settings\models.py:49
+msgid "Message"
+msgstr ""
+
+#: .\settings\models.py:51
+msgid "Has Seen"
+msgstr ""
+
+#: .\settings\models.py:53
+msgid "Has User Seen Notification?"
+msgstr ""
+
+#: .\settings\models.py:55
+msgid "Visibility"
+msgstr ""
+
+#: .\settings\models.py:60
+msgid "Priority"
+msgstr ""
+
+#: .\settings\models.py:66 .\templates\pages\dashboard\phones_list.html:206
+msgid "Status"
+msgstr ""
+
+#: .\settings\models.py:70
+msgid "Notification"
+msgstr ""
+
+#: .\settings\models.py:71 .\templates\layouts\components\notification.html:19
+msgid "Notifications"
+msgstr ""
+
+#: .\settings\models.py:96
+msgid "ago"
+msgstr "منذ"
+
+#: .\settings\models.py:100
+msgid "Title"
+msgstr ""
+
+#: .\settings\models.py:102
+msgid "Short Description"
+msgstr ""
+
+#: .\settings\models.py:105
+msgid "A short description of the slide"
+msgstr ""
+
+#: .\settings\models.py:110
 #: .\venv\Lib\site-packages\django\db\models\fields\files.py:393
 msgid "Image"
 msgstr ""
 
-#: .\settings\models.py:30
+#: .\settings\models.py:117
 msgid "Slide"
 msgstr ""
 
-#: .\settings\models.py:31
+#: .\settings\models.py:118
 msgid "Slides"
 msgstr ""
 
-#: .\settings\models.py:40
+#: .\settings\models.py:127
 msgid "Home Page"
 msgstr ""
 
-#: .\settings\models.py:41 .\templates\layouts\components\navbar.html:30
+#: .\settings\models.py:128 .\templates\layouts\components\navbar.html:30
 msgid "About"
 msgstr ""
 
-#: .\settings\models.py:42
+#: .\settings\models.py:129
 msgid "Contact us"
 msgstr ""
 
-#: .\settings\models.py:43
+#: .\settings\models.py:130
 msgid "Privacy Policy"
 msgstr ""
 
-#: .\settings\models.py:44
+#: .\settings\models.py:131
 msgid "Terms Page"
 msgstr ""
 
-#: .\settings\models.py:61
+#: .\settings\models.py:148
 msgid "Video File"
 msgstr ""
 
-#: .\settings\models.py:62
+#: .\settings\models.py:149
 msgid "Video file is uploaded to your website."
 msgstr ""
 
-#: .\settings\models.py:68
+#: .\settings\models.py:155
 msgid "Video Poster"
 msgstr ""
 
-#: .\settings\models.py:69
+#: .\settings\models.py:156
 msgid "Upload the video poster."
 msgstr ""
 
-#: .\settings\models.py:74
+#: .\settings\models.py:161
 msgid "Page"
 msgstr ""
 
-#: .\settings\models.py:75
+#: .\settings\models.py:162
 msgid "Pages"
 msgstr ""
 
-#: .\settings\models.py:84
+#: .\settings\models.py:171
 msgid "Belonging Page"
 msgstr ""
 
-#: .\settings\models.py:88
+#: .\settings\models.py:175
 msgid "Seo Title"
 msgstr ""
 
-#: .\settings\models.py:89
+#: .\settings\models.py:176
 msgid "For SEO purposes, ideally between 60-70 characters."
 msgstr ""
 
-#: .\settings\models.py:92
+#: .\settings\models.py:179
 msgid "Seo Description"
 msgstr ""
 
-#: .\settings\models.py:93
+#: .\settings\models.py:180
 msgid "For SEO purposes, ideally between 150-160 characters."
 msgstr ""
 
-#: .\settings\models.py:96
+#: .\settings\models.py:183
 msgid "Seo Keywords"
 msgstr ""
 
-#: .\settings\models.py:97
+#: .\settings\models.py:184
 msgid "Comma-separated list of keywords."
 msgstr ""
 
-#: .\settings\models.py:100
+#: .\settings\models.py:187
 msgid "Seo Canonical"
 msgstr ""
 
-#: .\settings\models.py:102
+#: .\settings\models.py:189
 msgid "Seo Robot Index"
 msgstr ""
 
-#: .\settings\models.py:103
+#: .\settings\models.py:190
 msgid "Set to allow search engines to index this page."
 msgstr ""
 
-#: .\settings\models.py:106
+#: .\settings\models.py:193
 msgid "Seo Robot Follow"
 msgstr ""
 
-#: .\settings\models.py:107
+#: .\settings\models.py:194
 msgid "Set to allow search engines to follow links on this page."
 msgstr ""
 
-#: .\settings\models.py:115 .\settings\models.py:116
+#: .\settings\models.py:202 .\settings\models.py:203
 msgid "SEO"
 msgstr ""
 
@@ -603,8 +648,7 @@ msgstr ""
 #: .\templates\400.html:19
 msgid ""
 "\n"
-"                        We're sorry, but it seems that there's been a bad "
-"request.\n"
+"                        We're sorry, but it seems that there's been a bad request.\n"
 "                        Please double-check the URL and try again.\n"
 "                    "
 msgstr ""
@@ -639,10 +683,8 @@ msgstr ""
 #: .\templates\500.html:19
 msgid ""
 "\n"
-"                        We're sorry, but it seems that there's been an "
-"internal server error.\n"
-"                        Our team has been notified and will work to fix it "
-"as soon as possible.\n"
+"                        We're sorry, but it seems that there's been an internal server error.\n"
+"                        Our team has been notified and will work to fix it as soon as possible.\n"
 "                    "
 msgstr ""
 
@@ -656,6 +698,15 @@ msgstr ""
 
 #: .\templates\layouts\components\navbar.html:40
 msgid "Be Partner"
+msgstr ""
+
+#: .\templates\layouts\components\notification.html:21
+msgid "Mark all as read"
+msgstr ""
+
+#: .\templates\layouts\components\notification.html:46
+#: .\templates\layouts\components\notification.html:151
+msgid "Your Inbox Is Empty"
 msgstr ""
 
 #: .\templates\layouts\components\sidebar.html:19
@@ -683,7 +734,7 @@ msgstr ""
 msgid "Financial"
 msgstr ""
 
-#: .\templates\layouts\dashboard.html:46
+#: .\templates\layouts\dashboard.html:50
 #, python-format
 msgid ""
 "\n"
@@ -702,13 +753,10 @@ msgstr ""
 #: .\templates\pages\dashboard\components\line_chart.html:18
 msgid ""
 "\n"
-"                                    This report illustrates the incremental "
-"growth of earnings over time. It is designed\n"
+"                                    This report illustrates the incremental growth of earnings over time. It is designed\n"
 "                                    to\n"
-"                                    help you track gradual increases in "
-"revenue, ideally showing a consistently upward\n"
-"                                    trend. A flat or declining chart may "
-"indicate areas of concern in revenue generation\n"
+"                                    help you track gradual increases in revenue, ideally showing a consistently upward\n"
+"                                    trend. A flat or declining chart may indicate areas of concern in revenue generation\n"
 "                                    that need attention.\n"
 "                                "
 msgstr ""
@@ -732,39 +780,31 @@ msgstr ""
 
 #: .\templates\pages\dashboard\components\line_chart.html:50
 #: .\templates\pages\dashboard\components\line_chart.html:59
-#: .\templates\pages\dashboard\financial.html:384
-#: .\templates\pages\dashboard\financial.html:545
+#: .\templates\pages\dashboard\financial.html:307
+#: .\templates\pages\dashboard\financial.html:468
 msgid "Withdrawal"
 msgstr ""
 
 #: .\templates\pages\dashboard\components\line_chart.html:61
 msgid ""
 "\n"
-"                                    This report provides insights into "
-"withdrawal activities over time. It tracks the\n"
+"                                    This report provides insights into withdrawal activities over time. It tracks the\n"
 "                                    volume\n"
-"                                    and frequency of withdrawals, helping to "
-"identify trends and patterns. A consistent\n"
+"                                    and frequency of withdrawals, helping to identify trends and patterns. A consistent\n"
 "                                    or\n"
-"                                    increasing withdrawal trend may indicate "
-"growing user engagement, while a decline\n"
+"                                    increasing withdrawal trend may indicate growing user engagement, while a decline\n"
 "                                    could\n"
-"                                    suggest potential issues that need to be "
-"addressed.\n"
+"                                    suggest potential issues that need to be addressed.\n"
 "                                "
 msgstr ""
 
 #: .\templates\pages\dashboard\components\line_chart.html:74
 msgid ""
 "\n"
-"                                    For each date bucket, the cumulative "
-"volume of activities is calculated. This means\n"
-"                                    that activities in period n include all "
-"activities up to and including period n,\n"
-"                                    plus any new activities generated during "
-"that period. This comprehensive approach\n"
-"                                    provides a complete view of activity "
-"growth over time.\n"
+"                                    For each date bucket, the cumulative volume of activities is calculated. This means\n"
+"                                    that activities in period n include all activities up to and including period n,\n"
+"                                    plus any new activities generated during that period. This comprehensive approach\n"
+"                                    provides a complete view of activity growth over time.\n"
 "                                "
 msgstr ""
 
@@ -772,35 +812,35 @@ msgstr ""
 msgid "Report"
 msgstr ""
 
-#: .\templates\pages\dashboard\financial.html:235
+#: .\templates\pages\dashboard\financial.html:158
 msgid "Date"
 msgstr ""
 
-#: .\templates\pages\dashboard\financial.html:236
+#: .\templates\pages\dashboard\financial.html:159
 msgid "Activity"
 msgstr ""
 
-#: .\templates\pages\dashboard\financial.html:237
+#: .\templates\pages\dashboard\financial.html:160
 msgid "Description"
 msgstr ""
 
-#: .\templates\pages\dashboard\financial.html:238
+#: .\templates\pages\dashboard\financial.html:161
 msgid "Amount"
 msgstr ""
 
-#: .\templates\pages\dashboard\financial.html:239
+#: .\templates\pages\dashboard\financial.html:162
 msgid "Bank"
 msgstr ""
 
-#: .\templates\pages\dashboard\financial.html:377
+#: .\templates\pages\dashboard\financial.html:300
 msgid "Digital Wallet"
 msgstr ""
 
-#: .\templates\pages\dashboard\financial.html:379
+#: .\templates\pages\dashboard\financial.html:302
 msgid "Current Amount :"
 msgstr ""
 
-#: .\templates\pages\dashboard\financial.html:540
+#: .\templates\pages\dashboard\financial.html:463
 #: .\templates\pages\main\components\earnings.html:8
 msgid "Earning"
 msgstr ""
@@ -819,10 +859,8 @@ msgstr ""
 #: .\templates\pages\dashboard\phones_create.html:50
 msgid ""
 "\n"
-"                        Please fill out the form carefully. Ensure all "
-"information is correct. Once submitted, our\n"
-"                        support team will review your submission and approve "
-"if everything is in order.\n"
+"                        Please fill out the form carefully. Ensure all information is correct. Once submitted, our\n"
+"                        support team will review your submission and approve if everything is in order.\n"
 "                    "
 msgstr ""
 
@@ -848,14 +886,6 @@ msgstr ""
 
 #: .\templates\pages\dashboard\phones_list.html:203
 msgid "Plan Length"
-msgstr ""
-
-#: .\templates\pages\dashboard\phones_list.html:205
-msgid "Verified"
-msgstr ""
-
-#: .\templates\pages\dashboard\phones_list.html:206
-msgid "Status"
 msgstr ""
 
 #: .\templates\pages\dashboard\phones_list.html:208
@@ -897,36 +927,27 @@ msgstr ""
 #: .\templates\pages\main\components\about.html:13
 msgid ""
 "\n"
-"                            At Global Cellular Partners, we lead the charge "
-"in telecommunications innovation, leveraging\n"
-"                            cutting-edge technology to transform "
-"international communication. Our unique approach\n"
+"                            At Global Cellular Partners, we lead the charge in telecommunications innovation, leveraging\n"
+"                            cutting-edge technology to transform international communication. Our unique approach\n"
 "                            harnesses\n"
 "                            the\n"
-"                            power of unused Android devices, breathing new "
-"life into them as integral components of our\n"
+"                            power of unused Android devices, breathing new life into them as integral components of our\n"
 "                            global\n"
-"                            network. By seamlessly connecting clients "
-"worldwide to local call rates through our digital\n"
-"                            infrastructure, we ensure affordable and "
-"accessible communication for all.\n"
+"                            network. By seamlessly connecting clients worldwide to local call rates through our digital\n"
+"                            infrastructure, we ensure affordable and accessible communication for all.\n"
 "                        "
 msgstr ""
 
 #: .\templates\pages\main\components\about.html:26
 msgid ""
 "\n"
-"                            At the heart of our mission is a commitment to "
-"unlocking earning potential while promoting\n"
-"                            sustainable technology use. Our Cellular "
-"Partners program empowers individuals to earn\n"
+"                            At the heart of our mission is a commitment to unlocking earning potential while promoting\n"
+"                            sustainable technology use. Our Cellular Partners program empowers individuals to earn\n"
 "                            passive\n"
-"                            income effortlessly, with no investment or labor "
-"required. Through this program,\n"
+"                            income effortlessly, with no investment or labor required. Through this program,\n"
 "                            participants\n"
 "                            can\n"
-"                            earn up to $2000 a month, simply by allowing "
-"their unused Android devices to contribute to\n"
+"                            earn up to $2000 a month, simply by allowing their unused Android devices to contribute to\n"
 "                            our\n"
 "                            network.\n"
 "                        "
@@ -935,11 +956,9 @@ msgstr ""
 #: .\templates\pages\main\components\about.html:40
 msgid ""
 "\n"
-"                            Join us at Global Cellular Partners and become "
-"part of a transformative movement towards\n"
+"                            Join us at Global Cellular Partners and become part of a transformative movement towards\n"
 "                            affordable,\n"
-"                            convenient, and sustainable international "
-"communication. Together, we're connecting the\n"
+"                            convenient, and sustainable international communication. Together, we're connecting the\n"
 "                            world,\n"
 "                            one\n"
 "                            call at a time.\n"
@@ -949,19 +968,13 @@ msgstr ""
 #: .\templates\pages\main\components\earnings.html:10
 msgid ""
 "\n"
-"                            At Global Cellular Partners, we present you with "
-"the most innovative way to earn up to <strong class=\"text-white\">$2000</"
-"strong>\n"
+"                            At Global Cellular Partners, we present you with the most innovative way to earn up to <strong class=\"text-white\">$2000</strong>\n"
 "                            a\n"
-"                            month without any investment or labor required. "
-"By utilizing unused Android phones, you can\n"
+"                            month without any investment or labor required. By utilizing unused Android phones, you can\n"
 "                            earn\n"
-"                            over <strong class=\"text-white\">$100</strong> "
-"per phone per month effortlessly. As a Cellular Partner, you'll earn  "
-"<strong class=\"text-white\">$0.02</strong> cents\n"
+"                            over <strong class=\"text-white\">$100</strong> per phone per month effortlessly. As a Cellular Partner, you'll earn  <strong class=\"text-white\">$0.02</strong> cents\n"
 "                            per\n"
-"                            call minute that passes through your phone. It's "
-"that simple!\n"
+"                            call minute that passes through your phone. It's that simple!\n"
 "                        "
 msgstr ""
 
@@ -976,18 +989,13 @@ msgstr ""
 #: .\templates\pages\main\components\faq.html:10
 msgid ""
 "\n"
-"                            Welcome to our FAQ section! Here, we've compiled "
-"a list of commonly asked questions to\n"
+"                            Welcome to our FAQ section! Here, we've compiled a list of commonly asked questions to\n"
 "                            provide\n"
-"                            you with quick and helpful answers. Whether "
-"you're curious about our products, services, or\n"
-"                            policies, you'll likely find the information you "
-"need below. If you don't see your question\n"
-"                            listed, feel free to reach out to our support "
-"team, and we'll be happy to assist you\n"
+"                            you with quick and helpful answers. Whether you're curious about our products, services, or\n"
+"                            policies, you'll likely find the information you need below. If you don't see your question\n"
+"                            listed, feel free to reach out to our support team, and we'll be happy to assist you\n"
 "                            further.\n"
-"                            Browse through the questions and click on each "
-"one to reveal the answer.\n"
+"                            Browse through the questions and click on each one to reveal the answer.\n"
 "                        "
 msgstr ""
 
@@ -998,42 +1006,33 @@ msgstr ""
 #: .\templates\pages\main\components\faq.html:37
 msgid ""
 "\n"
-"                                    How does Global Cellular Partners "
-"revolutionize international calls?\n"
+"                                    How does Global Cellular Partners revolutionize international calls?\n"
 "                                "
 msgstr ""
 
 #: .\templates\pages\main\components\faq.html:51
 msgid ""
 "\n"
-"                                    Global Cellular Partners revolutionizes "
-"international calls by utilizing a network\n"
-"                                    of over 100 cellular partners worldwide. "
-"Through interconnected Android devices, we\n"
-"                                    provide seamless connectivity and "
-"affordable communication solutions, allowing users\n"
-"                                    to make international calls at local "
-"call rates.\n"
+"                                    Global Cellular Partners revolutionizes international calls by utilizing a network\n"
+"                                    of over 100 cellular partners worldwide. Through interconnected Android devices, we\n"
+"                                    provide seamless connectivity and affordable communication solutions, allowing users\n"
+"                                    to make international calls at local call rates.\n"
 "                                "
 msgstr ""
 
 #: .\templates\pages\main\components\faq.html:72
 msgid ""
 "\n"
-"                                    What is the earning potential for "
-"cellular partners with Global Cellular Partners?\n"
+"                                    What is the earning potential for cellular partners with Global Cellular Partners?\n"
 "                                "
 msgstr ""
 
 #: .\templates\pages\main\components\faq.html:86
 msgid ""
 "\n"
-"                                    Cellular partners have the potential to "
-"earn up to $2000 a month with zero\n"
-"                                    investment and zero labor required. By "
-"contributing their unused Android devices to\n"
-"                                    our network, partners can earn revenue "
-"for every minute of call traffic that passes\n"
+"                                    Cellular partners have the potential to earn up to $2000 a month with zero\n"
+"                                    investment and zero labor required. By contributing their unused Android devices to\n"
+"                                    our network, partners can earn revenue for every minute of call traffic that passes\n"
 "                                    through their phones.\n"
 "                                "
 msgstr ""
@@ -1041,42 +1040,33 @@ msgstr ""
 #: .\templates\pages\main\components\faq.html:107
 msgid ""
 "\n"
-"                                    How does the technology behind Global "
-"Cellular Partners work?\n"
+"                                    How does the technology behind Global Cellular Partners work?\n"
 "                                "
 msgstr ""
 
 #: .\templates\pages\main\components\faq.html:121
 msgid ""
 "\n"
-"                                    Our technology works by routing "
-"international calls through our VoIP servers to\n"
-"                                    specific Android devices in our cellular "
-"partners network. These devices, located in\n"
-"                                    the destination countries, establish "
-"local calls and facilitate seamless\n"
-"                                    communication between our clients and "
-"local partners.\n"
+"                                    Our technology works by routing international calls through our VoIP servers to\n"
+"                                    specific Android devices in our cellular partners network. These devices, located in\n"
+"                                    the destination countries, establish local calls and facilitate seamless\n"
+"                                    communication between our clients and local partners.\n"
 "                                "
 msgstr ""
 
 #: .\templates\pages\main\components\faq.html:142
 msgid ""
 "\n"
-"                                    What are the benefits of joining Global "
-"Cellular Partners as a cellular partner?\n"
+"                                    What are the benefits of joining Global Cellular Partners as a cellular partner?\n"
 "                                "
 msgstr ""
 
 #: .\templates\pages\main\components\faq.html:156
 msgid ""
 "\n"
-"                                    Joining Global Cellular Partners offers "
-"several benefits, including passive income\n"
-"                                    generation, flexibility to work from "
-"anywhere, no upfront investment required, and\n"
-"                                    easy setup. Partners can earn money "
-"effortlessly by letting their unused Android\n"
+"                                    Joining Global Cellular Partners offers several benefits, including passive income\n"
+"                                    generation, flexibility to work from anywhere, no upfront investment required, and\n"
+"                                    easy setup. Partners can earn money effortlessly by letting their unused Android\n"
 "                                    phones work for them.\n"
 "                                "
 msgstr ""
@@ -1091,12 +1081,9 @@ msgstr ""
 #: .\templates\pages\main\components\hero.html:13
 msgid ""
 "\n"
-"                At Global Cellular Partners, we're revolutionizing the way "
-"international calls are made and terminated.\n"
-"                Our mission is to create a vast network of cellular partners "
-"spanning over 100 countries worldwide, all\n"
-"                united in providing seamless connectivity and affordable "
-"communication solutions.\n"
+"                At Global Cellular Partners, we're revolutionizing the way international calls are made and terminated.\n"
+"                Our mission is to create a vast network of cellular partners spanning over 100 countries worldwide, all\n"
+"                united in providing seamless connectivity and affordable communication solutions.\n"
 "            "
 msgstr ""
 
@@ -1115,12 +1102,9 @@ msgstr ""
 #: .\templates\pages\main\components\join_us.html:8
 msgid ""
 "\n"
-"                    Are you ready to be part of a global revolution in "
-"communication? Join us as a cellular partner and\n"
-"                    contribute your unused Android devices to our network. "
-"Together, we can redefine the way the world\n"
-"                    communicates, making international calling more "
-"convenient, affordable, and accessible for everyone.\n"
+"                    Are you ready to be part of a global revolution in communication? Join us as a cellular partner and\n"
+"                    contribute your unused Android devices to our network. Together, we can redefine the way the world\n"
+"                    communicates, making international calling more convenient, affordable, and accessible for everyone.\n"
 "                "
 msgstr ""
 
@@ -1157,12 +1141,9 @@ msgstr ""
 #: .\templates\pages\main\components\vision.html:33
 msgid ""
 "\n"
-"                                At Global Cellular Partners, our vision "
-"extends beyond borders. We're tirelessly working\n"
-"                                towards building a global network of "
-"cellular partners spanning over 100 countries. This\n"
-"                                expansive reach ensures that communication "
-"knows no bounds, offering widespread coverage\n"
+"                                At Global Cellular Partners, our vision extends beyond borders. We're tirelessly working\n"
+"                                towards building a global network of cellular partners spanning over 100 countries. This\n"
+"                                expansive reach ensures that communication knows no bounds, offering widespread coverage\n"
 "                                and\n"
 "                                accessibility to our users worldwide.\n"
 "                            "
@@ -1175,15 +1156,11 @@ msgstr ""
 #: .\templates\pages\main\components\vision.html:53
 msgid ""
 "\n"
-"                                We believe in the power of untapped "
-"potential. By unlocking the earning power of unused\n"
-"                                Android devices, we're not just revitalizing "
-"technology, but also transforming lives.\n"
-"                                Through the collective contribution of our "
-"partners, we're breathing new life into\n"
+"                                We believe in the power of untapped potential. By unlocking the earning power of unused\n"
+"                                Android devices, we're not just revitalizing technology, but also transforming lives.\n"
+"                                Through the collective contribution of our partners, we're breathing new life into\n"
 "                                devices,\n"
-"                                while simultaneously extending our digital "
-"footprint across the globe.\n"
+"                                while simultaneously extending our digital footprint across the globe.\n"
 "                            "
 msgstr ""
 
@@ -1194,16 +1171,12 @@ msgstr ""
 #: .\templates\pages\main\components\vision.html:77
 msgid ""
 "\n"
-"                                In a world where distances shrink and "
-"connections grow stronger, affordability shouldn't\n"
+"                                In a world where distances shrink and connections grow stronger, affordability shouldn't\n"
 "                                be\n"
-"                                a barrier. Our interconnected network of "
-"Android devices forms the backbone of seamless\n"
-"                                digital connectivity. This enables us to "
-"offer international call termination services\n"
+"                                a barrier. Our interconnected network of Android devices forms the backbone of seamless\n"
+"                                digital connectivity. This enables us to offer international call termination services\n"
 "                                at\n"
-"                                local rates, empowering users to stay "
-"connected with their loved ones without worrying\n"
+"                                local rates, empowering users to stay connected with their loved ones without worrying\n"
 "                                about\n"
 "                                hefty bills.\n"
 "                            "
@@ -1216,18 +1189,13 @@ msgstr ""
 #: .\templates\pages\main\components\vision.html:100
 msgid ""
 "\n"
-"                                At the heart of our mission lies a "
-"commitment to empowerment. Our cellular partners play\n"
+"                                At the heart of our mission lies a commitment to empowerment. Our cellular partners play\n"
 "                                a\n"
-"                                pivotal role in our ecosystem, earning "
-"revenue for every minute of call traffic routed\n"
-"                                through their unused devices. This "
-"innovative model not only enriches our partners\n"
-"                                financially but also champions the "
-"sustainable utilization of technology resources,\n"
+"                                pivotal role in our ecosystem, earning revenue for every minute of call traffic routed\n"
+"                                through their unused devices. This innovative model not only enriches our partners\n"
+"                                financially but also champions the sustainable utilization of technology resources,\n"
 "                                paving\n"
-"                                the way for a brighter, more connected "
-"future.\n"
+"                                the way for a brighter, more connected future.\n"
 "                            "
 msgstr ""
 
@@ -1244,7 +1212,8 @@ msgstr ""
 msgid "Forgot password?"
 msgstr ""
 
-#: .\templates\pages\main\login.html:31 .\templates\pages\main\register.html:50
+#: .\templates\pages\main\login.html:31
+#: .\templates\pages\main\register.html:50
 msgid "Sign in"
 msgstr ""
 
@@ -1281,8 +1250,7 @@ msgstr ""
 #: .\templates\pages\main\password_reset_complete.html:17
 msgid ""
 "\n"
-"                        Your password has been successfully reset. You can "
-"now log in with your new password.\n"
+"                        Your password has been successfully reset. You can now log in with your new password.\n"
 "                    "
 msgstr ""
 
@@ -1302,8 +1270,7 @@ msgstr ""
 #: .\templates\pages\main\password_reset_done.html:17
 msgid ""
 "\n"
-"                        We've sent you an email with instructions to reset "
-"your password. Please check your inbox (and\n"
+"                        We've sent you an email with instructions to reset your password. Please check your inbox (and\n"
 "                        your spam folder) to proceed.\n"
 "                    "
 msgstr ""
@@ -1382,8 +1349,8 @@ msgstr ""
 
 #: .\venv\Lib\site-packages\django\core\validators.py:267
 msgid ""
-"Enter a valid “slug” consisting of Unicode letters, numbers, underscores, or "
-"hyphens."
+"Enter a valid “slug” consisting of Unicode letters, numbers, underscores, or"
+" hyphens."
 msgstr ""
 
 #: .\venv\Lib\site-packages\django\core\validators.py:279
@@ -1589,15 +1556,15 @@ msgstr ""
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1550
 #, python-format
 msgid ""
-"“%(value)s” value has an invalid format. It must be in YYYY-MM-DD HH:MM[:ss[."
-"uuuuuu]][TZ] format."
+"“%(value)s” value has an invalid format. It must be in YYYY-MM-DD "
+"HH:MM[:ss[.uuuuuu]][TZ] format."
 msgstr ""
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1558
 #, python-format
 msgid ""
-"“%(value)s” value has the correct format (YYYY-MM-DD HH:MM[:ss[.uuuuuu]]"
-"[TZ]) but it is an invalid date/time."
+"“%(value)s” value has the correct format (YYYY-MM-DD "
+"HH:MM[:ss[.uuuuuu]][TZ]) but it is an invalid date/time."
 msgstr ""
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1563
@@ -1616,8 +1583,8 @@ msgstr ""
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1853
 #, python-format
 msgid ""
-"“%(value)s” value has an invalid format. It must be in [DD] [[HH:]MM:]ss[."
-"uuuuuu] format."
+"“%(value)s” value has an invalid format. It must be in [DD] "
+"[[HH:]MM:]ss[.uuuuuu] format."
 msgstr ""
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1857
@@ -1772,7 +1739,8 @@ msgid "Many-to-many relationship"
 msgstr ""
 
 #. Translators: If found as last label character, these punctuation
-#. characters will prevent the default label_suffix to be appended to the label
+#. characters will prevent the default label_suffix to be appended to the
+#. label
 #: .\venv\Lib\site-packages\django\forms\boundfield.py:185
 msgid ":?.!"
 msgstr ""
@@ -1822,7 +1790,8 @@ msgstr ""
 
 #: .\venv\Lib\site-packages\django\forms\fields.py:633
 #, python-format
-msgid "Ensure this filename has at most %(max)d character (it has %(length)d)."
+msgid ""
+"Ensure this filename has at most %(max)d character (it has %(length)d)."
 msgid_plural ""
 "Ensure this filename has at most %(max)d characters (it has %(length)d)."
 msgstr[0] ""
@@ -1929,7 +1898,8 @@ msgid "The inline value did not match the parent instance."
 msgstr ""
 
 #: .\venv\Lib\site-packages\django\forms\models.py:1448
-msgid "Select a valid choice. That choice is not one of the available choices."
+msgid ""
+"Select a valid choice. That choice is not one of the available choices."
 msgstr ""
 
 #: .\venv\Lib\site-packages\django\forms\models.py:1587
@@ -2389,11 +2359,11 @@ msgstr ""
 
 #: .\venv\Lib\site-packages\django\views\csrf.py:45
 msgid ""
-"If you are using the <meta name=\"referrer\" content=\"no-referrer\"> tag or "
-"including the “Referrer-Policy: no-referrer” header, please remove them. The "
-"CSRF protection requires the “Referer” header to do strict referer checking. "
-"If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
-"\" …> for links to third-party sites."
+"If you are using the <meta name=\"referrer\" content=\"no-referrer\"> tag or"
+" including the “Referrer-Policy: no-referrer” header, please remove them. "
+"The CSRF protection requires the “Referer” header to do strict referer "
+"checking. If you’re concerned about privacy, use alternatives like <a "
+"rel=\"noreferrer\" …> for links to third-party sites."
 msgstr ""
 
 #: .\venv\Lib\site-packages\django\views\csrf.py:54
@@ -2444,8 +2414,8 @@ msgstr ""
 #: .\venv\Lib\site-packages\django\views\generic\dates.py:652
 #, python-format
 msgid ""
-"Future %(verbose_name_plural)s not available because %(class_name)s."
-"allow_future is False."
+"Future %(verbose_name_plural)s not available because "
+"%(class_name)s.allow_future is False."
 msgstr ""
 
 #: .\venv\Lib\site-packages\django\views\generic\dates.py:692
@@ -2503,10 +2473,10 @@ msgstr ""
 #: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:221
 #, python-format
 msgid ""
-"You are seeing this page because <a href=\"https://docs.djangoproject.com/en/"
-"%(version)s/ref/settings/#debug\" target=\"_blank\" rel=\"noopener"
-"\">DEBUG=True</a> is in your settings file and you have not configured any "
-"URLs."
+"You are seeing this page because <a "
+"href=\"https://docs.djangoproject.com/en/%(version)s/ref/settings/#debug\" "
+"target=\"_blank\" rel=\"noopener\">DEBUG=True</a> is in your settings file "
+"and you have not configured any URLs."
 msgstr ""
 
 #: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:229

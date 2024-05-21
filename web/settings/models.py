@@ -93,7 +93,7 @@ class Notification(BaseModel):
     def get_time_since_created(self):
         now = timezone.now()
         time_difference = timesince(self.created_at, now)
-        return f"{time_difference} ago"
+        return f"{time_difference} " + _("ago")
 
 
 class Slide(TranslatableModel, BaseModel):

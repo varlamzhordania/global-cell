@@ -5,10 +5,9 @@ from settings.models import Notification
 
 def Default(request):
     if request.user.is_authenticated:
-        notifications = Notification.objects.filter(user=request.user, is_active=True)
+        notifications = Notification.objects.filter(user=request.user, is_active=True, has_seen=False)
         return {
-            'notifications': notifications,
-            'unseen_notifications': notifications.filter(has_seen=False),
+            'unseen_notifications': notifications,
             'asset_version': settings.STATIC_VERSION
         }
     else:

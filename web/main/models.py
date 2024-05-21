@@ -155,6 +155,7 @@ class PaymentMethod(BaseModel):
         blank=True,
         null=True,
     )
+    is_active = models.BooleanField(verbose_name=_("Verified"), default=False)
 
     class Meta:
         verbose_name = _("Payment Method")
@@ -293,5 +294,3 @@ class Device(BaseModel):
 
     def __str__(self):
         return f"{self.user}'s Device"
-
-
