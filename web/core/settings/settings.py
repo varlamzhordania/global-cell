@@ -26,7 +26,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent.parent
 SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', 'estdfuyser5setsetgf')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-
 if os.getenv('DJANGO_DEBUG') and os.getenv('DJANGO_DEBUG') == "False":
     DEBUG = False
 else:
