@@ -31,7 +31,7 @@
         <section class="col-span-1 lg:col-span-1 xl:col-span-1 order-last lg:order-2 xl:order-2 2xl:order-first">
             <div class="card h-fit overflow-y-auto primary-scrollbar">
                 <div class="card-content !p-3 flex-col gap-3">
-                    <h4 class="h4 dark:text-gray-200">Bank Accounts :</h4>
+                    <h4 class="h4 dark:text-gray-200">{% translate 'Bank Accounts :' %}</h4>
                     <div class="card w-full mt-1  border border-dashed border-black/80 hover:border-black dark:border-gray-300 dark:hover:border-gray-100 cursor-pointer group">
                         <div class="card-content !p-0  w-full">
                             <button id="bank-account-btn"
@@ -43,7 +43,7 @@
                                     <path d="M5 12h14"/>
                                     <path d="M12 5v14"/>
                                 </svg>
-                                <span class="text-lg font-bold">Add Account</span>
+                                <span class="text-lg font-bold">{% translate 'Add Account' %}</span>
                             </button>
                             <!-- Bank Account modal -->
                             <div id="bank-account-modal" tabindex="-1" aria-hidden="true"
@@ -54,7 +54,7 @@
                                         <!-- Modal header -->
                                         <div class="modal-header">
                                             <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-                                                Add Bank Account
+                                                {% translate 'Add Bank Account' %}
                                             </h3>
                                             <button type="button"
                                                     class="modal-btn-close"
@@ -66,7 +66,7 @@
                                                           stroke-linejoin="round"
                                                           stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
                                                 </svg>
-                                                <span class="sr-only">Close modal</span>
+                                                <span class="sr-only">{% translate 'Close modal' %}</span>
                                             </button>
                                         </div>
                                         <!-- Modal body -->
@@ -119,7 +119,7 @@
                                                     </div>
                                                 </div>
                                                 <button id="bank-account-submit" type="submit" style="display: none;">
-                                                    Submit
+                                                    {% translate 'Submit' %}
                                                 </button>
                                             </form>
 
@@ -129,11 +129,11 @@
                                             <button onclick="document.getElementById('bank-account-submit').click()"
                                                     type="button"
                                                     class="btn btn-primary" role="button">
-                                                Submit
+                                                {% translate 'Submit' %}
                                             </button>
                                             <button data-modal-hide="bank-account-modal" type="button"
                                                     class="btn btn-dark">
-                                                Cancel
+                                                {% translate 'Cancel' %}
                                             </button>
                                         </div>
                                     </div>
@@ -315,7 +315,7 @@
                                 <!-- Modal header -->
                                 <div class="modal-header">
                                     <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-                                        Transfer your Money
+                                        {% translate 'Transfer your Money' %}
                                     </h3>
                                     <button type="button"
                                             class="modal-btn-close"
@@ -325,24 +325,24 @@
                                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                                   stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
                                         </svg>
-                                        <span class="sr-only">Close modal</span>
+                                        <span class="sr-only">{% translate 'Close modal' %}</span>
                                     </button>
                                 </div>
                                 <!-- Modal body -->
                                 <div class="modal-body">
                                     <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                                        This Feature is unavailable right now
+                                        {% translate 'This Feature is unavailable right now' %}
                                     </p>
                                 </div>
                                 <!-- Modal footer -->
                                 <div class="modal-footer">
                                     <button data-modal-hide="wallet-transfer-modal" type="button"
                                             class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                                        I accept
+                                        {% translate 'I accept' %}
                                     </button>
                                     <button data-modal-hide="wallet-transfer-modal" type="button"
                                             class="py-2.5 px-5 ms-3 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
-                                        Decline
+                                        {% translate 'Decline' %}
                                     </button>
                                 </div>
                             </div>
@@ -362,7 +362,7 @@
                 <!-- Modal header -->
                 <div class="modal-header">
                     <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-                        Edit Bank Account
+                        {% translate 'Edit Bank Account' %}
                     </h3>
                     <button type="button"
                             class="modal-btn-close"
@@ -374,7 +374,7 @@
                                   stroke-linejoin="round"
                                   stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
                         </svg>
-                        <span class="sr-only">Close modal</span>
+                        <span class="sr-only">{% translate 'Close modal' %}</span>
                     </button>
                 </div>
                 <!-- Modal body -->
@@ -400,7 +400,7 @@
                             </div>
                         </div>
                         <button id="bank-account-edit-submit" type="submit" style="display: none;">
-                            Submit
+                            {% translate 'Submit' %}
                         </button>
                     </form>
 
@@ -410,11 +410,11 @@
                     <button onclick="document.getElementById('bank-account-edit-submit').click()"
                             type="button"
                             class="btn btn-primary" role="button">
-                        Submit
+                        {% translate 'Submit' %}
                     </button>
                     <button data-modal-hide="bank-account-edit-modal" type="button"
                             class="btn btn-dark">
-                        Cancel
+                        {% translate 'Cancel' %}
                     </button>
                 </div>
             </div>
@@ -448,6 +448,7 @@
                 },
                 stroke: {
                     width: 6,
+                    curve: 'smooth'
                 },
                 grid: {
                     show: true,
@@ -472,9 +473,6 @@
                 ],
                 legend: {
                     show: true
-                },
-                stroke: {
-                    curve: 'smooth'
                 },
                 xaxis: {
                     categories: ['01 Feb', '02 Feb', '03 Feb', '04 Feb', '05 Feb', '06 Feb', '07 Feb'],

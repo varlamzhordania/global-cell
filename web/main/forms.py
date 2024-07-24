@@ -15,7 +15,7 @@ class NotificationForm(forms.ModelForm):
 
 class PaymentMethodForm(forms.ModelForm):
     country = forms.ModelChoiceField(
-        queryset=Country.objects.filter(is_supported=True), required=True, widget=forms.Select(
+        queryset=Country.objects.filter(is_supported=True), label=_("Country"), required=True, widget=forms.Select(
             attrs={"class": "form-select"}
         ), )
 

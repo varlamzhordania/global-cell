@@ -1,3 +1,4 @@
+{% load i18n %}
 <div class="card bank-card">
     <div class="card-content">
         <div class="flex justify-between items-start w-full">
@@ -34,14 +35,14 @@
                                     data-modal-target="bank-account-edit-modal"
                                     data-modal-toggle="bank-account-edit-modal"
                                     class="pm-edit w-full text-start block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-                                Edit
+                                {% translate 'Edit' %}
                             </button>
                         </li>
                     </ul>
                     <div class="py-1">
                         <a href="{% url 'main:payment_method_delete' item.id %}"
                            class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">
-                            Delete
+                            {% translate 'Delete' %}
                         </a>
                     </div>
                 </div>
@@ -54,19 +55,19 @@
         </div>
         <div class="flex w-full justify-between items-center">
             <div class="flex flex-col gap-1">
-                <span class="text-sm text-slate-300 font-bold">Status</span>
+                <span class="text-sm text-slate-300 font-bold">{% trans 'Status' %}</span>
                 {% if item.is_active %}
-                    <span class="text-sm text-success-100">Verified</span>
+                    <span class="text-sm text-success-100">{% trans 'Verified' %}</span>
                 {% else %}
-                    <span class="text-sm text-danger-100">Unverified</span>
+                    <span class="text-sm text-danger-100">{% trans 'Unverified' %}</span>
                 {% endif %}
             </div>
             <div class="flex flex-col gap-1">
-                <span class="text-sm text-slate-300 font-bold">Bank</span>
+                <span class="text-sm text-slate-300 font-bold">{% trans 'Bank' %}</span>
                 <span class="text-sm text-slate-100">{{ item.bank_name }}</span>
             </div>
             <div class="flex flex-col gap-1">
-                <span class="text-sm text-slate-300 font-bold">Country</span>
+                <span class="text-sm text-slate-300 font-bold">{% trans 'Country' %}</span>
                 <div class="flex justify-start items-start gap-1">
                     <span class="fi fi-{{ item.country.short_name|default:"N/A"|slice:2|lower }}"></span>
                     <span class="text-sm text-slate-100 font-bold">{{ item.country.short_name|default:"N/A" }}</span>

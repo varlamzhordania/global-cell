@@ -1,3 +1,4 @@
+{% load i18n %}
 <div id="dashboard-carousel" class="relative w-full h-full" data-carousel="slide">
     <!-- Carousel wrapper -->
     <div class="slider">
@@ -7,7 +8,7 @@
             </div>
         {% empty %}
             <div class="slider-item flex justify-center items-center bg-primary" data-carousel-item>
-                <h1 class="h1 !text-white text-center">NO SLIDE FOR DISPLAY</h1>
+                <h1 class="h1 !text-white text-center">{% translate 'NO SLIDE FOR DISPLAY' %}</h1>
             </div>
         {% endfor %}
     </div>
@@ -35,7 +36,7 @@
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                       d="M5 1 1 5l4 4"/>
             </svg>
-            <span class="sr-only">Previous</span>
+            <span class="sr-only">{% translate 'Previous' %}</span>
         </span>
     </button>
     <button type="button"
@@ -47,7 +48,7 @@
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                       d="m1 9 4-4-4-4"/>
             </svg>
-            <span class="sr-only">Next</span>
+            <span class="sr-only">{% translate 'Next' %}</span>
         </span>
     </button>
 </div>

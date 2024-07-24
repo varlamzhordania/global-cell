@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-21 12:50+0400\n"
+"POT-Creation-Date: 2024-07-24 19:11+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,350 +20,361 @@ msgstr ""
 
 #: .\accounts\forms.py:12
 msgid "New password"
-msgstr ""
+msgstr "New password"
 
 #: .\accounts\forms.py:18
 msgid "Enter new password for your account"
-msgstr ""
+msgstr "Enter new password for your account"
 
 #: .\accounts\forms.py:24
 msgid "Password Confirmation"
-msgstr ""
+msgstr "Password Confirmation"
 
 #: .\accounts\forms.py:38
 msgid "Email"
-msgstr ""
+msgstr "Email"
 
 #: .\accounts\forms.py:53
 msgid "Required. Enter a valid email address."
-msgstr ""
+msgstr "Required. Enter a valid email address."
 
 #: .\accounts\forms.py:59 .\templates\pages\main\login.html:20
 msgid "Password"
-msgstr ""
+msgstr "Password"
 
 #: .\accounts\forms.py:71
 msgid "Confirm Password"
-msgstr ""
+msgstr "Confirm Password"
 
 #: .\accounts\forms.py:87
 msgid "Enter your first name here"
-msgstr ""
+msgstr "Enter your first name here"
 
 #: .\accounts\forms.py:90
 msgid "Enter your last name here"
-msgstr ""
+msgstr "Enter your last name here"
 
 #: .\accounts\forms.py:97
 msgid "A user with that email already exists."
-msgstr ""
+msgstr "A user with that email already exists."
 
 #: .\accounts\forms.py:116
 msgid "Enter your first name"
-msgstr ""
+msgstr "Enter your first name"
 
 #: .\accounts\forms.py:122
 msgid "Enter your last name"
-msgstr ""
+msgstr "Enter your last name"
 
 #: .\accounts\forms.py:128
 msgid "Enter your middle name"
-msgstr ""
+msgstr "Enter your middle name"
 
 #: .\accounts\forms.py:134
 msgid "Enter your phone number"
-msgstr ""
+msgstr "Enter your phone number"
 
 #: .\accounts\forms.py:139
 msgid "Your given name."
-msgstr ""
+msgstr "Your given name."
 
 #: .\accounts\forms.py:140
 msgid "Your family name."
-msgstr ""
+msgstr "Your family name."
 
 #: .\accounts\forms.py:141
 msgid "Your middle name, if you have one."
-msgstr ""
+msgstr "Your middle name, if you have one."
 
 #: .\accounts\forms.py:142
 msgid "Your contact number, example +12125552368."
-msgstr ""
+msgstr "Your contact number, example +12125552368."
 
 #: .\accounts\forms.py:152
 msgid "Enter your old password"
-msgstr ""
+msgstr "Enter your old password"
 
 #: .\accounts\forms.py:158
 msgid "Enter your new password"
-msgstr ""
+msgstr "Enter your new password"
 
 #: .\accounts\forms.py:164
 msgid "Confirm your new password"
-msgstr ""
+msgstr "Confirm your new password"
 
 #: .\accounts\models.py:11
 msgid "email address"
-msgstr ""
+msgstr "email address"
 
 #: .\accounts\models.py:12
 msgid "Middle Name"
-msgstr ""
+msgstr "Middle Name"
 
 #: .\accounts\models.py:13
 msgid "Phone Number"
-msgstr ""
+msgstr "Phone Number"
 
 #: .\accounts\models.py:20
 msgid "Wallet"
-msgstr ""
+msgstr "Wallet"
 
 #: .\accounts\models.py:23
 msgid "Last IP Address"
-msgstr ""
+msgstr "Last IP Address"
+
+#: .\accounts\signals.py:23
+#, fuzzy
+#| msgid "Welcome To Global Cell"
+msgid "Welcome to Global Cell"
+msgstr "Welcome To Global Cell"
 
 #: .\accounts\views.py:24
 #, python-brace-format
 msgid "Welcome {user}!"
-msgstr ""
+msgstr "Welcome {user}!"
 
 #: .\accounts\views.py:27
 msgid "Invalid email or password."
-msgstr ""
+msgstr "Invalid email or password."
 
 #: .\accounts\views.py:29
 msgid "Email and password is required."
-msgstr ""
+msgstr "Email and password is required."
 
 #: .\accounts\views.py:40 .\settings\models.py:132
 #: .\templates\pages\main\register.html:56
 msgid "Sign In"
-msgstr ""
+msgstr "Sign In"
 
 #: .\accounts\views.py:54
 msgid "Congratulations! You have successfully registered your account."
-msgstr ""
+msgstr "Congratulations! You have successfully registered your account."
 
 #: .\accounts\views.py:70 .\settings\models.py:133
 msgid "Sign Up"
-msgstr ""
+msgstr "Sign Up"
 
 #: .\accounts\views.py:83
 msgid "Your profile has been updated."
-msgstr ""
+msgstr "Your profile has been updated."
 
 #: .\accounts\views.py:97
 msgid "Your password has been successfully updated !"
-msgstr ""
+msgstr "Your password has been successfully updated !"
 
 #: .\accounts\views.py:107
 msgid "You have been logged out."
-msgstr ""
+msgstr "You have been logged out."
 
-#: .\core\settings\settings.py:125
+#: .\core\settings\settings.py:129
 msgid "English"
-msgstr ""
+msgstr "English"
 
-#: .\core\settings\settings.py:126
+#: .\core\settings\settings.py:130
 msgid "French"
-msgstr ""
+msgstr "French"
 
-#: .\core\settings\settings.py:127
+#: .\core\settings\settings.py:131
 msgid "Spanish"
-msgstr ""
+msgstr "Spanish"
 
-#: .\core\settings\settings.py:128
+#: .\core\settings\settings.py:132
 msgid "Arabic"
-msgstr ""
+msgstr "Arabic"
+
+#: .\main\forms.py:18 .\main\models.py:83 .\main\models.py:152
+#: .\templates\pages\dashboard\components\bank_card.html:70
+msgid "Country"
+msgstr "Country"
 
 #: .\main\forms.py:28 .\main\forms.py:31 .\main\forms.py:35 .\main\forms.py:38
 #: .\main\forms.py:42
 msgid "Enter the name of the account"
-msgstr ""
+msgstr "Enter the name of the account"
 
 #: .\main\forms.py:55
 msgid "Enter the name of the company"
-msgstr ""
+msgstr "Enter the name of the company"
 
 #: .\main\forms.py:59
 msgid "Enter the name of the plan"
-msgstr ""
+msgstr "Enter the name of the plan"
 
 #: .\main\forms.py:62
 msgid "Enter the cost of the plan "
-msgstr ""
+msgstr "Enter the cost of the plan"
 
 #: .\main\models.py:12
 msgid "Date Created"
-msgstr ""
+msgstr "Date Created"
 
 #: .\main\models.py:13
 msgid "Date Updated"
-msgstr ""
+msgstr "Date Updated"
 
 #: .\main\models.py:14 .\main\models.py:287
 msgid "Is Active"
-msgstr ""
+msgstr "Is Active"
 
 #: .\main\models.py:35
 msgid "Name of Country"
-msgstr ""
+msgstr "Name of Country"
 
 #: .\main\models.py:37
 msgid "The country name is case insensitive."
-msgstr ""
+msgstr "The country name is case insensitive."
 
 #: .\main\models.py:43
 msgid "Short Name of Country"
-msgstr ""
+msgstr "Short Name of Country"
 
 #: .\main\models.py:45
 msgid "A short unique abbreviation for the country."
-msgstr ""
+msgstr "A short unique abbreviation for the country."
 
 #: .\main\models.py:51
 msgid "Country Phone Prefix"
-msgstr ""
+msgstr "Country Phone Prefix"
 
 #: .\main\models.py:54
 msgid "The phone number prefix for the country."
-msgstr ""
+msgstr "The phone number prefix for the country."
 
 #: .\main\models.py:58
 msgid "Currency of Country"
-msgstr ""
+msgstr "Currency of Country"
 
 #: .\main\models.py:64
 msgid "Currency Sign"
-msgstr ""
+msgstr "Currency Sign"
 
 #: .\main\models.py:71
 msgid "Equivalent to 1 Dollar"
-msgstr ""
+msgstr "Equivalent to 1 Dollar"
 
 #: .\main\models.py:72
 msgid "The value of the country's currency compared to 1 US Dollar."
-msgstr ""
+msgstr "The value of the country's currency compared to 1 US Dollar."
 
 #: .\main\models.py:77
 msgid "Is Supported"
-msgstr ""
+msgstr "Is Supported"
 
 #: .\main\models.py:79
 msgid "Is this country supported?"
-msgstr ""
-
-#: .\main\models.py:83 .\main\models.py:152
-msgid "Country"
-msgstr ""
+msgstr "Is this country supported?"
 
 #: .\main\models.py:84
 msgid "Countries"
-msgstr ""
+msgstr "Countries"
 
 #: .\main\models.py:101
 msgid "Account Name"
-msgstr ""
+msgstr "Account Name"
 
 #: .\main\models.py:107
 msgid "Account Number"
-msgstr ""
+msgstr "Account Number"
 
 #: .\main\models.py:113
 msgid "Account number must be between 10 and 50 digits."
-msgstr ""
+msgstr "Account number must be between 10 and 50 digits."
 
 #: .\main\models.py:120
 msgid "Bank Name"
-msgstr ""
+msgstr "Bank Name"
 
 #: .\main\models.py:126
 msgid "SWIFT Number"
-msgstr ""
+msgstr "SWIFT Number"
 
 #: .\main\models.py:132
 msgid "SWIFT number must be between 8 and 11 characters."
-msgstr ""
+msgstr "SWIFT number must be between 8 and 11 characters."
 
 #: .\main\models.py:139
 msgid "IBAN Number"
-msgstr ""
+msgstr "IBAN Number"
 
 #: .\main\models.py:145
 msgid "IBAN number must be between 15 and 34 characters."
-msgstr ""
+msgstr "IBAN number must be between 15 and 34 characters."
 
-#: .\main\models.py:158 .\templates\pages\dashboard\phones_list.html:205
+#: .\main\models.py:158
+#: .\templates\pages\dashboard\components\bank_card.html:60
+#: .\templates\pages\dashboard\phones_list.html:141
+#: .\templates\pages\dashboard\phones_list.html:220
 msgid "Verified"
-msgstr ""
+msgstr "Verified"
 
 #: .\main\models.py:161
 msgid "Payment Method"
-msgstr ""
+msgstr "Payment Method"
 
 #: .\main\models.py:162
 msgid "Payment Methods"
-msgstr ""
+msgstr "Payment Methods"
 
-#: .\main\models.py:225
+#: .\main\models.py:225 .\templates\pages\dashboard\phones_list.html:161
 msgid "Post Paid"
-msgstr ""
+msgstr "Post Paid"
 
-#: .\main\models.py:226
+#: .\main\models.py:226 .\templates\pages\dashboard\phones_list.html:171
 msgid "Pre Paid"
-msgstr ""
+msgstr "Pre Paid"
 
 #: .\main\models.py:233
 msgid "SIM Number"
-msgstr ""
+msgstr "SIM Number"
 
 #: .\main\models.py:236
 msgid "Mobile Carrier"
-msgstr ""
+msgstr "Mobile Carrier"
 
 #: .\main\models.py:242
 msgid "Plan Payment"
-msgstr ""
+msgstr "Plan Payment"
 
 #: .\main\models.py:247
 msgid "Plan Name"
-msgstr ""
+msgstr "Plan Name"
 
 #: .\main\models.py:254
 msgid "Plan Cost"
-msgstr ""
+msgstr "Plan Cost"
 
 #: .\main\models.py:255
 msgid "Plan cost Based on USD Dollar ($)"
-msgstr ""
+msgstr "Plan cost Based on USD Dollar ($)"
 
 #: .\main\models.py:261
 msgid "Plan Length (Months)"
-msgstr ""
+msgstr "Plan Length (Months)"
 
-#: .\main\models.py:268 .\templates\pages\dashboard\phones_list.html:204
+#: .\main\models.py:268 .\templates\pages\dashboard\phones_list.html:151
+#: .\templates\pages\dashboard\phones_list.html:219
 msgid "Unlimited Minutes"
-msgstr ""
+msgstr "Unlimited Minutes"
 
 #: .\main\models.py:272
 msgid "Total Minutes"
-msgstr ""
+msgstr "Total Minutes"
 
 #: .\main\models.py:280
 msgid "Earned"
-msgstr ""
+msgstr "Earned"
 
 #: .\main\models.py:281
 msgid "Total earned"
-msgstr ""
+msgstr "Total earned"
 
 #: .\main\models.py:290 .\settings\models.py:35
 msgid "Device"
-msgstr ""
+msgstr "Device"
 
 #: .\main\models.py:291
 msgid "Devices"
-msgstr ""
+msgstr "Devices"
 
 #: .\main\signals.py:20
 #, python-format
@@ -371,6 +382,8 @@ msgid ""
 "Your new phone with SIM number '%(sim_number)s' will be reviewed soon by our "
 "support team."
 msgstr ""
+"Your new phone with SIM number '%(sim_number)s' will be reviewed soon by our "
+"support team."
 
 #: .\main\signals.py:35
 #, python-format
@@ -378,10 +391,12 @@ msgid ""
 "Your new bank account '%(account_name)s' will be reviewed soon by our "
 "support team."
 msgstr ""
+"Your new bank account '%(account_name)s' will be reviewed soon by our "
+"support team."
 
 #: .\main\views.py:26
 msgid "Welcome To Global Cell"
-msgstr ""
+msgstr "Welcome To Global Cell"
 
 #: .\main\views.py:37 .\templates\layouts\components\sidebar.html:32
 #: .\templates\pages\dashboard\financial.html:10
@@ -389,249 +404,252 @@ msgstr ""
 #: .\templates\pages\dashboard\phones_list.html:10
 #: .\templates\pages\dashboard\settings.html:10
 msgid "Dashboard"
-msgstr ""
+msgstr "Dashboard"
 
 #: .\main\views.py:51
 #, python-brace-format
 msgid "Device {device.sim_number} was add successfully"
-msgstr ""
+msgstr "Device {device.sim_number} was add successfully"
 
 #: .\main\views.py:54
 msgid "Please makesure your have fill the form correctly"
-msgstr ""
+msgstr "Please make sure you have fill the form correctly"
 
 #: .\main\views.py:60
 msgid "Add Your New Phone"
-msgstr ""
+msgstr "Add Your New Phone"
 
 #: .\main\views.py:99
 msgid "Phones List"
-msgstr ""
+msgstr "Phones List"
 
 #: .\main\views.py:128
 #, python-brace-format
 msgid "Bank Account {bank_name} updated successfully"
-msgstr ""
+msgstr "Bank Account {bank_name} updated successfully"
 
 #: .\main\views.py:131
 #, python-brace-format
 msgid "Bank Account {bank_name} was added successfully"
-msgstr ""
+msgstr "Bank Account {bank_name} was added successfully"
 
 #: .\main\views.py:141
 msgid "Please make sure you have filled the form correctly"
-msgstr ""
+msgstr "Please make sure you have filled the form correctly"
 
 #: .\main\views.py:147
 msgid "Manage your financial"
-msgstr ""
+msgstr "Manage your financial"
 
 #: .\main\views.py:158
 #, python-brace-format
 msgid "Bank Account {queryset.bank_name} was deleted successfully"
-msgstr ""
+msgstr "Bank Account {queryset.bank_name} was deleted successfully"
 
 #: .\main\views.py:168 .\templates\layouts\components\sidebar.html:114
 #: .\templates\pages\dashboard\settings.html:21
+#: .\templates\pages\dashboard\settings.html:34
 msgid "Settings"
-msgstr ""
+msgstr "Settings"
 
 #: .\settings\models.py:16
 msgid "Low"
-msgstr ""
+msgstr "Low"
 
 #: .\settings\models.py:17
 msgid "Medium"
-msgstr ""
+msgstr "Medium"
 
 #: .\settings\models.py:18
 msgid "High"
-msgstr ""
+msgstr "High"
 
 #: .\settings\models.py:21
 msgid "Success"
-msgstr ""
+msgstr "Success"
 
 #: .\settings\models.py:22
 msgid "Error"
-msgstr ""
+msgstr "Error"
 
 #: .\settings\models.py:23
 msgid "Warning"
-msgstr ""
+msgstr "Warning"
 
 #: .\settings\models.py:24
 msgid "Info"
-msgstr ""
+msgstr "Info"
 
 #: .\settings\models.py:38
 msgid "If the notification related to this device"
-msgstr ""
+msgstr "If the notification related to this device"
 
 #: .\settings\models.py:44
 msgid "Bank Account"
-msgstr ""
+msgstr "Bank Account"
 
 #: .\settings\models.py:47
 msgid "If the notification related to this bank account"
-msgstr ""
+msgstr "If the notification related to this bank account"
 
 #: .\settings\models.py:49
 msgid "Message"
-msgstr ""
+msgstr "Message"
 
 #: .\settings\models.py:51
 msgid "Has Seen"
-msgstr ""
+msgstr "Has Seen"
 
 #: .\settings\models.py:53
 msgid "Has User Seen Notification?"
-msgstr ""
+msgstr "Has User Seen Notification?"
 
 #: .\settings\models.py:55
 msgid "Visibility"
-msgstr ""
+msgstr "Visibility"
 
 #: .\settings\models.py:60
 msgid "Priority"
-msgstr ""
+msgstr "Priority"
 
-#: .\settings\models.py:66 .\templates\pages\dashboard\phones_list.html:206
+#: .\settings\models.py:66
+#: .\templates\pages\dashboard\components\bank_card.html:58
+#: .\templates\pages\dashboard\phones_list.html:221
 msgid "Status"
-msgstr ""
+msgstr "Status"
 
 #: .\settings\models.py:70
 msgid "Notification"
-msgstr ""
+msgstr "Notification"
 
 #: .\settings\models.py:71 .\templates\layouts\components\notification.html:19
 msgid "Notifications"
-msgstr ""
+msgstr "Notifications"
 
 #: .\settings\models.py:96
 msgid "ago"
-msgstr ""
+msgstr "ago"
 
 #: .\settings\models.py:100
 msgid "Title"
-msgstr ""
+msgstr "Title"
 
 #: .\settings\models.py:102
 msgid "Short Description"
-msgstr ""
+msgstr "Short Description"
 
 #: .\settings\models.py:105
 msgid "A short description of the slide"
-msgstr ""
+msgstr "A short description of the slide"
 
 #: .\settings\models.py:110
 #: .\venv\Lib\site-packages\django\db\models\fields\files.py:393
 msgid "Image"
-msgstr ""
+msgstr "Image"
 
 #: .\settings\models.py:117
 msgid "Slide"
-msgstr ""
+msgstr "Slide"
 
 #: .\settings\models.py:118
 msgid "Slides"
-msgstr ""
+msgstr "Slides"
 
 #: .\settings\models.py:127
 msgid "Home Page"
-msgstr ""
+msgstr "Home Page"
 
 #: .\settings\models.py:128 .\templates\layouts\components\navbar.html:30
 msgid "About"
-msgstr ""
+msgstr "About"
 
 #: .\settings\models.py:129
 msgid "Contact us"
-msgstr ""
+msgstr "Contact us"
 
 #: .\settings\models.py:130
 msgid "Privacy Policy"
-msgstr ""
+msgstr "Privacy Policy"
 
 #: .\settings\models.py:131
 msgid "Terms Page"
-msgstr ""
+msgstr "Terms Page"
 
 #: .\settings\models.py:148
 msgid "Video File"
-msgstr ""
+msgstr "Video File"
 
 #: .\settings\models.py:149
 msgid "Video file is uploaded to your website."
-msgstr ""
+msgstr "Video file is uploaded to your website."
 
 #: .\settings\models.py:155
 msgid "Video Poster"
-msgstr ""
+msgstr "Video Poster"
 
 #: .\settings\models.py:156
 msgid "Upload the video poster."
-msgstr ""
+msgstr "Upload the video poster."
 
 #: .\settings\models.py:161
 msgid "Page"
-msgstr ""
+msgstr "Page"
 
 #: .\settings\models.py:162
 msgid "Pages"
-msgstr ""
+msgstr "Pages"
 
 #: .\settings\models.py:171
 msgid "Belonging Page"
-msgstr ""
+msgstr "Belonging Page"
 
 #: .\settings\models.py:175
 msgid "Seo Title"
-msgstr ""
+msgstr "Seo Title"
 
 #: .\settings\models.py:176
 msgid "For SEO purposes, ideally between 60-70 characters."
-msgstr ""
+msgstr "For SEO purposes, ideally between 60-70 characters."
 
 #: .\settings\models.py:179
 msgid "Seo Description"
-msgstr ""
+msgstr "Seo Description"
 
 #: .\settings\models.py:180
 msgid "For SEO purposes, ideally between 150-160 characters."
-msgstr ""
+msgstr "For SEO purposes, ideally between 150-160 characters."
 
 #: .\settings\models.py:183
 msgid "Seo Keywords"
-msgstr ""
+msgstr "Seo Keywords"
 
 #: .\settings\models.py:184
 msgid "Comma-separated list of keywords."
-msgstr ""
+msgstr "Comma-separated list of keywords."
 
 #: .\settings\models.py:187
 msgid "Seo Canonical"
-msgstr ""
+msgstr "Seo Canonical"
 
 #: .\settings\models.py:189
 msgid "Seo Robot Index"
-msgstr ""
+msgstr "Seo Robot Index"
 
 #: .\settings\models.py:190
 msgid "Set to allow search engines to index this page."
-msgstr ""
+msgstr "Set to allow search engines to index this page."
 
 #: .\settings\models.py:193
 msgid "Seo Robot Follow"
-msgstr ""
+msgstr "Seo Robot Follow"
 
 #: .\settings\models.py:194
 msgid "Set to allow search engines to follow links on this page."
-msgstr ""
+msgstr "Set to allow search engines to follow links on this page."
 
 #: .\settings\models.py:202 .\settings\models.py:203
 msgid "SEO"
-msgstr ""
+msgstr "SEO"
 
 #: .\templates\400.html:14
 msgid ""
@@ -639,6 +657,8 @@ msgid ""
 "                        Oops! Bad request.\n"
 "                    "
 msgstr ""
+"\n"
+"Oops! Bad request."
 
 #: .\templates\400.html:19
 msgid ""
@@ -648,10 +668,13 @@ msgid ""
 "                        Please double-check the URL and try again.\n"
 "                    "
 msgstr ""
+"\n"
+"We're sorry, but it seems that there's been a bad request.\n"
+"                        Please double-check the URL and try again."
 
 #: .\templates\400.html:26 .\templates\404.html:30 .\templates\500.html:26
 msgid "to Homepage"
-msgstr ""
+msgstr "to Homepage"
 
 #: .\templates\404.html:15
 msgid ""
@@ -659,6 +682,8 @@ msgid ""
 "                        Something's missing.\n"
 "                    "
 msgstr ""
+"\n"
+"Something's missing."
 
 #: .\templates\404.html:21
 msgid ""
@@ -668,6 +693,10 @@ msgid ""
 "                        find lots to explore on the home page.\n"
 "                    "
 msgstr ""
+"\n"
+"Sorry, we can't find that page.\n"
+"                        You'll\n"
+"                        find lots to explore on the home page."
 
 #: .\templates\500.html:14
 msgid ""
@@ -675,6 +704,8 @@ msgid ""
 "                        Oops! Something went wrong.\n"
 "                    "
 msgstr ""
+"\n"
+"Oops! Something went wrong."
 
 #: .\templates\500.html:19
 msgid ""
@@ -685,51 +716,63 @@ msgid ""
 "as soon as possible.\n"
 "                    "
 msgstr ""
+"\n"
+"We're sorry, but it seems that there's been an internal server error.\n"
+"                        Our team has been notified and will work to fix it "
+"as soon as possible."
 
 #: .\templates\layouts\components\navbar.html:25
 msgid "home"
-msgstr ""
+msgstr "home"
 
 #: .\templates\layouts\components\navbar.html:35
 msgid "Contact"
-msgstr ""
+msgstr "Contact"
 
 #: .\templates\layouts\components\navbar.html:40
 msgid "Be Partner"
-msgstr ""
+msgstr "Be Partner"
 
 #: .\templates\layouts\components\notification.html:21
 msgid "Mark all as read"
+msgstr "Mark all as read"
+
+#: .\templates\layouts\components\notification.html:34
+msgid "Inbox"
 msgstr ""
 
 #: .\templates\layouts\components\notification.html:46
 #: .\templates\layouts\components\notification.html:151
 msgid "Your Inbox Is Empty"
-msgstr ""
+msgstr "Your Inbox Is Empty"
 
 #: .\templates\layouts\components\sidebar.html:19
 #: .\templates\pages\main\components\about.html:10
 msgid "Global Cell"
-msgstr ""
+msgstr "Global Cell"
 
 #: .\templates\layouts\components\sidebar.html:48
 #: .\templates\pages\dashboard\phones_create.html:21
 #: .\templates\pages\dashboard\phones_list.html:21
 msgid "Phones"
-msgstr ""
+msgstr "Phones"
 
 #: .\templates\layouts\components\sidebar.html:68
 msgid "Add"
-msgstr ""
+msgstr "Add"
 
 #: .\templates\layouts\components\sidebar.html:84
 #: .\templates\pages\dashboard\phones_list.html:32
 msgid "List"
-msgstr ""
+msgstr "List"
 
 #: .\templates\layouts\components\sidebar.html:102
 #: .\templates\pages\dashboard\financial.html:21
 msgid "Financial"
+msgstr "Financial"
+
+#: .\templates\layouts\components\sidebar.html:127
+msgid "Exit"
 msgstr ""
 
 #: .\templates\layouts\dashboard.html:50
@@ -739,14 +782,69 @@ msgid ""
 "                    Wallet : %(fund)s\n"
 "                "
 msgstr ""
+"\n"
+"Wallet : %(fund)s\n"
+"                "
+
+#: .\templates\pages\dashboard\components\add_phone.html:5
+#: .\templates\pages\dashboard\phones_create.html:44
+msgid "Add picture"
+msgstr "Add picture"
+
+#: .\templates\pages\dashboard\components\add_phone.html:8
+#: .\templates\pages\dashboard\phones_create.html:47
+msgid "Add Your Phone"
+msgstr "Add Your Phone"
+
+#: .\templates\pages\dashboard\components\add_phone.html:11
+msgid ""
+"\n"
+"            Please fill out the form carefully. Ensure all information is "
+"correct. Once submitted, our\n"
+"            support team will review your submission and approve if "
+"everything is in order.\n"
+"        "
+msgstr ""
+"\n"
+"Please fill out the form carefully. Ensure all information is correct. Once "
+"submitted, our\n"
+"            support team will review your submission and approve if "
+"everything is in order."
+
+#: .\templates\pages\dashboard\components\add_phone.html:16
+#: .\templates\pages\dashboard\phones_list.html:77
+#, fuzzy
+#| msgid "Add Your Phone"
+msgid "Add Phone"
+msgstr "Add Your Phone"
+
+#: .\templates\pages\dashboard\components\bank_card.html:38
+msgid "Edit"
+msgstr ""
+
+#: .\templates\pages\dashboard\components\bank_card.html:45
+#: .\venv\Lib\site-packages\django\forms\formsets.py:499
+msgid "Delete"
+msgstr "Delete"
+
+#: .\templates\pages\dashboard\components\bank_card.html:62
+#, fuzzy
+#| msgid "Verified"
+msgid "Unverified"
+msgstr "Verified"
+
+#: .\templates\pages\dashboard\components\bank_card.html:66
+#: .\templates\pages\dashboard\financial.html:162
+msgid "Bank"
+msgstr "Bank"
 
 #: .\templates\pages\dashboard\components\line_chart.html:7
 msgid "Earnings"
-msgstr ""
+msgstr "Earnings"
 
 #: .\templates\pages\dashboard\components\line_chart.html:16
 msgid "Earnings - Incremental"
-msgstr ""
+msgstr "Earnings - Incremental"
 
 #: .\templates\pages\dashboard\components\line_chart.html:18
 msgid ""
@@ -761,11 +859,20 @@ msgid ""
 "                                    that need attention.\n"
 "                                "
 msgstr ""
+"\n"
+"This report illustrates the incremental growth of earnings over time. It is "
+"designed\n"
+"                                    to\n"
+"                                    help you track gradual increases in "
+"revenue, ideally showing a consistently upward\n"
+"                                    trend. A flat or declining chart may "
+"indicate areas of concern in revenue generation\n"
+"                                    that need attention."
 
 #: .\templates\pages\dashboard\components\line_chart.html:27
 #: .\templates\pages\dashboard\components\line_chart.html:72
 msgid "Calculation"
-msgstr ""
+msgstr "Calculation"
 
 #: .\templates\pages\dashboard\components\line_chart.html:29
 msgid ""
@@ -773,18 +880,20 @@ msgid ""
 "                                    Not Available.\n"
 "                                "
 msgstr ""
+"\n"
+"Not Available."
 
 #: .\templates\pages\dashboard\components\line_chart.html:35
 #: .\templates\pages\dashboard\components\line_chart.html:84
 msgid "Read more"
-msgstr ""
+msgstr "Read more"
 
 #: .\templates\pages\dashboard\components\line_chart.html:50
 #: .\templates\pages\dashboard\components\line_chart.html:59
 #: .\templates\pages\dashboard\financial.html:307
-#: .\templates\pages\dashboard\financial.html:468
+#: .\templates\pages\dashboard\financial.html:469
 msgid "Withdrawal"
-msgstr ""
+msgstr "Withdrawal"
 
 #: .\templates\pages\dashboard\components\line_chart.html:61
 msgid ""
@@ -802,6 +911,18 @@ msgid ""
 "addressed.\n"
 "                                "
 msgstr ""
+"\n"
+"This report provides insights into withdrawal activities over time. It "
+"tracks the\n"
+"                                    volume\n"
+"                                    and frequency of withdrawals, helping to "
+"identify trends and patterns. A consistent\n"
+"                                    or\n"
+"                                    increasing withdrawal trend may indicate "
+"growing user engagement, while a decline\n"
+"                                    could\n"
+"                                    suggest potential issues that need to be "
+"addressed."
 
 #: .\templates\pages\dashboard\components\line_chart.html:74
 msgid ""
@@ -816,55 +937,149 @@ msgid ""
 "growth over time.\n"
 "                                "
 msgstr ""
+"\n"
+"For each date bucket, the cumulative volume of activities is calculated. "
+"This means\n"
+"                                    that activities in period n include all "
+"activities up to and including period n,\n"
+"                                    plus any new activities generated during "
+"that period. This comprehensive approach\n"
+"                                    provides a complete view of activity "
+"growth over time."
 
-#: .\templates\pages\dashboard\components\line_chart.html:150
+#: .\templates\pages\dashboard\components\line_chart.html:103
+msgid "Last week"
+msgstr ""
+
+#: .\templates\pages\dashboard\components\line_chart.html:116
+msgid "Yesterday"
+msgstr ""
+
+#: .\templates\pages\dashboard\components\line_chart.html:122
+msgid "Today"
+msgstr ""
+
+#: .\templates\pages\dashboard\components\line_chart.html:128
+#, fuzzy
+#| msgid "Last IP Address"
+msgid "Last 7 days"
+msgstr "Last IP Address"
+
+#: .\templates\pages\dashboard\components\line_chart.html:134
+msgid "Last 30 days"
+msgstr ""
+
+#: .\templates\pages\dashboard\components\line_chart.html:140
+msgid "Last 90 days"
+msgstr ""
+
+#: .\templates\pages\dashboard\components\line_chart.html:157
 msgid "Report"
+msgstr "Report"
+
+#: .\templates\pages\dashboard\components\slider.html:11
+msgid "NO SLIDE FOR DISPLAY"
+msgstr ""
+
+#: .\templates\pages\dashboard\components\slider.html:39
+msgid "Previous"
+msgstr ""
+
+#: .\templates\pages\dashboard\components\slider.html:51
+msgid "Next"
+msgstr ""
+
+#: .\templates\pages\dashboard\financial.html:34
+#, fuzzy
+#| msgid "Bank Account"
+msgid "Bank Accounts :"
+msgstr "Bank Account"
+
+#: .\templates\pages\dashboard\financial.html:46
+#, fuzzy
+#| msgid "Bank Account"
+msgid "Add Account"
+msgstr "Bank Account"
+
+#: .\templates\pages\dashboard\financial.html:57
+#, fuzzy
+#| msgid "Bank Account"
+msgid "Add Bank Account"
+msgstr "Bank Account"
+
+#: .\templates\pages\dashboard\financial.html:69
+#: .\templates\pages\dashboard\financial.html:328
+#: .\templates\pages\dashboard\financial.html:377
+msgid "Close modal"
+msgstr ""
+
+#: .\templates\pages\dashboard\financial.html:122
+#: .\templates\pages\dashboard\financial.html:132
+#: .\templates\pages\dashboard\financial.html:403
+#: .\templates\pages\dashboard\financial.html:413
+msgid "Submit"
+msgstr ""
+
+#: .\templates\pages\dashboard\financial.html:136
+#: .\templates\pages\dashboard\financial.html:417
+msgid "Cancel"
 msgstr ""
 
 #: .\templates\pages\dashboard\financial.html:158
 msgid "Date"
-msgstr ""
+msgstr "Date"
 
 #: .\templates\pages\dashboard\financial.html:159
 msgid "Activity"
-msgstr ""
+msgstr "Activity"
 
 #: .\templates\pages\dashboard\financial.html:160
 msgid "Description"
-msgstr ""
+msgstr "Description"
 
 #: .\templates\pages\dashboard\financial.html:161
 msgid "Amount"
-msgstr ""
-
-#: .\templates\pages\dashboard\financial.html:162
-msgid "Bank"
-msgstr ""
+msgstr "Amount"
 
 #: .\templates\pages\dashboard\financial.html:300
 msgid "Digital Wallet"
-msgstr ""
+msgstr "Digital Wallet"
 
 #: .\templates\pages\dashboard\financial.html:302
 msgid "Current Amount :"
+msgstr "Current Amount :"
+
+#: .\templates\pages\dashboard\financial.html:318
+msgid "Transfer your Money"
 msgstr ""
 
-#: .\templates\pages\dashboard\financial.html:463
+#: .\templates\pages\dashboard\financial.html:334
+msgid "This Feature is unavailable right now"
+msgstr ""
+
+#: .\templates\pages\dashboard\financial.html:341
+msgid "I accept"
+msgstr ""
+
+#: .\templates\pages\dashboard\financial.html:345
+msgid "Decline"
+msgstr ""
+
+#: .\templates\pages\dashboard\financial.html:365
+#, fuzzy
+#| msgid "Bank Account"
+msgid "Edit Bank Account"
+msgstr "Bank Account"
+
+#: .\templates\pages\dashboard\financial.html:464
 #: .\templates\pages\main\components\earnings.html:8
 msgid "Earning"
-msgstr ""
+msgstr "Earning"
 
-#: .\templates\pages\dashboard\main.html:12
-#: .\templates\pages\dashboard\phones_create.html:44
-msgid "Add picture"
-msgstr ""
+#: .\templates\pages\dashboard\phones_create.html:32
+msgid "Create"
+msgstr "Create"
 
-#: .\templates\pages\dashboard\main.html:15
-#: .\templates\pages\dashboard\phones_create.html:47
-msgid "Add Your Phone"
-msgstr ""
-
-#: .\templates\pages\dashboard\main.html:18
 #: .\templates\pages\dashboard\phones_create.html:50
 msgid ""
 "\n"
@@ -874,66 +1089,136 @@ msgid ""
 "if everything is in order.\n"
 "                    "
 msgstr ""
-
-#: .\templates\pages\dashboard\phones_create.html:32
-msgid "Create"
-msgstr ""
+"\n"
+"Please fill out the form carefully. Ensure all information is correct. Once "
+"submitted, our\n"
+"                        support team will review your submission and approve "
+"if everything is in order."
 
 #: .\templates\pages\dashboard\phones_create.html:101
 msgid "No country supported yet"
+msgstr "No country supported yet"
+
+#: .\templates\pages\dashboard\phones_create.html:177
+#, fuzzy
+#| msgid "Device"
+msgid "Add New Device"
+msgstr "Device"
+
+#: .\templates\pages\dashboard\phones_list.html:49
+#, fuzzy
+#| msgid "March"
+msgid "Search"
+msgstr "March"
+
+#: .\templates\pages\dashboard\phones_list.html:64
+#, fuzzy
+#| msgid "SIM Number"
+msgid "Search SIM number"
+msgstr "SIM Number"
+
+#: .\templates\pages\dashboard\phones_list.html:88
+#: .\templates\pages\dashboard\phones_list.html:223
+msgid "Actions"
+msgstr "Actions"
+
+#: .\templates\pages\dashboard\phones_list.html:107
+msgid "CSV REPORT"
 msgstr ""
 
-#: .\templates\pages\dashboard\phones_list.html:200
-msgid "SIM"
+#: .\templates\pages\dashboard\phones_list.html:121
+#: .\templates\pages\dashboard\phones_list.html:195
+msgid "Filter"
 msgstr ""
+
+#: .\templates\pages\dashboard\phones_list.html:131
+msgid "Choose filter"
+msgstr ""
+
+#: .\templates\pages\dashboard\phones_list.html:180
+#, fuzzy
+#| msgid "Is Active"
+msgid "Status : Active"
+msgstr "Is Active"
+
+#: .\templates\pages\dashboard\phones_list.html:189
+#, fuzzy
+#| msgid "Is Active"
+msgid "Status : DeActive"
+msgstr "Is Active"
 
 #: .\templates\pages\dashboard\phones_list.html:201
+#: .\venv\Lib\site-packages\django\forms\widgets.py:461
+msgid "Clear"
+msgstr "Clear"
+
+#: .\templates\pages\dashboard\phones_list.html:215
+msgid "SIM"
+msgstr "SIM"
+
+#: .\templates\pages\dashboard\phones_list.html:216
 msgid "Carrier"
-msgstr ""
+msgstr "Carrier"
 
-#: .\templates\pages\dashboard\phones_list.html:202
+#: .\templates\pages\dashboard\phones_list.html:217
 msgid "Payment"
-msgstr ""
+msgstr "Payment"
 
-#: .\templates\pages\dashboard\phones_list.html:203
+#: .\templates\pages\dashboard\phones_list.html:218
 msgid "Plan Length"
+msgstr "Plan Length"
+
+#: .\templates\pages\dashboard\phones_list.html:245
+msgid "VERIFIED"
 msgstr ""
 
-#: .\templates\pages\dashboard\phones_list.html:208
-msgid "Actions"
+#: .\templates\pages\dashboard\phones_list.html:247
+msgid "UNVERIFIED"
 msgstr ""
 
-#: .\templates\pages\dashboard\phones_list.html:301
+#: .\templates\pages\dashboard\phones_list.html:303
 msgid "You don't have any phones yet."
+msgstr "You don't have any phones yet."
+
+#: .\templates\pages\dashboard\phones_list.html:306
+msgid "Click here to add one"
+msgstr "Click here to add one"
+
+#: .\templates\pages\dashboard\phones_list.html:318
+msgid "Showing"
 msgstr ""
 
-#: .\templates\pages\dashboard\phones_list.html:304
-msgid "Click here to add one"
+#: .\templates\pages\dashboard\phones_list.html:320
+msgid "of"
+msgstr ""
+
+#: .\templates\pages\dashboard\settings.html:57
+msgid "ACTIVE"
 msgstr ""
 
 #: .\templates\pages\dashboard\settings.html:60
 msgid "Joined since :"
-msgstr ""
+msgstr "Joined since :"
 
 #: .\templates\pages\dashboard\settings.html:64
 msgid "Last login :"
-msgstr ""
+msgstr "Last login :"
 
 #: .\templates\pages\dashboard\settings.html:90
 msgid "Profile"
-msgstr ""
+msgstr "Profile"
 
 #: .\templates\pages\dashboard\settings.html:99
 msgid "Change Password"
-msgstr ""
+msgstr "Change Password"
 
 #: .\templates\pages\dashboard\settings.html:151
 msgid "Save changes"
-msgstr ""
+msgstr "Save changes"
 
 #: .\templates\pages\dashboard\settings.html:194
 msgid "Change password"
-msgstr ""
+msgstr "Change password"
 
 #: .\templates\pages\main\components\about.html:13
 msgid ""
@@ -953,6 +1238,20 @@ msgid ""
 "accessible communication for all.\n"
 "                        "
 msgstr ""
+"\n"
+"At Global Cellular Partners, we lead the charge in telecommunications "
+"innovation, leveraging\n"
+"                            cutting-edge technology to transform "
+"international communication. Our unique approach\n"
+"                            harnesses\n"
+"                            the\n"
+"                            power of unused Android devices, breathing new "
+"life into them as integral components of our\n"
+"                            global\n"
+"                            network. By seamlessly connecting clients "
+"worldwide to local call rates through our digital\n"
+"                            infrastructure, we ensure affordable and "
+"accessible communication for all."
 
 #: .\templates\pages\main\components\about.html:26
 msgid ""
@@ -972,6 +1271,20 @@ msgid ""
 "                            network.\n"
 "                        "
 msgstr ""
+"\n"
+"At the heart of our mission is a commitment to unlocking earning potential "
+"while promoting\n"
+"                            sustainable technology use. Our Cellular "
+"Partners program empowers individuals to earn\n"
+"                            passive\n"
+"                            income effortlessly, with no investment or labor "
+"required. Through this program,\n"
+"                            participants\n"
+"                            can\n"
+"                            earn up to $2000 a month, simply by allowing "
+"their unused Android devices to contribute to\n"
+"                            our\n"
+"                            network."
 
 #: .\templates\pages\main\components\about.html:40
 msgid ""
@@ -986,6 +1299,15 @@ msgid ""
 "                            call at a time.\n"
 "                        "
 msgstr ""
+"\n"
+"Join us at Global Cellular Partners and become part of a transformative "
+"movement towards\n"
+"                            affordable,\n"
+"                            convenient, and sustainable international "
+"communication. Together, we're connecting the\n"
+"                            world,\n"
+"                            one\n"
+"                            call at a time."
 
 #: .\templates\pages\main\components\earnings.html:10
 msgid ""
@@ -1005,14 +1327,27 @@ msgid ""
 "that simple!\n"
 "                        "
 msgstr ""
+"\n"
+"At Global Cellular Partners, we present you with the most innovative way to "
+"earn up to <strong class=\"text-white\">$2000</strong>\n"
+"                            a\n"
+"                            month without any investment or labor required. "
+"By utilizing unused Android phones, you can\n"
+"                            earn\n"
+"                            over <strong class=\"text-white\">$100</strong> "
+"per phone per month effortlessly. As a Cellular Partner, you'll earn  "
+"<strong class=\"text-white\">$0.02</strong> cents\n"
+"                            per\n"
+"                            call minute that passes through your phone. It's "
+"that simple!"
 
 #: .\templates\pages\main\components\earnings.html:20
 msgid "My Earning"
-msgstr ""
+msgstr "My Earning"
 
 #: .\templates\pages\main\components\faq.html:8
 msgid "FAQ"
-msgstr ""
+msgstr "FAQ"
 
 #: .\templates\pages\main\components\faq.html:10
 msgid ""
@@ -1031,10 +1366,23 @@ msgid ""
 "one to reveal the answer.\n"
 "                        "
 msgstr ""
+"\n"
+"Welcome to our FAQ section! Here, we've compiled a list of commonly asked "
+"questions to\n"
+"                            provide\n"
+"                            you with quick and helpful answers. Whether "
+"you're curious about our products, services, or\n"
+"                            policies, you'll likely find the information you "
+"need below. If you don't see your question\n"
+"                            listed, feel free to reach out to our support "
+"team, and we'll be happy to assist you\n"
+"                            further.\n"
+"                            Browse through the questions and click on each "
+"one to reveal the answer."
 
 #: .\templates\pages\main\components\faq.html:20
 msgid "Contact Us"
-msgstr ""
+msgstr "Contact Us"
 
 #: .\templates\pages\main\components\faq.html:37
 msgid ""
@@ -1043,6 +1391,8 @@ msgid ""
 "revolutionize international calls?\n"
 "                                "
 msgstr ""
+"\n"
+"How does Global Cellular Partners revolutionize international calls?"
 
 #: .\templates\pages\main\components\faq.html:51
 msgid ""
@@ -1057,6 +1407,15 @@ msgid ""
 "call rates.\n"
 "                                "
 msgstr ""
+"\n"
+"Global Cellular Partners revolutionizes international calls by utilizing a "
+"network\n"
+"                                    of over 100 cellular partners worldwide. "
+"Through interconnected Android devices, we\n"
+"                                    provide seamless connectivity and "
+"affordable communication solutions, allowing users\n"
+"                                    to make international calls at local "
+"call rates."
 
 #: .\templates\pages\main\components\faq.html:72
 msgid ""
@@ -1065,6 +1424,9 @@ msgid ""
 "cellular partners with Global Cellular Partners?\n"
 "                                "
 msgstr ""
+"\n"
+"What is the earning potential for cellular partners with Global Cellular "
+"Partners?"
 
 #: .\templates\pages\main\components\faq.html:86
 msgid ""
@@ -1078,6 +1440,13 @@ msgid ""
 "                                    through their phones.\n"
 "                                "
 msgstr ""
+"\n"
+"Cellular partners have the potential to earn up to $2000 a month with zero\n"
+"                                    investment and zero labor required. By "
+"contributing their unused Android devices to\n"
+"                                    our network, partners can earn revenue "
+"for every minute of call traffic that passes\n"
+"                                    through their phones."
 
 #: .\templates\pages\main\components\faq.html:107
 msgid ""
@@ -1086,6 +1455,8 @@ msgid ""
 "Cellular Partners work?\n"
 "                                "
 msgstr ""
+"\n"
+"How does the technology behind Global Cellular Partners work?"
 
 #: .\templates\pages\main\components\faq.html:121
 msgid ""
@@ -1100,6 +1471,15 @@ msgid ""
 "local partners.\n"
 "                                "
 msgstr ""
+"\n"
+"Our technology works by routing international calls through our VoIP servers "
+"to\n"
+"                                    specific Android devices in our cellular "
+"partners network. These devices, located in\n"
+"                                    the destination countries, establish "
+"local calls and facilitate seamless\n"
+"                                    communication between our clients and "
+"local partners."
 
 #: .\templates\pages\main\components\faq.html:142
 msgid ""
@@ -1108,6 +1488,9 @@ msgid ""
 "Cellular Partners as a cellular partner?\n"
 "                                "
 msgstr ""
+"\n"
+"What are the benefits of joining Global Cellular Partners as a cellular "
+"partner?"
 
 #: .\templates\pages\main\components\faq.html:156
 msgid ""
@@ -1121,6 +1504,14 @@ msgid ""
 "                                    phones work for them.\n"
 "                                "
 msgstr ""
+"\n"
+"Joining Global Cellular Partners offers several benefits, including passive "
+"income\n"
+"                                    generation, flexibility to work from "
+"anywhere, no upfront investment required, and\n"
+"                                    easy setup. Partners can earn money "
+"effortlessly by letting their unused Android\n"
+"                                    phones work for them."
 
 #: .\templates\pages\main\components\hero.html:8
 msgid ""
@@ -1128,6 +1519,8 @@ msgid ""
 "                Welcome to Global Cellular Partners\n"
 "            "
 msgstr ""
+"\n"
+"Welcome to Global Cellular Partners"
 
 #: .\templates\pages\main\components\hero.html:13
 msgid ""
@@ -1140,18 +1533,25 @@ msgid ""
 "communication solutions.\n"
 "            "
 msgstr ""
+"\n"
+"At Global Cellular Partners, we're revolutionizing the way international "
+"calls are made and terminated.\n"
+"                Our mission is to create a vast network of cellular partners "
+"spanning over 100 countries worldwide, all\n"
+"                united in providing seamless connectivity and affordable "
+"communication solutions."
 
 #: .\templates\pages\main\components\hero.html:21
 msgid "Get started"
-msgstr ""
+msgstr "Get started"
 
 #: .\templates\pages\main\components\hero.html:29
 msgid "Learn more"
-msgstr ""
+msgstr "Learn more"
 
 #: .\templates\pages\main\components\join_us.html:6
 msgid "Join the Movement"
-msgstr ""
+msgstr "Join the Movement"
 
 #: .\templates\pages\main\components\join_us.html:8
 msgid ""
@@ -1164,14 +1564,21 @@ msgid ""
 "convenient, affordable, and accessible for everyone.\n"
 "                "
 msgstr ""
+"\n"
+"Are you ready to be part of a global revolution in communication? Join us as "
+"a cellular partner and\n"
+"                    contribute your unused Android devices to our network. "
+"Together, we can redefine the way the world\n"
+"                    communicates, making international calling more "
+"convenient, affordable, and accessible for everyone."
 
 #: .\templates\pages\main\components\join_us.html:14
 msgid "Join Now"
-msgstr ""
+msgstr "Join Now"
 
 #: .\templates\pages\main\components\support_countries.html:8
 msgid "Countries We support"
-msgstr ""
+msgstr "Countries We support"
 
 #: .\templates\pages\main\components\support_countries.html:10
 msgid ""
@@ -1179,6 +1586,8 @@ msgid ""
 "                Start exploring the countries Global Cell support\n"
 "            "
 msgstr ""
+"\n"
+"Start exploring the countries Global Cell support"
 
 #: .\templates\pages\main\components\video_explain.html:7
 msgid ""
@@ -1186,14 +1595,16 @@ msgid ""
 "                Let's hear directly from our team\n"
 "            "
 msgstr ""
+"\n"
+"Let's hear directly from our team"
 
 #: .\templates\pages\main\components\vision.html:10
 msgid "Our Vision"
-msgstr ""
+msgstr "Our Vision"
 
 #: .\templates\pages\main\components\vision.html:31
 msgid "Connecting the World:"
-msgstr ""
+msgstr "Connecting the World:"
 
 #: .\templates\pages\main\components\vision.html:33
 msgid ""
@@ -1208,10 +1619,19 @@ msgid ""
 "                                accessibility to our users worldwide.\n"
 "                            "
 msgstr ""
+"\n"
+"At Global Cellular Partners, our vision extends beyond borders. We're "
+"tirelessly working\n"
+"                                towards building a global network of "
+"cellular partners spanning over 100 countries. This\n"
+"                                expansive reach ensures that communication "
+"knows no bounds, offering widespread coverage\n"
+"                                and\n"
+"                                accessibility to our users worldwide."
 
 #: .\templates\pages\main\components\vision.html:51
 msgid "Revolutionizing Connectivity:"
-msgstr ""
+msgstr "Revolutionizing Connectivity:"
 
 #: .\templates\pages\main\components\vision.html:53
 msgid ""
@@ -1227,10 +1647,20 @@ msgid ""
 "footprint across the globe.\n"
 "                            "
 msgstr ""
+"\n"
+"We believe in the power of untapped potential. By unlocking the earning "
+"power of unused\n"
+"                                Android devices, we're not just revitalizing "
+"technology, but also transforming lives.\n"
+"                                Through the collective contribution of our "
+"partners, we're breathing new life into\n"
+"                                devices,\n"
+"                                while simultaneously extending our digital "
+"footprint across the globe."
 
 #: .\templates\pages\main\components\vision.html:75
 msgid "Seamless Communication: "
-msgstr ""
+msgstr "Seamless Communication:"
 
 #: .\templates\pages\main\components\vision.html:77
 msgid ""
@@ -1249,10 +1679,23 @@ msgid ""
 "                                hefty bills.\n"
 "                            "
 msgstr ""
+"\n"
+"In a world where distances shrink and connections grow stronger, "
+"affordability shouldn't\n"
+"                                be\n"
+"                                a barrier. Our interconnected network of "
+"Android devices forms the backbone of seamless\n"
+"                                digital connectivity. This enables us to "
+"offer international call termination services\n"
+"                                at\n"
+"                                local rates, empowering users to stay "
+"connected with their loved ones without worrying\n"
+"                                about\n"
+"                                hefty bills."
 
 #: .\templates\pages\main\components\vision.html:98
 msgid "Empowering Partners:"
-msgstr ""
+msgstr "Empowering Partners:"
 
 #: .\templates\pages\main\components\vision.html:100
 msgid ""
@@ -1271,23 +1714,36 @@ msgid ""
 "future.\n"
 "                            "
 msgstr ""
+"\n"
+"At the heart of our mission lies a commitment to empowerment. Our cellular "
+"partners play\n"
+"                                a\n"
+"                                pivotal role in our ecosystem, earning "
+"revenue for every minute of call traffic routed\n"
+"                                through their unused devices. This "
+"innovative model not only enriches our partners\n"
+"                                financially but also champions the "
+"sustainable utilization of technology resources,\n"
+"                                paving\n"
+"                                the way for a brighter, more connected "
+"future."
 
 #: .\templates\pages\main\login.html:9
 msgid "Sign in to your account"
-msgstr ""
+msgstr "Sign in to your account"
 
 #: .\templates\pages\main\login.html:15
 #: .\templates\pages\main\password_reset.html:15
 msgid "Your email"
-msgstr ""
+msgstr "Your email"
 
 #: .\templates\pages\main\login.html:27
 msgid "Forgot password?"
-msgstr ""
+msgstr "Forgot password?"
 
 #: .\templates\pages\main\login.html:31 .\templates\pages\main\register.html:50
 msgid "Sign in"
-msgstr ""
+msgstr "Sign in"
 
 #: .\templates\pages\main\login.html:34
 msgid ""
@@ -1295,29 +1751,31 @@ msgid ""
 "                                Don’t have an account yet?\n"
 "                            "
 msgstr ""
+"\n"
+"Don’t have an account yet?"
 
 #: .\templates\pages\main\login.html:37
 msgid "Sign up"
-msgstr ""
+msgstr "Sign up"
 
 #: .\templates\pages\main\password_reset.html:9
 #: .\templates\pages\main\password_reset_form.html:9
 #: .\templates\pages\main\password_reset_form.html:27
 msgid "Reset Password"
-msgstr ""
+msgstr "Reset Password"
 
 #: .\templates\pages\main\password_reset.html:20
 msgid "Send"
-msgstr ""
+msgstr "Send"
 
 #: .\templates\pages\main\password_reset_complete.html:9
 #: .\templates\pages\main\password_reset_complete.html:14
 msgid "Password Reset Successful"
-msgstr ""
+msgstr "Password Reset Successful"
 
 #: .\templates\pages\main\password_reset_complete.html:11
 msgid "Password Reset"
-msgstr ""
+msgstr "Password Reset"
 
 #: .\templates\pages\main\password_reset_complete.html:17
 msgid ""
@@ -1326,19 +1784,22 @@ msgid ""
 "now log in with your new password.\n"
 "                    "
 msgstr ""
+"\n"
+"Your password has been successfully reset. You can now log in with your new "
+"password."
 
 #: .\templates\pages\main\password_reset_complete.html:23
 msgid "Go to Login"
-msgstr ""
+msgstr "Go to Login"
 
 #: .\templates\pages\main\password_reset_done.html:9
 #: .\templates\pages\main\password_reset_done.html:11
 msgid "Email Sent"
-msgstr ""
+msgstr "Email Sent"
 
 #: .\templates\pages\main\password_reset_done.html:14
 msgid "Check Your Email"
-msgstr ""
+msgstr "Check Your Email"
 
 #: .\templates\pages\main\password_reset_done.html:17
 msgid ""
@@ -1348,14 +1809,18 @@ msgid ""
 "                        your spam folder) to proceed.\n"
 "                    "
 msgstr ""
+"\n"
+"We've sent you an email with instructions to reset your password. Please "
+"check your inbox (and\n"
+"                        your spam folder) to proceed."
 
 #: .\templates\pages\main\password_reset_done.html:24
 msgid "Back to Homepage"
-msgstr ""
+msgstr "Back to Homepage"
 
 #: .\templates\pages\main\register.html:9
 msgid "Create an account"
-msgstr ""
+msgstr "Create an account"
 
 #: .\templates\pages\main\register.html:53
 msgid ""
@@ -1363,108 +1828,113 @@ msgid ""
 "                                Already have an account?\n"
 "                            "
 msgstr ""
+"\n"
+"Already have an account?"
 
 #: .\venv\Lib\site-packages\django\contrib\messages\apps.py:16
 msgid "Messages"
-msgstr ""
+msgstr "Messages"
 
 #: .\venv\Lib\site-packages\django\contrib\sitemaps\apps.py:8
 msgid "Site Maps"
-msgstr ""
+msgstr "Site Maps"
 
 #: .\venv\Lib\site-packages\django\contrib\staticfiles\apps.py:9
 msgid "Static Files"
-msgstr ""
+msgstr "Static Files"
 
 #: .\venv\Lib\site-packages\django\contrib\syndication\apps.py:7
 msgid "Syndication"
-msgstr ""
+msgstr "Syndication"
 
 #. Translators: String used to replace omitted page numbers in elided page
 #. range generated by paginators, e.g. [1, 2, '…', 5, 6, 7, '…', 9, 10].
 #: .\venv\Lib\site-packages\django\core\paginator.py:30
 msgid "…"
-msgstr ""
+msgstr "…"
 
 #: .\venv\Lib\site-packages\django\core\paginator.py:32
 msgid "That page number is not an integer"
-msgstr ""
+msgstr "That page number is not an integer"
 
 #: .\venv\Lib\site-packages\django\core\paginator.py:33
 msgid "That page number is less than 1"
-msgstr ""
+msgstr "That page number is less than 1"
 
 #: .\venv\Lib\site-packages\django\core\paginator.py:34
 msgid "That page contains no results"
-msgstr ""
+msgstr "That page contains no results"
 
 #: .\venv\Lib\site-packages\django\core\validators.py:22
 msgid "Enter a valid value."
-msgstr ""
+msgstr "Enter a valid value."
 
 #: .\venv\Lib\site-packages\django\core\validators.py:104
 #: .\venv\Lib\site-packages\django\forms\fields.py:760
 msgid "Enter a valid URL."
-msgstr ""
+msgstr "Enter a valid URL."
 
 #: .\venv\Lib\site-packages\django\core\validators.py:165
 msgid "Enter a valid integer."
-msgstr ""
+msgstr "Enter a valid integer."
 
 #: .\venv\Lib\site-packages\django\core\validators.py:176
 msgid "Enter a valid email address."
-msgstr ""
+msgstr "Enter a valid email address."
 
 #. Translators: "letters" means latin letters: a-z and A-Z.
 #: .\venv\Lib\site-packages\django\core\validators.py:259
 msgid ""
 "Enter a valid “slug” consisting of letters, numbers, underscores or hyphens."
 msgstr ""
+"Enter a valid “slug” consisting of letters, numbers, underscores or hyphens."
 
 #: .\venv\Lib\site-packages\django\core\validators.py:267
 msgid ""
 "Enter a valid “slug” consisting of Unicode letters, numbers, underscores, or "
 "hyphens."
 msgstr ""
+"Enter a valid “slug” consisting of Unicode letters, numbers, underscores, or "
+"hyphens."
 
 #: .\venv\Lib\site-packages\django\core\validators.py:279
 #: .\venv\Lib\site-packages\django\core\validators.py:306
 msgid "Enter a valid IPv4 address."
-msgstr ""
+msgstr "Enter a valid IPv4 address."
 
 #: .\venv\Lib\site-packages\django\core\validators.py:286
 #: .\venv\Lib\site-packages\django\core\validators.py:307
 msgid "Enter a valid IPv6 address."
-msgstr ""
+msgstr "Enter a valid IPv6 address."
 
 #: .\venv\Lib\site-packages\django\core\validators.py:298
 #: .\venv\Lib\site-packages\django\core\validators.py:305
 msgid "Enter a valid IPv4 or IPv6 address."
-msgstr ""
+msgstr "Enter a valid IPv4 or IPv6 address."
 
 #: .\venv\Lib\site-packages\django\core\validators.py:341
 msgid "Enter only digits separated by commas."
-msgstr ""
+msgstr "Enter only digits separated by commas."
 
 #: .\venv\Lib\site-packages\django\core\validators.py:347
 #, python-format
 msgid "Ensure this value is %(limit_value)s (it is %(show_value)s)."
-msgstr ""
+msgstr "Ensure this value is %(limit_value)s (it is %(show_value)s)."
 
 #: .\venv\Lib\site-packages\django\core\validators.py:382
 #, python-format
 msgid "Ensure this value is less than or equal to %(limit_value)s."
-msgstr ""
+msgstr "Ensure this value is less than or equal to %(limit_value)s."
 
 #: .\venv\Lib\site-packages\django\core\validators.py:391
 #, python-format
 msgid "Ensure this value is greater than or equal to %(limit_value)s."
-msgstr ""
+msgstr "Ensure this value is greater than or equal to %(limit_value)s."
 
 #: .\venv\Lib\site-packages\django\core\validators.py:400
 #, python-format
 msgid "Ensure this value is a multiple of step size %(limit_value)s."
-msgstr ""
+msgstr "Ensure this value is a multiple of step size %(limit_value)s."
 
 #: .\venv\Lib\site-packages\django\core\validators.py:407
 #, python-format
@@ -1472,6 +1942,8 @@ msgid ""
 "Ensure this value is a multiple of step size %(limit_value)s, starting from "
 "%(offset)s, e.g. %(offset)s, %(valid_value1)s, %(valid_value2)s, and so on."
 msgstr ""
+"Ensure this value is a multiple of step size %(limit_value)s, starting from "
+"%(offset)s, e.g. %(offset)s, %(valid_value1)s, %(valid_value2)s, and so on."
 
 #: .\venv\Lib\site-packages\django\core\validators.py:439
 #, python-format
@@ -1482,7 +1954,11 @@ msgid_plural ""
 "Ensure this value has at least %(limit_value)d characters (it has "
 "%(show_value)d)."
 msgstr[0] ""
+"Ensure this value has at least %(limit_value)d character (it has "
+"%(show_value)d)."
 msgstr[1] ""
+"Ensure this value has at least %(limit_value)d characters (it has "
+"%(show_value)d)."
 
 #: .\venv\Lib\site-packages\django\core\validators.py:457
 #, python-format
@@ -1493,27 +1969,31 @@ msgid_plural ""
 "Ensure this value has at most %(limit_value)d characters (it has "
 "%(show_value)d)."
 msgstr[0] ""
+"Ensure this value has at most %(limit_value)d character (it has "
+"%(show_value)d)."
 msgstr[1] ""
+"Ensure this value has at most %(limit_value)d characters (it has "
+"%(show_value)d)."
 
 #: .\venv\Lib\site-packages\django\core\validators.py:480
 #: .\venv\Lib\site-packages\django\forms\fields.py:355
 #: .\venv\Lib\site-packages\django\forms\fields.py:394
 msgid "Enter a number."
-msgstr ""
+msgstr "Enter a number."
 
 #: .\venv\Lib\site-packages\django\core\validators.py:482
 #, python-format
 msgid "Ensure that there are no more than %(max)s digit in total."
 msgid_plural "Ensure that there are no more than %(max)s digits in total."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Ensure that there are no more than %(max)s digit in total."
+msgstr[1] "Ensure that there are no more than %(max)s digits in total."
 
 #: .\venv\Lib\site-packages\django\core\validators.py:487
 #, python-format
 msgid "Ensure that there are no more than %(max)s decimal place."
 msgid_plural "Ensure that there are no more than %(max)s decimal places."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Ensure that there are no more than %(max)s decimal place."
+msgstr[1] "Ensure that there are no more than %(max)s decimal places."
 
 #: .\venv\Lib\site-packages\django\core\validators.py:492
 #, python-format
@@ -1522,7 +2002,9 @@ msgid ""
 msgid_plural ""
 "Ensure that there are no more than %(max)s digits before the decimal point."
 msgstr[0] ""
+"Ensure that there are no more than %(max)s digit before the decimal point."
 msgstr[1] ""
+"Ensure that there are no more than %(max)s digits before the decimal point."
 
 #: .\venv\Lib\site-packages\django\core\validators.py:563
 #, python-format
@@ -1530,43 +2012,45 @@ msgid ""
 "File extension “%(extension)s” is not allowed. Allowed extensions are: "
 "%(allowed_extensions)s."
 msgstr ""
+"File extension “%(extension)s” is not allowed. Allowed extensions are: "
+"%(allowed_extensions)s."
 
 #: .\venv\Lib\site-packages\django\core\validators.py:624
 msgid "Null characters are not allowed."
-msgstr ""
+msgstr "Null characters are not allowed."
 
 #: .\venv\Lib\site-packages\django\db\models\base.py:1473
 #: .\venv\Lib\site-packages\django\forms\models.py:906
 msgid "and"
-msgstr ""
+msgstr "and"
 
 #: .\venv\Lib\site-packages\django\db\models\base.py:1475
 #, python-format
 msgid "%(model_name)s with this %(field_labels)s already exists."
-msgstr ""
+msgstr "%(model_name)s with this %(field_labels)s already exists."
 
 #: .\venv\Lib\site-packages\django\db\models\constraints.py:20
 #, python-format
 msgid "Constraint “%(name)s” is violated."
-msgstr ""
+msgstr "Constraint “%(name)s” is violated."
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:133
 #, python-format
 msgid "Value %(value)r is not a valid choice."
-msgstr ""
+msgstr "Value %(value)r is not a valid choice."
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:134
 msgid "This field cannot be null."
-msgstr ""
+msgstr "This field cannot be null."
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:135
 msgid "This field cannot be blank."
-msgstr ""
+msgstr "This field cannot be blank."
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:136
 #, python-format
 msgid "%(model_name)s with this %(field_label)s already exists."
-msgstr ""
+msgstr "%(model_name)s with this %(field_label)s already exists."
 
 #. Translators: The 'lookup_type' is one of 'date', 'year' or
 #. 'month'. Eg: "Title must be unique for pub_date year"
@@ -1575,38 +2059,39 @@ msgstr ""
 msgid ""
 "%(field_label)s must be unique for %(date_field_label)s %(lookup_type)s."
 msgstr ""
+"%(field_label)s must be unique for %(date_field_label)s %(lookup_type)s."
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:179
 #, python-format
 msgid "Field of type: %(field_type)s"
-msgstr ""
+msgstr "Field of type: %(field_type)s"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1155
 #, python-format
 msgid "“%(value)s” value must be either True or False."
-msgstr ""
+msgstr "“%(value)s” value must be either True or False."
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1156
 #, python-format
 msgid "“%(value)s” value must be either True, False, or None."
-msgstr ""
+msgstr "“%(value)s” value must be either True, False, or None."
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1158
 msgid "Boolean (Either True or False)"
-msgstr ""
+msgstr "Boolean (Either True or False)"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1208
 #, python-format
 msgid "String (up to %(max_length)s)"
-msgstr ""
+msgstr "String (up to %(max_length)s)"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1210
 msgid "String (unlimited)"
-msgstr ""
+msgstr "String (unlimited)"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1314
 msgid "Comma-separated integers"
-msgstr ""
+msgstr "Comma-separated integers"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1415
 #, python-format
@@ -1614,6 +2099,8 @@ msgid ""
 "“%(value)s” value has an invalid date format. It must be in YYYY-MM-DD "
 "format."
 msgstr ""
+"“%(value)s” value has an invalid date format. It must be in YYYY-MM-DD "
+"format."
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1419
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1554
@@ -1622,10 +2109,12 @@ msgid ""
 "“%(value)s” value has the correct format (YYYY-MM-DD) but it is an invalid "
 "date."
 msgstr ""
+"“%(value)s” value has the correct format (YYYY-MM-DD) but it is an invalid "
+"date."
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1423
 msgid "Date (without time)"
-msgstr ""
+msgstr "Date (without time)"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1550
 #, python-format
@@ -1633,6 +2122,8 @@ msgid ""
 "“%(value)s” value has an invalid format. It must be in YYYY-MM-DD HH:MM[:ss[."
 "uuuuuu]][TZ] format."
 msgstr ""
+"“%(value)s” value has an invalid format. It must be in YYYY-MM-DD HH:MM[:ss[."
+"uuuuuu]][TZ] format."
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1558
 #, python-format
@@ -1640,19 +2131,21 @@ msgid ""
 "“%(value)s” value has the correct format (YYYY-MM-DD HH:MM[:ss[.uuuuuu]]"
 "[TZ]) but it is an invalid date/time."
 msgstr ""
+"“%(value)s” value has the correct format (YYYY-MM-DD HH:MM[:ss[.uuuuuu]]"
+"[TZ]) but it is an invalid date/time."
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1563
 msgid "Date (with time)"
-msgstr ""
+msgstr "Date (with time)"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1690
 #, python-format
 msgid "“%(value)s” value must be a decimal number."
-msgstr ""
+msgstr "“%(value)s” value must be a decimal number."
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1692
 msgid "Decimal number"
-msgstr ""
+msgstr "Decimal number"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1853
 #, python-format
@@ -1660,83 +2153,85 @@ msgid ""
 "“%(value)s” value has an invalid format. It must be in [DD] [[HH:]MM:]ss[."
 "uuuuuu] format."
 msgstr ""
+"“%(value)s” value has an invalid format. It must be in [DD] [[HH:]MM:]ss[."
+"uuuuuu] format."
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1857
 msgid "Duration"
-msgstr ""
+msgstr "Duration"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1909
 msgid "Email address"
-msgstr ""
+msgstr "Email address"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1934
 msgid "File path"
-msgstr ""
+msgstr "File path"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2012
 #, python-format
 msgid "“%(value)s” value must be a float."
-msgstr ""
+msgstr "“%(value)s” value must be a float."
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2014
 msgid "Floating point number"
-msgstr ""
+msgstr "Floating point number"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2054
 #, python-format
 msgid "“%(value)s” value must be an integer."
-msgstr ""
+msgstr "“%(value)s” value must be an integer."
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2056
 msgid "Integer"
-msgstr ""
+msgstr "Integer"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2152
 msgid "Big (8 byte) integer"
-msgstr ""
+msgstr "Big (8 byte) integer"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2169
 msgid "Small integer"
-msgstr ""
+msgstr "Small integer"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2177
 msgid "IPv4 address"
-msgstr ""
+msgstr "IPv4 address"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2208
 msgid "IP address"
-msgstr ""
+msgstr "IP address"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2301
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2302
 #, python-format
 msgid "“%(value)s” value must be either None, True or False."
-msgstr ""
+msgstr "“%(value)s” value must be either None, True or False."
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2304
 msgid "Boolean (Either True, False or None)"
-msgstr ""
+msgstr "Boolean (Either True, False or None)"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2355
 msgid "Positive big integer"
-msgstr ""
+msgstr "Positive big integer"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2370
 msgid "Positive integer"
-msgstr ""
+msgstr "Positive integer"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2385
 msgid "Positive small integer"
-msgstr ""
+msgstr "Positive small integer"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2401
 #, python-format
 msgid "Slug (up to %(max_length)s)"
-msgstr ""
+msgstr "Slug (up to %(max_length)s)"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2437
 msgid "Text"
-msgstr ""
+msgstr "Text"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2512
 #, python-format
@@ -1744,6 +2239,8 @@ msgid ""
 "“%(value)s” value has an invalid format. It must be in HH:MM[:ss[.uuuuuu]] "
 "format."
 msgstr ""
+"“%(value)s” value has an invalid format. It must be in HH:MM[:ss[.uuuuuu]] "
+"format."
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2516
 #, python-format
@@ -1751,115 +2248,117 @@ msgid ""
 "“%(value)s” value has the correct format (HH:MM[:ss[.uuuuuu]]) but it is an "
 "invalid time."
 msgstr ""
+"“%(value)s” value has the correct format (HH:MM[:ss[.uuuuuu]]) but it is an "
+"invalid time."
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2520
 msgid "Time"
-msgstr ""
+msgstr "Time"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2628
 msgid "URL"
-msgstr ""
+msgstr "URL"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2652
 msgid "Raw binary data"
-msgstr ""
+msgstr "Raw binary data"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2717
 #, python-format
 msgid "“%(value)s” is not a valid UUID."
-msgstr ""
+msgstr "“%(value)s” is not a valid UUID."
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2719
 msgid "Universally unique identifier"
-msgstr ""
+msgstr "Universally unique identifier"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\files.py:232
 msgid "File"
-msgstr ""
+msgstr "File"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\json.py:26
 msgid "A JSON object"
-msgstr ""
+msgstr "A JSON object"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\json.py:28
 msgid "Value must be valid JSON."
-msgstr ""
+msgstr "Value must be valid JSON."
 
 #: .\venv\Lib\site-packages\django\db\models\fields\related.py:939
 #, python-format
 msgid "%(model)s instance with %(field)s %(value)r does not exist."
-msgstr ""
+msgstr "%(model)s instance with %(field)s %(value)r does not exist."
 
 #: .\venv\Lib\site-packages\django\db\models\fields\related.py:941
 msgid "Foreign Key (type determined by related field)"
-msgstr ""
+msgstr "Foreign Key (type determined by related field)"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\related.py:1235
 msgid "One-to-one relationship"
-msgstr ""
+msgstr "One-to-one relationship"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\related.py:1292
 #, python-format
 msgid "%(from)s-%(to)s relationship"
-msgstr ""
+msgstr "%(from)s-%(to)s relationship"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\related.py:1294
 #, python-format
 msgid "%(from)s-%(to)s relationships"
-msgstr ""
+msgstr "%(from)s-%(to)s relationships"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\related.py:1342
 msgid "Many-to-many relationship"
-msgstr ""
+msgstr "Many-to-many relationship"
 
 #. Translators: If found as last label character, these punctuation
 #. characters will prevent the default label_suffix to be appended to the label
 #: .\venv\Lib\site-packages\django\forms\boundfield.py:185
 msgid ":?.!"
-msgstr ""
+msgstr ":?.!"
 
 #: .\venv\Lib\site-packages\django\forms\fields.py:95
 msgid "This field is required."
-msgstr ""
+msgstr "This field is required."
 
 #: .\venv\Lib\site-packages\django\forms\fields.py:304
 msgid "Enter a whole number."
-msgstr ""
+msgstr "Enter a whole number."
 
 #: .\venv\Lib\site-packages\django\forms\fields.py:475
 #: .\venv\Lib\site-packages\django\forms\fields.py:1252
 msgid "Enter a valid date."
-msgstr ""
+msgstr "Enter a valid date."
 
 #: .\venv\Lib\site-packages\django\forms\fields.py:498
 #: .\venv\Lib\site-packages\django\forms\fields.py:1253
 msgid "Enter a valid time."
-msgstr ""
+msgstr "Enter a valid time."
 
 #: .\venv\Lib\site-packages\django\forms\fields.py:525
 msgid "Enter a valid date/time."
-msgstr ""
+msgstr "Enter a valid date/time."
 
 #: .\venv\Lib\site-packages\django\forms\fields.py:559
 msgid "Enter a valid duration."
-msgstr ""
+msgstr "Enter a valid duration."
 
 #: .\venv\Lib\site-packages\django\forms\fields.py:560
 #, python-brace-format
 msgid "The number of days must be between {min_days} and {max_days}."
-msgstr ""
+msgstr "The number of days must be between {min_days} and {max_days}."
 
 #: .\venv\Lib\site-packages\django\forms\fields.py:629
 msgid "No file was submitted. Check the encoding type on the form."
-msgstr ""
+msgstr "No file was submitted. Check the encoding type on the form."
 
 #: .\venv\Lib\site-packages\django\forms\fields.py:630
 msgid "No file was submitted."
-msgstr ""
+msgstr "No file was submitted."
 
 #: .\venv\Lib\site-packages\django\forms\fields.py:631
 msgid "The submitted file is empty."
-msgstr ""
+msgstr "The submitted file is empty."
 
 #: .\venv\Lib\site-packages\django\forms\fields.py:633
 #, python-format
@@ -1867,52 +2366,56 @@ msgid "Ensure this filename has at most %(max)d character (it has %(length)d)."
 msgid_plural ""
 "Ensure this filename has at most %(max)d characters (it has %(length)d)."
 msgstr[0] ""
+"Ensure this filename has at most %(max)d character (it has %(length)d)."
 msgstr[1] ""
+"Ensure this filename has at most %(max)d characters (it has %(length)d)."
 
 #: .\venv\Lib\site-packages\django\forms\fields.py:638
 msgid "Please either submit a file or check the clear checkbox, not both."
-msgstr ""
+msgstr "Please either submit a file or check the clear checkbox, not both."
 
 #: .\venv\Lib\site-packages\django\forms\fields.py:702
 msgid ""
 "Upload a valid image. The file you uploaded was either not an image or a "
 "corrupted image."
 msgstr ""
+"Upload a valid image. The file you uploaded was either not an image or a "
+"corrupted image."
 
 #: .\venv\Lib\site-packages\django\forms\fields.py:874
 #: .\venv\Lib\site-packages\django\forms\fields.py:960
 #: .\venv\Lib\site-packages\django\forms\models.py:1585
 #, python-format
 msgid "Select a valid choice. %(value)s is not one of the available choices."
-msgstr ""
+msgstr "Select a valid choice. %(value)s is not one of the available choices."
 
 #: .\venv\Lib\site-packages\django\forms\fields.py:962
 #: .\venv\Lib\site-packages\django\forms\fields.py:1081
 #: .\venv\Lib\site-packages\django\forms\models.py:1583
 msgid "Enter a list of values."
-msgstr ""
+msgstr "Enter a list of values."
 
 #: .\venv\Lib\site-packages\django\forms\fields.py:1082
 msgid "Enter a complete value."
-msgstr ""
+msgstr "Enter a complete value."
 
 #: .\venv\Lib\site-packages\django\forms\fields.py:1321
 msgid "Enter a valid UUID."
-msgstr ""
+msgstr "Enter a valid UUID."
 
 #: .\venv\Lib\site-packages\django\forms\fields.py:1351
 msgid "Enter a valid JSON."
-msgstr ""
+msgstr "Enter a valid JSON."
 
 #. Translators: This is the default suffix added to form field labels
 #: .\venv\Lib\site-packages\django\forms\forms.py:94
 msgid ":"
-msgstr ""
+msgstr ":"
 
 #: .\venv\Lib\site-packages\django\forms\forms.py:231
 #, python-format
 msgid "(Hidden field %(name)s) %(error)s"
-msgstr ""
+msgstr "(Hidden field %(name)s) %(error)s"
 
 #: .\venv\Lib\site-packages\django\forms\formsets.py:61
 #, python-format
@@ -1920,39 +2423,37 @@ msgid ""
 "ManagementForm data is missing or has been tampered with. Missing fields: "
 "%(field_names)s. You may need to file a bug report if the issue persists."
 msgstr ""
+"ManagementForm data is missing or has been tampered with. Missing fields: "
+"%(field_names)s. You may need to file a bug report if the issue persists."
 
 #: .\venv\Lib\site-packages\django\forms\formsets.py:65
 #, python-format
 msgid "Please submit at most %(num)d form."
 msgid_plural "Please submit at most %(num)d forms."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Please submit at most %(num)d form."
+msgstr[1] "Please submit at most %(num)d forms."
 
 #: .\venv\Lib\site-packages\django\forms\formsets.py:70
 #, python-format
 msgid "Please submit at least %(num)d form."
 msgid_plural "Please submit at least %(num)d forms."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Please submit at least %(num)d form."
+msgstr[1] "Please submit at least %(num)d forms."
 
 #: .\venv\Lib\site-packages\django\forms\formsets.py:484
 #: .\venv\Lib\site-packages\django\forms\formsets.py:491
 msgid "Order"
-msgstr ""
-
-#: .\venv\Lib\site-packages\django\forms\formsets.py:499
-msgid "Delete"
-msgstr ""
+msgstr "Order"
 
 #: .\venv\Lib\site-packages\django\forms\models.py:899
 #, python-format
 msgid "Please correct the duplicate data for %(field)s."
-msgstr ""
+msgstr "Please correct the duplicate data for %(field)s."
 
 #: .\venv\Lib\site-packages\django\forms\models.py:904
 #, python-format
 msgid "Please correct the duplicate data for %(field)s, which must be unique."
-msgstr ""
+msgstr "Please correct the duplicate data for %(field)s, which must be unique."
 
 #: .\venv\Lib\site-packages\django\forms\models.py:911
 #, python-format
@@ -1960,23 +2461,26 @@ msgid ""
 "Please correct the duplicate data for %(field_name)s which must be unique "
 "for the %(lookup)s in %(date_field)s."
 msgstr ""
+"Please correct the duplicate data for %(field_name)s which must be unique "
+"for the %(lookup)s in %(date_field)s."
 
 #: .\venv\Lib\site-packages\django\forms\models.py:920
 msgid "Please correct the duplicate values below."
-msgstr ""
+msgstr "Please correct the duplicate values below."
 
 #: .\venv\Lib\site-packages\django\forms\models.py:1357
 msgid "The inline value did not match the parent instance."
-msgstr ""
+msgstr "The inline value did not match the parent instance."
 
 #: .\venv\Lib\site-packages\django\forms\models.py:1448
 msgid "Select a valid choice. That choice is not one of the available choices."
 msgstr ""
+"Select a valid choice. That choice is not one of the available choices."
 
 #: .\venv\Lib\site-packages\django\forms\models.py:1587
 #, python-format
 msgid "“%(pk)s” is not a valid value."
-msgstr ""
+msgstr "“%(pk)s” is not a valid value."
 
 #: .\venv\Lib\site-packages\django\forms\utils.py:227
 #, python-format
@@ -1984,434 +2488,432 @@ msgid ""
 "%(datetime)s couldn’t be interpreted in time zone %(current_timezone)s; it "
 "may be ambiguous or it may not exist."
 msgstr ""
-
-#: .\venv\Lib\site-packages\django\forms\widgets.py:461
-msgid "Clear"
-msgstr ""
+"%(datetime)s couldn’t be interpreted in time zone %(current_timezone)s; it "
+"may be ambiguous or it may not exist."
 
 #: .\venv\Lib\site-packages\django\forms\widgets.py:462
 msgid "Currently"
-msgstr ""
+msgstr "Currently"
 
 #: .\venv\Lib\site-packages\django\forms\widgets.py:463
 msgid "Change"
-msgstr ""
+msgstr "Change"
 
 #: .\venv\Lib\site-packages\django\forms\widgets.py:800
 msgid "Unknown"
-msgstr ""
+msgstr "Unknown"
 
 #: .\venv\Lib\site-packages\django\forms\widgets.py:801
 msgid "Yes"
-msgstr ""
+msgstr "Yes"
 
 #: .\venv\Lib\site-packages\django\forms\widgets.py:802
 msgid "No"
-msgstr ""
+msgstr "No"
 
 #. Translators: Please do not add spaces around commas.
 #: .\venv\Lib\site-packages\django\template\defaultfilters.py:876
 msgid "yes,no,maybe"
-msgstr ""
+msgstr "yes,no,maybe"
 
 #: .\venv\Lib\site-packages\django\template\defaultfilters.py:906
 #: .\venv\Lib\site-packages\django\template\defaultfilters.py:923
 #, python-format
 msgid "%(size)d byte"
 msgid_plural "%(size)d bytes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%(size)d byte"
+msgstr[1] "%(size)d bytes"
 
 #: .\venv\Lib\site-packages\django\template\defaultfilters.py:925
 #, python-format
 msgid "%s KB"
-msgstr ""
+msgstr "%s KB"
 
 #: .\venv\Lib\site-packages\django\template\defaultfilters.py:927
 #, python-format
 msgid "%s MB"
-msgstr ""
+msgstr "%s MB"
 
 #: .\venv\Lib\site-packages\django\template\defaultfilters.py:929
 #, python-format
 msgid "%s GB"
-msgstr ""
+msgstr "%s GB"
 
 #: .\venv\Lib\site-packages\django\template\defaultfilters.py:931
 #, python-format
 msgid "%s TB"
-msgstr ""
+msgstr "%s TB"
 
 #: .\venv\Lib\site-packages\django\template\defaultfilters.py:933
 #, python-format
 msgid "%s PB"
-msgstr ""
+msgstr "%s PB"
 
 #: .\venv\Lib\site-packages\django\utils\dateformat.py:74
 msgid "p.m."
-msgstr ""
+msgstr "p.m."
 
 #: .\venv\Lib\site-packages\django\utils\dateformat.py:75
 msgid "a.m."
-msgstr ""
+msgstr "a.m."
 
 #: .\venv\Lib\site-packages\django\utils\dateformat.py:80
 msgid "PM"
-msgstr ""
+msgstr "PM"
 
 #: .\venv\Lib\site-packages\django\utils\dateformat.py:81
 msgid "AM"
-msgstr ""
+msgstr "AM"
 
 #: .\venv\Lib\site-packages\django\utils\dateformat.py:153
 msgid "midnight"
-msgstr ""
+msgstr "midnight"
 
 #: .\venv\Lib\site-packages\django\utils\dateformat.py:155
 msgid "noon"
-msgstr ""
+msgstr "noon"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:7
 msgid "Monday"
-msgstr ""
+msgstr "Monday"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:8
 msgid "Tuesday"
-msgstr ""
+msgstr "Tuesday"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:9
 msgid "Wednesday"
-msgstr ""
+msgstr "Wednesday"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:10
 msgid "Thursday"
-msgstr ""
+msgstr "Thursday"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:11
 msgid "Friday"
-msgstr ""
+msgstr "Friday"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:12
 msgid "Saturday"
-msgstr ""
+msgstr "Saturday"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:13
 msgid "Sunday"
-msgstr ""
+msgstr "Sunday"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:16
 msgid "Mon"
-msgstr ""
+msgstr "Mon"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:17
 msgid "Tue"
-msgstr ""
+msgstr "Tue"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:18
 msgid "Wed"
-msgstr ""
+msgstr "Wed"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:19
 msgid "Thu"
-msgstr ""
+msgstr "Thu"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:20
 msgid "Fri"
-msgstr ""
+msgstr "Fri"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:21
 msgid "Sat"
-msgstr ""
+msgstr "Sat"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:22
 msgid "Sun"
-msgstr ""
+msgstr "Sun"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:25
 msgid "January"
-msgstr ""
+msgstr "January"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:26
 msgid "February"
-msgstr ""
+msgstr "February"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:27
 msgid "March"
-msgstr ""
+msgstr "March"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:28
 msgid "April"
-msgstr ""
+msgstr "April"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:29
 msgid "May"
-msgstr ""
+msgstr "May"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:30
 msgid "June"
-msgstr ""
+msgstr "June"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:31
 msgid "July"
-msgstr ""
+msgstr "July"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:32
 msgid "August"
-msgstr ""
+msgstr "August"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:33
 msgid "September"
-msgstr ""
+msgstr "September"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:34
 msgid "October"
-msgstr ""
+msgstr "October"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:35
 msgid "November"
-msgstr ""
+msgstr "November"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:36
 msgid "December"
-msgstr ""
+msgstr "December"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:39
 msgid "jan"
-msgstr ""
+msgstr "jan"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:40
 msgid "feb"
-msgstr ""
+msgstr "feb"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:41
 msgid "mar"
-msgstr ""
+msgstr "mar"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:42
 msgid "apr"
-msgstr ""
+msgstr "apr"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:43
 msgid "may"
-msgstr ""
+msgstr "may"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:44
 msgid "jun"
-msgstr ""
+msgstr "jun"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:45
 msgid "jul"
-msgstr ""
+msgstr "jul"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:46
 msgid "aug"
-msgstr ""
+msgstr "aug"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:47
 msgid "sep"
-msgstr ""
+msgstr "sep"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:48
 msgid "oct"
-msgstr ""
+msgstr "oct"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:49
 msgid "nov"
-msgstr ""
+msgstr "nov"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:50
 msgid "dec"
-msgstr ""
+msgstr "dec"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:53
 msgctxt "abbrev. month"
 msgid "Jan."
-msgstr ""
+msgstr "Jan."
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:54
 msgctxt "abbrev. month"
 msgid "Feb."
-msgstr ""
+msgstr "Feb."
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:55
 msgctxt "abbrev. month"
 msgid "March"
-msgstr ""
+msgstr "March"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:56
 msgctxt "abbrev. month"
 msgid "April"
-msgstr ""
+msgstr "April"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:57
 msgctxt "abbrev. month"
 msgid "May"
-msgstr ""
+msgstr "May"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:58
 msgctxt "abbrev. month"
 msgid "June"
-msgstr ""
+msgstr "June"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:59
 msgctxt "abbrev. month"
 msgid "July"
-msgstr ""
+msgstr "July"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:60
 msgctxt "abbrev. month"
 msgid "Aug."
-msgstr ""
+msgstr "Aug."
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:61
 msgctxt "abbrev. month"
 msgid "Sept."
-msgstr ""
+msgstr "Sept."
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:62
 msgctxt "abbrev. month"
 msgid "Oct."
-msgstr ""
+msgstr "Oct."
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:63
 msgctxt "abbrev. month"
 msgid "Nov."
-msgstr ""
+msgstr "Nov."
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:64
 msgctxt "abbrev. month"
 msgid "Dec."
-msgstr ""
+msgstr "Dec."
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:67
 msgctxt "alt. month"
 msgid "January"
-msgstr ""
+msgstr "January"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:68
 msgctxt "alt. month"
 msgid "February"
-msgstr ""
+msgstr "February"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:69
 msgctxt "alt. month"
 msgid "March"
-msgstr ""
+msgstr "March"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:70
 msgctxt "alt. month"
 msgid "April"
-msgstr ""
+msgstr "April"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:71
 msgctxt "alt. month"
 msgid "May"
-msgstr ""
+msgstr "May"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:72
 msgctxt "alt. month"
 msgid "June"
-msgstr ""
+msgstr "June"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:73
 msgctxt "alt. month"
 msgid "July"
-msgstr ""
+msgstr "July"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:74
 msgctxt "alt. month"
 msgid "August"
-msgstr ""
+msgstr "August"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:75
 msgctxt "alt. month"
 msgid "September"
-msgstr ""
+msgstr "September"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:76
 msgctxt "alt. month"
 msgid "October"
-msgstr ""
+msgstr "October"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:77
 msgctxt "alt. month"
 msgid "November"
-msgstr ""
+msgstr "November"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:78
 msgctxt "alt. month"
 msgid "December"
-msgstr ""
+msgstr "December"
 
 #: .\venv\Lib\site-packages\django\utils\ipv6.py:8
 msgid "This is not a valid IPv6 address."
-msgstr ""
+msgstr "This is not a valid IPv6 address."
 
 #: .\venv\Lib\site-packages\django\utils\text.py:123
 #, python-format
 msgctxt "String to return when truncating text"
 msgid "%(truncated_text)s…"
-msgstr ""
+msgstr "%(truncated_text)s…"
 
 #: .\venv\Lib\site-packages\django\utils\text.py:323
 msgid "or"
-msgstr ""
+msgstr "or"
 
 #. Translators: This string is used as a separator between list elements
 #: .\venv\Lib\site-packages\django\utils\text.py:342
 #: .\venv\Lib\site-packages\django\utils\timesince.py:135
 msgid ", "
-msgstr ""
+msgstr ","
 
 #: .\venv\Lib\site-packages\django\utils\timesince.py:8
 #, python-format
 msgid "%(num)d year"
 msgid_plural "%(num)d years"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%(num)d year"
+msgstr[1] "%(num)d years"
 
 #: .\venv\Lib\site-packages\django\utils\timesince.py:9
 #, python-format
 msgid "%(num)d month"
 msgid_plural "%(num)d months"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%(num)d month"
+msgstr[1] "%(num)d months"
 
 #: .\venv\Lib\site-packages\django\utils\timesince.py:10
 #, python-format
 msgid "%(num)d week"
 msgid_plural "%(num)d weeks"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%(num)d week"
+msgstr[1] "%(num)d weeks"
 
 #: .\venv\Lib\site-packages\django\utils\timesince.py:11
 #, python-format
 msgid "%(num)d day"
 msgid_plural "%(num)d days"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%(num)d day"
+msgstr[1] "%(num)d days"
 
 #: .\venv\Lib\site-packages\django\utils\timesince.py:12
 #, python-format
 msgid "%(num)d hour"
 msgid_plural "%(num)d hours"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%(num)d hour"
+msgstr[1] "%(num)d hours"
 
 #: .\venv\Lib\site-packages\django\utils\timesince.py:13
 #, python-format
 msgid "%(num)d minute"
 msgid_plural "%(num)d minutes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%(num)d minute"
+msgstr[1] "%(num)d minutes"
 
 #: .\venv\Lib\site-packages\django\views\csrf.py:29
 msgid "Forbidden"
-msgstr ""
+msgstr "Forbidden"
 
 #: .\venv\Lib\site-packages\django\views\csrf.py:30
 msgid "CSRF verification failed. Request aborted."
-msgstr ""
+msgstr "CSRF verification failed. Request aborted."
 
 #: .\venv\Lib\site-packages\django\views\csrf.py:34
 msgid ""
@@ -2420,6 +2922,10 @@ msgid ""
 "required for security reasons, to ensure that your browser is not being "
 "hijacked by third parties."
 msgstr ""
+"You are seeing this message because this HTTPS site requires a “Referer "
+"header” to be sent by your web browser, but none was sent. This header is "
+"required for security reasons, to ensure that your browser is not being "
+"hijacked by third parties."
 
 #: .\venv\Lib\site-packages\django\views\csrf.py:40
 msgid ""
@@ -2427,6 +2933,9 @@ msgid ""
 "enable them, at least for this site, or for HTTPS connections, or for “same-"
 "origin” requests."
 msgstr ""
+"If you have configured your browser to disable “Referer” headers, please re-"
+"enable them, at least for this site, or for HTTPS connections, or for “same-"
+"origin” requests."
 
 #: .\venv\Lib\site-packages\django\views\csrf.py:45
 msgid ""
@@ -2436,6 +2945,11 @@ msgid ""
 "If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
 "\" …> for links to third-party sites."
 msgstr ""
+"If you are using the <meta name=\"referrer\" content=\"no-referrer\"> tag or "
+"including the “Referrer-Policy: no-referrer” header, please remove them. The "
+"CSRF protection requires the “Referer” header to do strict referer checking. "
+"If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+"\" …> for links to third-party sites."
 
 #: .\venv\Lib\site-packages\django\views\csrf.py:54
 msgid ""
@@ -2443,44 +2957,49 @@ msgid ""
 "submitting forms. This cookie is required for security reasons, to ensure "
 "that your browser is not being hijacked by third parties."
 msgstr ""
+"You are seeing this message because this site requires a CSRF cookie when "
+"submitting forms. This cookie is required for security reasons, to ensure "
+"that your browser is not being hijacked by third parties."
 
 #: .\venv\Lib\site-packages\django\views\csrf.py:60
 msgid ""
 "If you have configured your browser to disable cookies, please re-enable "
 "them, at least for this site, or for “same-origin” requests."
 msgstr ""
+"If you have configured your browser to disable cookies, please re-enable "
+"them, at least for this site, or for “same-origin” requests."
 
 #: .\venv\Lib\site-packages\django\views\csrf.py:66
 msgid "More information is available with DEBUG=True."
-msgstr ""
+msgstr "More information is available with DEBUG=True."
 
 #: .\venv\Lib\site-packages\django\views\generic\dates.py:44
 msgid "No year specified"
-msgstr ""
+msgstr "No year specified"
 
 #: .\venv\Lib\site-packages\django\views\generic\dates.py:64
 #: .\venv\Lib\site-packages\django\views\generic\dates.py:115
 #: .\venv\Lib\site-packages\django\views\generic\dates.py:214
 msgid "Date out of range"
-msgstr ""
+msgstr "Date out of range"
 
 #: .\venv\Lib\site-packages\django\views\generic\dates.py:94
 msgid "No month specified"
-msgstr ""
+msgstr "No month specified"
 
 #: .\venv\Lib\site-packages\django\views\generic\dates.py:147
 msgid "No day specified"
-msgstr ""
+msgstr "No day specified"
 
 #: .\venv\Lib\site-packages\django\views\generic\dates.py:194
 msgid "No week specified"
-msgstr ""
+msgstr "No week specified"
 
 #: .\venv\Lib\site-packages\django\views\generic\dates.py:349
 #: .\venv\Lib\site-packages\django\views\generic\dates.py:380
 #, python-format
 msgid "No %(verbose_name_plural)s available"
-msgstr ""
+msgstr "No %(verbose_name_plural)s available"
 
 #: .\venv\Lib\site-packages\django\views\generic\dates.py:652
 #, python-format
@@ -2488,51 +3007,53 @@ msgid ""
 "Future %(verbose_name_plural)s not available because %(class_name)s."
 "allow_future is False."
 msgstr ""
+"Future %(verbose_name_plural)s not available because %(class_name)s."
+"allow_future is False."
 
 #: .\venv\Lib\site-packages\django\views\generic\dates.py:692
 #, python-format
 msgid "Invalid date string “%(datestr)s” given format “%(format)s”"
-msgstr ""
+msgstr "Invalid date string “%(datestr)s” given format “%(format)s”"
 
 #: .\venv\Lib\site-packages\django\views\generic\detail.py:56
 #, python-format
 msgid "No %(verbose_name)s found matching the query"
-msgstr ""
+msgstr "No %(verbose_name)s found matching the query"
 
 #: .\venv\Lib\site-packages\django\views\generic\list.py:70
 msgid "Page is not “last”, nor can it be converted to an int."
-msgstr ""
+msgstr "Page is not “last”, nor can it be converted to an int."
 
 #: .\venv\Lib\site-packages\django\views\generic\list.py:77
 #, python-format
 msgid "Invalid page (%(page_number)s): %(message)s"
-msgstr ""
+msgstr "Invalid page (%(page_number)s): %(message)s"
 
 #: .\venv\Lib\site-packages\django\views\generic\list.py:169
 #, python-format
 msgid "Empty list and “%(class_name)s.allow_empty” is False."
-msgstr ""
+msgstr "Empty list and “%(class_name)s.allow_empty” is False."
 
 #: .\venv\Lib\site-packages\django\views\static.py:49
 msgid "Directory indexes are not allowed here."
-msgstr ""
+msgstr "Directory indexes are not allowed here."
 
 #: .\venv\Lib\site-packages\django\views\static.py:51
 #, python-format
 msgid "“%(path)s” does not exist"
-msgstr ""
+msgstr "“%(path)s” does not exist"
 
 #: .\venv\Lib\site-packages\django\views\static.py:68
 #: .\venv\Lib\site-packages\django\views\templates\directory_index.html:8
 #: .\venv\Lib\site-packages\django\views\templates\directory_index.html:11
 #, python-format
 msgid "Index of %(directory)s"
-msgstr ""
+msgstr "Index of %(directory)s"
 
 #: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:7
 #: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:220
 msgid "The install worked successfully! Congratulations!"
-msgstr ""
+msgstr "The install worked successfully! Congratulations!"
 
 #: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:206
 #, python-format
@@ -2540,6 +3061,8 @@ msgid ""
 "View <a href=\"https://docs.djangoproject.com/en/%(version)s/releases/\" "
 "target=\"_blank\" rel=\"noopener\">release notes</a> for Django %(version)s"
 msgstr ""
+"View <a href=\"https://docs.djangoproject.com/en/%(version)s/releases/\" "
+"target=\"_blank\" rel=\"noopener\">release notes</a> for Django %(version)s"
 
 #: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:221
 #, python-format
@@ -2549,27 +3072,31 @@ msgid ""
 "\">DEBUG=True</a> is in your settings file and you have not configured any "
 "URLs."
 msgstr ""
+"You are seeing this page because <a href=\"https://docs.djangoproject.com/en/"
+"%(version)s/ref/settings/#debug\" target=\"_blank\" rel=\"noopener"
+"\">DEBUG=True</a> is in your settings file and you have not configured any "
+"URLs."
 
 #: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:229
 msgid "Django Documentation"
-msgstr ""
+msgstr "Django Documentation"
 
 #: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:230
 msgid "Topics, references, &amp; how-to’s"
-msgstr ""
+msgstr "Topics, references, & how-to’s"
 
 #: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:238
 msgid "Tutorial: A Polling App"
-msgstr ""
+msgstr "Tutorial: A Polling App"
 
 #: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:239
 msgid "Get started with Django"
-msgstr ""
+msgstr "Get started with Django"
 
 #: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:247
 msgid "Django Community"
-msgstr ""
+msgstr "Django Community"
 
 #: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:248
 msgid "Connect, get help, or contribute"
-msgstr ""
+msgstr "Connect, get help, or contribute"

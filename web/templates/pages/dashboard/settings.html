@@ -31,7 +31,7 @@
              style="background-image: url('{% static 'img/pattern.svg' %}')"></div>
         <div class="container block relative h-72">
             <div class="py-10">
-                <h1 class="h1 !text-white">Settings</h1>
+                <h1 class="h1 !text-white">{% translate 'Settings' %}</h1>
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-4 gap-3 w-full mt-8 lg:mt-10">
@@ -44,7 +44,7 @@
                         </div>
                         <div class="w-full">
                             <h3 class="!text-slate-300 text-center w-full font-bold capitalize mb-1">{{ request.user.first_name }} {{ request.user.middle_name|default:"" }} {{ request.user.last_name }}</h3>
-                            <h4 class="text-sm !text-slate-300 text-center w-full capitalize">{{ request.user.email }}</h4>
+                            <h4 class="text-sm !text-slate-300 text-center w-full">{{ request.user.email }}</h4>
                         </div>
                         <div class="w-full border-t py-2 border-gray-600">
                             <div class="flex justify-center items-center gap-2 mt-3 bg-success font-bold p-3 rounded-md">
@@ -54,15 +54,15 @@
                                     <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/>
                                     <path d="m9 12 2 2 4-4"/>
                                 </svg>
-                                ACTIVE
+                                {% translate 'ACTIVE' %}
                             </div>
                             <div class="flex justify-center items-center gap-2 mt-3 bg-gray-700 p-3 rounded-md">
-                                <h3 class="text-sm !text-slate-300 capitalize font-bold">{% translate 'Joined since :' %}</h3>
-                                <h4 class="text-sm !text-slate-300 capitalize">{{ request.user.date_joined|date }}</h4>
+                                <h3 class="text-xs !text-slate-300 capitalize font-bold">{% translate 'Joined since :' %}</h3>
+                                <h4 class="text-xs !text-slate-300 capitalize">{{ request.user.date_joined|date }}</h4>
                             </div>
                             <div class="flex justify-center items-center gap-2 mt-3 bg-gray-700 p-3 rounded-md">
-                                <h3 class="text-sm !text-slate-300 capitalize font-bold">{% translate 'Last login :' %}</h3>
-                                <h4 class="text-sm !text-slate-300 capitalize">{{ request.user.last_login|date }}</h4>
+                                <h3 class="text-xs !text-slate-300 capitalize font-bold">{% translate 'Last login :' %}</h3>
+                                <h4 class="text-xs !text-slate-300 capitalize">{{ request.user.last_login|date }}</h4>
                             </div>
                         </div>
                         <div class="w-full border-t py-2 border-gray-600">

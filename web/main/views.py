@@ -16,6 +16,8 @@ from .forms import DeviceForm, PaymentMethodForm
 def home_view(request, *args, **kwargs):
     page_data = cache.get("home_page")
 
+    supported_countries = Country.objects.filter(is_supported=True)
+
     if page_data is not None:
         page = page_data
     else:
@@ -25,6 +27,7 @@ def home_view(request, *args, **kwargs):
     my_context = {
         "Title": _("Welcome To Global Cell"),
         "page": page,
+        "countries": supported_countries
     }
     return render(request, "pages/main/home.html", my_context)
 

@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-21 12:50+0400\n"
-"PO-Revision-Date: 2024-05-18 18:04+0000\n"
+"POT-Creation-Date: 2024-07-24 20:25+0400\n"
+"PO-Revision-Date: 2024-07-24 20:24+0000\n"
 "Last-Translator:   <admin@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -22,350 +22,359 @@ msgstr ""
 
 #: .\accounts\forms.py:12
 msgid "New password"
-msgstr ""
+msgstr "Nueva contraseña"
 
 #: .\accounts\forms.py:18
 msgid "Enter new password for your account"
-msgstr ""
+msgstr "Ingrese una nueva contraseña para su cuenta"
 
 #: .\accounts\forms.py:24
 msgid "Password Confirmation"
-msgstr ""
+msgstr "Confirmación de contraseña"
 
 #: .\accounts\forms.py:38
 msgid "Email"
-msgstr ""
+msgstr "Correo electrónico"
 
 #: .\accounts\forms.py:53
 msgid "Required. Enter a valid email address."
-msgstr ""
+msgstr "Requerido. Introduzca una dirección de correo electrónico válida."
 
 #: .\accounts\forms.py:59 .\templates\pages\main\login.html:20
 msgid "Password"
-msgstr ""
+msgstr "Contraseña"
 
 #: .\accounts\forms.py:71
 msgid "Confirm Password"
-msgstr ""
+msgstr "confirmar Contraseña"
 
 #: .\accounts\forms.py:87
 msgid "Enter your first name here"
-msgstr ""
+msgstr "Introduce tu nombre aquí"
 
 #: .\accounts\forms.py:90
 msgid "Enter your last name here"
-msgstr ""
+msgstr "Introduce tu apellido aquí"
 
 #: .\accounts\forms.py:97
 msgid "A user with that email already exists."
-msgstr ""
+msgstr "Un usuario con ese email ya existe."
 
 #: .\accounts\forms.py:116
 msgid "Enter your first name"
-msgstr ""
+msgstr "Ponga su primer nombre"
 
 #: .\accounts\forms.py:122
 msgid "Enter your last name"
-msgstr ""
+msgstr "Introduce tu apellido"
 
 #: .\accounts\forms.py:128
 msgid "Enter your middle name"
-msgstr ""
+msgstr "Introduce tu segundo nombre"
 
 #: .\accounts\forms.py:134
 msgid "Enter your phone number"
-msgstr ""
+msgstr "Ingrese su número telefónico"
 
 #: .\accounts\forms.py:139
 msgid "Your given name."
-msgstr ""
+msgstr "Tu nombre de pila."
 
 #: .\accounts\forms.py:140
 msgid "Your family name."
-msgstr ""
+msgstr "Tu apellido."
 
 #: .\accounts\forms.py:141
 msgid "Your middle name, if you have one."
-msgstr ""
+msgstr "Tu segundo nombre, si lo tienes."
 
 #: .\accounts\forms.py:142
 msgid "Your contact number, example +12125552368."
-msgstr ""
+msgstr "Su número de contacto, ejemplo +12125552368."
 
 #: .\accounts\forms.py:152
 msgid "Enter your old password"
-msgstr ""
+msgstr "Ingrese su antigua contraseña"
 
 #: .\accounts\forms.py:158
 msgid "Enter your new password"
-msgstr ""
+msgstr "Introduzca su nueva contraseña"
 
 #: .\accounts\forms.py:164
 msgid "Confirm your new password"
-msgstr ""
+msgstr "Confirma tu nueva contraseña"
 
 #: .\accounts\models.py:11
 msgid "email address"
-msgstr ""
+msgstr "dirección de correo electrónico"
 
 #: .\accounts\models.py:12
 msgid "Middle Name"
-msgstr ""
+msgstr "Segundo nombre"
 
 #: .\accounts\models.py:13
 msgid "Phone Number"
-msgstr ""
+msgstr "Número de teléfono"
 
 #: .\accounts\models.py:20
 msgid "Wallet"
-msgstr ""
+msgstr "Billetera"
 
 #: .\accounts\models.py:23
 msgid "Last IP Address"
-msgstr ""
+msgstr "Última dirección IP"
+
+#: .\accounts\signals.py:23
+msgid "Welcome to Global Cell"
+msgstr "Bienvenido a Global Cell"
 
 #: .\accounts\views.py:24
 #, python-brace-format
 msgid "Welcome {user}!"
-msgstr ""
+msgstr "¡Bienvenido {user}!"
 
 #: .\accounts\views.py:27
 msgid "Invalid email or password."
-msgstr ""
+msgstr "Correo electrónico o contraseña no válidos."
 
 #: .\accounts\views.py:29
 msgid "Email and password is required."
-msgstr ""
+msgstr "Se requiere correo electrónico y contraseña."
 
 #: .\accounts\views.py:40 .\settings\models.py:132
 #: .\templates\pages\main\register.html:56
 msgid "Sign In"
-msgstr ""
+msgstr "Iniciar sesión"
 
 #: .\accounts\views.py:54
 msgid "Congratulations! You have successfully registered your account."
-msgstr ""
+msgstr "¡Felicidades! Ha registrado exitosamente su cuenta."
 
 #: .\accounts\views.py:70 .\settings\models.py:133
 msgid "Sign Up"
-msgstr ""
+msgstr "Inscribirse"
 
 #: .\accounts\views.py:83
 msgid "Your profile has been updated."
-msgstr ""
+msgstr "Tu perfil ha sido actualizado."
 
 #: .\accounts\views.py:97
 msgid "Your password has been successfully updated !"
-msgstr ""
+msgstr "Su contraseña ha sido actualizada satisfactoriamente !"
 
 #: .\accounts\views.py:107
 msgid "You have been logged out."
-msgstr ""
+msgstr "Has sido desconectado."
 
-#: .\core\settings\settings.py:125
+#: .\core\settings\settings.py:129
 msgid "English"
-msgstr ""
+msgstr "Inglés"
 
-#: .\core\settings\settings.py:126
+#: .\core\settings\settings.py:130
 msgid "French"
-msgstr ""
+msgstr "Francés"
 
-#: .\core\settings\settings.py:127
+#: .\core\settings\settings.py:131
 msgid "Spanish"
-msgstr ""
+msgstr "Español"
 
-#: .\core\settings\settings.py:128
+#: .\core\settings\settings.py:132
 msgid "Arabic"
-msgstr ""
+msgstr "Arábica"
+
+#: .\main\forms.py:18 .\main\models.py:83 .\main\models.py:152
+#: .\templates\pages\dashboard\components\bank_card.html:70
+msgid "Country"
+msgstr "País"
 
 #: .\main\forms.py:28 .\main\forms.py:31 .\main\forms.py:35 .\main\forms.py:38
 #: .\main\forms.py:42
 msgid "Enter the name of the account"
-msgstr ""
+msgstr "Ingrese el nombre de la cuenta"
 
 #: .\main\forms.py:55
 msgid "Enter the name of the company"
-msgstr ""
+msgstr "Introduzca el nombre de la empresa"
 
 #: .\main\forms.py:59
 msgid "Enter the name of the plan"
-msgstr ""
+msgstr "Ingrese el nombre del plan"
 
 #: .\main\forms.py:62
 msgid "Enter the cost of the plan "
-msgstr ""
+msgstr "Ingresa el costo del plan"
 
 #: .\main\models.py:12
 msgid "Date Created"
-msgstr ""
+msgstr "fecha de creacion"
 
 #: .\main\models.py:13
 msgid "Date Updated"
-msgstr ""
+msgstr "Fecha actualizada"
 
 #: .\main\models.py:14 .\main\models.py:287
 msgid "Is Active"
-msgstr ""
+msgstr "Está activo"
 
 #: .\main\models.py:35
 msgid "Name of Country"
-msgstr ""
+msgstr "Nombre del país"
 
 #: .\main\models.py:37
 msgid "The country name is case insensitive."
-msgstr ""
+msgstr "El nombre del país no distingue entre mayúsculas y minúsculas."
 
 #: .\main\models.py:43
 msgid "Short Name of Country"
-msgstr ""
+msgstr "Nombre corto del país"
 
 #: .\main\models.py:45
 msgid "A short unique abbreviation for the country."
-msgstr ""
+msgstr "Una breve abreviatura única para el país."
 
 #: .\main\models.py:51
 msgid "Country Phone Prefix"
-msgstr ""
+msgstr "Prefijo telefónico del país"
 
 #: .\main\models.py:54
 msgid "The phone number prefix for the country."
-msgstr ""
+msgstr "El prefijo del número de teléfono del país."
 
 #: .\main\models.py:58
 msgid "Currency of Country"
-msgstr ""
+msgstr "Moneda del país"
 
 #: .\main\models.py:64
 msgid "Currency Sign"
-msgstr ""
+msgstr "Signo de moneda"
 
 #: .\main\models.py:71
 msgid "Equivalent to 1 Dollar"
-msgstr ""
+msgstr "Equivalente a 1 dólar"
 
 #: .\main\models.py:72
 msgid "The value of the country's currency compared to 1 US Dollar."
-msgstr ""
+msgstr "El valor de la moneda del país comparado con 1 dólar estadounidense."
 
 #: .\main\models.py:77
 msgid "Is Supported"
-msgstr ""
+msgstr "Esta apoyado"
 
 #: .\main\models.py:79
 msgid "Is this country supported?"
-msgstr ""
-
-#: .\main\models.py:83 .\main\models.py:152
-msgid "Country"
-msgstr ""
+msgstr "¿Se apoya a este país?"
 
 #: .\main\models.py:84
 msgid "Countries"
-msgstr ""
+msgstr "Países"
 
 #: .\main\models.py:101
 msgid "Account Name"
-msgstr ""
+msgstr "Nombre de la cuenta"
 
 #: .\main\models.py:107
 msgid "Account Number"
-msgstr ""
+msgstr "Número de cuenta"
 
 #: .\main\models.py:113
 msgid "Account number must be between 10 and 50 digits."
-msgstr ""
+msgstr "El número de cuenta debe tener entre 10 y 50 dígitos."
 
 #: .\main\models.py:120
 msgid "Bank Name"
-msgstr ""
+msgstr "Nombre del banco"
 
 #: .\main\models.py:126
 msgid "SWIFT Number"
-msgstr ""
+msgstr "Número rápido"
 
 #: .\main\models.py:132
 msgid "SWIFT number must be between 8 and 11 characters."
-msgstr ""
+msgstr "El número SWIFT debe tener entre 8 y 11 caracteres."
 
 #: .\main\models.py:139
 msgid "IBAN Number"
-msgstr ""
+msgstr "Número IBAN"
 
 #: .\main\models.py:145
 msgid "IBAN number must be between 15 and 34 characters."
-msgstr ""
+msgstr "El número IBAN debe tener entre 15 y 34 caracteres."
 
-#: .\main\models.py:158 .\templates\pages\dashboard\phones_list.html:205
+#: .\main\models.py:158
+#: .\templates\pages\dashboard\components\bank_card.html:60
+#: .\templates\pages\dashboard\phones_list.html:141
+#: .\templates\pages\dashboard\phones_list.html:220
 msgid "Verified"
-msgstr ""
+msgstr "Verificado"
 
 #: .\main\models.py:161
 msgid "Payment Method"
-msgstr ""
+msgstr "Método de pago"
 
 #: .\main\models.py:162
 msgid "Payment Methods"
-msgstr ""
+msgstr "Métodos de pago"
 
-#: .\main\models.py:225
+#: .\main\models.py:225 .\templates\pages\dashboard\phones_list.html:161
 msgid "Post Paid"
-msgstr ""
+msgstr "Post pagado"
 
-#: .\main\models.py:226
+#: .\main\models.py:226 .\templates\pages\dashboard\phones_list.html:171
 msgid "Pre Paid"
-msgstr ""
+msgstr "Pagado por adelantado"
 
 #: .\main\models.py:233
 msgid "SIM Number"
-msgstr ""
+msgstr "Número SIM"
 
 #: .\main\models.py:236
 msgid "Mobile Carrier"
-msgstr ""
+msgstr "Operador de telefonía móvil"
 
 #: .\main\models.py:242
 msgid "Plan Payment"
-msgstr ""
+msgstr "Pago del plan"
 
 #: .\main\models.py:247
 msgid "Plan Name"
-msgstr ""
+msgstr "Nombre del plan"
 
 #: .\main\models.py:254
 msgid "Plan Cost"
-msgstr ""
+msgstr "Costo del plan"
 
 #: .\main\models.py:255
 msgid "Plan cost Based on USD Dollar ($)"
-msgstr ""
+msgstr "Costo del plan Basado en dólares USD ($)"
 
 #: .\main\models.py:261
 msgid "Plan Length (Months)"
-msgstr ""
+msgstr "Duración del plan (meses)"
 
-#: .\main\models.py:268 .\templates\pages\dashboard\phones_list.html:204
+#: .\main\models.py:268 .\templates\pages\dashboard\phones_list.html:151
+#: .\templates\pages\dashboard\phones_list.html:219
 msgid "Unlimited Minutes"
-msgstr ""
+msgstr "Minutos Ilimitados"
 
 #: .\main\models.py:272
 msgid "Total Minutes"
-msgstr ""
+msgstr "Minutos totales"
 
 #: .\main\models.py:280
 msgid "Earned"
-msgstr ""
+msgstr "Ganado"
 
 #: .\main\models.py:281
 msgid "Total earned"
-msgstr ""
+msgstr "Total de Ganancias"
 
 #: .\main\models.py:290 .\settings\models.py:35
 msgid "Device"
-msgstr ""
+msgstr "Dispositivo"
 
 #: .\main\models.py:291
 msgid "Devices"
-msgstr ""
+msgstr "Dispositivos"
 
 #: .\main\signals.py:20
 #, python-format
@@ -373,6 +382,8 @@ msgid ""
 "Your new phone with SIM number '%(sim_number)s' will be reviewed soon by our "
 "support team."
 msgstr ""
+"Nuestro equipo de soporte revisará pronto su nuevo teléfono con el número "
+"SIM '%(sim_number)s'."
 
 #: .\main\signals.py:35
 #, python-format
@@ -380,10 +391,12 @@ msgid ""
 "Your new bank account '%(account_name)s' will be reviewed soon by our "
 "support team."
 msgstr ""
+"Nuestro equipo de soporte revisará pronto su nueva cuenta bancaria "
+"'%(account_name)s'."
 
 #: .\main\views.py:26
 msgid "Welcome To Global Cell"
-msgstr ""
+msgstr "Bienvenido a la célula global"
 
 #: .\main\views.py:37 .\templates\layouts\components\sidebar.html:32
 #: .\templates\pages\dashboard\financial.html:10
@@ -391,251 +404,255 @@ msgstr ""
 #: .\templates\pages\dashboard\phones_list.html:10
 #: .\templates\pages\dashboard\settings.html:10
 msgid "Dashboard"
-msgstr ""
+msgstr "Panel"
 
 #: .\main\views.py:51
 #, python-brace-format
 msgid "Device {device.sim_number} was add successfully"
-msgstr ""
+msgstr "El dispositivo {device.sim_number} se agregó correctamente"
 
 #: .\main\views.py:54
 msgid "Please makesure your have fill the form correctly"
-msgstr ""
+msgstr "Por favor asegúrese de haber completado el formulario correctamente"
 
 #: .\main\views.py:60
 msgid "Add Your New Phone"
-msgstr ""
+msgstr "Agrega tu nuevo teléfono"
 
 #: .\main\views.py:99
 msgid "Phones List"
-msgstr ""
+msgstr "Lista de teléfonos"
 
 #: .\main\views.py:128
 #, python-brace-format
 msgid "Bank Account {bank_name} updated successfully"
-msgstr ""
+msgstr "Cuenta bancaria {bank_name} actualizada correctamente"
 
 #: .\main\views.py:131
 #, python-brace-format
 msgid "Bank Account {bank_name} was added successfully"
-msgstr ""
+msgstr "La cuenta bancaria {bank_name} se agregó correctamente"
 
 #: .\main\views.py:141
 msgid "Please make sure you have filled the form correctly"
-msgstr ""
+msgstr "Por favor asegúrese de haber completado el formulario correctamente"
 
 #: .\main\views.py:147
 msgid "Manage your financial"
-msgstr ""
+msgstr "Gestiona tus finanzas"
 
 #: .\main\views.py:158
 #, python-brace-format
 msgid "Bank Account {queryset.bank_name} was deleted successfully"
-msgstr ""
+msgstr "La cuenta bancaria {queryset.bank_name} se eliminó correctamente"
 
 #: .\main\views.py:168 .\templates\layouts\components\sidebar.html:114
 #: .\templates\pages\dashboard\settings.html:21
+#: .\templates\pages\dashboard\settings.html:34
 msgid "Settings"
-msgstr ""
+msgstr "Ajustes"
 
 #: .\settings\models.py:16
 msgid "Low"
-msgstr ""
+msgstr "Bajo"
 
 #: .\settings\models.py:17
 msgid "Medium"
-msgstr ""
+msgstr "Medio"
 
 #: .\settings\models.py:18
 msgid "High"
-msgstr ""
+msgstr "Alto"
 
 #: .\settings\models.py:21
 msgid "Success"
-msgstr ""
+msgstr "Éxito"
 
 #: .\settings\models.py:22
 msgid "Error"
-msgstr ""
+msgstr "Error"
 
 #: .\settings\models.py:23
-#, fuzzy
-#| msgid "Earnings"
 msgid "Warning"
-msgstr "Ganancias"
+msgstr "Advertencia"
 
 #: .\settings\models.py:24
 msgid "Info"
-msgstr ""
+msgstr "Información"
 
 #: .\settings\models.py:38
 msgid "If the notification related to this device"
-msgstr ""
+msgstr "Si la notificación relacionada con este dispositivo"
 
 #: .\settings\models.py:44
 msgid "Bank Account"
-msgstr ""
+msgstr "Cuenta bancaria"
 
 #: .\settings\models.py:47
 msgid "If the notification related to this bank account"
-msgstr ""
+msgstr "Si la notificación se relaciona con esta cuenta bancaria"
 
 #: .\settings\models.py:49
 msgid "Message"
-msgstr ""
+msgstr "Mensaje"
 
 #: .\settings\models.py:51
 msgid "Has Seen"
-msgstr ""
+msgstr "Ha visto"
 
 #: .\settings\models.py:53
 msgid "Has User Seen Notification?"
-msgstr ""
+msgstr "¿El usuario ha visto la notificación?"
 
 #: .\settings\models.py:55
 msgid "Visibility"
-msgstr ""
+msgstr "Visibilidad"
 
 #: .\settings\models.py:60
 msgid "Priority"
-msgstr ""
+msgstr "Prioridad"
 
-#: .\settings\models.py:66 .\templates\pages\dashboard\phones_list.html:206
+#: .\settings\models.py:66
+#: .\templates\pages\dashboard\components\bank_card.html:58
+#: .\templates\pages\dashboard\phones_list.html:221
 msgid "Status"
-msgstr ""
+msgstr "Estado"
 
 #: .\settings\models.py:70
 msgid "Notification"
-msgstr ""
+msgstr "Notificación"
 
 #: .\settings\models.py:71 .\templates\layouts\components\notification.html:19
 msgid "Notifications"
-msgstr ""
+msgstr "Notificaciones"
 
 #: .\settings\models.py:96
 msgid "ago"
-msgstr ""
+msgstr "hace"
 
 #: .\settings\models.py:100
 msgid "Title"
-msgstr ""
+msgstr "Título"
 
 #: .\settings\models.py:102
 msgid "Short Description"
-msgstr ""
+msgstr "Breve descripción"
 
 #: .\settings\models.py:105
 msgid "A short description of the slide"
-msgstr ""
+msgstr "Una breve descripción de la diapositiva."
 
 #: .\settings\models.py:110
 #: .\venv\Lib\site-packages\django\db\models\fields\files.py:393
 msgid "Image"
-msgstr ""
+msgstr "Imagen"
 
 #: .\settings\models.py:117
 msgid "Slide"
-msgstr ""
+msgstr "Deslizar"
 
 #: .\settings\models.py:118
 msgid "Slides"
-msgstr ""
+msgstr "Diapositivas"
 
 #: .\settings\models.py:127
 msgid "Home Page"
-msgstr ""
+msgstr "Página de inicio"
 
 #: .\settings\models.py:128 .\templates\layouts\components\navbar.html:30
 msgid "About"
-msgstr ""
+msgstr "Acerca de"
 
 #: .\settings\models.py:129
 msgid "Contact us"
-msgstr ""
+msgstr "Contacta con nosotros"
 
 #: .\settings\models.py:130
 msgid "Privacy Policy"
-msgstr ""
+msgstr "política de privacidad"
 
 #: .\settings\models.py:131
 msgid "Terms Page"
-msgstr ""
+msgstr "Página de términos"
 
 #: .\settings\models.py:148
 msgid "Video File"
-msgstr ""
+msgstr "Archivo de vídeo"
 
 #: .\settings\models.py:149
 msgid "Video file is uploaded to your website."
-msgstr ""
+msgstr "El archivo de vídeo se carga en su sitio web."
 
 #: .\settings\models.py:155
 msgid "Video Poster"
-msgstr ""
+msgstr "Póster de vídeo"
 
 #: .\settings\models.py:156
 msgid "Upload the video poster."
-msgstr ""
+msgstr "Sube el cartel del vídeo."
 
 #: .\settings\models.py:161
 msgid "Page"
-msgstr ""
+msgstr "Página"
 
 #: .\settings\models.py:162
 msgid "Pages"
-msgstr ""
+msgstr "paginas"
 
 #: .\settings\models.py:171
 msgid "Belonging Page"
-msgstr ""
+msgstr "Página de pertenencia"
 
 #: .\settings\models.py:175
 msgid "Seo Title"
-msgstr ""
+msgstr "Título de SEO"
 
 #: .\settings\models.py:176
 msgid "For SEO purposes, ideally between 60-70 characters."
-msgstr ""
+msgstr "Para fines de SEO, lo ideal es entre 60 y 70 caracteres."
 
 #: .\settings\models.py:179
 msgid "Seo Description"
-msgstr ""
+msgstr "Descripción SEO"
 
 #: .\settings\models.py:180
 msgid "For SEO purposes, ideally between 150-160 characters."
-msgstr ""
+msgstr "Para fines de SEO, lo ideal es entre 150 y 160 caracteres."
 
 #: .\settings\models.py:183
 msgid "Seo Keywords"
-msgstr ""
+msgstr "Palabras clave de SEO"
 
 #: .\settings\models.py:184
 msgid "Comma-separated list of keywords."
-msgstr ""
+msgstr "Lista de palabras clave separadas por comas."
 
 #: .\settings\models.py:187
 msgid "Seo Canonical"
-msgstr ""
+msgstr "SEO canónico"
 
 #: .\settings\models.py:189
 msgid "Seo Robot Index"
-msgstr ""
+msgstr "Índice de robots SEO"
 
 #: .\settings\models.py:190
 msgid "Set to allow search engines to index this page."
 msgstr ""
+"Configurado para permitir que los motores de búsqueda indexen esta página."
 
 #: .\settings\models.py:193
 msgid "Seo Robot Follow"
-msgstr ""
+msgstr "Robot SEO Seguir"
 
 #: .\settings\models.py:194
 msgid "Set to allow search engines to follow links on this page."
 msgstr ""
+"Configurado para permitir que los motores de búsqueda sigan enlaces en esta "
+"página."
 
 #: .\settings\models.py:202 .\settings\models.py:203
 msgid "SEO"
-msgstr ""
+msgstr "SEO"
 
 #: .\templates\400.html:14
 msgid ""
@@ -643,6 +660,8 @@ msgid ""
 "                        Oops! Bad request.\n"
 "                    "
 msgstr ""
+"\n"
+"¡Ups! Solicitud incorrecta."
 
 #: .\templates\400.html:19
 msgid ""
@@ -652,10 +671,13 @@ msgid ""
 "                        Please double-check the URL and try again.\n"
 "                    "
 msgstr ""
+"\n"
+"Lo sentimos, pero parece que ha habido una solicitud incorrecta.\n"
+"Vuelva a verificar la URL e inténtelo nuevamente."
 
 #: .\templates\400.html:26 .\templates\404.html:30 .\templates\500.html:26
 msgid "to Homepage"
-msgstr ""
+msgstr "a la página de inicio"
 
 #: .\templates\404.html:15
 msgid ""
@@ -663,6 +685,8 @@ msgid ""
 "                        Something's missing.\n"
 "                    "
 msgstr ""
+"\n"
+"Algo falta, algo está faltando."
 
 #: .\templates\404.html:21
 msgid ""
@@ -672,6 +696,10 @@ msgid ""
 "                        find lots to explore on the home page.\n"
 "                    "
 msgstr ""
+"\n"
+"Lo sentimos, no podemos encontrar esa página.\n"
+"usted\n"
+"encuentre mucho para explorar en la página de inicio."
 
 #: .\templates\500.html:14
 msgid ""
@@ -679,6 +707,8 @@ msgid ""
 "                        Oops! Something went wrong.\n"
 "                    "
 msgstr ""
+"\n"
+"¡Ups! Algo salió mal."
 
 #: .\templates\500.html:19
 msgid ""
@@ -689,52 +719,64 @@ msgid ""
 "as soon as possible.\n"
 "                    "
 msgstr ""
+"\n"
+"Lo sentimos, pero parece que ha habido un error interno del servidor.\n"
+"Nuestro equipo ha sido notificado y trabajará para solucionarlo lo antes "
+"posible."
 
 #: .\templates\layouts\components\navbar.html:25
 msgid "home"
-msgstr ""
+msgstr "hogar"
 
 #: .\templates\layouts\components\navbar.html:35
 msgid "Contact"
-msgstr ""
+msgstr "Contacto"
 
 #: .\templates\layouts\components\navbar.html:40
 msgid "Be Partner"
-msgstr ""
+msgstr "Ser compañero"
 
 #: .\templates\layouts\components\notification.html:21
 msgid "Mark all as read"
-msgstr ""
+msgstr "marcar todo como leido"
+
+#: .\templates\layouts\components\notification.html:34
+msgid "Inbox"
+msgstr "Bandeja de entrada"
 
 #: .\templates\layouts\components\notification.html:46
 #: .\templates\layouts\components\notification.html:151
 msgid "Your Inbox Is Empty"
-msgstr ""
+msgstr "Su bandeja de entrada está vacía"
 
 #: .\templates\layouts\components\sidebar.html:19
 #: .\templates\pages\main\components\about.html:10
 msgid "Global Cell"
-msgstr ""
+msgstr "Célula global"
 
 #: .\templates\layouts\components\sidebar.html:48
 #: .\templates\pages\dashboard\phones_create.html:21
 #: .\templates\pages\dashboard\phones_list.html:21
 msgid "Phones"
-msgstr ""
+msgstr "Los telefonos"
 
 #: .\templates\layouts\components\sidebar.html:68
 msgid "Add"
-msgstr ""
+msgstr "Agregar"
 
 #: .\templates\layouts\components\sidebar.html:84
 #: .\templates\pages\dashboard\phones_list.html:32
 msgid "List"
-msgstr ""
+msgstr "Lista"
 
 #: .\templates\layouts\components\sidebar.html:102
 #: .\templates\pages\dashboard\financial.html:21
 msgid "Financial"
-msgstr ""
+msgstr "Financiero"
+
+#: .\templates\layouts\components\sidebar.html:127
+msgid "Exit"
+msgstr "Salida"
 
 #: .\templates\layouts\dashboard.html:50
 #, python-format
@@ -743,6 +785,55 @@ msgid ""
 "                    Wallet : %(fund)s\n"
 "                "
 msgstr ""
+"\n"
+"Monedero: %(fund)s"
+
+#: .\templates\pages\dashboard\components\add_phone.html:5
+#: .\templates\pages\dashboard\phones_create.html:44
+msgid "Add picture"
+msgstr "Añade una foto"
+
+#: .\templates\pages\dashboard\components\add_phone.html:8
+#: .\templates\pages\dashboard\phones_create.html:47
+msgid "Add Your Phone"
+msgstr "Añade tu teléfono"
+
+#: .\templates\pages\dashboard\components\add_phone.html:11
+msgid ""
+"\n"
+"            Please fill out the form carefully. Ensure all information is "
+"correct. Once submitted, our\n"
+"            support team will review your submission and approve if "
+"everything is in order.\n"
+"        "
+msgstr ""
+"\n"
+"Por favor complete el formulario cuidadosamente. Asegúrese de que toda la "
+"información sea correcta. Una vez enviado, nuestro\n"
+"El equipo de soporte revisará su envío y lo aprobará si todo está en orden."
+
+#: .\templates\pages\dashboard\components\add_phone.html:16
+#: .\templates\pages\dashboard\phones_list.html:77
+msgid "Add Phone"
+msgstr "Añadir teléfono"
+
+#: .\templates\pages\dashboard\components\bank_card.html:38
+msgid "Edit"
+msgstr "Editar"
+
+#: .\templates\pages\dashboard\components\bank_card.html:45
+#: .\venv\Lib\site-packages\django\forms\formsets.py:499
+msgid "Delete"
+msgstr "Borrar"
+
+#: .\templates\pages\dashboard\components\bank_card.html:62
+msgid "Unverified"
+msgstr "Inconfirmado"
+
+#: .\templates\pages\dashboard\components\bank_card.html:66
+#: .\templates\pages\dashboard\financial.html:162
+msgid "Bank"
+msgstr "Banco"
 
 #: .\templates\pages\dashboard\components\line_chart.html:7
 msgid "Earnings"
@@ -750,7 +841,7 @@ msgstr "Ganancias"
 
 #: .\templates\pages\dashboard\components\line_chart.html:16
 msgid "Earnings - Incremental"
-msgstr ""
+msgstr "Ganancias: incrementales"
 
 #: .\templates\pages\dashboard\components\line_chart.html:18
 msgid ""
@@ -765,11 +856,20 @@ msgid ""
 "                                    that need attention.\n"
 "                                "
 msgstr ""
+"\n"
+"Este informe ilustra el crecimiento incremental de las ganancias a lo largo "
+"del tiempo. esta disenado\n"
+"a\n"
+"ayudarle a realizar un seguimiento de los aumentos graduales de los "
+"ingresos, idealmente mostrando un aumento constante\n"
+"tendencia. Un gráfico plano o decreciente puede indicar áreas de "
+"preocupación en la generación de ingresos.\n"
+"que necesitan atención."
 
 #: .\templates\pages\dashboard\components\line_chart.html:27
 #: .\templates\pages\dashboard\components\line_chart.html:72
 msgid "Calculation"
-msgstr ""
+msgstr "Cálculo"
 
 #: .\templates\pages\dashboard\components\line_chart.html:29
 msgid ""
@@ -777,18 +877,20 @@ msgid ""
 "                                    Not Available.\n"
 "                                "
 msgstr ""
+"\n"
+"No disponible."
 
 #: .\templates\pages\dashboard\components\line_chart.html:35
 #: .\templates\pages\dashboard\components\line_chart.html:84
 msgid "Read more"
-msgstr ""
+msgstr "Leer más"
 
 #: .\templates\pages\dashboard\components\line_chart.html:50
 #: .\templates\pages\dashboard\components\line_chart.html:59
 #: .\templates\pages\dashboard\financial.html:307
-#: .\templates\pages\dashboard\financial.html:468
+#: .\templates\pages\dashboard\financial.html:469
 msgid "Withdrawal"
-msgstr ""
+msgstr "Retiro"
 
 #: .\templates\pages\dashboard\components\line_chart.html:61
 msgid ""
@@ -806,6 +908,17 @@ msgid ""
 "addressed.\n"
 "                                "
 msgstr ""
+"\n"
+"Este informe proporciona información sobre las actividades de retiro a lo "
+"largo del tiempo. Realiza un seguimiento de la\n"
+"volumen\n"
+"y frecuencia de los retiros, lo que ayuda a identificar tendencias y "
+"patrones. Un consistente\n"
+"o\n"
+"La creciente tendencia de retiro puede indicar una creciente participación "
+"de los usuarios, mientras que una disminución\n"
+"podría\n"
+"sugerir posibles problemas que deben abordarse."
 
 #: .\templates\pages\dashboard\components\line_chart.html:74
 msgid ""
@@ -820,55 +933,139 @@ msgid ""
 "growth over time.\n"
 "                                "
 msgstr ""
+"\n"
+"Para cada período de fechas, se calcula el volumen acumulado de actividades. "
+"Esto significa\n"
+"que las actividades en el período n incluyen todas las actividades hasta el "
+"período n incluido,\n"
+"más cualquier actividad nueva generada durante ese período. Este enfoque "
+"integral\n"
+"Proporciona una visión completa del crecimiento de la actividad a lo largo "
+"del tiempo."
 
-#: .\templates\pages\dashboard\components\line_chart.html:150
+#: .\templates\pages\dashboard\components\line_chart.html:103
+msgid "Last week"
+msgstr "La semana pasada"
+
+#: .\templates\pages\dashboard\components\line_chart.html:116
+msgid "Yesterday"
+msgstr "Ayer"
+
+#: .\templates\pages\dashboard\components\line_chart.html:122
+msgid "Today"
+msgstr "Hoy"
+
+#: .\templates\pages\dashboard\components\line_chart.html:128
+msgid "Last 7 days"
+msgstr "Los últimos 7 días"
+
+#: .\templates\pages\dashboard\components\line_chart.html:134
+msgid "Last 30 days"
+msgstr "últimos 30 días"
+
+#: .\templates\pages\dashboard\components\line_chart.html:140
+msgid "Last 90 days"
+msgstr "últimos 90 días"
+
+#: .\templates\pages\dashboard\components\line_chart.html:157
 msgid "Report"
-msgstr ""
+msgstr "Informe"
+
+#: .\templates\pages\dashboard\components\slider.html:11
+msgid "NO SLIDE FOR DISPLAY"
+msgstr "NO HAY DIAPOSITIVAS PARA VISUALIZACIÓN"
+
+#: .\templates\pages\dashboard\components\slider.html:39
+msgid "Previous"
+msgstr "Previo"
+
+#: .\templates\pages\dashboard\components\slider.html:51
+msgid "Next"
+msgstr "Próximo"
+
+#: .\templates\pages\dashboard\financial.html:34
+msgid "Bank Accounts :"
+msgstr "Cuentas bancarias :"
+
+#: .\templates\pages\dashboard\financial.html:46
+msgid "Add Account"
+msgstr "Añadir cuenta"
+
+#: .\templates\pages\dashboard\financial.html:57
+msgid "Add Bank Account"
+msgstr "Agregar cuenta bancaria"
+
+#: .\templates\pages\dashboard\financial.html:69
+#: .\templates\pages\dashboard\financial.html:328
+#: .\templates\pages\dashboard\financial.html:377
+msgid "Close modal"
+msgstr "Cerrar modal"
+
+#: .\templates\pages\dashboard\financial.html:122
+#: .\templates\pages\dashboard\financial.html:132
+#: .\templates\pages\dashboard\financial.html:403
+#: .\templates\pages\dashboard\financial.html:413
+msgid "Submit"
+msgstr "Entregar"
+
+#: .\templates\pages\dashboard\financial.html:136
+#: .\templates\pages\dashboard\financial.html:417
+msgid "Cancel"
+msgstr "Cancelar"
 
 #: .\templates\pages\dashboard\financial.html:158
 msgid "Date"
-msgstr ""
+msgstr "Fecha"
 
 #: .\templates\pages\dashboard\financial.html:159
 msgid "Activity"
-msgstr ""
+msgstr "Actividad"
 
 #: .\templates\pages\dashboard\financial.html:160
 msgid "Description"
-msgstr ""
+msgstr "Descripción"
 
 #: .\templates\pages\dashboard\financial.html:161
 msgid "Amount"
-msgstr ""
-
-#: .\templates\pages\dashboard\financial.html:162
-msgid "Bank"
-msgstr ""
+msgstr "Cantidad"
 
 #: .\templates\pages\dashboard\financial.html:300
 msgid "Digital Wallet"
-msgstr ""
+msgstr "Billetera Digital"
 
 #: .\templates\pages\dashboard\financial.html:302
 msgid "Current Amount :"
-msgstr ""
+msgstr "Cantidad actual :"
 
-#: .\templates\pages\dashboard\financial.html:463
+#: .\templates\pages\dashboard\financial.html:318
+msgid "Transfer your Money"
+msgstr "Transfiera su dinero"
+
+#: .\templates\pages\dashboard\financial.html:334
+msgid "This Feature is unavailable right now"
+msgstr "Esta función no está disponible en este momento"
+
+#: .\templates\pages\dashboard\financial.html:341
+msgid "I accept"
+msgstr "Acepto"
+
+#: .\templates\pages\dashboard\financial.html:345
+msgid "Decline"
+msgstr "Rechazar"
+
+#: .\templates\pages\dashboard\financial.html:365
+msgid "Edit Bank Account"
+msgstr "Editar cuenta bancaria"
+
+#: .\templates\pages\dashboard\financial.html:464
 #: .\templates\pages\main\components\earnings.html:8
 msgid "Earning"
-msgstr ""
+msgstr "Ganador"
 
-#: .\templates\pages\dashboard\main.html:12
-#: .\templates\pages\dashboard\phones_create.html:44
-msgid "Add picture"
-msgstr ""
+#: .\templates\pages\dashboard\phones_create.html:32
+msgid "Create"
+msgstr "Crear"
 
-#: .\templates\pages\dashboard\main.html:15
-#: .\templates\pages\dashboard\phones_create.html:47
-msgid "Add Your Phone"
-msgstr ""
-
-#: .\templates\pages\dashboard\main.html:18
 #: .\templates\pages\dashboard\phones_create.html:50
 msgid ""
 "\n"
@@ -878,66 +1075,125 @@ msgid ""
 "if everything is in order.\n"
 "                    "
 msgstr ""
-
-#: .\templates\pages\dashboard\phones_create.html:32
-msgid "Create"
-msgstr ""
+"\n"
+"Por favor complete el formulario cuidadosamente. Asegúrese de que toda la "
+"información sea correcta. Una vez enviado, nuestro\n"
+"El equipo de soporte revisará su envío y lo aprobará si todo está en orden."
 
 #: .\templates\pages\dashboard\phones_create.html:101
 msgid "No country supported yet"
-msgstr ""
+msgstr "Ningún país soportado todavía"
 
-#: .\templates\pages\dashboard\phones_list.html:200
-msgid "SIM"
-msgstr ""
+#: .\templates\pages\dashboard\phones_create.html:177
+msgid "Add New Device"
+msgstr "Agrega un nuevo dispositivo"
+
+#: .\templates\pages\dashboard\phones_list.html:49
+msgid "Search"
+msgstr "Buscar"
+
+#: .\templates\pages\dashboard\phones_list.html:64
+msgid "Search SIM number"
+msgstr "Buscar número SIM"
+
+#: .\templates\pages\dashboard\phones_list.html:88
+#: .\templates\pages\dashboard\phones_list.html:223
+msgid "Actions"
+msgstr "Comportamiento"
+
+#: .\templates\pages\dashboard\phones_list.html:107
+msgid "CSV REPORT"
+msgstr "INFORME CSV"
+
+#: .\templates\pages\dashboard\phones_list.html:121
+#: .\templates\pages\dashboard\phones_list.html:195
+msgid "Filter"
+msgstr "Filtrar"
+
+#: .\templates\pages\dashboard\phones_list.html:131
+msgid "Choose filter"
+msgstr "Elige filtro"
+
+#: .\templates\pages\dashboard\phones_list.html:180
+msgid "Status : Active"
+msgstr "Estado: Activo"
+
+#: .\templates\pages\dashboard\phones_list.html:189
+msgid "Status : DeActive"
+msgstr "Estado: Desactivo"
 
 #: .\templates\pages\dashboard\phones_list.html:201
+#: .\venv\Lib\site-packages\django\forms\widgets.py:461
+msgid "Clear"
+msgstr "Claro"
+
+#: .\templates\pages\dashboard\phones_list.html:215
+msgid "SIM"
+msgstr "SIM"
+
+#: .\templates\pages\dashboard\phones_list.html:216
 msgid "Carrier"
-msgstr ""
+msgstr "Transportador"
 
-#: .\templates\pages\dashboard\phones_list.html:202
+#: .\templates\pages\dashboard\phones_list.html:217
 msgid "Payment"
-msgstr ""
+msgstr "Pago"
 
-#: .\templates\pages\dashboard\phones_list.html:203
+#: .\templates\pages\dashboard\phones_list.html:218
 msgid "Plan Length"
-msgstr ""
+msgstr "Longitud del plan"
 
-#: .\templates\pages\dashboard\phones_list.html:208
-msgid "Actions"
-msgstr ""
+#: .\templates\pages\dashboard\phones_list.html:245
+msgid "VERIFIED"
+msgstr "VERIFICADO"
 
-#: .\templates\pages\dashboard\phones_list.html:301
+#: .\templates\pages\dashboard\phones_list.html:247
+msgid "UNVERIFIED"
+msgstr "INCONFIRMADO"
+
+#: .\templates\pages\dashboard\phones_list.html:303
 msgid "You don't have any phones yet."
-msgstr ""
+msgstr "Aún no tienes ningún teléfono."
 
-#: .\templates\pages\dashboard\phones_list.html:304
+#: .\templates\pages\dashboard\phones_list.html:306
 msgid "Click here to add one"
-msgstr ""
+msgstr "Haga clic aquí para añadir uno"
+
+#: .\templates\pages\dashboard\phones_list.html:318
+msgid "Showing"
+msgstr "Mostrando"
+
+#: .\templates\pages\dashboard\phones_list.html:320
+msgid "of"
+msgstr "de"
+
+#: .\templates\pages\dashboard\settings.html:57
+msgid "ACTIVE"
+msgstr "ACTIVO"
 
 #: .\templates\pages\dashboard\settings.html:60
 msgid "Joined since :"
-msgstr ""
+msgstr "Unido desde:"
 
 #: .\templates\pages\dashboard\settings.html:64
 msgid "Last login :"
-msgstr ""
+msgstr "Último acceso :"
 
 #: .\templates\pages\dashboard\settings.html:90
 msgid "Profile"
-msgstr ""
+msgstr "Perfil"
 
 #: .\templates\pages\dashboard\settings.html:99
 msgid "Change Password"
-msgstr ""
+msgstr "Cambiar la contraseña"
 
 #: .\templates\pages\dashboard\settings.html:151
 msgid "Save changes"
-msgstr ""
+msgstr "Guardar cambios"
 
 #: .\templates\pages\dashboard\settings.html:194
 msgid "Change password"
-msgstr ""
+msgstr "Cambiar la contraseña"
 
 #: .\templates\pages\main\components\about.html:13
 msgid ""
@@ -957,6 +1213,20 @@ msgid ""
 "accessible communication for all.\n"
 "                        "
 msgstr ""
+"\n"
+"En Global Cellular Partners, lideramos la innovación en telecomunicaciones, "
+"aprovechando\n"
+"Tecnología de punta para transformar la comunicación internacional. Nuestro "
+"enfoque único\n"
+"arneses\n"
+"el\n"
+"poder de los dispositivos Android no utilizados, dándoles nueva vida como "
+"componentes integrales de nuestro\n"
+"global\n"
+"red. Al conectar sin problemas a clientes de todo el mundo con tarifas de "
+"llamadas locales a través de nuestra plataforma digital\n"
+"infraestructura, garantizamos una comunicación asequible y accesible para "
+"todos."
 
 #: .\templates\pages\main\components\about.html:26
 msgid ""
@@ -976,6 +1246,20 @@ msgid ""
 "                            network.\n"
 "                        "
 msgstr ""
+"\n"
+"En el centro de nuestra misión está el compromiso de desbloquear el "
+"potencial de ingresos y al mismo tiempo promover\n"
+"uso sustentable de la tecnología. Nuestro programa Cellular Partners permite "
+"a las personas ganar\n"
+"pasivo\n"
+"ingresos sin esfuerzo, sin necesidad de inversión ni mano de obra. A través "
+"de este programa,\n"
+"Participantes\n"
+"poder\n"
+"gane hasta $ 2000 al mes, simplemente permitiendo que sus dispositivos "
+"Android no utilizados contribuyan a\n"
+"nuestro\n"
+"red."
 
 #: .\templates\pages\main\components\about.html:40
 msgid ""
@@ -990,6 +1274,15 @@ msgid ""
 "                            call at a time.\n"
 "                        "
 msgstr ""
+"\n"
+"Únase a nosotros en Global Cellular Partners y forme parte de un movimiento "
+"transformador hacia\n"
+"asequible,\n"
+"comunicación internacional conveniente y sostenible. Juntos, estamos "
+"conectando el\n"
+"mundo,\n"
+"uno\n"
+"llamar a la vez."
 
 #: .\templates\pages\main\components\earnings.html:10
 msgid ""
@@ -1009,14 +1302,26 @@ msgid ""
 "that simple!\n"
 "                        "
 msgstr ""
+"\n"
+"En Global Cellular Partners te presentamos la forma más innovadora de ganar "
+"hasta <strong class=\"text-white\">$2000</strong>\n"
+"a\n"
+"mes sin necesidad de inversión ni mano de obra. Al utilizar teléfonos "
+"Android no utilizados, puede\n"
+"ganar\n"
+"más de <strong class=\"text-white\">$100</strong> por teléfono al mes sin "
+"esfuerzo. Como socio celular, ganarás <strong class=\"text-white\">$0,02</"
+"strong> centavos\n"
+"por\n"
+"minuto de llamada que pasa por tu teléfono. ¡Es así de simple!"
 
 #: .\templates\pages\main\components\earnings.html:20
 msgid "My Earning"
-msgstr ""
+msgstr "mis ganancias"
 
 #: .\templates\pages\main\components\faq.html:8
 msgid "FAQ"
-msgstr ""
+msgstr "Preguntas más frecuentes"
 
 #: .\templates\pages\main\components\faq.html:10
 msgid ""
@@ -1035,10 +1340,22 @@ msgid ""
 "one to reveal the answer.\n"
 "                        "
 msgstr ""
+"\n"
+"¡Bienvenido a nuestra sección de preguntas frecuentes! Aquí, hemos compilado "
+"una lista de preguntas frecuentes para\n"
+"proporcionar\n"
+"usted con respuestas rápidas y útiles. Si tiene curiosidad acerca de "
+"nuestros productos, servicios o\n"
+"políticas, probablemente encontrará la información que necesita a "
+"continuación. Si no ves tu pregunta\n"
+"listado, no dude en comunicarse con nuestro equipo de soporte y estaremos "
+"encantados de ayudarle\n"
+"más.\n"
+"Explore las preguntas y haga clic en cada una para revelar la respuesta."
 
 #: .\templates\pages\main\components\faq.html:20
 msgid "Contact Us"
-msgstr ""
+msgstr "Contacta con nosotros"
 
 #: .\templates\pages\main\components\faq.html:37
 msgid ""
@@ -1047,6 +1364,8 @@ msgid ""
 "revolutionize international calls?\n"
 "                                "
 msgstr ""
+"\n"
+"¿Cómo revoluciona Global Cellular Partners las llamadas internacionales?"
 
 #: .\templates\pages\main\components\faq.html:51
 msgid ""
@@ -1061,6 +1380,14 @@ msgid ""
 "call rates.\n"
 "                                "
 msgstr ""
+"\n"
+"Global Cellular Partners revoluciona las llamadas internacionales al "
+"utilizar una red\n"
+"de más de 100 socios celulares en todo el mundo. A través de dispositivos "
+"Android interconectados, podemos\n"
+"Proporcionar conectividad perfecta y soluciones de comunicación asequibles, "
+"permitiendo a los usuarios\n"
+"para realizar llamadas internacionales a tarifas de llamadas locales."
 
 #: .\templates\pages\main\components\faq.html:72
 msgid ""
@@ -1069,6 +1396,9 @@ msgid ""
 "cellular partners with Global Cellular Partners?\n"
 "                                "
 msgstr ""
+"\n"
+"¿Cuál es el potencial de ingresos para los socios celulares de Global "
+"Cellular Partners?"
 
 #: .\templates\pages\main\components\faq.html:86
 msgid ""
@@ -1082,6 +1412,14 @@ msgid ""
 "                                    through their phones.\n"
 "                                "
 msgstr ""
+"\n"
+"Los socios de telefonía móvil tienen el potencial de ganar hasta $2000 al "
+"mes con cero\n"
+"inversión y cero mano de obra requerida. Al contribuir con sus dispositivos "
+"Android no utilizados a\n"
+"En nuestra red, los socios pueden obtener ingresos por cada minuto de "
+"tráfico de llamadas que pasa.\n"
+"a través de sus teléfonos."
 
 #: .\templates\pages\main\components\faq.html:107
 msgid ""
@@ -1090,6 +1428,8 @@ msgid ""
 "Cellular Partners work?\n"
 "                                "
 msgstr ""
+"\n"
+"¿Cómo funciona la tecnología detrás de Global Cellular Partners?"
 
 #: .\templates\pages\main\components\faq.html:121
 msgid ""
@@ -1104,6 +1444,14 @@ msgid ""
 "local partners.\n"
 "                                "
 msgstr ""
+"\n"
+"Nuestra tecnología funciona enrutando llamadas internacionales a través de "
+"nuestros servidores VoIP a\n"
+"dispositivos Android específicos en nuestra red de socios celulares. Estos "
+"dispositivos, ubicados en\n"
+"los países de destino, establecer llamadas locales y facilitar la "
+"comunicación\n"
+"comunicación entre nuestros clientes y socios locales."
 
 #: .\templates\pages\main\components\faq.html:142
 msgid ""
@@ -1112,6 +1460,9 @@ msgid ""
 "Cellular Partners as a cellular partner?\n"
 "                                "
 msgstr ""
+"\n"
+"¿Cuáles son los beneficios de unirse a Global Cellular Partners como socio "
+"celular?"
 
 #: .\templates\pages\main\components\faq.html:156
 msgid ""
@@ -1125,6 +1476,14 @@ msgid ""
 "                                    phones work for them.\n"
 "                                "
 msgstr ""
+"\n"
+"Unirse a Global Cellular Partners ofrece varios beneficios, incluidos "
+"ingresos pasivos\n"
+"generación, flexibilidad para trabajar desde cualquier lugar, no se requiere "
+"inversión inicial y\n"
+"configuración fácil. Los socios pueden ganar dinero sin esfuerzo dejando que "
+"su Android no utilizado\n"
+"Los teléfonos funcionan para ellos."
 
 #: .\templates\pages\main\components\hero.html:8
 msgid ""
@@ -1132,6 +1491,8 @@ msgid ""
 "                Welcome to Global Cellular Partners\n"
 "            "
 msgstr ""
+"\n"
+"Bienvenido a socios celulares globales"
 
 #: .\templates\pages\main\components\hero.html:13
 msgid ""
@@ -1144,18 +1505,25 @@ msgid ""
 "communication solutions.\n"
 "            "
 msgstr ""
+"\n"
+"En Global Cellular Partners, estamos revolucionando la forma en que se "
+"realizan y finalizan las llamadas internacionales.\n"
+"Nuestra misión es crear una vasta red de socios celulares que abarque más de "
+"100 países en todo el mundo, todos\n"
+"unidos para brindar conectividad perfecta y soluciones de comunicación "
+"asequibles."
 
 #: .\templates\pages\main\components\hero.html:21
 msgid "Get started"
-msgstr ""
+msgstr "Empezar"
 
 #: .\templates\pages\main\components\hero.html:29
 msgid "Learn more"
-msgstr ""
+msgstr "Aprende más"
 
 #: .\templates\pages\main\components\join_us.html:6
 msgid "Join the Movement"
-msgstr ""
+msgstr "Unete al movimiento"
 
 #: .\templates\pages\main\components\join_us.html:8
 msgid ""
@@ -1168,14 +1536,21 @@ msgid ""
 "convenient, affordable, and accessible for everyone.\n"
 "                "
 msgstr ""
+"\n"
+"¿Estás listo para ser parte de una revolución global en comunicación? Únase "
+"a nosotros como socio celular y\n"
+"Contribuya con sus dispositivos Android no utilizados a nuestra red. Juntos "
+"podemos redefinir la forma en que el mundo\n"
+"se comunica, haciendo que las llamadas internacionales sean más "
+"convenientes, asequibles y accesibles para todos."
 
 #: .\templates\pages\main\components\join_us.html:14
 msgid "Join Now"
-msgstr ""
+msgstr "Únete ahora"
 
 #: .\templates\pages\main\components\support_countries.html:8
 msgid "Countries We support"
-msgstr ""
+msgstr "Países que apoyamos"
 
 #: .\templates\pages\main\components\support_countries.html:10
 msgid ""
@@ -1183,6 +1558,8 @@ msgid ""
 "                Start exploring the countries Global Cell support\n"
 "            "
 msgstr ""
+"\n"
+"Comience a explorar los países con soporte para Global Cell"
 
 #: .\templates\pages\main\components\video_explain.html:7
 msgid ""
@@ -1190,14 +1567,16 @@ msgid ""
 "                Let's hear directly from our team\n"
 "            "
 msgstr ""
+"\n"
+"Escuchemos directamente a nuestro equipo."
 
 #: .\templates\pages\main\components\vision.html:10
 msgid "Our Vision"
-msgstr ""
+msgstr "Nuestra visión"
 
 #: .\templates\pages\main\components\vision.html:31
 msgid "Connecting the World:"
-msgstr ""
+msgstr "Conectando el mundo:"
 
 #: .\templates\pages\main\components\vision.html:33
 msgid ""
@@ -1212,10 +1591,19 @@ msgid ""
 "                                accessibility to our users worldwide.\n"
 "                            "
 msgstr ""
+"\n"
+"En Global Cellular Partners, nuestra visión se extiende más allá de las "
+"fronteras. Estamos trabajando incansablemente\n"
+"hacia la construcción de una red global de socios celulares que abarca más "
+"de 100 países. Este\n"
+"El alcance expansivo garantiza que la comunicación no conozca límites y "
+"ofrezca una amplia cobertura.\n"
+"y\n"
+"accesibilidad para nuestros usuarios en todo el mundo."
 
 #: .\templates\pages\main\components\vision.html:51
 msgid "Revolutionizing Connectivity:"
-msgstr ""
+msgstr "Revolucionando la conectividad:"
 
 #: .\templates\pages\main\components\vision.html:53
 msgid ""
@@ -1231,10 +1619,19 @@ msgid ""
 "footprint across the globe.\n"
 "                            "
 msgstr ""
+"\n"
+"Creemos en el poder del potencial sin explotar. Al desbloquear el poder "
+"adquisitivo de los activos no utilizados\n"
+"Dispositivos Android, no sólo estamos revitalizando la tecnología, sino "
+"también transformando vidas.\n"
+"A través de la contribución colectiva de nuestros socios, estamos dando "
+"nueva vida a\n"
+"dispositivos,\n"
+"y al mismo tiempo extendemos nuestra huella digital en todo el mundo."
 
 #: .\templates\pages\main\components\vision.html:75
 msgid "Seamless Communication: "
-msgstr ""
+msgstr "Comunicación perfecta:"
 
 #: .\templates\pages\main\components\vision.html:77
 msgid ""
@@ -1253,10 +1650,23 @@ msgid ""
 "                                hefty bills.\n"
 "                            "
 msgstr ""
+"\n"
+"En un mundo donde las distancias se reducen y las conexiones se fortalecen, "
+"la asequibilidad no debería\n"
+"ser\n"
+"una barrera. Nuestra red interconectada de dispositivos Android forma la "
+"columna vertebral de una perfecta\n"
+"Conectividad digital. Esto nos permite ofrecer servicios de terminación de "
+"llamadas internacionales.\n"
+"en\n"
+"Tarifas locales, que permiten a los usuarios mantenerse conectados con sus "
+"seres queridos sin preocuparse.\n"
+"acerca de\n"
+"billetes considerables."
 
 #: .\templates\pages\main\components\vision.html:98
 msgid "Empowering Partners:"
-msgstr ""
+msgstr "Socios empoderadores:"
 
 #: .\templates\pages\main\components\vision.html:100
 msgid ""
@@ -1275,23 +1685,35 @@ msgid ""
 "future.\n"
 "                            "
 msgstr ""
+"\n"
+"En el corazón de nuestra misión se encuentra el compromiso con el "
+"empoderamiento. Nuestros socios celulares juegan\n"
+"a\n"
+"papel fundamental en nuestro ecosistema, obteniendo ingresos por cada minuto "
+"de tráfico de llamadas enrutadas\n"
+"a través de sus dispositivos no utilizados. Este modelo innovador no sólo "
+"enriquece a nuestros socios\n"
+"financieramente, sino que también defiende la utilización sostenible de los "
+"recursos tecnológicos,\n"
+"pavimentación\n"
+"el camino hacia un futuro más brillante y más conectado."
 
 #: .\templates\pages\main\login.html:9
 msgid "Sign in to your account"
-msgstr ""
+msgstr "Iniciar sesión en su cuenta"
 
 #: .\templates\pages\main\login.html:15
 #: .\templates\pages\main\password_reset.html:15
 msgid "Your email"
-msgstr ""
+msgstr "Tu correo electrónico"
 
 #: .\templates\pages\main\login.html:27
 msgid "Forgot password?"
-msgstr ""
+msgstr "¿Has olvidado tu contraseña?"
 
 #: .\templates\pages\main\login.html:31 .\templates\pages\main\register.html:50
 msgid "Sign in"
-msgstr ""
+msgstr "Iniciar sesión"
 
 #: .\templates\pages\main\login.html:34
 msgid ""
@@ -1299,29 +1721,31 @@ msgid ""
 "                                Don’t have an account yet?\n"
 "                            "
 msgstr ""
+"\n"
+"¿Aún no tienes una cuenta?"
 
 #: .\templates\pages\main\login.html:37
 msgid "Sign up"
-msgstr ""
+msgstr "Inscribirse"
 
 #: .\templates\pages\main\password_reset.html:9
 #: .\templates\pages\main\password_reset_form.html:9
 #: .\templates\pages\main\password_reset_form.html:27
 msgid "Reset Password"
-msgstr ""
+msgstr "Restablecer la contraseña"
 
 #: .\templates\pages\main\password_reset.html:20
 msgid "Send"
-msgstr ""
+msgstr "Enviar"
 
 #: .\templates\pages\main\password_reset_complete.html:9
 #: .\templates\pages\main\password_reset_complete.html:14
 msgid "Password Reset Successful"
-msgstr ""
+msgstr "Restablecimiento de contraseña exitoso"
 
 #: .\templates\pages\main\password_reset_complete.html:11
 msgid "Password Reset"
-msgstr ""
+msgstr "Restablecimiento de contraseña"
 
 #: .\templates\pages\main\password_reset_complete.html:17
 msgid ""
@@ -1330,19 +1754,22 @@ msgid ""
 "now log in with your new password.\n"
 "                    "
 msgstr ""
+"\n"
+"Su contraseña se ha restablecido correctamente. Ahora puedes iniciar sesión "
+"con tu nueva contraseña."
 
 #: .\templates\pages\main\password_reset_complete.html:23
 msgid "Go to Login"
-msgstr ""
+msgstr "Ir a Iniciar sesión"
 
 #: .\templates\pages\main\password_reset_done.html:9
 #: .\templates\pages\main\password_reset_done.html:11
 msgid "Email Sent"
-msgstr ""
+msgstr "Email enviado"
 
 #: .\templates\pages\main\password_reset_done.html:14
 msgid "Check Your Email"
-msgstr ""
+msgstr "Consultar su correo electrónico"
 
 #: .\templates\pages\main\password_reset_done.html:17
 msgid ""
@@ -1352,14 +1779,18 @@ msgid ""
 "                        your spam folder) to proceed.\n"
 "                    "
 msgstr ""
+"\n"
+"Le hemos enviado un correo electrónico con instrucciones para restablecer su "
+"contraseña. Por favor revise su bandeja de entrada (y\n"
+"su carpeta de spam) para continuar."
 
 #: .\templates\pages\main\password_reset_done.html:24
 msgid "Back to Homepage"
-msgstr ""
+msgstr "Volver a la página de inicio"
 
 #: .\templates\pages\main\register.html:9
 msgid "Create an account"
-msgstr ""
+msgstr "Crea una cuenta"
 
 #: .\templates\pages\main\register.html:53
 msgid ""
@@ -1367,22 +1798,24 @@ msgid ""
 "                                Already have an account?\n"
 "                            "
 msgstr ""
+"\n"
+"¿Ya tienes una cuenta?"
 
 #: .\venv\Lib\site-packages\django\contrib\messages\apps.py:16
 msgid "Messages"
-msgstr ""
+msgstr "Mensajes"
 
 #: .\venv\Lib\site-packages\django\contrib\sitemaps\apps.py:8
 msgid "Site Maps"
-msgstr ""
+msgstr "Mapas del sitio"
 
 #: .\venv\Lib\site-packages\django\contrib\staticfiles\apps.py:9
 msgid "Static Files"
-msgstr ""
+msgstr "Archivos estáticos"
 
 #: .\venv\Lib\site-packages\django\contrib\syndication\apps.py:7
 msgid "Syndication"
-msgstr ""
+msgstr "Sindicación"
 
 #. Translators: String used to replace omitted page numbers in elided page
 #. range generated by paginators, e.g. [1, 2, '…', 5, 6, 7, '…', 9, 10].
@@ -1944,10 +2377,6 @@ msgstr[1] ""
 msgid "Order"
 msgstr ""
 
-#: .\venv\Lib\site-packages\django\forms\formsets.py:499
-msgid "Delete"
-msgstr ""
-
 #: .\venv\Lib\site-packages\django\forms\models.py:899
 #, python-format
 msgid "Please correct the duplicate data for %(field)s."
@@ -1987,10 +2416,6 @@ msgstr ""
 msgid ""
 "%(datetime)s couldn’t be interpreted in time zone %(current_timezone)s; it "
 "may be ambiguous or it may not exist."
-msgstr ""
-
-#: .\venv\Lib\site-packages\django\forms\widgets.py:461
-msgid "Clear"
 msgstr ""
 
 #: .\venv\Lib\site-packages\django\forms\widgets.py:462

@@ -12,51 +12,15 @@
             {% endblocktranslate %}
         </p>
         <div class="flex flex-wrap justify-center items-start my-20 gap-10">
-            <div class="col-span-1">
-                <div class="w-24 h-24 overflow-hidden rounded-full flex justify-center items-center">
-                    <span class="fi fi-gr !w-full !h-full fis "></span>
+            {% for item in data %}
+                <div class="col-span-1">
+                    <div class="w-24 h-24 overflow-hidden rounded-full flex justify-center items-center">
+                        <span class="fi fi-{{ item.short_name|lower }} !w-full !h-full fis "></span>
+                    </div>
                 </div>
-            </div>
-            <div class="col-span-1">
-                <div class="w-24 h-24 overflow-hidden rounded-full flex justify-center items-center">
-                    <span class="fi fi-us !w-full !h-full fis"></span>
-                </div>
-            </div>
-            <div class="col-span-1">
-                <div class="w-24 h-24 overflow-hidden rounded-full flex justify-center items-center">
-                    <span class="fi fi-gb !w-full !h-full fis"></span>
-                </div>
-            </div>
-            <div class="col-span-1">
-                <div class="w-24 h-24 overflow-hidden rounded-full flex justify-center items-center">
-                    <span class="fi fi-ca !w-full !h-full fis"></span>
-                </div>
-            </div>
-            <div class="col-span-1">
-                <div class="w-24 h-24 overflow-hidden rounded-full flex justify-center items-center">
-                    <span class="fi fi-cn !w-full !h-full fis"></span>
-                </div>
-            </div>
-            <div class="col-span-1">
-                <div class="w-24 h-24 overflow-hidden rounded-full flex justify-center items-center">
-                    <span class="fi fi-mc !w-full !h-full fis"></span>
-                </div>
-            </div>
-            <div class="col-span-1">
-                <div class="w-24 h-24 overflow-hidden rounded-full flex justify-center items-center">
-                    <span class="fi fi-ir !w-full !h-full fis"></span>
-                </div>
-            </div>
-            <div class="col-span-1">
-                <div class="w-24 h-24 overflow-hidden rounded-full flex justify-center items-center">
-                    <span class="fi fi-pk !w-full !h-full fis"></span>
-                </div>
-            </div>
-            <div class="col-span-1">
-                <div class="w-24 h-24 overflow-hidden rounded-full flex justify-center items-center">
-                    <span class="fi fi-qa !w-full !h-full fis"></span>
-                </div>
-            </div>
+            {% empty %}
+
+            {% endfor %}
         </div>
     </div>
 </section>

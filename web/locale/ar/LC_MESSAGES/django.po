@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-21 12:50+0400\n"
-"PO-Revision-Date: 2024-05-21 12:51+0000\n"
+"POT-Creation-Date: 2024-07-24 20:25+0400\n"
+"PO-Revision-Date: 2024-07-24 20:29+0000\n"
 "Last-Translator:   <admin@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -21,350 +21,359 @@ msgstr ""
 
 #: .\accounts\forms.py:12
 msgid "New password"
-msgstr ""
+msgstr "كلمة المرور الجديدة"
 
 #: .\accounts\forms.py:18
 msgid "Enter new password for your account"
-msgstr ""
+msgstr "أدخل كلمة المرور الجديدة لحسابك"
 
 #: .\accounts\forms.py:24
 msgid "Password Confirmation"
-msgstr ""
+msgstr "تأكيد كلمة المرور"
 
 #: .\accounts\forms.py:38
 msgid "Email"
-msgstr ""
+msgstr "بريد إلكتروني"
 
 #: .\accounts\forms.py:53
 msgid "Required. Enter a valid email address."
-msgstr ""
+msgstr "مطلوب. أدخل عنوان بريد إلكتروني صالح."
 
 #: .\accounts\forms.py:59 .\templates\pages\main\login.html:20
 msgid "Password"
-msgstr ""
+msgstr "كلمة المرور"
 
 #: .\accounts\forms.py:71
 msgid "Confirm Password"
-msgstr ""
+msgstr "تأكيد كلمة المرور"
 
 #: .\accounts\forms.py:87
 msgid "Enter your first name here"
-msgstr ""
+msgstr "أدخل اسمك الأول هنا"
 
 #: .\accounts\forms.py:90
 msgid "Enter your last name here"
-msgstr ""
+msgstr "أدخل اسمك الأخير هنا"
 
 #: .\accounts\forms.py:97
 msgid "A user with that email already exists."
-msgstr ""
+msgstr "هناك شخص يمتلك هذا البريد الألكتروني."
 
 #: .\accounts\forms.py:116
 msgid "Enter your first name"
-msgstr ""
+msgstr "أدخل اسمك الأول"
 
 #: .\accounts\forms.py:122
 msgid "Enter your last name"
-msgstr ""
+msgstr "أدخل اسمك الأخير"
 
 #: .\accounts\forms.py:128
 msgid "Enter your middle name"
-msgstr ""
+msgstr "أدخل اسمك الأوسط"
 
 #: .\accounts\forms.py:134
 msgid "Enter your phone number"
-msgstr ""
+msgstr "أدخل رقم هاتفك"
 
 #: .\accounts\forms.py:139
 msgid "Your given name."
-msgstr ""
+msgstr "اسمك المحدد."
 
 #: .\accounts\forms.py:140
 msgid "Your family name."
-msgstr ""
+msgstr "اسم عائلتك."
 
 #: .\accounts\forms.py:141
 msgid "Your middle name, if you have one."
-msgstr ""
+msgstr "اسمك الأوسط، إذا كان لديك واحد."
 
 #: .\accounts\forms.py:142
 msgid "Your contact number, example +12125552368."
-msgstr ""
+msgstr "رقم الاتصال الخاص بك، مثال: +12125552368."
 
 #: .\accounts\forms.py:152
 msgid "Enter your old password"
-msgstr ""
+msgstr "أدخل كلمة المرور القديمة الخاصة بك"
 
 #: .\accounts\forms.py:158
 msgid "Enter your new password"
-msgstr ""
+msgstr "أدخل كلمة المرور الجديدة"
 
 #: .\accounts\forms.py:164
 msgid "Confirm your new password"
-msgstr ""
+msgstr "قم بتأكيد كلمة المرور الجديدة"
 
 #: .\accounts\models.py:11
 msgid "email address"
-msgstr ""
+msgstr "عنوان البريد الإلكتروني"
 
 #: .\accounts\models.py:12
 msgid "Middle Name"
-msgstr ""
+msgstr "الاسم الأوسط"
 
 #: .\accounts\models.py:13
 msgid "Phone Number"
-msgstr ""
+msgstr "رقم التليفون"
 
 #: .\accounts\models.py:20
 msgid "Wallet"
-msgstr ""
+msgstr "محفظة"
 
 #: .\accounts\models.py:23
 msgid "Last IP Address"
-msgstr ""
+msgstr "عنوان IP الأخير"
+
+#: .\accounts\signals.py:23
+msgid "Welcome to Global Cell"
+msgstr "مرحبا بكم في الخلية العالمية"
 
 #: .\accounts\views.py:24
 #, python-brace-format
 msgid "Welcome {user}!"
-msgstr ""
+msgstr "مرحبًا {user}!"
 
 #: .\accounts\views.py:27
 msgid "Invalid email or password."
-msgstr ""
+msgstr "البريد الإلكتروني أو كلمة السر خاطئة."
 
 #: .\accounts\views.py:29
 msgid "Email and password is required."
-msgstr ""
+msgstr "مطلوب البريد الإلكتروني وكلمة المرور."
 
 #: .\accounts\views.py:40 .\settings\models.py:132
 #: .\templates\pages\main\register.html:56
 msgid "Sign In"
-msgstr ""
+msgstr "تسجيل الدخول"
 
 #: .\accounts\views.py:54
 msgid "Congratulations! You have successfully registered your account."
-msgstr ""
+msgstr "تهانينا! لقد قمت بتسجيل حسابك بنجاح."
 
 #: .\accounts\views.py:70 .\settings\models.py:133
 msgid "Sign Up"
-msgstr ""
+msgstr "اشتراك"
 
 #: .\accounts\views.py:83
 msgid "Your profile has been updated."
-msgstr ""
+msgstr "تم تحديث ملفك الشخصي."
 
 #: .\accounts\views.py:97
 msgid "Your password has been successfully updated !"
-msgstr ""
+msgstr "لقد تم تحديث كلمة السر الخاصة بك بنجاح !"
 
 #: .\accounts\views.py:107
 msgid "You have been logged out."
-msgstr ""
+msgstr "لقد تم تسجيل الخروج."
 
-#: .\core\settings\settings.py:125
+#: .\core\settings\settings.py:129
 msgid "English"
-msgstr ""
+msgstr "إنجليزي"
 
-#: .\core\settings\settings.py:126
+#: .\core\settings\settings.py:130
 msgid "French"
-msgstr ""
+msgstr "فرنسي"
 
-#: .\core\settings\settings.py:127
+#: .\core\settings\settings.py:131
 msgid "Spanish"
-msgstr ""
+msgstr "الأسبانية"
 
-#: .\core\settings\settings.py:128
+#: .\core\settings\settings.py:132
 msgid "Arabic"
-msgstr ""
+msgstr "عربي"
+
+#: .\main\forms.py:18 .\main\models.py:83 .\main\models.py:152
+#: .\templates\pages\dashboard\components\bank_card.html:70
+msgid "Country"
+msgstr "دولة"
 
 #: .\main\forms.py:28 .\main\forms.py:31 .\main\forms.py:35 .\main\forms.py:38
 #: .\main\forms.py:42
 msgid "Enter the name of the account"
-msgstr ""
+msgstr "أدخل اسم الحساب"
 
 #: .\main\forms.py:55
 msgid "Enter the name of the company"
-msgstr ""
+msgstr "أدخل اسم الشركة"
 
 #: .\main\forms.py:59
 msgid "Enter the name of the plan"
-msgstr ""
+msgstr "أدخل اسم الخطة"
 
 #: .\main\forms.py:62
 msgid "Enter the cost of the plan "
-msgstr ""
+msgstr "أدخل تكلفة الخطة"
 
 #: .\main\models.py:12
 msgid "Date Created"
-msgstr ""
+msgstr "تاريخ الإنشاء"
 
 #: .\main\models.py:13
 msgid "Date Updated"
-msgstr ""
+msgstr "تاريخ تحديث"
 
 #: .\main\models.py:14 .\main\models.py:287
 msgid "Is Active"
-msgstr ""
+msgstr "نشط"
 
 #: .\main\models.py:35
 msgid "Name of Country"
-msgstr ""
+msgstr "اسم البلد"
 
 #: .\main\models.py:37
 msgid "The country name is case insensitive."
-msgstr ""
+msgstr "اسم البلد حساس لحالة الأحرف."
 
 #: .\main\models.py:43
 msgid "Short Name of Country"
-msgstr ""
+msgstr "الاسم المختصر للبلد"
 
 #: .\main\models.py:45
 msgid "A short unique abbreviation for the country."
-msgstr ""
+msgstr "اختصار فريد قصير للبلد."
 
 #: .\main\models.py:51
 msgid "Country Phone Prefix"
-msgstr ""
+msgstr "بادئة هاتف البلد"
 
 #: .\main\models.py:54
 msgid "The phone number prefix for the country."
-msgstr ""
+msgstr "بادئة رقم الهاتف للبلد."
 
 #: .\main\models.py:58
 msgid "Currency of Country"
-msgstr ""
+msgstr "عملة البلد"
 
 #: .\main\models.py:64
 msgid "Currency Sign"
-msgstr ""
+msgstr "علامة العملة"
 
 #: .\main\models.py:71
 msgid "Equivalent to 1 Dollar"
-msgstr ""
+msgstr "أي ما يعادل 1 دولار"
 
 #: .\main\models.py:72
 msgid "The value of the country's currency compared to 1 US Dollar."
-msgstr ""
+msgstr "قيمة عملة البلاد مقارنة بالدولار الأمريكي الواحد."
 
 #: .\main\models.py:77
 msgid "Is Supported"
-msgstr ""
+msgstr "مدعوم"
 
 #: .\main\models.py:79
 msgid "Is this country supported?"
-msgstr ""
-
-#: .\main\models.py:83 .\main\models.py:152
-msgid "Country"
-msgstr ""
+msgstr "هل هذه الدولة مدعومة؟"
 
 #: .\main\models.py:84
 msgid "Countries"
-msgstr ""
+msgstr "بلدان"
 
 #: .\main\models.py:101
 msgid "Account Name"
-msgstr ""
+msgstr "إسم الحساب"
 
 #: .\main\models.py:107
 msgid "Account Number"
-msgstr ""
+msgstr "رقم حساب"
 
 #: .\main\models.py:113
 msgid "Account number must be between 10 and 50 digits."
-msgstr ""
+msgstr "يجب أن يتراوح رقم الحساب بين 10 و50 رقمًا."
 
 #: .\main\models.py:120
 msgid "Bank Name"
-msgstr ""
+msgstr "اسم البنك"
 
 #: .\main\models.py:126
 msgid "SWIFT Number"
-msgstr ""
+msgstr "رقم سويفت"
 
 #: .\main\models.py:132
 msgid "SWIFT number must be between 8 and 11 characters."
-msgstr ""
+msgstr "يجب أن يتراوح عدد أرقام SWIFT بين 8 و11 حرفًا."
 
 #: .\main\models.py:139
 msgid "IBAN Number"
-msgstr ""
+msgstr "رقم الآيبان"
 
 #: .\main\models.py:145
 msgid "IBAN number must be between 15 and 34 characters."
-msgstr ""
+msgstr "يجب أن يتراوح رقم IBAN بين 15 و34 حرفًا."
 
-#: .\main\models.py:158 .\templates\pages\dashboard\phones_list.html:205
+#: .\main\models.py:158
+#: .\templates\pages\dashboard\components\bank_card.html:60
+#: .\templates\pages\dashboard\phones_list.html:141
+#: .\templates\pages\dashboard\phones_list.html:220
 msgid "Verified"
-msgstr ""
+msgstr "تم التحقق"
 
 #: .\main\models.py:161
 msgid "Payment Method"
-msgstr ""
+msgstr "طريقة الدفع او السداد"
 
 #: .\main\models.py:162
 msgid "Payment Methods"
-msgstr ""
+msgstr "طرق الدفع"
 
-#: .\main\models.py:225
+#: .\main\models.py:225 .\templates\pages\dashboard\phones_list.html:161
 msgid "Post Paid"
-msgstr ""
+msgstr "آخر المدفوعة"
 
-#: .\main\models.py:226
+#: .\main\models.py:226 .\templates\pages\dashboard\phones_list.html:171
 msgid "Pre Paid"
-msgstr ""
+msgstr "مسبقة الدفع"
 
 #: .\main\models.py:233
 msgid "SIM Number"
-msgstr ""
+msgstr "رقم SIM"
 
 #: .\main\models.py:236
 msgid "Mobile Carrier"
-msgstr ""
+msgstr "الناقل المحمول"
 
 #: .\main\models.py:242
 msgid "Plan Payment"
-msgstr ""
+msgstr "خطة الدفع"
 
 #: .\main\models.py:247
 msgid "Plan Name"
-msgstr ""
+msgstr "اسم الخطة"
 
 #: .\main\models.py:254
 msgid "Plan Cost"
-msgstr ""
+msgstr "تكلفة الخطة"
 
 #: .\main\models.py:255
 msgid "Plan cost Based on USD Dollar ($)"
-msgstr ""
+msgstr "تكلفة الخطة على أساس الدولار الأمريكي ($)"
 
 #: .\main\models.py:261
 msgid "Plan Length (Months)"
-msgstr ""
+msgstr "طول الخطة (أشهر)"
 
-#: .\main\models.py:268 .\templates\pages\dashboard\phones_list.html:204
+#: .\main\models.py:268 .\templates\pages\dashboard\phones_list.html:151
+#: .\templates\pages\dashboard\phones_list.html:219
 msgid "Unlimited Minutes"
-msgstr ""
+msgstr "دقائق غير محدودة"
 
 #: .\main\models.py:272
 msgid "Total Minutes"
-msgstr ""
+msgstr "إجمالي الدقائق"
 
 #: .\main\models.py:280
 msgid "Earned"
-msgstr ""
+msgstr "حصل"
 
 #: .\main\models.py:281
 msgid "Total earned"
-msgstr ""
+msgstr "إجمالي المكتسبة"
 
 #: .\main\models.py:290 .\settings\models.py:35
 msgid "Device"
-msgstr ""
+msgstr "جهاز"
 
 #: .\main\models.py:291
 msgid "Devices"
-msgstr ""
+msgstr "الأجهزة"
 
 #: .\main\signals.py:20
 #, python-format
@@ -381,10 +390,12 @@ msgid ""
 "Your new bank account '%(account_name)s' will be reviewed soon by our "
 "support team."
 msgstr ""
+"ستتم مراجعة حسابك المصرفي الجديد '%(account_name)s' قريبًا بواسطة فريق الدعم"
+" لدينا."
 
 #: .\main\views.py:26
 msgid "Welcome To Global Cell"
-msgstr ""
+msgstr "مرحبا بكم في الخلية العالمية"
 
 #: .\main\views.py:37 .\templates\layouts\components\sidebar.html:32
 #: .\templates\pages\dashboard\financial.html:10
@@ -392,126 +403,127 @@ msgstr ""
 #: .\templates\pages\dashboard\phones_list.html:10
 #: .\templates\pages\dashboard\settings.html:10
 msgid "Dashboard"
-msgstr ""
+msgstr "لوحة القيادة"
 
 #: .\main\views.py:51
 #, python-brace-format
 msgid "Device {device.sim_number} was add successfully"
-msgstr ""
+msgstr "تمت إضافة الجهاز {device.sim_number} بنجاح"
 
 #: .\main\views.py:54
 msgid "Please makesure your have fill the form correctly"
-msgstr ""
+msgstr "يرجى التأكد من ملء النموذج بشكل صحيح"
 
 #: .\main\views.py:60
 msgid "Add Your New Phone"
-msgstr ""
+msgstr "أضف هاتفك الجديد"
 
 #: .\main\views.py:99
 msgid "Phones List"
-msgstr ""
+msgstr "قائمة الهواتف"
 
 #: .\main\views.py:128
 #, python-brace-format
 msgid "Bank Account {bank_name} updated successfully"
-msgstr ""
+msgstr "تم تحديث الحساب البنكي {bank_name} بنجاح"
 
 #: .\main\views.py:131
 #, python-brace-format
 msgid "Bank Account {bank_name} was added successfully"
-msgstr ""
+msgstr "تمت إضافة الحساب البنكي {bank_name} بنجاح"
 
 #: .\main\views.py:141
 msgid "Please make sure you have filled the form correctly"
-msgstr ""
+msgstr "يرجى التأكد من ملء النموذج بشكل صحيح"
 
 #: .\main\views.py:147
 msgid "Manage your financial"
-msgstr ""
+msgstr "إدارة المالية الخاصة بك"
 
 #: .\main\views.py:158
 #, python-brace-format
 msgid "Bank Account {queryset.bank_name} was deleted successfully"
-msgstr ""
+msgstr "تم حذف الحساب البنكي {queryset.bank_name} بنجاح"
 
 #: .\main\views.py:168 .\templates\layouts\components\sidebar.html:114
 #: .\templates\pages\dashboard\settings.html:21
+#: .\templates\pages\dashboard\settings.html:34
 msgid "Settings"
-msgstr ""
+msgstr "إعدادات"
 
 #: .\settings\models.py:16
 msgid "Low"
-msgstr ""
+msgstr "قليل"
 
 #: .\settings\models.py:17
 msgid "Medium"
-msgstr ""
+msgstr "واسطة"
 
 #: .\settings\models.py:18
 msgid "High"
-msgstr ""
+msgstr "عالي"
 
 #: .\settings\models.py:21
 msgid "Success"
-msgstr ""
+msgstr "نجاح"
 
 #: .\settings\models.py:22
 msgid "Error"
-msgstr ""
+msgstr "خطأ"
 
 #: .\settings\models.py:23
-#, fuzzy
-#| msgid "Earnings"
 msgid "Warning"
-msgstr "الأرباح"
+msgstr "تحذير"
 
 #: .\settings\models.py:24
 msgid "Info"
-msgstr ""
+msgstr "معلومات"
 
 #: .\settings\models.py:38
 msgid "If the notification related to this device"
-msgstr ""
+msgstr "إذا كان الإخطار المتعلقة بهذا الجهاز"
 
 #: .\settings\models.py:44
 msgid "Bank Account"
-msgstr ""
+msgstr "حساب البنك"
 
 #: .\settings\models.py:47
 msgid "If the notification related to this bank account"
-msgstr ""
+msgstr "إذا كان الإخطار يتعلق بهذا الحساب البنكي"
 
 #: .\settings\models.py:49
 msgid "Message"
-msgstr ""
+msgstr "رسالة"
 
 #: .\settings\models.py:51
 msgid "Has Seen"
-msgstr ""
+msgstr "قد راى"
 
 #: .\settings\models.py:53
 msgid "Has User Seen Notification?"
-msgstr ""
+msgstr "هل شاهد المستخدم إشعارًا؟"
 
 #: .\settings\models.py:55
 msgid "Visibility"
-msgstr ""
+msgstr "الرؤية"
 
 #: .\settings\models.py:60
 msgid "Priority"
-msgstr ""
+msgstr "أولوية"
 
-#: .\settings\models.py:66 .\templates\pages\dashboard\phones_list.html:206
+#: .\settings\models.py:66
+#: .\templates\pages\dashboard\components\bank_card.html:58
+#: .\templates\pages\dashboard\phones_list.html:221
 msgid "Status"
-msgstr ""
+msgstr "حالة"
 
 #: .\settings\models.py:70
 msgid "Notification"
-msgstr ""
+msgstr "إشعار"
 
 #: .\settings\models.py:71 .\templates\layouts\components\notification.html:19
 msgid "Notifications"
-msgstr ""
+msgstr "إشعارات"
 
 #: .\settings\models.py:96
 msgid "ago"
@@ -519,124 +531,126 @@ msgstr "منذ"
 
 #: .\settings\models.py:100
 msgid "Title"
-msgstr ""
+msgstr "عنوان"
 
 #: .\settings\models.py:102
 msgid "Short Description"
-msgstr ""
+msgstr "وصف قصير"
 
 #: .\settings\models.py:105
 msgid "A short description of the slide"
-msgstr ""
+msgstr "وصف موجز للشريحة"
 
 #: .\settings\models.py:110
 #: .\venv\Lib\site-packages\django\db\models\fields\files.py:393
 msgid "Image"
-msgstr ""
+msgstr "صورة"
 
 #: .\settings\models.py:117
 msgid "Slide"
-msgstr ""
+msgstr "الانزلاق"
 
 #: .\settings\models.py:118
 msgid "Slides"
-msgstr ""
+msgstr "الشرائح"
 
 #: .\settings\models.py:127
 msgid "Home Page"
-msgstr ""
+msgstr "الصفحة الرئيسية"
 
 #: .\settings\models.py:128 .\templates\layouts\components\navbar.html:30
 msgid "About"
-msgstr ""
+msgstr "عن"
 
 #: .\settings\models.py:129
 msgid "Contact us"
-msgstr ""
+msgstr "اتصل بنا"
 
 #: .\settings\models.py:130
 msgid "Privacy Policy"
-msgstr ""
+msgstr "سياسة الخصوصية"
 
 #: .\settings\models.py:131
 msgid "Terms Page"
-msgstr ""
+msgstr "صفحة الشروط"
 
 #: .\settings\models.py:148
 msgid "Video File"
-msgstr ""
+msgstr "ملف فيديو"
 
 #: .\settings\models.py:149
 msgid "Video file is uploaded to your website."
-msgstr ""
+msgstr "يتم تحميل ملف الفيديو إلى موقع الويب الخاص بك."
 
 #: .\settings\models.py:155
 msgid "Video Poster"
-msgstr ""
+msgstr "ملصق فيديو"
 
 #: .\settings\models.py:156
 msgid "Upload the video poster."
-msgstr ""
+msgstr "قم بتحميل ملصق الفيديو."
 
 #: .\settings\models.py:161
 msgid "Page"
-msgstr ""
+msgstr "صفحة"
 
 #: .\settings\models.py:162
 msgid "Pages"
-msgstr ""
+msgstr "الصفحات"
 
 #: .\settings\models.py:171
 msgid "Belonging Page"
-msgstr ""
+msgstr "صفحة الانتماء"
 
 #: .\settings\models.py:175
 msgid "Seo Title"
-msgstr ""
+msgstr "عنوان سيو"
 
 #: .\settings\models.py:176
 msgid "For SEO purposes, ideally between 60-70 characters."
-msgstr ""
+msgstr "لأغراض تحسين محركات البحث، من المثالي أن يكون بين 60-70 حرفًا."
 
 #: .\settings\models.py:179
 msgid "Seo Description"
-msgstr ""
+msgstr "وصف سيو"
 
 #: .\settings\models.py:180
 msgid "For SEO purposes, ideally between 150-160 characters."
 msgstr ""
+"لأغراض تحسين محركات البحث، من الأفضل أن يتراوح عدد الأحرف بين 150-160 حرفًا."
 
 #: .\settings\models.py:183
 msgid "Seo Keywords"
-msgstr ""
+msgstr "الكلمات الرئيسية سيو"
 
 #: .\settings\models.py:184
 msgid "Comma-separated list of keywords."
-msgstr ""
+msgstr "قائمة الكلمات الرئيسية مفصولة بفواصل."
 
 #: .\settings\models.py:187
 msgid "Seo Canonical"
-msgstr ""
+msgstr "سيو الكنسي"
 
 #: .\settings\models.py:189
 msgid "Seo Robot Index"
-msgstr ""
+msgstr "مؤشر سيو روبوت"
 
 #: .\settings\models.py:190
 msgid "Set to allow search engines to index this page."
-msgstr ""
+msgstr "قم بالتعيين للسماح لمحركات البحث بفهرسة هذه الصفحة."
 
 #: .\settings\models.py:193
 msgid "Seo Robot Follow"
-msgstr ""
+msgstr "اتبع سيو روبوت"
 
 #: .\settings\models.py:194
 msgid "Set to allow search engines to follow links on this page."
 msgstr ""
+"قم بالتعيين للسماح لمحركات البحث بمتابعة الروابط الموجودة على هذه الصفحة."
 
 #: .\settings\models.py:202 .\settings\models.py:203
 msgid "SEO"
-msgstr ""
+msgstr "تحسين محركات البحث"
 
 #: .\templates\400.html:14
 msgid ""
@@ -644,6 +658,8 @@ msgid ""
 "                        Oops! Bad request.\n"
 "                    "
 msgstr ""
+"\n"
+"أُووبس! اقتراح غير جيد."
 
 #: .\templates\400.html:19
 msgid ""
@@ -652,10 +668,13 @@ msgid ""
 "                        Please double-check the URL and try again.\n"
 "                    "
 msgstr ""
+"\n"
+"نأسف، ولكن يبدو أن هناك طلبًا سيئًا.\n"
+"                        يرجى التحقق مرة أخرى من عنوان URL والمحاولة مرة أخرى."
 
 #: .\templates\400.html:26 .\templates\404.html:30 .\templates\500.html:26
 msgid "to Homepage"
-msgstr ""
+msgstr "إلى الصفحة الرئيسية"
 
 #: .\templates\404.html:15
 msgid ""
@@ -663,6 +682,8 @@ msgid ""
 "                        Something's missing.\n"
 "                    "
 msgstr ""
+"\n"
+"هناك شيء مفقود."
 
 #: .\templates\404.html:21
 msgid ""
@@ -672,6 +693,10 @@ msgid ""
 "                        find lots to explore on the home page.\n"
 "                    "
 msgstr ""
+"\n"
+"عذرًا، لا يمكننا العثور على تلك الصفحة.\n"
+"                        سوف تفعل\n"
+"                        ابحث عن الكثير لاستكشافه على الصفحة الرئيسية."
 
 #: .\templates\500.html:14
 msgid ""
@@ -679,6 +704,8 @@ msgid ""
 "                        Oops! Something went wrong.\n"
 "                    "
 msgstr ""
+"\n"
+"أُووبس! هناك خطأ ما."
 
 #: .\templates\500.html:19
 msgid ""
@@ -687,52 +714,63 @@ msgid ""
 "                        Our team has been notified and will work to fix it as soon as possible.\n"
 "                    "
 msgstr ""
+"\n"
+"عذرًا، ولكن يبدو أن هناك خطأ داخليًا في الخادم.\n"
+"                        لقد تم إخطار فريقنا وسيعمل على حل المشكلة في أقرب وقت ممكن."
 
 #: .\templates\layouts\components\navbar.html:25
 msgid "home"
-msgstr ""
+msgstr "بيت"
 
 #: .\templates\layouts\components\navbar.html:35
 msgid "Contact"
-msgstr ""
+msgstr "اتصال"
 
 #: .\templates\layouts\components\navbar.html:40
 msgid "Be Partner"
-msgstr ""
+msgstr "كن شريكا"
 
 #: .\templates\layouts\components\notification.html:21
 msgid "Mark all as read"
-msgstr ""
+msgstr "اشر عليها بانها قرات"
+
+#: .\templates\layouts\components\notification.html:34
+msgid "Inbox"
+msgstr "صندوق الوارد"
 
 #: .\templates\layouts\components\notification.html:46
 #: .\templates\layouts\components\notification.html:151
 msgid "Your Inbox Is Empty"
-msgstr ""
+msgstr "صندوق الوارد الخاص بك فارغ"
 
 #: .\templates\layouts\components\sidebar.html:19
 #: .\templates\pages\main\components\about.html:10
 msgid "Global Cell"
-msgstr ""
+msgstr "الخلية العالمية"
 
 #: .\templates\layouts\components\sidebar.html:48
 #: .\templates\pages\dashboard\phones_create.html:21
 #: .\templates\pages\dashboard\phones_list.html:21
 msgid "Phones"
-msgstr ""
+msgstr "الهواتف"
 
 #: .\templates\layouts\components\sidebar.html:68
 msgid "Add"
-msgstr ""
+msgstr "يضيف"
 
 #: .\templates\layouts\components\sidebar.html:84
 #: .\templates\pages\dashboard\phones_list.html:32
 msgid "List"
-msgstr ""
+msgstr "قائمة"
 
 #: .\templates\layouts\components\sidebar.html:102
 #: .\templates\pages\dashboard\financial.html:21
 msgid "Financial"
-msgstr ""
+msgstr "مالي"
+
+#: .\templates\layouts\components\sidebar.html:127
+msgid "Exit"
+msgstr "مخرج"
 
 #: .\templates\layouts\dashboard.html:50
 #, python-format
@@ -741,6 +779,53 @@ msgid ""
 "                    Wallet : %(fund)s\n"
 "                "
 msgstr ""
+"\n"
+"المحفظة : %(fund)s\n"
+"                "
+
+#: .\templates\pages\dashboard\components\add_phone.html:5
+#: .\templates\pages\dashboard\phones_create.html:44
+msgid "Add picture"
+msgstr "إضافة الصورة"
+
+#: .\templates\pages\dashboard\components\add_phone.html:8
+#: .\templates\pages\dashboard\phones_create.html:47
+msgid "Add Your Phone"
+msgstr "أضف هاتفك"
+
+#: .\templates\pages\dashboard\components\add_phone.html:11
+msgid ""
+"\n"
+"            Please fill out the form carefully. Ensure all information is correct. Once submitted, our\n"
+"            support team will review your submission and approve if everything is in order.\n"
+"        "
+msgstr ""
+"\n"
+"يرجى ملء النموذج بعناية. التأكد من صحة كافة المعلومات. بمجرد تقديمها، لدينا\n"
+"            سيقوم فريق الدعم بمراجعة طلبك والموافقة عليه إذا كان كل شيء على ما يرام."
+
+#: .\templates\pages\dashboard\components\add_phone.html:16
+#: .\templates\pages\dashboard\phones_list.html:77
+msgid "Add Phone"
+msgstr "إضافة هاتف"
+
+#: .\templates\pages\dashboard\components\bank_card.html:38
+msgid "Edit"
+msgstr "يحرر"
+
+#: .\templates\pages\dashboard\components\bank_card.html:45
+#: .\venv\Lib\site-packages\django\forms\formsets.py:499
+msgid "Delete"
+msgstr "يمسح"
+
+#: .\templates\pages\dashboard\components\bank_card.html:62
+msgid "Unverified"
+msgstr "لم يتم التحقق منها"
+
+#: .\templates\pages\dashboard\components\bank_card.html:66
+#: .\templates\pages\dashboard\financial.html:162
+msgid "Bank"
+msgstr "بنك"
 
 #: .\templates\pages\dashboard\components\line_chart.html:7
 msgid "Earnings"
@@ -748,7 +833,7 @@ msgstr "الأرباح"
 
 #: .\templates\pages\dashboard\components\line_chart.html:16
 msgid "Earnings - Incremental"
-msgstr ""
+msgstr "الأرباح - تزايدي"
 
 #: .\templates\pages\dashboard\components\line_chart.html:18
 msgid ""
@@ -760,11 +845,17 @@ msgid ""
 "                                    that need attention.\n"
 "                                "
 msgstr ""
+"\n"
+"ويوضح هذا التقرير النمو المتزايد للأرباح مع مرور الوقت. تم تصميمه\n"
+"                                    ل\n"
+"                                    تساعدك على تتبع الزيادات التدريجية في الإيرادات، ومن الأفضل أن تظهر ارتفاعًا مستمرًا\n"
+"                                    اتجاه. قد يشير الرسم البياني المسطح أو المتناقص إلى مجالات مثيرة للقلق في توليد الإيرادات\n"
+"                                    التي تحتاج إلى الاهتمام."
 
 #: .\templates\pages\dashboard\components\line_chart.html:27
 #: .\templates\pages\dashboard\components\line_chart.html:72
 msgid "Calculation"
-msgstr ""
+msgstr "عملية حسابية"
 
 #: .\templates\pages\dashboard\components\line_chart.html:29
 msgid ""
@@ -772,18 +863,20 @@ msgid ""
 "                                    Not Available.\n"
 "                                "
 msgstr ""
+"\n"
+"غير متاح."
 
 #: .\templates\pages\dashboard\components\line_chart.html:35
 #: .\templates\pages\dashboard\components\line_chart.html:84
 msgid "Read more"
-msgstr ""
+msgstr "اقرأ أكثر"
 
 #: .\templates\pages\dashboard\components\line_chart.html:50
 #: .\templates\pages\dashboard\components\line_chart.html:59
 #: .\templates\pages\dashboard\financial.html:307
-#: .\templates\pages\dashboard\financial.html:468
+#: .\templates\pages\dashboard\financial.html:469
 msgid "Withdrawal"
-msgstr ""
+msgstr "انسحاب"
 
 #: .\templates\pages\dashboard\components\line_chart.html:61
 msgid ""
@@ -797,6 +890,14 @@ msgid ""
 "                                    suggest potential issues that need to be addressed.\n"
 "                                "
 msgstr ""
+"\n"
+"يقدم هذا التقرير نظرة ثاقبة لأنشطة الانسحاب مع مرور الوقت. إنه يتتبع\n"
+"                                    مقدار\n"
+"                                    وتواتر عمليات السحب، مما يساعد على تحديد الاتجاهات والأنماط. متسقة\n"
+"                                    أو\n"
+"                                    وقد يشير اتجاه الانسحاب المتزايد إلى تزايد مشاركة المستخدمين، في حين يشير إلى انخفاض\n"
+"                                    استطاع\n"
+"                                    اقتراح القضايا المحتملة التي تحتاج إلى معالجة."
 
 #: .\templates\pages\dashboard\components\line_chart.html:74
 msgid ""
@@ -807,55 +908,135 @@ msgid ""
 "                                    provides a complete view of activity growth over time.\n"
 "                                "
 msgstr ""
+"\n"
+"لكل مجموعة تاريخ، يتم حساب الحجم التراكمي للأنشطة. هذا يعنى\n"
+"                                    أن الأنشطة في الفترة n تشمل جميع الأنشطة حتى الفترة n،\n"
+"                                    بالإضافة إلى أي أنشطة جديدة تم إنشاؤها خلال تلك الفترة. هذا النهج الشامل\n"
+"                                    يوفر رؤية كاملة لنمو النشاط مع مرور الوقت."
 
-#: .\templates\pages\dashboard\components\line_chart.html:150
+#: .\templates\pages\dashboard\components\line_chart.html:103
+msgid "Last week"
+msgstr "الأسبوع الماضي"
+
+#: .\templates\pages\dashboard\components\line_chart.html:116
+msgid "Yesterday"
+msgstr "أمس"
+
+#: .\templates\pages\dashboard\components\line_chart.html:122
+msgid "Today"
+msgstr "اليوم"
+
+#: .\templates\pages\dashboard\components\line_chart.html:128
+msgid "Last 7 days"
+msgstr "اخر 7 ايام"
+
+#: .\templates\pages\dashboard\components\line_chart.html:134
+msgid "Last 30 days"
+msgstr "آخر 30 يومًا"
+
+#: .\templates\pages\dashboard\components\line_chart.html:140
+msgid "Last 90 days"
+msgstr "آخر 90 يومًا"
+
+#: .\templates\pages\dashboard\components\line_chart.html:157
 msgid "Report"
-msgstr ""
+msgstr "تقرير"
+
+#: .\templates\pages\dashboard\components\slider.html:11
+msgid "NO SLIDE FOR DISPLAY"
+msgstr "لا توجد شريحة للعرض"
+
+#: .\templates\pages\dashboard\components\slider.html:39
+msgid "Previous"
+msgstr "سابق"
+
+#: .\templates\pages\dashboard\components\slider.html:51
+msgid "Next"
+msgstr "التالي"
+
+#: .\templates\pages\dashboard\financial.html:34
+msgid "Bank Accounts :"
+msgstr "حسابات بنكية :"
+
+#: .\templates\pages\dashboard\financial.html:46
+msgid "Add Account"
+msgstr "إضافة حساب"
+
+#: .\templates\pages\dashboard\financial.html:57
+msgid "Add Bank Account"
+msgstr "إضافة حساب بنكي"
+
+#: .\templates\pages\dashboard\financial.html:69
+#: .\templates\pages\dashboard\financial.html:328
+#: .\templates\pages\dashboard\financial.html:377
+msgid "Close modal"
+msgstr "إغلاق مشروط"
+
+#: .\templates\pages\dashboard\financial.html:122
+#: .\templates\pages\dashboard\financial.html:132
+#: .\templates\pages\dashboard\financial.html:403
+#: .\templates\pages\dashboard\financial.html:413
+msgid "Submit"
+msgstr "يُقدِّم"
+
+#: .\templates\pages\dashboard\financial.html:136
+#: .\templates\pages\dashboard\financial.html:417
+msgid "Cancel"
+msgstr "يلغي"
 
 #: .\templates\pages\dashboard\financial.html:158
 msgid "Date"
-msgstr ""
+msgstr "تاريخ"
 
 #: .\templates\pages\dashboard\financial.html:159
 msgid "Activity"
-msgstr ""
+msgstr "نشاط"
 
 #: .\templates\pages\dashboard\financial.html:160
 msgid "Description"
-msgstr ""
+msgstr "وصف"
 
 #: .\templates\pages\dashboard\financial.html:161
 msgid "Amount"
-msgstr ""
-
-#: .\templates\pages\dashboard\financial.html:162
-msgid "Bank"
-msgstr ""
+msgstr "كمية"
 
 #: .\templates\pages\dashboard\financial.html:300
 msgid "Digital Wallet"
-msgstr ""
+msgstr "المحفظة الرقمية"
 
 #: .\templates\pages\dashboard\financial.html:302
 msgid "Current Amount :"
-msgstr ""
+msgstr "القيمة الحالية :"
 
-#: .\templates\pages\dashboard\financial.html:463
+#: .\templates\pages\dashboard\financial.html:318
+msgid "Transfer your Money"
+msgstr "تحويل أموالك"
+
+#: .\templates\pages\dashboard\financial.html:334
+msgid "This Feature is unavailable right now"
+msgstr "هذه الميزة غير متوفرة الآن"
+
+#: .\templates\pages\dashboard\financial.html:341
+msgid "I accept"
+msgstr "أنا أتفق"
+
+#: .\templates\pages\dashboard\financial.html:345
+msgid "Decline"
+msgstr "انخفاض"
+
+#: .\templates\pages\dashboard\financial.html:365
+msgid "Edit Bank Account"
+msgstr "تحرير الحساب البنكي"
+
+#: .\templates\pages\dashboard\financial.html:464
 #: .\templates\pages\main\components\earnings.html:8
 msgid "Earning"
-msgstr ""
+msgstr "كسب"
 
-#: .\templates\pages\dashboard\main.html:12
-#: .\templates\pages\dashboard\phones_create.html:44
-msgid "Add picture"
-msgstr ""
+#: .\templates\pages\dashboard\phones_create.html:32
+msgid "Create"
+msgstr "يخلق"
 
-#: .\templates\pages\dashboard\main.html:15
-#: .\templates\pages\dashboard\phones_create.html:47
-msgid "Add Your Phone"
-msgstr ""
-
-#: .\templates\pages\dashboard\main.html:18
 #: .\templates\pages\dashboard\phones_create.html:50
 msgid ""
 "\n"
@@ -863,66 +1044,124 @@ msgid ""
 "                        support team will review your submission and approve if everything is in order.\n"
 "                    "
 msgstr ""
-
-#: .\templates\pages\dashboard\phones_create.html:32
-msgid "Create"
-msgstr ""
+"\n"
+"يرجى ملء النموذج بعناية. التأكد من صحة كافة المعلومات. بمجرد تقديمها، لدينا\n"
+"                        سيقوم فريق الدعم بمراجعة طلبك والموافقة عليه إذا كان كل شيء على ما يرام."
 
 #: .\templates\pages\dashboard\phones_create.html:101
 msgid "No country supported yet"
-msgstr ""
+msgstr "لم يتم دعم أي دولة حتى الآن"
 
-#: .\templates\pages\dashboard\phones_list.html:200
-msgid "SIM"
-msgstr ""
+#: .\templates\pages\dashboard\phones_create.html:177
+msgid "Add New Device"
+msgstr "إضافة جهاز جديد"
+
+#: .\templates\pages\dashboard\phones_list.html:49
+msgid "Search"
+msgstr "يبحث"
+
+#: .\templates\pages\dashboard\phones_list.html:64
+msgid "Search SIM number"
+msgstr "البحث عن رقم SIM"
+
+#: .\templates\pages\dashboard\phones_list.html:88
+#: .\templates\pages\dashboard\phones_list.html:223
+msgid "Actions"
+msgstr "أجراءات"
+
+#: .\templates\pages\dashboard\phones_list.html:107
+msgid "CSV REPORT"
+msgstr "تقرير CSV"
+
+#: .\templates\pages\dashboard\phones_list.html:121
+#: .\templates\pages\dashboard\phones_list.html:195
+msgid "Filter"
+msgstr "منقي"
+
+#: .\templates\pages\dashboard\phones_list.html:131
+msgid "Choose filter"
+msgstr "اختر الفلتر"
+
+#: .\templates\pages\dashboard\phones_list.html:180
+msgid "Status : Active"
+msgstr "الحالة : نشط"
+
+#: .\templates\pages\dashboard\phones_list.html:189
+msgid "Status : DeActive"
+msgstr "الحالة : معطل"
 
 #: .\templates\pages\dashboard\phones_list.html:201
+#: .\venv\Lib\site-packages\django\forms\widgets.py:461
+msgid "Clear"
+msgstr "واضح"
+
+#: .\templates\pages\dashboard\phones_list.html:215
+msgid "SIM"
+msgstr "سيم"
+
+#: .\templates\pages\dashboard\phones_list.html:216
 msgid "Carrier"
-msgstr ""
+msgstr "الناقل"
 
-#: .\templates\pages\dashboard\phones_list.html:202
+#: .\templates\pages\dashboard\phones_list.html:217
 msgid "Payment"
-msgstr ""
+msgstr "قسط"
 
-#: .\templates\pages\dashboard\phones_list.html:203
+#: .\templates\pages\dashboard\phones_list.html:218
 msgid "Plan Length"
-msgstr ""
+msgstr "طول الخطة"
 
-#: .\templates\pages\dashboard\phones_list.html:208
-msgid "Actions"
-msgstr ""
+#: .\templates\pages\dashboard\phones_list.html:245
+msgid "VERIFIED"
+msgstr "تم التحقق"
 
-#: .\templates\pages\dashboard\phones_list.html:301
+#: .\templates\pages\dashboard\phones_list.html:247
+msgid "UNVERIFIED"
+msgstr "لم يتم التحقق منها"
+
+#: .\templates\pages\dashboard\phones_list.html:303
 msgid "You don't have any phones yet."
-msgstr ""
+msgstr "ليس لديك أي هواتف حتى الآن."
 
-#: .\templates\pages\dashboard\phones_list.html:304
+#: .\templates\pages\dashboard\phones_list.html:306
 msgid "Click here to add one"
-msgstr ""
+msgstr "انقر هنا لاضافة واحدة"
+
+#: .\templates\pages\dashboard\phones_list.html:318
+msgid "Showing"
+msgstr "عرض"
+
+#: .\templates\pages\dashboard\phones_list.html:320
+msgid "of"
+msgstr "من"
+
+#: .\templates\pages\dashboard\settings.html:57
+msgid "ACTIVE"
+msgstr "نشيط"
 
 #: .\templates\pages\dashboard\settings.html:60
 msgid "Joined since :"
-msgstr ""
+msgstr "انضم منذ:"
 
 #: .\templates\pages\dashboard\settings.html:64
 msgid "Last login :"
-msgstr ""
+msgstr "آخر تسجيل دخول :"
 
 #: .\templates\pages\dashboard\settings.html:90
 msgid "Profile"
-msgstr ""
+msgstr "حساب تعريفي"
 
 #: .\templates\pages\dashboard\settings.html:99
 msgid "Change Password"
-msgstr ""
+msgstr "تغيير كلمة المرور"
 
 #: .\templates\pages\dashboard\settings.html:151
 msgid "Save changes"
-msgstr ""
+msgstr "حفظ التغييرات"
 
 #: .\templates\pages\dashboard\settings.html:194
 msgid "Change password"
-msgstr ""
+msgstr "تغيير كلمة المرور"
 
 #: .\templates\pages\main\components\about.html:13
 msgid ""
@@ -937,6 +1176,15 @@ msgid ""
 "                            infrastructure, we ensure affordable and accessible communication for all.\n"
 "                        "
 msgstr ""
+"\n"
+"في Global Cellular Partners، نحن نقود الجهود في مجال ابتكار الاتصالات والاستفادة منها\n"
+"                            التكنولوجيا المتطورة لتحويل الاتصالات الدولية. نهجنا الفريد\n"
+"                            أحزمة\n"
+"                            ال\n"
+"                            قوة أجهزة Android غير المستخدمة، وبث حياة جديدة فيها باعتبارها مكونات لا يتجزأ من منتجاتنا\n"
+"                            عالمي\n"
+"                            شبكة. من خلال ربط العملاء في جميع أنحاء العالم بأسعار المكالمات المحلية بسلاسة من خلال خدماتنا الرقمية\n"
+"                            البنية التحتية، ونحن نضمن الاتصالات بأسعار معقولة ويمكن الوصول إليها للجميع."
 
 #: .\templates\pages\main\components\about.html:26
 msgid ""
@@ -952,6 +1200,16 @@ msgid ""
 "                            network.\n"
 "                        "
 msgstr ""
+"\n"
+"يقع في قلب مهمتنا الالتزام بإطلاق العنان لإمكانات الربح أثناء الترويج\n"
+"                            استخدام التكنولوجيا المستدامة. يعمل برنامج Cellular Partners الخاص بنا على تمكين الأفراد من تحقيق الربح\n"
+"                            سلبي\n"
+"                            الدخل بسهولة، دون الحاجة إلى استثمار أو عمالة. من خلال هذا البرنامج،\n"
+"                            مشاركون\n"
+"                            يستطيع\n"
+"                            يكسبون ما يصل إلى 2000 دولار شهريًا، وذلك ببساطة عن طريق السماح لأجهزة Android غير المستخدمة بالمساهمة\n"
+"                            ملكنا\n"
+"                            شبكة."
 
 #: .\templates\pages\main\components\about.html:40
 msgid ""
@@ -964,6 +1222,13 @@ msgid ""
 "                            call at a time.\n"
 "                        "
 msgstr ""
+"\n"
+"انضم إلينا في Global Cellular Partners وكن جزءًا من الحركة التحويلية نحو\n"
+"                            بسعر معقول،\n"
+"                            اتصالات دولية مريحة ومستدامة. معًا، نقوم بتوصيل\n"
+"                            عالم،\n"
+"                            واحد\n"
+"                            اتصل في وقت واحد."
 
 #: .\templates\pages\main\components\earnings.html:10
 msgid ""
@@ -977,14 +1242,22 @@ msgid ""
 "                            call minute that passes through your phone. It's that simple!\n"
 "                        "
 msgstr ""
+"\n"
+"في Global Cellular Partners، نقدم لك الطريقة الأكثر ابتكارًا لكسب ما يصل إلى <strong class=\"text-white\">2000 دولار</strong>\n"
+"                            أ\n"
+"                            شهر دون أي استثمار أو العمالة المطلوبة. من خلال استخدام هواتف Android غير المستخدمة، يمكنك ذلك\n"
+"                            يكسب\n"
+"                            أكثر من <strong class=\"text-white\">100 دولار</strong> لكل هاتف شهريًا دون عناء. باعتبارك شريكًا خلويًا، سوف تكسب <strong class=\"text-white\">$0.02</strong> سنتًا\n"
+"                            لكل\n"
+"                            دقيقة الاتصال التي تمر عبر هاتفك. بكل بساطة!"
 
 #: .\templates\pages\main\components\earnings.html:20
 msgid "My Earning"
-msgstr ""
+msgstr "كسبي"
 
 #: .\templates\pages\main\components\faq.html:8
 msgid "FAQ"
-msgstr ""
+msgstr "التعليمات"
 
 #: .\templates\pages\main\components\faq.html:10
 msgid ""
@@ -998,10 +1271,18 @@ msgid ""
 "                            Browse through the questions and click on each one to reveal the answer.\n"
 "                        "
 msgstr ""
+"\n"
+"مرحبًا بك في قسم الأسئلة الشائعة! هنا، قمنا بتجميع قائمة من الأسئلة الشائعة ل\n"
+"                            يمد\n"
+"                            لك بإجابات سريعة ومفيدة. سواء كنت مهتمًا بمنتجاتنا أو خدماتنا أو\n"
+"                            السياسات، فمن المرجح أن تجد المعلومات التي تحتاجها أدناه. إذا كنت لا ترى سؤالك\n"
+"                            المدرجة، فلا تتردد في التواصل مع فريق الدعم لدينا، وسنكون سعداء بمساعدتك\n"
+"                            إضافي.\n"
+"                            تصفح الأسئلة وانقر على كل منها لتكشف عن الإجابة."
 
 #: .\templates\pages\main\components\faq.html:20
 msgid "Contact Us"
-msgstr ""
+msgstr "اتصل بنا"
 
 #: .\templates\pages\main\components\faq.html:37
 msgid ""
@@ -1009,6 +1290,8 @@ msgid ""
 "                                    How does Global Cellular Partners revolutionize international calls?\n"
 "                                "
 msgstr ""
+"\n"
+"كيف يُحدث Global Cellular Partners ثورة في المكالمات الدولية؟"
 
 #: .\templates\pages\main\components\faq.html:51
 msgid ""
@@ -1019,6 +1302,11 @@ msgid ""
 "                                    to make international calls at local call rates.\n"
 "                                "
 msgstr ""
+"\n"
+"تُحدث Global Cellular Partners ثورة في المكالمات الدولية من خلال الاستفادة من الشبكة\n"
+"                                    لأكثر من 100 شريك خلوي حول العالم. من خلال أجهزة Android المترابطة، يمكننا\n"
+"                                    توفير اتصال سلس وحلول اتصالات بأسعار معقولة، مما يسمح للمستخدمين\n"
+"                                    لإجراء مكالمات دولية بأسعار المكالمات المحلية."
 
 #: .\templates\pages\main\components\faq.html:72
 msgid ""
@@ -1026,6 +1314,8 @@ msgid ""
 "                                    What is the earning potential for cellular partners with Global Cellular Partners?\n"
 "                                "
 msgstr ""
+"\n"
+"ما هي إمكانية الربح لشركاء الهاتف الخلوي مع Global Cellular Partners؟"
 
 #: .\templates\pages\main\components\faq.html:86
 msgid ""
@@ -1036,6 +1326,11 @@ msgid ""
 "                                    through their phones.\n"
 "                                "
 msgstr ""
+"\n"
+"يتمتع الشركاء الخلويون بالقدرة على كسب ما يصل إلى 2000 دولار شهريًا بدون صفر\n"
+"                                    الاستثمار والعمالة الصفرية المطلوبة. من خلال المساهمة بأجهزة Android غير المستخدمة في\n"
+"                                    شبكتنا، يمكن لشركائنا تحقيق إيرادات مقابل كل دقيقة من حركة المكالمات التي تمر\n"
+"                                    من خلال هواتفهم."
 
 #: .\templates\pages\main\components\faq.html:107
 msgid ""
@@ -1043,6 +1338,8 @@ msgid ""
 "                                    How does the technology behind Global Cellular Partners work?\n"
 "                                "
 msgstr ""
+"\n"
+"كيف تعمل التكنولوجيا وراء Global Cellular Partners؟"
 
 #: .\templates\pages\main\components\faq.html:121
 msgid ""
@@ -1053,6 +1350,11 @@ msgid ""
 "                                    communication between our clients and local partners.\n"
 "                                "
 msgstr ""
+"\n"
+"تعمل تقنيتنا عن طريق توجيه المكالمات الدولية من خلال خوادم VoIP الخاصة بنا إلى\n"
+"                                    أجهزة Android محددة في شبكة شركائنا الخلويين. هذه الأجهزة الموجودة في\n"
+"                                    بلدان المقصد، وإجراء مكالمات محلية وتسهيل سلس\n"
+"                                    التواصل بين عملائنا والشركاء المحليين."
 
 #: .\templates\pages\main\components\faq.html:142
 msgid ""
@@ -1060,6 +1362,8 @@ msgid ""
 "                                    What are the benefits of joining Global Cellular Partners as a cellular partner?\n"
 "                                "
 msgstr ""
+"\n"
+"ما هي فوائد الانضمام إلى Global Cellular Partners كشريك خلوي؟"
 
 #: .\templates\pages\main\components\faq.html:156
 msgid ""
@@ -1070,6 +1374,11 @@ msgid ""
 "                                    phones work for them.\n"
 "                                "
 msgstr ""
+"\n"
+"يقدم الانضمام إلى Global Cellular Partners العديد من المزايا، بما في ذلك الدخل السلبي\n"
+"                                    التوليد، والمرونة في العمل من أي مكان، وعدم الحاجة إلى استثمار مقدم، و\n"
+"                                    خطوه سهله. يمكن للشركاء كسب المال بسهولة عن طريق السماح لأجهزة Android غير المستخدمة\n"
+"                                    الهواتف تعمل لصالحهم."
 
 #: .\templates\pages\main\components\hero.html:8
 msgid ""
@@ -1077,6 +1386,8 @@ msgid ""
 "                Welcome to Global Cellular Partners\n"
 "            "
 msgstr ""
+"\n"
+"مرحبًا بكم في الشركاء الخلويين العالميين"
 
 #: .\templates\pages\main\components\hero.html:13
 msgid ""
@@ -1086,18 +1397,22 @@ msgid ""
 "                united in providing seamless connectivity and affordable communication solutions.\n"
 "            "
 msgstr ""
+"\n"
+"في Global Cellular Partners، نقوم بإحداث ثورة في طريقة إجراء المكالمات الدولية وإنهائها.\n"
+"                مهمتنا هي إنشاء شبكة واسعة من الشركاء الخلويين الذين يمتدون إلى أكثر من 100 دولة حول العالم\n"
+"                متحدون في توفير الاتصال السلس وحلول الاتصالات بأسعار معقولة."
 
 #: .\templates\pages\main\components\hero.html:21
 msgid "Get started"
-msgstr ""
+msgstr "البدء"
 
 #: .\templates\pages\main\components\hero.html:29
 msgid "Learn more"
-msgstr ""
+msgstr "يتعلم أكثر"
 
 #: .\templates\pages\main\components\join_us.html:6
 msgid "Join the Movement"
-msgstr ""
+msgstr "انضم للحركة"
 
 #: .\templates\pages\main\components\join_us.html:8
 msgid ""
@@ -1107,14 +1422,18 @@ msgid ""
 "                    communicates, making international calling more convenient, affordable, and accessible for everyone.\n"
 "                "
 msgstr ""
+"\n"
+"هل أنت مستعد لتكون جزءًا من ثورة عالمية في مجال الاتصالات؟ انضم إلينا كشريك خلوي و\n"
+"                    المساهمة بأجهزة Android غير المستخدمة في شبكتنا. معًا، يمكننا إعادة تعريف الطريقة التي يعيش بها العالم\n"
+"                    يتواصل، مما يجعل الاتصال الدولي أكثر ملاءمة وبأسعار معقولة وفي متناول الجميع."
 
 #: .\templates\pages\main\components\join_us.html:14
 msgid "Join Now"
-msgstr ""
+msgstr "نضم الان"
 
 #: .\templates\pages\main\components\support_countries.html:8
 msgid "Countries We support"
-msgstr ""
+msgstr "الدول التي ندعمها"
 
 #: .\templates\pages\main\components\support_countries.html:10
 msgid ""
@@ -1122,6 +1441,8 @@ msgid ""
 "                Start exploring the countries Global Cell support\n"
 "            "
 msgstr ""
+"\n"
+"ابدأ في استكشاف البلدان التي تدعمها Global Cell"
 
 #: .\templates\pages\main\components\video_explain.html:7
 msgid ""
@@ -1129,14 +1450,16 @@ msgid ""
 "                Let's hear directly from our team\n"
 "            "
 msgstr ""
+"\n"
+"دعونا نسمع مباشرة من فريقنا"
 
 #: .\templates\pages\main\components\vision.html:10
 msgid "Our Vision"
-msgstr ""
+msgstr "رؤيتنا"
 
 #: .\templates\pages\main\components\vision.html:31
 msgid "Connecting the World:"
-msgstr ""
+msgstr "ربط العالم:"
 
 #: .\templates\pages\main\components\vision.html:33
 msgid ""
@@ -1148,10 +1471,16 @@ msgid ""
 "                                accessibility to our users worldwide.\n"
 "                            "
 msgstr ""
+"\n"
+"في Global Cellular Partners، تمتد رؤيتنا إلى ما وراء الحدود. نحن نعمل بلا كلل\n"
+"                                نحو بناء شبكة عالمية من الشركاء الخلويين الذين يمتدون إلى أكثر من 100 دولة. هذا\n"
+"                                يضمن الوصول الموسع أن الاتصالات لا تعرف حدودًا، مما يوفر تغطية واسعة النطاق\n"
+"                                و\n"
+"                                إمكانية الوصول لمستخدمينا في جميع أنحاء العالم."
 
 #: .\templates\pages\main\components\vision.html:51
 msgid "Revolutionizing Connectivity:"
-msgstr ""
+msgstr "ثورة في الاتصال:"
 
 #: .\templates\pages\main\components\vision.html:53
 msgid ""
@@ -1163,10 +1492,16 @@ msgid ""
 "                                while simultaneously extending our digital footprint across the globe.\n"
 "                            "
 msgstr ""
+"\n"
+"نحن نؤمن بقوة الإمكانات غير المستغلة. عن طريق فتح قوة الكسب غير المستخدمة\n"
+"                                أجهزة Android، لا نقوم فقط بتنشيط التكنولوجيا، ولكننا نغير حياة الناس أيضًا.\n"
+"                                ومن خلال المساهمة الجماعية لشركائنا، فإننا نبث حياة جديدة فينا\n"
+"                                الأجهزة،\n"
+"                                مع توسيع نطاق بصمتنا الرقمية في جميع أنحاء العالم في الوقت نفسه."
 
 #: .\templates\pages\main\components\vision.html:75
 msgid "Seamless Communication: "
-msgstr ""
+msgstr "التواصل السلس:"
 
 #: .\templates\pages\main\components\vision.html:77
 msgid ""
@@ -1181,10 +1516,19 @@ msgid ""
 "                                hefty bills.\n"
 "                            "
 msgstr ""
+"\n"
+"في عالم تتقلص فيه المسافات وتزداد قوة الروابط، لا ينبغي أن تكون القدرة على تحمل التكاليف أمرًا كذلك\n"
+"                                يكون\n"
+"                                حاجز. تشكل شبكتنا المترابطة من أجهزة Android العمود الفقري للسلاسة\n"
+"                                الاتصال الرقمي. وهذا يمكننا من تقديم خدمات إنهاء المكالمات الدولية\n"
+"                                في\n"
+"                                الأسعار المحلية، مما يتيح للمستخدمين البقاء على اتصال مع أحبائهم دون قلق\n"
+"                                عن\n"
+"                                فواتير ضخمة."
 
 #: .\templates\pages\main\components\vision.html:98
 msgid "Empowering Partners:"
-msgstr ""
+msgstr "تمكين الشركاء:"
 
 #: .\templates\pages\main\components\vision.html:100
 msgid ""
@@ -1198,24 +1542,32 @@ msgid ""
 "                                the way for a brighter, more connected future.\n"
 "                            "
 msgstr ""
+"\n"
+"في قلب مهمتنا يكمن الالتزام بالتمكين. يلعب شركاؤنا الخلويون\n"
+"                                أ\n"
+"                                دورًا محوريًا في نظامنا البيئي، حيث نحقق إيرادات مقابل كل دقيقة من حركة المكالمات الموجهة\n"
+"                                من خلال أجهزتهم غير المستخدمة. هذا النموذج المبتكر لا يثري شركائنا فقط\n"
+"                                مالياً ولكن أيضاً يدعم الاستخدام المستدام لموارد التكنولوجيا،\n"
+"                                رصف\n"
+"                                الطريق لمستقبل أكثر إشراقا وأكثر ترابطا."
 
 #: .\templates\pages\main\login.html:9
 msgid "Sign in to your account"
-msgstr ""
+msgstr "تسجيل الدخول إلى حسابك"
 
 #: .\templates\pages\main\login.html:15
 #: .\templates\pages\main\password_reset.html:15
 msgid "Your email"
-msgstr ""
+msgstr "بريدك الالكتروني"
 
 #: .\templates\pages\main\login.html:27
 msgid "Forgot password?"
-msgstr ""
+msgstr "هل نسيت كلمة السر؟"
 
 #: .\templates\pages\main\login.html:31
 #: .\templates\pages\main\register.html:50
 msgid "Sign in"
-msgstr ""
+msgstr "تسجيل الدخول"
 
 #: .\templates\pages\main\login.html:34
 msgid ""
@@ -1223,29 +1575,31 @@ msgid ""
 "                                Don’t have an account yet?\n"
 "                            "
 msgstr ""
+"\n"
+"لا تملك حسابا حتى الآن؟"
 
 #: .\templates\pages\main\login.html:37
 msgid "Sign up"
-msgstr ""
+msgstr "اشتراك"
 
 #: .\templates\pages\main\password_reset.html:9
 #: .\templates\pages\main\password_reset_form.html:9
 #: .\templates\pages\main\password_reset_form.html:27
 msgid "Reset Password"
-msgstr ""
+msgstr "إعادة تعيين كلمة المرور"
 
 #: .\templates\pages\main\password_reset.html:20
 msgid "Send"
-msgstr ""
+msgstr "يرسل"
 
 #: .\templates\pages\main\password_reset_complete.html:9
 #: .\templates\pages\main\password_reset_complete.html:14
 msgid "Password Reset Successful"
-msgstr ""
+msgstr "تمت إعادة تعيين كلمة المرور بنجاح"
 
 #: .\templates\pages\main\password_reset_complete.html:11
 msgid "Password Reset"
-msgstr ""
+msgstr "إعادة تعيين كلمة المرور"
 
 #: .\templates\pages\main\password_reset_complete.html:17
 msgid ""
@@ -1253,19 +1607,21 @@ msgid ""
 "                        Your password has been successfully reset. You can now log in with your new password.\n"
 "                    "
 msgstr ""
+"\n"
+"لقد تم إعادة تعيين كلمة المرور الخاصة بك بنجاح. يمكنك الآن تسجيل الدخول باستخدام كلمة المرور الجديدة الخاصة بك."
 
 #: .\templates\pages\main\password_reset_complete.html:23
 msgid "Go to Login"
-msgstr ""
+msgstr "اذهب إلى تسجيل الدخول"
 
 #: .\templates\pages\main\password_reset_done.html:9
 #: .\templates\pages\main\password_reset_done.html:11
 msgid "Email Sent"
-msgstr ""
+msgstr "أرسل البريد الإلكتروني"
 
 #: .\templates\pages\main\password_reset_done.html:14
 msgid "Check Your Email"
-msgstr ""
+msgstr "تحقق من بريدك الالكتروني"
 
 #: .\templates\pages\main\password_reset_done.html:17
 msgid ""
@@ -1274,14 +1630,17 @@ msgid ""
 "                        your spam folder) to proceed.\n"
 "                    "
 msgstr ""
+"\n"
+"لقد أرسلنا إليك بريدًا إلكترونيًا يتضمن تعليمات لإعادة تعيين كلمة المرور الخاصة بك. يرجى التحقق من صندوق الوارد الخاص بك (و\n"
+"                        مجلد الرسائل غير المرغوب فيها) للمتابعة."
 
 #: .\templates\pages\main\password_reset_done.html:24
 msgid "Back to Homepage"
-msgstr ""
+msgstr "العودة إلى الصفحة الرئيسية"
 
 #: .\templates\pages\main\register.html:9
 msgid "Create an account"
-msgstr ""
+msgstr "إنشاء حساب"
 
 #: .\templates\pages\main\register.html:53
 msgid ""
@@ -1289,108 +1648,114 @@ msgid ""
 "                                Already have an account?\n"
 "                            "
 msgstr ""
+"\n"
+"هل لديك حساب؟"
 
 #: .\venv\Lib\site-packages\django\contrib\messages\apps.py:16
 msgid "Messages"
-msgstr ""
+msgstr "رسائل"
 
 #: .\venv\Lib\site-packages\django\contrib\sitemaps\apps.py:8
 msgid "Site Maps"
-msgstr ""
+msgstr "خرائط الموقع"
 
 #: .\venv\Lib\site-packages\django\contrib\staticfiles\apps.py:9
 msgid "Static Files"
-msgstr ""
+msgstr "الملفات الثابتة"
 
 #: .\venv\Lib\site-packages\django\contrib\syndication\apps.py:7
 msgid "Syndication"
-msgstr ""
+msgstr "خلاصات"
 
 #. Translators: String used to replace omitted page numbers in elided page
 #. range generated by paginators, e.g. [1, 2, '…', 5, 6, 7, '…', 9, 10].
 #: .\venv\Lib\site-packages\django\core\paginator.py:30
 msgid "…"
-msgstr ""
+msgstr "…"
 
 #: .\venv\Lib\site-packages\django\core\paginator.py:32
 msgid "That page number is not an integer"
-msgstr ""
+msgstr "رقم الصفحة هذا ليس عددًا صحيحًا"
 
 #: .\venv\Lib\site-packages\django\core\paginator.py:33
 msgid "That page number is less than 1"
-msgstr ""
+msgstr "رقم الصفحة هذا أقل من 1"
 
 #: .\venv\Lib\site-packages\django\core\paginator.py:34
 msgid "That page contains no results"
-msgstr ""
+msgstr "هذه الصفحة لا تحتوي على أي نتائج"
 
 #: .\venv\Lib\site-packages\django\core\validators.py:22
 msgid "Enter a valid value."
-msgstr ""
+msgstr "إدخال قيمة صالحة."
 
 #: .\venv\Lib\site-packages\django\core\validators.py:104
 #: .\venv\Lib\site-packages\django\forms\fields.py:760
 msgid "Enter a valid URL."
-msgstr ""
+msgstr "أدخل عنوان URL صالحًا."
 
 #: .\venv\Lib\site-packages\django\core\validators.py:165
 msgid "Enter a valid integer."
-msgstr ""
+msgstr "أدخل عددًا صحيحًا صالحًا."
 
 #: .\venv\Lib\site-packages\django\core\validators.py:176
 msgid "Enter a valid email address."
-msgstr ""
+msgstr "أدخل عنوان بريد إلكتروني صالح."
 
 #. Translators: "letters" means latin letters: a-z and A-Z.
 #: .\venv\Lib\site-packages\django\core\validators.py:259
 msgid ""
 "Enter a valid “slug” consisting of letters, numbers, underscores or hyphens."
 msgstr ""
+"أدخل \"رمزًا ثابتًا\" صالحًا يتكون من أحرف أو أرقام أو شرطات سفلية أو "
+"واصلات."
 
 #: .\venv\Lib\site-packages\django\core\validators.py:267
 msgid ""
 "Enter a valid “slug” consisting of Unicode letters, numbers, underscores, or"
 " hyphens."
 msgstr ""
+"أدخل \"رمزًا ثابتًا\" صالحًا يتكون من أحرف Unicode أو أرقام أو شرطات سفلية "
+"أو واصلات."
 
 #: .\venv\Lib\site-packages\django\core\validators.py:279
 #: .\venv\Lib\site-packages\django\core\validators.py:306
 msgid "Enter a valid IPv4 address."
-msgstr ""
+msgstr "أدخل عنوان IPv4 صالحًا."
 
 #: .\venv\Lib\site-packages\django\core\validators.py:286
 #: .\venv\Lib\site-packages\django\core\validators.py:307
 msgid "Enter a valid IPv6 address."
-msgstr ""
+msgstr "أدخل عنوان IPv6 صالحًا."
 
 #: .\venv\Lib\site-packages\django\core\validators.py:298
 #: .\venv\Lib\site-packages\django\core\validators.py:305
 msgid "Enter a valid IPv4 or IPv6 address."
-msgstr ""
+msgstr "أدخل عنوان IPv4 أو IPv6 صالحًا."
 
 #: .\venv\Lib\site-packages\django\core\validators.py:341
 msgid "Enter only digits separated by commas."
-msgstr ""
+msgstr "أدخل فقط أرقامًا مفصولة بفواصل."
 
 #: .\venv\Lib\site-packages\django\core\validators.py:347
 #, python-format
 msgid "Ensure this value is %(limit_value)s (it is %(show_value)s)."
-msgstr ""
+msgstr "تأكد من أن هذه القيمة هي %(limit_value)s (وهي %(show_value)s)."
 
 #: .\venv\Lib\site-packages\django\core\validators.py:382
 #, python-format
 msgid "Ensure this value is less than or equal to %(limit_value)s."
-msgstr ""
+msgstr "تأكد من أن هذه القيمة أقل من أو تساوي %(limit_value)s."
 
 #: .\venv\Lib\site-packages\django\core\validators.py:391
 #, python-format
 msgid "Ensure this value is greater than or equal to %(limit_value)s."
-msgstr ""
+msgstr "تأكد من أن هذه القيمة أكبر من أو تساوي %(limit_value)s."
 
 #: .\venv\Lib\site-packages\django\core\validators.py:400
 #, python-format
 msgid "Ensure this value is a multiple of step size %(limit_value)s."
-msgstr ""
+msgstr "تأكد من أن هذه القيمة من مضاعفات حجم الخطوة %(limit_value)s."
 
 #: .\venv\Lib\site-packages\django\core\validators.py:407
 #, python-format
@@ -1398,6 +1763,9 @@ msgid ""
 "Ensure this value is a multiple of step size %(limit_value)s, starting from "
 "%(offset)s, e.g. %(offset)s, %(valid_value1)s, %(valid_value2)s, and so on."
 msgstr ""
+"تأكد من أن هذه القيمة من مضاعفات حجم الخطوة %(limit_value)s، بدءًا من "
+"%(offset)s، على سبيل المثال. %(offset)s، %(valid_value1)s، %(valid_value2)s،"
+" وما إلى ذلك."
 
 #: .\venv\Lib\site-packages\django\core\validators.py:439
 #, python-format
@@ -1408,7 +1776,11 @@ msgid_plural ""
 "Ensure this value has at least %(limit_value)d characters (it has "
 "%(show_value)d)."
 msgstr[0] ""
+"تأكد من أن هذه القيمة تحتوي على %(limit_value)d على الأقل (تحتوي على "
+"%(show_value)d)."
 msgstr[1] ""
+"تأكد من أن هذه القيمة تحتوي على %(limit_value)d من الأحرف على الأقل (تحتوي "
+"على %(show_value)d)."
 
 #: .\venv\Lib\site-packages\django\core\validators.py:457
 #, python-format
@@ -1419,27 +1791,31 @@ msgid_plural ""
 "Ensure this value has at most %(limit_value)d characters (it has "
 "%(show_value)d)."
 msgstr[0] ""
+"تأكد من أن هذه القيمة تحتوي على %(limit_value)d على الأكثر (تحتوي على "
+"%(show_value)d)."
 msgstr[1] ""
+"تأكد من أن هذه القيمة تحتوي على %(limit_value)d من الأحرف على الأكثر (تحتوي "
+"على %(show_value)d)."
 
 #: .\venv\Lib\site-packages\django\core\validators.py:480
 #: .\venv\Lib\site-packages\django\forms\fields.py:355
 #: .\venv\Lib\site-packages\django\forms\fields.py:394
 msgid "Enter a number."
-msgstr ""
+msgstr "أدخل رقما."
 
 #: .\venv\Lib\site-packages\django\core\validators.py:482
 #, python-format
 msgid "Ensure that there are no more than %(max)s digit in total."
 msgid_plural "Ensure that there are no more than %(max)s digits in total."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "تأكد من عدم وجود أكثر من %(max)s رقم إجمالاً."
+msgstr[1] "تأكد من عدم وجود أكثر من %(max)s أرقام إجمالاً."
 
 #: .\venv\Lib\site-packages\django\core\validators.py:487
 #, python-format
 msgid "Ensure that there are no more than %(max)s decimal place."
 msgid_plural "Ensure that there are no more than %(max)s decimal places."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "تأكد من عدم وجود أكثر من %(max)s منزلة عشرية."
+msgstr[1] "تأكد من عدم وجود أكثر من %(max)s من المنازل العشرية."
 
 #: .\venv\Lib\site-packages\django\core\validators.py:492
 #, python-format
@@ -1447,8 +1823,8 @@ msgid ""
 "Ensure that there are no more than %(max)s digit before the decimal point."
 msgid_plural ""
 "Ensure that there are no more than %(max)s digits before the decimal point."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "تأكد من عدم وجود أكثر من %(max)s رقم قبل العلامة العشرية."
+msgstr[1] "تأكد من عدم وجود أكثر من %(max)s رقم قبل العلامة العشرية."
 
 #: .\venv\Lib\site-packages\django\core\validators.py:563
 #, python-format
@@ -1456,43 +1832,45 @@ msgid ""
 "File extension “%(extension)s” is not allowed. Allowed extensions are: "
 "%(allowed_extensions)s."
 msgstr ""
+"ملحق الملف \"%(extension)s\" غير مسموح به. الامتدادات المسموح بها هي: "
+"%(allowed_extensions)s."
 
 #: .\venv\Lib\site-packages\django\core\validators.py:624
 msgid "Null characters are not allowed."
-msgstr ""
+msgstr "غير مسموح بالأحرف الفارغة."
 
 #: .\venv\Lib\site-packages\django\db\models\base.py:1473
 #: .\venv\Lib\site-packages\django\forms\models.py:906
 msgid "and"
-msgstr ""
+msgstr "و"
 
 #: .\venv\Lib\site-packages\django\db\models\base.py:1475
 #, python-format
 msgid "%(model_name)s with this %(field_labels)s already exists."
-msgstr ""
+msgstr "%(model_name)s مع هذا %(field_labels)s موجود بالفعل."
 
 #: .\venv\Lib\site-packages\django\db\models\constraints.py:20
 #, python-format
 msgid "Constraint “%(name)s” is violated."
-msgstr ""
+msgstr "تم انتهاك القيد \"%(name)s\"."
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:133
 #, python-format
 msgid "Value %(value)r is not a valid choice."
-msgstr ""
+msgstr "القيمة %(value)r ليست اختياراً صالحاً."
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:134
 msgid "This field cannot be null."
-msgstr ""
+msgstr "لا يمكن أن يكون هذا الحقل فارغًا."
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:135
 msgid "This field cannot be blank."
-msgstr ""
+msgstr "هذا الحقل لا يمكن أن يكون فارغا."
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:136
 #, python-format
 msgid "%(model_name)s with this %(field_label)s already exists."
-msgstr ""
+msgstr "%(model_name)s بهذا %(field_label)s موجود بالفعل."
 
 #. Translators: The 'lookup_type' is one of 'date', 'year' or
 #. 'month'. Eg: "Title must be unique for pub_date year"
@@ -1501,38 +1879,39 @@ msgstr ""
 msgid ""
 "%(field_label)s must be unique for %(date_field_label)s %(lookup_type)s."
 msgstr ""
+"يجب أن يكون%(field_label)s فريدًا لـ %(date_field_label)s %(lookup_type)s."
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:179
 #, python-format
 msgid "Field of type: %(field_type)s"
-msgstr ""
+msgstr "حقل النوع: %(field_type)s"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1155
 #, python-format
 msgid "“%(value)s” value must be either True or False."
-msgstr ""
+msgstr "يجب أن تكون قيمة \"%(value)s\" إما True أو False."
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1156
 #, python-format
 msgid "“%(value)s” value must be either True, False, or None."
-msgstr ""
+msgstr "يجب أن تكون قيمة \"%(value)s\" إما True أو False أو لا شيء."
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1158
 msgid "Boolean (Either True or False)"
-msgstr ""
+msgstr "منطقية (سواء كانت صحيحة أو خاطئة)"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1208
 #, python-format
 msgid "String (up to %(max_length)s)"
-msgstr ""
+msgstr "السلسلة (حتى %(max_length)s)"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1210
 msgid "String (unlimited)"
-msgstr ""
+msgstr "سلسلة (غير محدودة)"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1314
 msgid "Comma-separated integers"
-msgstr ""
+msgstr "أعداد صحيحة مفصولة بفواصل"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1415
 #, python-format
@@ -1540,6 +1919,8 @@ msgid ""
 "“%(value)s” value has an invalid date format. It must be in YYYY-MM-DD "
 "format."
 msgstr ""
+"تحتوي القيمة \"%(value)s\" على تنسيق تاريخ غير صالح. ويجب أن يكون بتنسيق "
+"YYYY-MM-DD."
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1419
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1554
@@ -1548,10 +1929,11 @@ msgid ""
 "“%(value)s” value has the correct format (YYYY-MM-DD) but it is an invalid "
 "date."
 msgstr ""
+"القيمة \"%(value)s\" لها التنسيق الصحيح (YYYY-MM-DD) ولكنها تاريخ غير صالح."
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1423
 msgid "Date (without time)"
-msgstr ""
+msgstr "التاريخ (بدون وقت)"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1550
 #, python-format
@@ -1559,6 +1941,8 @@ msgid ""
 "“%(value)s” value has an invalid format. It must be in YYYY-MM-DD "
 "HH:MM[:ss[.uuuuuu]][TZ] format."
 msgstr ""
+"قيمة \"%(value)s\" لها تنسيق غير صالح. يجب أن يكون بالتنسيق YYYY-MM-DD "
+"HH:MM[:ss[.uuuuuu]][TZ]."
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1558
 #, python-format
@@ -1566,19 +1950,21 @@ msgid ""
 "“%(value)s” value has the correct format (YYYY-MM-DD "
 "HH:MM[:ss[.uuuuuu]][TZ]) but it is an invalid date/time."
 msgstr ""
+"القيمة \"%(value)s\" لها التنسيق الصحيح (YYYY-MM-DD HH:MM[:ss[.uuuuuu]][TZ])"
+" ولكنها تاريخ/وقت غير صالح."
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1563
 msgid "Date (with time)"
-msgstr ""
+msgstr "التاريخ (مع الوقت)"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1690
 #, python-format
 msgid "“%(value)s” value must be a decimal number."
-msgstr ""
+msgstr "يجب أن تكون قيمة \"%(value)s\" رقمًا عشريًا."
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1692
 msgid "Decimal number"
-msgstr ""
+msgstr "عدد عشري"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1853
 #, python-format
@@ -1586,83 +1972,85 @@ msgid ""
 "“%(value)s” value has an invalid format. It must be in [DD] "
 "[[HH:]MM:]ss[.uuuuuu] format."
 msgstr ""
+"قيمة \"%(value)s\" لها تنسيق غير صالح. يجب أن يكون بتنسيق [DD] "
+"[[HH:]MM:]ss[.uuuuuu]."
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1857
 msgid "Duration"
-msgstr ""
+msgstr "مدة"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1909
 msgid "Email address"
-msgstr ""
+msgstr "عنوان البريد الإلكتروني"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1934
 msgid "File path"
-msgstr ""
+msgstr "مسار الملف"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2012
 #, python-format
 msgid "“%(value)s” value must be a float."
-msgstr ""
+msgstr "يجب أن تكون قيمة \"%(value)s\" عائمة."
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2014
 msgid "Floating point number"
-msgstr ""
+msgstr "رقم النقطة العائمة"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2054
 #, python-format
 msgid "“%(value)s” value must be an integer."
-msgstr ""
+msgstr "يجب أن تكون قيمة \"%(value)s\" عددًا صحيحًا."
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2056
 msgid "Integer"
-msgstr ""
+msgstr "عدد صحيح"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2152
 msgid "Big (8 byte) integer"
-msgstr ""
+msgstr "عدد صحيح كبير (8 بايت)."
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2169
 msgid "Small integer"
-msgstr ""
+msgstr "عدد صحيح صغير"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2177
 msgid "IPv4 address"
-msgstr ""
+msgstr "عنوان IPv4"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2208
 msgid "IP address"
-msgstr ""
+msgstr "عنوان IP"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2301
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2302
 #, python-format
 msgid "“%(value)s” value must be either None, True or False."
-msgstr ""
+msgstr "يجب أن تكون قيمة \"%(value)s\" إما لا شيء أو True أو False."
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2304
 msgid "Boolean (Either True, False or None)"
-msgstr ""
+msgstr "منطقية (إما صحيح أو خطأ أو لا شيء)"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2355
 msgid "Positive big integer"
-msgstr ""
+msgstr "عدد صحيح كبير موجب"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2370
 msgid "Positive integer"
-msgstr ""
+msgstr "عدد صحيح موجب"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2385
 msgid "Positive small integer"
-msgstr ""
+msgstr "عدد صحيح صغير موجب"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2401
 #, python-format
 msgid "Slug (up to %(max_length)s)"
-msgstr ""
+msgstr "سبيكة (يصل إلى %(max_length)s)"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2437
 msgid "Text"
-msgstr ""
+msgstr "نص"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2512
 #, python-format
@@ -1670,6 +2058,8 @@ msgid ""
 "“%(value)s” value has an invalid format. It must be in HH:MM[:ss[.uuuuuu]] "
 "format."
 msgstr ""
+"قيمة \"%(value)s\" لها تنسيق غير صالح. يجب أن يكون بتنسيق "
+"HH:MM[:ss[.uuuuuu]]."
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2516
 #, python-format
@@ -1677,116 +2067,118 @@ msgid ""
 "“%(value)s” value has the correct format (HH:MM[:ss[.uuuuuu]]) but it is an "
 "invalid time."
 msgstr ""
+"القيمة \"%(value)s\" لها التنسيق الصحيح (HH:MM[:ss[.uuuuuu]]) ولكنها وقت غير"
+" صالح."
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2520
 msgid "Time"
-msgstr ""
+msgstr "وقت"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2628
 msgid "URL"
-msgstr ""
+msgstr "عنوان URL"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2652
 msgid "Raw binary data"
-msgstr ""
+msgstr "البيانات الثنائية الخام"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2717
 #, python-format
 msgid "“%(value)s” is not a valid UUID."
-msgstr ""
+msgstr "\"%(value)s\" ليس UUID صالحًا."
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2719
 msgid "Universally unique identifier"
-msgstr ""
+msgstr "معرف فريد عالميًا"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\files.py:232
 msgid "File"
-msgstr ""
+msgstr "ملف"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\json.py:26
 msgid "A JSON object"
-msgstr ""
+msgstr "كائن JSON"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\json.py:28
 msgid "Value must be valid JSON."
-msgstr ""
+msgstr "يجب أن تكون القيمة صالحة بتنسيق JSON."
 
 #: .\venv\Lib\site-packages\django\db\models\fields\related.py:939
 #, python-format
 msgid "%(model)s instance with %(field)s %(value)r does not exist."
-msgstr ""
+msgstr "مثيل%(model)s مع %(field)s %(value)r غير موجود."
 
 #: .\venv\Lib\site-packages\django\db\models\fields\related.py:941
 msgid "Foreign Key (type determined by related field)"
-msgstr ""
+msgstr "المفتاح الخارجي (النوع المحدد حسب الحقل ذي الصلة)"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\related.py:1235
 msgid "One-to-one relationship"
-msgstr ""
+msgstr "علاقة فردية"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\related.py:1292
 #, python-format
 msgid "%(from)s-%(to)s relationship"
-msgstr ""
+msgstr "%(from)s-%(to)s العلاقة"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\related.py:1294
 #, python-format
 msgid "%(from)s-%(to)s relationships"
-msgstr ""
+msgstr "%(from)s-%(to)s العلاقات"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\related.py:1342
 msgid "Many-to-many relationship"
-msgstr ""
+msgstr "علاقة كثير إلى كثير"
 
 #. Translators: If found as last label character, these punctuation
 #. characters will prevent the default label_suffix to be appended to the
 #. label
 #: .\venv\Lib\site-packages\django\forms\boundfield.py:185
 msgid ":?.!"
-msgstr ""
+msgstr ":؟.!"
 
 #: .\venv\Lib\site-packages\django\forms\fields.py:95
 msgid "This field is required."
-msgstr ""
+msgstr "هذه الخانة مطلوبه."
 
 #: .\venv\Lib\site-packages\django\forms\fields.py:304
 msgid "Enter a whole number."
-msgstr ""
+msgstr "أدخل رقمًا صحيحًا."
 
 #: .\venv\Lib\site-packages\django\forms\fields.py:475
 #: .\venv\Lib\site-packages\django\forms\fields.py:1252
 msgid "Enter a valid date."
-msgstr ""
+msgstr "أدخل تاريخًا صالحًا."
 
 #: .\venv\Lib\site-packages\django\forms\fields.py:498
 #: .\venv\Lib\site-packages\django\forms\fields.py:1253
 msgid "Enter a valid time."
-msgstr ""
+msgstr "أدخل وقتًا صالحًا."
 
 #: .\venv\Lib\site-packages\django\forms\fields.py:525
 msgid "Enter a valid date/time."
-msgstr ""
+msgstr "أدخل تاريخًا/وقتًا صالحًا."
 
 #: .\venv\Lib\site-packages\django\forms\fields.py:559
 msgid "Enter a valid duration."
-msgstr ""
+msgstr "أدخل مدة صالحة."
 
 #: .\venv\Lib\site-packages\django\forms\fields.py:560
 #, python-brace-format
 msgid "The number of days must be between {min_days} and {max_days}."
-msgstr ""
+msgstr "يجب أن يتراوح عدد الأيام بين {min_days} و{max_days}."
 
 #: .\venv\Lib\site-packages\django\forms\fields.py:629
 msgid "No file was submitted. Check the encoding type on the form."
-msgstr ""
+msgstr "لم يتم تقديم أي ملف. التحقق من نوع الترميز في النموذج."
 
 #: .\venv\Lib\site-packages\django\forms\fields.py:630
 msgid "No file was submitted."
-msgstr ""
+msgstr "لم يتم تقديم أي ملف."
 
 #: .\venv\Lib\site-packages\django\forms\fields.py:631
 msgid "The submitted file is empty."
-msgstr ""
+msgstr "الملف المقدم فارغ."
 
 #: .\venv\Lib\site-packages\django\forms\fields.py:633
 #, python-format
@@ -1795,52 +2187,57 @@ msgid ""
 msgid_plural ""
 "Ensure this filename has at most %(max)d characters (it has %(length)d)."
 msgstr[0] ""
+"تأكد من أن اسم الملف هذا يحتوي على %(max)d حرف على الأكثر (يحتوي على "
+"%(length)d)."
 msgstr[1] ""
+"تأكد من أن اسم الملف هذا يحتوي على %(max)d من الأحرف على الأكثر (يحتوي على "
+"%(length)d)."
 
 #: .\venv\Lib\site-packages\django\forms\fields.py:638
 msgid "Please either submit a file or check the clear checkbox, not both."
-msgstr ""
+msgstr "يرجى إما إرسال ملف أو تحديد خانة الاختيار الواضحة، وليس كليهما."
 
 #: .\venv\Lib\site-packages\django\forms\fields.py:702
 msgid ""
 "Upload a valid image. The file you uploaded was either not an image or a "
 "corrupted image."
 msgstr ""
+"قم بتحميل صورة صالحة. الملف الذي قمت بتحميله لم يكن صورة أو صورة تالفة."
 
 #: .\venv\Lib\site-packages\django\forms\fields.py:874
 #: .\venv\Lib\site-packages\django\forms\fields.py:960
 #: .\venv\Lib\site-packages\django\forms\models.py:1585
 #, python-format
 msgid "Select a valid choice. %(value)s is not one of the available choices."
-msgstr ""
+msgstr "حدد خيارًا صالحًا. %(value)s ليس أحد الخيارات المتاحة."
 
 #: .\venv\Lib\site-packages\django\forms\fields.py:962
 #: .\venv\Lib\site-packages\django\forms\fields.py:1081
 #: .\venv\Lib\site-packages\django\forms\models.py:1583
 msgid "Enter a list of values."
-msgstr ""
+msgstr "أدخل قائمة القيم."
 
 #: .\venv\Lib\site-packages\django\forms\fields.py:1082
 msgid "Enter a complete value."
-msgstr ""
+msgstr "أدخل قيمة كاملة."
 
 #: .\venv\Lib\site-packages\django\forms\fields.py:1321
 msgid "Enter a valid UUID."
-msgstr ""
+msgstr "أدخل UUID صالحًا."
 
 #: .\venv\Lib\site-packages\django\forms\fields.py:1351
 msgid "Enter a valid JSON."
-msgstr ""
+msgstr "أدخل JSON صالحًا."
 
 #. Translators: This is the default suffix added to form field labels
 #: .\venv\Lib\site-packages\django\forms\forms.py:94
 msgid ":"
-msgstr ""
+msgstr ":"
 
 #: .\venv\Lib\site-packages\django\forms\forms.py:231
 #, python-format
 msgid "(Hidden field %(name)s) %(error)s"
-msgstr ""
+msgstr "(حقل مخفي %(name)s) %(error)s"
 
 #: .\venv\Lib\site-packages\django\forms\formsets.py:61
 #, python-format
@@ -1848,39 +2245,37 @@ msgid ""
 "ManagementForm data is missing or has been tampered with. Missing fields: "
 "%(field_names)s. You may need to file a bug report if the issue persists."
 msgstr ""
+"بيانات ManagementForm مفقودة أو تم العبث بها. الحقول المفقودة: "
+"%(field_names)s. قد تحتاج إلى تقديم تقرير بالأخطاء إذا استمرت المشكلة."
 
 #: .\venv\Lib\site-packages\django\forms\formsets.py:65
 #, python-format
 msgid "Please submit at most %(num)d form."
 msgid_plural "Please submit at most %(num)d forms."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "يرجى تقديم نموذج %(num)d على الأكثر."
+msgstr[1] "يرجى تقديم %(num)d من النماذج على الأكثر."
 
 #: .\venv\Lib\site-packages\django\forms\formsets.py:70
 #, python-format
 msgid "Please submit at least %(num)d form."
 msgid_plural "Please submit at least %(num)d forms."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "يرجى تقديم نموذج %(num)d على الأقل."
+msgstr[1] "يرجى تقديم ما لا يقل عن %(num)d من النماذج."
 
 #: .\venv\Lib\site-packages\django\forms\formsets.py:484
 #: .\venv\Lib\site-packages\django\forms\formsets.py:491
 msgid "Order"
-msgstr ""
-
-#: .\venv\Lib\site-packages\django\forms\formsets.py:499
-msgid "Delete"
-msgstr ""
+msgstr "طلب"
 
 #: .\venv\Lib\site-packages\django\forms\models.py:899
 #, python-format
 msgid "Please correct the duplicate data for %(field)s."
-msgstr ""
+msgstr "الرجاء تصحيح البيانات المكررة لـ %(field)s."
 
 #: .\venv\Lib\site-packages\django\forms\models.py:904
 #, python-format
 msgid "Please correct the duplicate data for %(field)s, which must be unique."
-msgstr ""
+msgstr "الرجاء تصحيح البيانات المكررة لـ %(field)s، والتي يجب أن تكون فريدة."
 
 #: .\venv\Lib\site-packages\django\forms\models.py:911
 #, python-format
@@ -1888,24 +2283,26 @@ msgid ""
 "Please correct the duplicate data for %(field_name)s which must be unique "
 "for the %(lookup)s in %(date_field)s."
 msgstr ""
+"الرجاء تصحيح البيانات المكررة لـ %(field_name)s والتي يجب أن تكون فريدة لـ "
+"%(lookup)s في %(date_field)s."
 
 #: .\venv\Lib\site-packages\django\forms\models.py:920
 msgid "Please correct the duplicate values below."
-msgstr ""
+msgstr "الرجاء تصحيح القيم المكررة أدناه."
 
 #: .\venv\Lib\site-packages\django\forms\models.py:1357
 msgid "The inline value did not match the parent instance."
-msgstr ""
+msgstr "لم تتطابق القيمة المضمنة مع المثيل الأصلي."
 
 #: .\venv\Lib\site-packages\django\forms\models.py:1448
 msgid ""
 "Select a valid choice. That choice is not one of the available choices."
-msgstr ""
+msgstr "حدد خيارًا صالحًا. وهذا الاختيار ليس من الخيارات المتاحة."
 
 #: .\venv\Lib\site-packages\django\forms\models.py:1587
 #, python-format
 msgid "“%(pk)s” is not a valid value."
-msgstr ""
+msgstr "\"%(pk)s\" ليست قيمة صالحة."
 
 #: .\venv\Lib\site-packages\django\forms\utils.py:227
 #, python-format
@@ -1913,434 +2310,432 @@ msgid ""
 "%(datetime)s couldn’t be interpreted in time zone %(current_timezone)s; it "
 "may be ambiguous or it may not exist."
 msgstr ""
-
-#: .\venv\Lib\site-packages\django\forms\widgets.py:461
-msgid "Clear"
-msgstr ""
+"لا يمكن تفسير%(datetime)s بالمنطقة الزمنية %(current_timezone)s؛ قد تكون "
+"غامضة أو قد لا تكون موجودة."
 
 #: .\venv\Lib\site-packages\django\forms\widgets.py:462
 msgid "Currently"
-msgstr ""
+msgstr "حالياً"
 
 #: .\venv\Lib\site-packages\django\forms\widgets.py:463
 msgid "Change"
-msgstr ""
+msgstr "يتغير"
 
 #: .\venv\Lib\site-packages\django\forms\widgets.py:800
 msgid "Unknown"
-msgstr ""
+msgstr "مجهول"
 
 #: .\venv\Lib\site-packages\django\forms\widgets.py:801
 msgid "Yes"
-msgstr ""
+msgstr "نعم"
 
 #: .\venv\Lib\site-packages\django\forms\widgets.py:802
 msgid "No"
-msgstr ""
+msgstr "لا"
 
 #. Translators: Please do not add spaces around commas.
 #: .\venv\Lib\site-packages\django\template\defaultfilters.py:876
 msgid "yes,no,maybe"
-msgstr ""
+msgstr "نعم، لا، ربما"
 
 #: .\venv\Lib\site-packages\django\template\defaultfilters.py:906
 #: .\venv\Lib\site-packages\django\template\defaultfilters.py:923
 #, python-format
 msgid "%(size)d byte"
 msgid_plural "%(size)d bytes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%(size)d بايت"
+msgstr[1] "%(size)d بايت"
 
 #: .\venv\Lib\site-packages\django\template\defaultfilters.py:925
 #, python-format
 msgid "%s KB"
-msgstr ""
+msgstr "%s كيلو بايت"
 
 #: .\venv\Lib\site-packages\django\template\defaultfilters.py:927
 #, python-format
 msgid "%s MB"
-msgstr ""
+msgstr "%s ميغابايت"
 
 #: .\venv\Lib\site-packages\django\template\defaultfilters.py:929
 #, python-format
 msgid "%s GB"
-msgstr ""
+msgstr "%s غيغابايت"
 
 #: .\venv\Lib\site-packages\django\template\defaultfilters.py:931
 #, python-format
 msgid "%s TB"
-msgstr ""
+msgstr "%s السل"
 
 #: .\venv\Lib\site-packages\django\template\defaultfilters.py:933
 #, python-format
 msgid "%s PB"
-msgstr ""
+msgstr "%s PB"
 
 #: .\venv\Lib\site-packages\django\utils\dateformat.py:74
 msgid "p.m."
-msgstr ""
+msgstr "مساءً."
 
 #: .\venv\Lib\site-packages\django\utils\dateformat.py:75
 msgid "a.m."
-msgstr ""
+msgstr "أكون."
 
 #: .\venv\Lib\site-packages\django\utils\dateformat.py:80
 msgid "PM"
-msgstr ""
+msgstr "مساءً"
 
 #: .\venv\Lib\site-packages\django\utils\dateformat.py:81
 msgid "AM"
-msgstr ""
+msgstr "أكون"
 
 #: .\venv\Lib\site-packages\django\utils\dateformat.py:153
 msgid "midnight"
-msgstr ""
+msgstr "منتصف الليل"
 
 #: .\venv\Lib\site-packages\django\utils\dateformat.py:155
 msgid "noon"
-msgstr ""
+msgstr "وقت الظهيرة"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:7
 msgid "Monday"
-msgstr ""
+msgstr "الاثنين"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:8
 msgid "Tuesday"
-msgstr ""
+msgstr "يوم الثلاثاء"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:9
 msgid "Wednesday"
-msgstr ""
+msgstr "الأربعاء"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:10
 msgid "Thursday"
-msgstr ""
+msgstr "يوم الخميس"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:11
 msgid "Friday"
-msgstr ""
+msgstr "جمعة"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:12
 msgid "Saturday"
-msgstr ""
+msgstr "السبت"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:13
 msgid "Sunday"
-msgstr ""
+msgstr "الأحد"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:16
 msgid "Mon"
-msgstr ""
+msgstr "الاثنين"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:17
 msgid "Tue"
-msgstr ""
+msgstr "الثلاثاء"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:18
 msgid "Wed"
-msgstr ""
+msgstr "تزوج"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:19
 msgid "Thu"
-msgstr ""
+msgstr "الخميس"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:20
 msgid "Fri"
-msgstr ""
+msgstr "الجمعة"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:21
 msgid "Sat"
-msgstr ""
+msgstr "قعد"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:22
 msgid "Sun"
-msgstr ""
+msgstr "شمس"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:25
 msgid "January"
-msgstr ""
+msgstr "يناير"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:26
 msgid "February"
-msgstr ""
+msgstr "شهر فبراير"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:27
 msgid "March"
-msgstr ""
+msgstr "يمشي"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:28
 msgid "April"
-msgstr ""
+msgstr "أبريل"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:29
 msgid "May"
-msgstr ""
+msgstr "يمكن"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:30
 msgid "June"
-msgstr ""
+msgstr "يونيو"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:31
 msgid "July"
-msgstr ""
+msgstr "يوليو"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:32
 msgid "August"
-msgstr ""
+msgstr "أغسطس"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:33
 msgid "September"
-msgstr ""
+msgstr "سبتمبر"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:34
 msgid "October"
-msgstr ""
+msgstr "اكتوبر"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:35
 msgid "November"
-msgstr ""
+msgstr "شهر نوفمبر"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:36
 msgid "December"
-msgstr ""
+msgstr "ديسمبر"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:39
 msgid "jan"
-msgstr ""
+msgstr "يناير"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:40
 msgid "feb"
-msgstr ""
+msgstr "فبراير"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:41
 msgid "mar"
-msgstr ""
+msgstr "مار"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:42
 msgid "apr"
-msgstr ""
+msgstr "أبريل"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:43
 msgid "may"
-msgstr ""
+msgstr "يمكن"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:44
 msgid "jun"
-msgstr ""
+msgstr "يونيو"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:45
 msgid "jul"
-msgstr ""
+msgstr "يوليو"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:46
 msgid "aug"
-msgstr ""
+msgstr "أغسطس"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:47
 msgid "sep"
-msgstr ""
+msgstr "سبتمبر"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:48
 msgid "oct"
-msgstr ""
+msgstr "أكتوبر"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:49
 msgid "nov"
-msgstr ""
+msgstr "نوفمبر"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:50
 msgid "dec"
-msgstr ""
+msgstr "ديسمبر"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:53
 msgctxt "abbrev. month"
 msgid "Jan."
-msgstr ""
+msgstr "يناير"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:54
 msgctxt "abbrev. month"
 msgid "Feb."
-msgstr ""
+msgstr "فبراير"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:55
 msgctxt "abbrev. month"
 msgid "March"
-msgstr ""
+msgstr "يمشي"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:56
 msgctxt "abbrev. month"
 msgid "April"
-msgstr ""
+msgstr "أبريل"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:57
 msgctxt "abbrev. month"
 msgid "May"
-msgstr ""
+msgstr "يمكن"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:58
 msgctxt "abbrev. month"
 msgid "June"
-msgstr ""
+msgstr "يونيو"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:59
 msgctxt "abbrev. month"
 msgid "July"
-msgstr ""
+msgstr "يوليو"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:60
 msgctxt "abbrev. month"
 msgid "Aug."
-msgstr ""
+msgstr "أغسطس."
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:61
 msgctxt "abbrev. month"
 msgid "Sept."
-msgstr ""
+msgstr "سبتمبر."
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:62
 msgctxt "abbrev. month"
 msgid "Oct."
-msgstr ""
+msgstr "أكتوبر"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:63
 msgctxt "abbrev. month"
 msgid "Nov."
-msgstr ""
+msgstr "نوفمبر."
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:64
 msgctxt "abbrev. month"
 msgid "Dec."
-msgstr ""
+msgstr "ديسمبر."
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:67
 msgctxt "alt. month"
 msgid "January"
-msgstr ""
+msgstr "يناير"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:68
 msgctxt "alt. month"
 msgid "February"
-msgstr ""
+msgstr "شهر فبراير"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:69
 msgctxt "alt. month"
 msgid "March"
-msgstr ""
+msgstr "يمشي"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:70
 msgctxt "alt. month"
 msgid "April"
-msgstr ""
+msgstr "أبريل"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:71
 msgctxt "alt. month"
 msgid "May"
-msgstr ""
+msgstr "يمكن"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:72
 msgctxt "alt. month"
 msgid "June"
-msgstr ""
+msgstr "يونيو"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:73
 msgctxt "alt. month"
 msgid "July"
-msgstr ""
+msgstr "يوليو"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:74
 msgctxt "alt. month"
 msgid "August"
-msgstr ""
+msgstr "أغسطس"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:75
 msgctxt "alt. month"
 msgid "September"
-msgstr ""
+msgstr "سبتمبر"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:76
 msgctxt "alt. month"
 msgid "October"
-msgstr ""
+msgstr "اكتوبر"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:77
 msgctxt "alt. month"
 msgid "November"
-msgstr ""
+msgstr "شهر نوفمبر"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:78
 msgctxt "alt. month"
 msgid "December"
-msgstr ""
+msgstr "ديسمبر"
 
 #: .\venv\Lib\site-packages\django\utils\ipv6.py:8
 msgid "This is not a valid IPv6 address."
-msgstr ""
+msgstr "هذا ليس عنوان IPv6 صالحًا."
 
 #: .\venv\Lib\site-packages\django\utils\text.py:123
 #, python-format
 msgctxt "String to return when truncating text"
 msgid "%(truncated_text)s…"
-msgstr ""
+msgstr "%(truncated_text)s..."
 
 #: .\venv\Lib\site-packages\django\utils\text.py:323
 msgid "or"
-msgstr ""
+msgstr "أو"
 
 #. Translators: This string is used as a separator between list elements
 #: .\venv\Lib\site-packages\django\utils\text.py:342
 #: .\venv\Lib\site-packages\django\utils\timesince.py:135
 msgid ", "
-msgstr ""
+msgstr ","
 
 #: .\venv\Lib\site-packages\django\utils\timesince.py:8
 #, python-format
 msgid "%(num)d year"
 msgid_plural "%(num)d years"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%(num)d سنة"
+msgstr[1] "%(num)d سنة"
 
 #: .\venv\Lib\site-packages\django\utils\timesince.py:9
 #, python-format
 msgid "%(num)d month"
 msgid_plural "%(num)d months"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%(num)d شهر"
+msgstr[1] "%(num)d شهر"
 
 #: .\venv\Lib\site-packages\django\utils\timesince.py:10
 #, python-format
 msgid "%(num)d week"
 msgid_plural "%(num)d weeks"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%(num)d أسبوع"
+msgstr[1] "%(num)d أسابيع"
 
 #: .\venv\Lib\site-packages\django\utils\timesince.py:11
 #, python-format
 msgid "%(num)d day"
 msgid_plural "%(num)d days"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%(num)d يوم"
+msgstr[1] "%(num)d يوم"
 
 #: .\venv\Lib\site-packages\django\utils\timesince.py:12
 #, python-format
 msgid "%(num)d hour"
 msgid_plural "%(num)d hours"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%(num)d ساعة"
+msgstr[1] "%(num)d ساعة"
 
 #: .\venv\Lib\site-packages\django\utils\timesince.py:13
 #, python-format
 msgid "%(num)d minute"
 msgid_plural "%(num)d minutes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%(num)d دقيقة"
+msgstr[1] "%(num)d دقيقة"
 
 #: .\venv\Lib\site-packages\django\views\csrf.py:29
 msgid "Forbidden"
-msgstr ""
+msgstr "مُحرَّم"
 
 #: .\venv\Lib\site-packages\django\views\csrf.py:30
 msgid "CSRF verification failed. Request aborted."
-msgstr ""
+msgstr "فشل التحقق من CSRF. تم إحباط الطلب."
 
 #: .\venv\Lib\site-packages\django\views\csrf.py:34
 msgid ""
@@ -2349,6 +2744,9 @@ msgid ""
 "required for security reasons, to ensure that your browser is not being "
 "hijacked by third parties."
 msgstr ""
+"تظهر لك هذه الرسالة لأن موقع HTTPS هذا يتطلب إرسال \"رأس المرجع\" بواسطة "
+"متصفح الويب الخاص بك، ولكن لم يتم إرسال أي شيء. هذا الرأس مطلوب لأسباب "
+"أمنية، لضمان عدم اختراق متصفحك من قبل أطراف ثالثة."
 
 #: .\venv\Lib\site-packages\django\views\csrf.py:40
 msgid ""
@@ -2356,6 +2754,8 @@ msgid ""
 "enable them, at least for this site, or for HTTPS connections, or for “same-"
 "origin” requests."
 msgstr ""
+"إذا قمت بتكوين متصفحك لتعطيل رؤوس \"المرجع\"، فيرجى إعادة تمكينها، على الأقل"
+" لهذا الموقع، أو لاتصالات HTTPS، أو لطلبات \"نفس المصدر\"."
 
 #: .\venv\Lib\site-packages\django\views\csrf.py:45
 msgid ""
@@ -2365,6 +2765,11 @@ msgid ""
 "checking. If you’re concerned about privacy, use alternatives like <a "
 "rel=\"noreferrer\" …> for links to third-party sites."
 msgstr ""
+"إذا كنت تستخدم العلامة <meta name=\"referrer\" content=\"no-referrer\"> أو "
+"تتضمن رأس \"Referrer-Policy: no-referrer\"، فيرجى إزالتها. تتطلب حماية CSRF "
+"أن يقوم رأس \"المُحيل\" بإجراء فحص صارم للمُحيل. إذا كنت مهتمًا بالخصوصية، "
+"فاستخدم بدائل مثل <a rel=\"noreferrer\" …> للروابط إلى مواقع الجهات "
+"الخارجية."
 
 #: .\venv\Lib\site-packages\django\views\csrf.py:54
 msgid ""
@@ -2372,44 +2777,49 @@ msgid ""
 "submitting forms. This cookie is required for security reasons, to ensure "
 "that your browser is not being hijacked by third parties."
 msgstr ""
+"أنت ترى هذه الرسالة لأن هذا الموقع يتطلب ملف تعريف الارتباط CSRF عند إرسال "
+"النماذج. ملف تعريف الارتباط هذا مطلوب لأسباب أمنية، لضمان عدم اختراق متصفحك "
+"من قبل أطراف ثالثة."
 
 #: .\venv\Lib\site-packages\django\views\csrf.py:60
 msgid ""
 "If you have configured your browser to disable cookies, please re-enable "
 "them, at least for this site, or for “same-origin” requests."
 msgstr ""
+"إذا قمت بتكوين متصفحك لتعطيل ملفات تعريف الارتباط، فيرجى إعادة تمكينها، على "
+"الأقل لهذا الموقع، أو لطلبات \"نفس المصدر\"."
 
 #: .\venv\Lib\site-packages\django\views\csrf.py:66
 msgid "More information is available with DEBUG=True."
-msgstr ""
+msgstr "يتوفر مزيد من المعلومات مع ديبوغ = ترو."
 
 #: .\venv\Lib\site-packages\django\views\generic\dates.py:44
 msgid "No year specified"
-msgstr ""
+msgstr "لم يتم تحديد سنة"
 
 #: .\venv\Lib\site-packages\django\views\generic\dates.py:64
 #: .\venv\Lib\site-packages\django\views\generic\dates.py:115
 #: .\venv\Lib\site-packages\django\views\generic\dates.py:214
 msgid "Date out of range"
-msgstr ""
+msgstr "التاريخ خارج النطاق"
 
 #: .\venv\Lib\site-packages\django\views\generic\dates.py:94
 msgid "No month specified"
-msgstr ""
+msgstr "لم يتم تحديد شهر"
 
 #: .\venv\Lib\site-packages\django\views\generic\dates.py:147
 msgid "No day specified"
-msgstr ""
+msgstr "لم يتم تحديد يوم"
 
 #: .\venv\Lib\site-packages\django\views\generic\dates.py:194
 msgid "No week specified"
-msgstr ""
+msgstr "لم يتم تحديد اسبوع"
 
 #: .\venv\Lib\site-packages\django\views\generic\dates.py:349
 #: .\venv\Lib\site-packages\django\views\generic\dates.py:380
 #, python-format
 msgid "No %(verbose_name_plural)s available"
-msgstr ""
+msgstr "لا يتوفر %(verbose_name_plural)s "
 
 #: .\venv\Lib\site-packages\django\views\generic\dates.py:652
 #, python-format
@@ -2417,51 +2827,53 @@ msgid ""
 "Future %(verbose_name_plural)s not available because "
 "%(class_name)s.allow_future is False."
 msgstr ""
+"المستقبل %(verbose_name_plural)s غير متاح لأن %(class_name)s.allow_future هو"
+" خطأ."
 
 #: .\venv\Lib\site-packages\django\views\generic\dates.py:692
 #, python-format
 msgid "Invalid date string “%(datestr)s” given format “%(format)s”"
-msgstr ""
+msgstr "سلسلة تاريخ غير صالحة \"%(datestr)s\" بالتنسيق \"%(format)s\""
 
 #: .\venv\Lib\site-packages\django\views\generic\detail.py:56
 #, python-format
 msgid "No %(verbose_name)s found matching the query"
-msgstr ""
+msgstr "لم يتم العثور على %(verbose_name)s مطابقًا للاستعلام"
 
 #: .\venv\Lib\site-packages\django\views\generic\list.py:70
 msgid "Page is not “last”, nor can it be converted to an int."
-msgstr ""
+msgstr "الصفحة ليست \"الأخيرة\"، ولا يمكن تحويلها إلى int."
 
 #: .\venv\Lib\site-packages\django\views\generic\list.py:77
 #, python-format
 msgid "Invalid page (%(page_number)s): %(message)s"
-msgstr ""
+msgstr "صفحة غير صالحة (%(page_number)s): %(message)s"
 
 #: .\venv\Lib\site-packages\django\views\generic\list.py:169
 #, python-format
 msgid "Empty list and “%(class_name)s.allow_empty” is False."
-msgstr ""
+msgstr "القائمة الفارغة و\"%(class_name)s.allow_empty\" خطأ."
 
 #: .\venv\Lib\site-packages\django\views\static.py:49
 msgid "Directory indexes are not allowed here."
-msgstr ""
+msgstr "فهارس الدليل غير مسموح بها هنا."
 
 #: .\venv\Lib\site-packages\django\views\static.py:51
 #, python-format
 msgid "“%(path)s” does not exist"
-msgstr ""
+msgstr "\"%(path)s\" غير موجود"
 
 #: .\venv\Lib\site-packages\django\views\static.py:68
 #: .\venv\Lib\site-packages\django\views\templates\directory_index.html:8
 #: .\venv\Lib\site-packages\django\views\templates\directory_index.html:11
 #, python-format
 msgid "Index of %(directory)s"
-msgstr ""
+msgstr "فهرس %(directory)s"
 
 #: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:7
 #: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:220
 msgid "The install worked successfully! Congratulations!"
-msgstr ""
+msgstr "تم التثبيت بنجاح! تهانينا!"
 
 #: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:206
 #, python-format
@@ -2469,6 +2881,8 @@ msgid ""
 "View <a href=\"https://docs.djangoproject.com/en/%(version)s/releases/\" "
 "target=\"_blank\" rel=\"noopener\">release notes</a> for Django %(version)s"
 msgstr ""
+"عرض <a href=\"https://docs.djangoproject.com/en/%(version)s/releases/\" "
+"target=\"_blank\" rel=\"noopener\">ملاحظات الإصدار</a> لـ Django %(version)s"
 
 #: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:221
 #, python-format
@@ -2478,27 +2892,31 @@ msgid ""
 "target=\"_blank\" rel=\"noopener\">DEBUG=True</a> is in your settings file "
 "and you have not configured any URLs."
 msgstr ""
+"أنت تشاهد هذه الصفحة لأن <a "
+"href=\"https://docs.djangoproject.com/en/%(version)s/ref/settings/#debug\" "
+"target=\"_blank\" rel=\"noopener\">DEBUG=True</a> موجود في ملف الإعدادات "
+"الخاص بك ولم تقم بتكوين أي عناوين URL."
 
 #: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:229
 msgid "Django Documentation"
-msgstr ""
+msgstr "توثيق جانغو"
 
 #: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:230
 msgid "Topics, references, &amp; how-to’s"
-msgstr ""
+msgstr "المواضيع والمراجع والإرشادات"
 
 #: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:238
 msgid "Tutorial: A Polling App"
-msgstr ""
+msgstr "البرنامج التعليمي: تطبيق الاقتراع"
 
 #: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:239
 msgid "Get started with Django"
-msgstr ""
+msgstr "ابدأ مع جانغو"
 
 #: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:247
 msgid "Django Community"
-msgstr ""
+msgstr "مجتمع جانغو"
 
 #: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:248
 msgid "Connect, get help, or contribute"
-msgstr ""
+msgstr "تواصل أو احصل على المساعدة أو ساهم"
