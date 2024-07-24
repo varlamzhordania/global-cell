@@ -15,7 +15,7 @@
             {% for item in data %}
                 <div class="col-span-1">
                     <div class="w-24 h-24 overflow-hidden rounded-full flex justify-center items-center">
-                        <span class="fi fi-{{ item.short_name|lower }} !w-full !h-full fis "></span>
+                        <span class="fi fi-{{ item.short_name|slice:2|lower }} !w-full !h-full fis "></span>
                     </div>
                 </div>
             {% empty %}
