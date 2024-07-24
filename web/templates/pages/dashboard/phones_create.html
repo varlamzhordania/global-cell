@@ -64,17 +64,20 @@
                                    class="form-label">{{ form.sim_number.label }}</label>
                             <div class="flex gap-2 justify-center items-start">
                                 <div class="flex items-center">
-                                    <button id="dropdown-phone-button" data-dropdown-toggle="dropdown-phone"
-                                            class="btn btn-outline btn-primary"
-                                            type="button" data-prefix="+1">
-                                        <span class="fi fi-us "></span>
-                                        +1
-                                        <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true"
-                                             xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                                  stroke-width="2" d="m1 1 4 4 4-4"/>
-                                        </svg>
-                                    </button>
+                                    {% with countries.first as item %}
+                                        <button id="dropdown-phone-button" data-dropdown-toggle="dropdown-phone"
+                                                class="btn btn-outline btn-primary"
+                                                type="button" data-prefix="+1">
+                                            <span class="fi fi-{{ item.short_name|slice:2|lower }}"></span>
+                                             +{{ item.phone_prefix|default:"N/A" }}
+                                            <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true"
+                                                 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                                <path stroke="currentColor" stroke-linecap="round"
+                                                      stroke-linejoin="round"
+                                                      stroke-width="2" d="m1 1 4 4 4-4"/>
+                                            </svg>
+                                        </button>
+                                    {% endwith %}
                                     <div id="dropdown-phone"
                                          class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-auto dark:bg-gray-700">
                                         <ul class="py-2 text-sm text-gray-700 dark:text-gray-200"
