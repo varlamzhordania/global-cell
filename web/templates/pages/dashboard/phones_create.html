@@ -63,7 +63,7 @@
                             <label for="id_{{ form.sim_number.name }}"
                                    class="form-label">{{ form.sim_number.label }}</label>
                             <div class="flex gap-2 justify-center items-start">
-                                <div class="flex items-center">
+                                <div class="flex items-center" dir="ltr">
                                     {% with countries.first as item %}
                                         <button id="dropdown-phone-button" data-dropdown-toggle="dropdown-phone"
                                                 class="btn btn-outline btn-primary"
@@ -116,7 +116,7 @@
 
                                     </div>
                                 </div>
-                                <input type="text" id="id_sim_number" name="sim_number"
+                                <input type="text" id="id_sim_number" name="sim_number" dir="ltr"
                                        class="form-control" autocomplete="off"
                                        placeholder="000-000-0000"
                                        required/>
