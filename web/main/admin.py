@@ -3,11 +3,28 @@ from django.utils.html import format_html
 from django.shortcuts import redirect
 from django.urls import path
 from django.contrib.auth import get_user_model
+from import_export import resources
+from import_export.admin import ImportExportModelAdmin
 
 from settings.models import Notification
 
 from .models import Device, Country, PaymentMethod
 from .forms import NotificationForm
+
+
+class DeviceResource(resources.ModelResource):
+    class Meta:
+        model = Device
+
+
+class PaymentMethodResource(resources.ModelResource):
+    class Meta:
+        model = PaymentMethod
+
+
+class CountryResource(resources.ModelResource):
+    class Meta:
+        model = Country
 
 
 class NotificationInline(admin.StackedInline):
@@ -37,7 +54,7 @@ class NotificationInline(admin.StackedInline):
 
 
 @admin.register(PaymentMethod)
-class PaymentMethodAdmin(admin.ModelAdmin):
+class PaymentMethodAdmin(ImportExportModelAdmin):
     list_display = ('id', 'user', 'account_name', 'account_number', 'bank_name', 'is_active', 'action')
     list_filter = ("is_active",)
     search_fields = ("id", 'user__username', 'account_number')
@@ -47,6 +64,7 @@ class PaymentMethodAdmin(admin.ModelAdmin):
         ('Bank Information', {"fields": ('bank_name', 'account_name', 'account_number')}),
         ('International Information', {"fields": ('swift_number', 'iban_number')}),
     )
+    resource_classes = [PaymentMethodResource]
 
     def action(self, obj):
         if obj.is_active:
@@ -79,20 +97,21 @@ class PaymentMethodAdmin(admin.ModelAdmin):
 
 
 @admin.register(Country)
-class CountryAdmin(admin.ModelAdmin):
+class CountryAdmin(ImportExportModelAdmin):
     list_display = (
         'id', 'name', "short_name", "phone_prefix", "currency_name", "currency_sign", "to_dollar",
         "is_supported",
     )
     list_filter = ("is_supported",)
     search_fields = ("id", 'name', 'short_name', 'currency_name')
+    resource_classes = [CountryResource]
 
     def to_dollar(self, value):
         return format_html('<span>${}</span>', value.equivalent_to_dollar)
 
 
 @admin.register(Device)
-class DeviceAdmin(admin.ModelAdmin):
+class DeviceAdmin(ImportExportModelAdmin):
     list_display = (
         'id', 'user', 'sim_number', 'mobile_carrier', 'plan_payment', 'plan_name', 'plan_cost', 'plan_length',
         'is_unlimited_minutes',
@@ -106,3 +125,4 @@ class DeviceAdmin(admin.ModelAdmin):
         ('SIM Information', {"fields": ('sim_number', 'mobile_carrier')}),
         ('Plan', {"fields": ('plan_name', 'plan_payment', 'plan_cost', 'plan_length', 'is_unlimited_minutes')}),
     )
+    resource_classes = [DeviceResource]

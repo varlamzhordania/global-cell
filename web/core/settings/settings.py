@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'hijack.contrib.admin',
     'parler',
     'rest_framework',
+    'import_export',
 ]
 
 MIDDLEWARE = [

@@ -10,8 +10,9 @@ cp /etc/letsencrypt/live/globalcellpartners.com/fullchain.pem cert.crt
 
 
 #combine
-certbot certonly --standalone -d "globalcellteam.com" -d "www.globalcellteam.com" -d "globalcellpartners.com" -d "www.globalcellpartners.com" --register-unsafely-without-email
+certbot certonly --standalone -d "globalcellpartners.com" -d "www.globalcellpartners.com" --register-unsafely-without-email
 
 
-cp /etc/letsencrypt/live/globalcellteam.com/fullchain.pem cert.crt
-cp /etc/letsencrypt/live/globalcellteam.com/privkey.pem private.key
+cp /etc/letsencrypt/live/globalcellpartners.com/fullchain.pem cert.crt
+cp /etc/letsencrypt/live/globalcellpartners.com/privkey.pem private.key
+
