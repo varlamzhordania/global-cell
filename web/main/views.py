@@ -4,6 +4,7 @@ from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from django.utils.translation import gettext as _
 from django.views.decorators.http import require_POST
 from django.core.cache import cache
+from django.db import IntegrityError
 
 from core.utils import fancy_message
 from accounts.forms import UserForm, PasswordChangeForm
@@ -50,11 +51,20 @@ def phones_create(request, *args, **kwargs):
         if form.is_valid():
             device = form.save(commit=False)
             device.user = request.user
-            device.save()
-            fancy_message(request, _(f"Device {device.sim_number} was add successfully"), level="success")
-            return redirect("main:phones_list")
+
+            try:
+                device.save()
+                fancy_message(request, _(f"Device {device.sim_number} was added successfully"), level="success")
+                return redirect("main:phones_list")
+            except IntegrityError:
+                fancy_message(
+                    request,
+                    _("You already have an active device with this phone number, try another."),
+                    level="error"
+                )
         else:
-            fancy_message(request, _(f"Please makesure your have fill the form correctly"), level="error")
+            fancy_message(request, _("Please make sure you have filled the form correctly"), level="error")
+
     else:
         form = DeviceForm()
 

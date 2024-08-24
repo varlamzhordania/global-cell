@@ -28,18 +28,18 @@ class PaymentMethodForm(forms.ModelForm):
                 attrs={"class": "form-control", "placeholder": _("Enter the name of the account")}
             ),
             "account_number": forms.NumberInput(
-                attrs={"class": "form-control", "placeholder": _("Enter the name of the account"),
+                attrs={"class": "form-control", "placeholder": _("Enter the account number"),
                        "autocomplete": "off"}
             ),
             "bank_name": forms.TextInput(
-                attrs={"class": "form-control", "placeholder": _("Enter the name of the account")}
+                attrs={"class": "form-control", "placeholder": _("Enter the bank name")}
             ),
             "swift_number": forms.NumberInput(
-                attrs={"class": "form-control", "placeholder": _("Enter the name of the account"),
+                attrs={"class": "form-control", "placeholder": _("Enter the SWIFT number"),
                        "autocomplete": "off"}
             ),
             "iban_number": forms.NumberInput(
-                attrs={"class": "form-control", "placeholder": _("Enter the name of the account"),
+                attrs={"class": "form-control", "placeholder": _("Enter the IBAN number"),
                        "autocomplete": "off"}
             ),
         }
@@ -65,4 +65,10 @@ class DeviceForm(forms.ModelForm):
             "total_minutes": forms.NumberInput(attrs={"class": "form-control"}),
             "is_unlimited_minutes": forms.CheckboxInput(attrs={"class": "form-check-box"}),
 
+        }
+        error_messages = {
+            "sim_number": {
+                "required": _("Please enter a phone number."),
+                "invalid": _("Please enter a valid International phone number of chosen country."),
+            },
         }

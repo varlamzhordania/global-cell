@@ -67,7 +67,7 @@
                                     {% with countries.first as item %}
                                         <button id="dropdown-phone-button" data-dropdown-toggle="dropdown-phone"
                                                 class="btn btn-outline btn-primary"
-                                                type="button" data-prefix="+1">
+                                                type="button" data-prefix="+{{ item.phone_prefix }}">
                                             <span class="fi fi-{{ item.short_name|slice:2|lower }}"></span>
                                             +{{ item.phone_prefix|default:"N/A" }}
                                             <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true"
@@ -118,7 +118,7 @@
                                 </div>
                                 <input type="text" id="id_sim_number" name="sim_number" dir="ltr"
                                        class="form-control" autocomplete="off"
-                                       placeholder="000-000-0000"
+                                       placeholder="Enter phone number"
                                        required/>
                             </div>
                             <small class="text-xs text-red-700">{{ form.sim_number.errors }}</small>
@@ -218,20 +218,27 @@
 
             // Function to update input mask
             function updateInputMask() {
-
                 const maskOptions = {
-                    mask: `000-000-0000`,
+                    mask: /^\d{0,15}$/, // Regex to match the digits part of international phone numbers (excluding prefix)
+                    prepare: function (str) {
+                        return str.replace(/\D/g, ''); // Remove all non-digit characters
+                    },
+                    lazy: false, // Show placeholder for the entire mask
+                    placeholderChar: ' ', // Use space as a placeholder character
                 };
-                // Apply new mask
+
+                // Apply the mask
                 mask = IMask(phoneInput, maskOptions);
             }
 
+            updateInputMask();
 
-            updateInputMask()
             const form = document.getElementById('main-form');
             form.addEventListener('submit', (event) => {
+                // Add the country prefix before the unmasked value
                 phoneInput.value = phoneDropDown.getAttribute("data-prefix") + mask.unmaskedValue;
             });
+
 
             const checkUnlimited = () => {
                 if (unlimitedInput.checked) {

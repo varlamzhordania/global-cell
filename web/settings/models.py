@@ -140,6 +140,13 @@ class Page(TranslatableModel, BaseModel):
         unique=True,
         default=TypeChoices.HOME,
     )
+    application_file = models.FileField(
+        upload_to=UploadPath(folder="main", sub_path="app"),
+        verbose_name=_("Application File"),
+        blank=True,
+        null=True,
+        help_text=_("Mobile Application File"),
+    )
     translations = TranslatedFields(
         video=models.FileField(
             upload_to=UploadPath(folder="content", sub_path="videos"),

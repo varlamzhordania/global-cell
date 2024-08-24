@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'parler',
     'rest_framework',
     'import_export',
+    "phonenumber_field",
 ]
 
 MIDDLEWARE = [
@@ -196,6 +197,8 @@ AUTHENTICATION_BACKENDS = [
     'accounts.backends.EmailBackend',
     'django.contrib.auth.backends.ModelBackend',
 ]
+
+PHONENUMBER_DEFAULT_FORMAT = "INTERNATIONAL"
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [

@@ -73,6 +73,14 @@ class Country(models.Model):
         blank=True,
         null=True
     )
+    rate_pet_minute = models.DecimalField(
+        max_digits=10,
+        decimal_places=6,
+        verbose_name=_("Rate per minute"),
+        help_text=_("The value of the interest rate per minute usage in US Dollar."),
+        blank=True,
+        null=True,
+    )
     is_supported = models.BooleanField(
         verbose_name=_("Is Supported"),
         default=True,
