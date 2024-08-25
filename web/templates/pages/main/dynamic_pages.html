@@ -1,0 +1,46 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+{% block content %}
+    <section class="py-10 my-4 container w-full flex justify-center">
+        <article class="prose lg:prose-xl text-center">
+            <h1 class="text-highlight">{{ page.title }}</h1>
+            <p class="body1">{{ page.content }}</p>
+        </article>
+    </section>
+
+    <!-- Media Section -->
+    <section class="py-10 my-4 container w-full flex justify-center">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-2 mb-6">
+            {% for media in page.media.all %}
+                {% if media.type == 'image' %}
+                    <div class="col-span-1">
+                        <img src="{{ media.file.url }}" alt="{{ media.caption }}" class="aspect-square">
+                    </div>
+                {% elif media.type == 'video' %}
+                    <div class="col-span-1">
+                        <video controls class="aspect-video">
+                            <source src="{{ media.file.url }}" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                {% elif media.type == 'audio' %}
+                    <div class="col-span-1 sm:col-span-2">
+                        <audio controls class="w-full mx-auto">
+                            <source src="{{ media.file.url }}" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                {% elif media.type == 'document' %}
+                    <div class="col-span-1 sm:col-span-2">
+                        <a href="{{ media.file.url }}" target="_blank" class="text-highlight">
+                            {{ media.caption|default:"Download Document" }}
+                        </a>
+                    </div>
+                {% endif %}
+                {% if media.caption %}
+                    <p class="caption text-sm text-center mt-2">{{ media.caption }}</p>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </section>
+{% endblock %}

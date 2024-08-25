@@ -1,11 +1,16 @@
+import requests
+from decimal import Decimal
+
 from django.core.validators import MinValueValidator, MaxValueValidator, RegexValidator
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 from django.contrib.auth import get_user_model
 from django.utils.deconstruct import deconstructible
 from django.utils import timezone
+from django.conf import settings
 
 from phonenumber_field.modelfields import PhoneNumberField
+from phonenumber_field.phonenumber import PhoneNumber
 
 
 class BaseModel(models.Model):
@@ -73,7 +78,7 @@ class Country(models.Model):
         blank=True,
         null=True
     )
-    rate_pet_minute = models.DecimalField(
+    rate_per_minute = models.DecimalField(
         max_digits=10,
         decimal_places=6,
         verbose_name=_("Rate per minute"),
@@ -291,6 +296,18 @@ class Device(BaseModel):
         validators=[MinValueValidator(0)],
         blank=True,
     )
+    used_minutes = models.PositiveIntegerField(
+        verbose_name=_("Used Minutes"),
+        default=0,
+        blank=True,
+        null=True,
+        help_text=_("Total used base on minute")
+    )
+    last_updated = models.DateTimeField(
+        verbose_name=_("Last Updated"),
+        null=True,
+        blank=True,
+    )
     is_verified = models.BooleanField(verbose_name="Verified", default=False)
     is_active = models.BooleanField(verbose_name=_("Is Active"), default=False)
 
@@ -302,3 +319,60 @@ class Device(BaseModel):
 
     def __str__(self):
         return f"{self.user}'s Device"
+
+    def mark_as_deactivated(self):
+        if not self.is_active:
+            return 400
+
+        url = f"{settings.BACKEND_URL}/disable-phone"
+        data = {"phoneNumber": self.sim_number.as_e164}
+        try:
+            response = requests.post(
+                url,
+                json=data,
+                headers={"Content-Type": "application/json", "Accept": "application/json"}
+            )
+            response.raise_for_status()
+
+            self.is_active = False
+            self.save(update_fields=['is_active'])
+            return True
+
+        except requests.exceptions.RequestException as e:
+            print(e)
+            return False
+
+    def update_earned(self, force_update=False):
+        timedelta = timezone.timedelta
+        time_range = timedelta(days=1)
+
+        if force_update or not self.last_updated or timezone.now() - self.last_updated > time_range:
+            url = f"{settings.BACKEND_URL}/call-summary?phone_number={self.sim_number.as_e164}&month={timezone.now().strftime('%Y-%m')}"
+            try:
+                response = requests.get(url, headers={"Content-Type": "application/json", "Accept": "application/json"})
+                response.raise_for_status()
+
+                total_duration = response.json().get("total_duration", 0)
+                country_rate = self.get_country().rate_per_minute or Decimal(0)
+                self.earned = Decimal(total_duration) * Decimal(country_rate)
+                self.used_minutes = total_duration
+                self.last_updated = timezone.now()
+                self.save(update_fields=['earned', 'last_updated'])
+
+            except requests.exceptions.RequestException as e:
+                print(e)
+                return False
+
+        return True
+
+    def get_earned(self):
+        self.update_earned(force_update=True if not self.earned else False)
+        return f"${self.earned:.2f}"
+
+    def get_country(self):
+        code = self.sim_number.country_code
+        try:
+            queryset = Country.objects.get(phone_prefix=code)
+            return queryset
+        except Country.DoesNotExist:
+            return None

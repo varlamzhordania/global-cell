@@ -217,6 +217,8 @@
                                 <th scope="col" align="center">{% translate 'Payment' %}</th>
                                 <th scope="col" align="center">{% translate 'Plan Length' %}</th>
                                 <th scope="col" align="center">{% translate 'Unlimited Minutes' %}</th>
+                                <th scope="col" align="center">{% translate 'Used (minutes)' %}</th>
+                                <th scope="col" align="center">{% translate 'Earned ($)' %}</th>
                                 <th scope="col" align="center">{% translate 'Verified' %}</th>
                                 <th scope="col" align="center">{% translate 'Status' %}</th>
                                 <th scope="col">
@@ -240,6 +242,8 @@
                                             <div class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-primary"></div>
                                         </label>
                                     </td>
+                                    <td align="center">{{ item.used_minutes }}</td>
+                                    <td align="center">{{ item.get_earned }}</td>
                                     <td align="center">
                                         {% if item.is_verified %}
                                             <span class="badge badge-success capitalize">{% translate 'VERIFIED' %}</span>
@@ -266,35 +270,16 @@
                                             </svg>
                                         {% endif %}
                                     </td>
-                                    {#                                    <td class="px-4 py-3 flex items-center justify-end">#}
-                                    {#                                        <button id="record-{{ item.id }}-dropdown-button"#}
-                                    {#                                                data-dropdown-toggle="record-{{ item.id }}-dropdown"#}
-                                    {#                                                class="inline-flex items-center p-0.5 text-sm font-medium text-center text-gray-500 hover:text-gray-800 rounded-lg focus:outline-none dark:text-gray-400 dark:hover:text-gray-100"#}
-                                    {#                                                type="button">#}
-                                    {#                                            <svg class="w-5 h-5" aria-hidden="true" fill="currentColor"#}
-                                    {#                                                 viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">#}
-                                    {#                                                <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z"/>#}
-                                    {#                                            </svg>#}
-                                    {#                                        </button>#}
-                                    {#                                        <div id="record-{{ item.id }}-dropdown"#}
-                                    {#                                             class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600">#}
-                                    {#                                            <ul class="py-1 text-sm text-gray-700 dark:text-gray-200"#}
-                                    {#                                                aria-labelledby="record-{{ item.id }}-dropdown-button">#}
-                                    {#                                                <li>#}
-                                    {#                                                    <a href="#"#}
-                                    {#                                                       class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Show</a>#}
-                                    {#                                                </li>#}
-                                    {#                                                <li>#}
-                                    {#                                                    <a href="#"#}
-                                    {#                                                       class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Edit</a>#}
-                                    {#                                                </li>#}
-                                    {#                                            </ul>#}
-                                    {#                                            <div class="py-1">#}
-                                    {#                                                <a href="#"#}
-                                    {#                                                   class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Delete</a>#}
-                                    {#                                            </div>#}
-                                    {#                                        </div>#}
-                                    {#                                    </td>#}
+                                    <td class="px-4 py-3 flex items-center justify-end">
+                                        <button id="record-{{ item.id }}-dropdown-button" data-id="{{ item.pk }}"
+                                                class="dropdown-buttons inline-flex items-center p-0.5 text-sm font-medium text-center text-gray-500 hover:text-gray-800 rounded-lg focus:outline-none dark:text-gray-400 dark:hover:text-gray-100"
+                                                type="button">
+                                            <svg class="w-5 h-5" aria-hidden="true" fill="currentColor"
+                                                 viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z"/>
+                                            </svg>
+                                        </button>
+                                    </td>
                                 </tr>
                             {% empty %}
                                 <tr>
@@ -367,5 +352,39 @@
                 </div>
             </div>
         </div>
+
+        <div id="record-dropdown"
+             class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600">
+        </div>
     </section>
+
+{% endblock %}
+
+{% block js %}
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const menuButtons = document.querySelectorAll(".dropdown-buttons");
+            const dropdown = document.getElementById("record-dropdown");
+            const options = {
+                placement: 'bottom',
+                triggerType: 'click',
+            };
+
+            menuButtons.forEach(button => {
+                button.addEventListener("click", (event) => {
+                    const id = event.currentTarget.getAttribute("data-id")
+                    const url = `{% url 'main:phones_deactivate' 0 %}`.replace(0, id)
+                    dropdown.innerHTML = `<ul class="py-1 text-sm text-gray-700 dark:text-gray-200"
+                        aria-labelledby="record-dropdown-button">
+                       <li>
+                        <a href="${url}" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Deactivate</a>
+                      </li>
+                    </ul>`
+                    const dropdownInstance = new Dropdown(dropdown, button, options);
+                    dropdownInstance.show();
+                });
+            });
+
+        });
+    </script>
 {% endblock %}

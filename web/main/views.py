@@ -1,3 +1,4 @@
+from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
@@ -121,6 +122,24 @@ def phones_list(request, *args, **kwargs):
     }
 
     return render(request, "pages/dashboard/phones_list.html", my_context)
+
+
+@login_required
+def phones_deactivate(request, pk, *args, **kwargs):
+    device = get_object_or_404(Device, pk=pk, user=request.user)
+    try:
+        result = device.mark_as_deactivated()
+        if result == 400:
+            fancy_message(request, _("This phone is already deactivated."), level="warning")
+        elif result:
+            fancy_message(request, _("%s has been deactivated." % device.sim_number), level="success")
+        else:
+            fancy_message(request, _("Deactivation operation failed"), level="error")
+    except Exception as e:
+        print(e)
+        fancy_message(request, _("An unexpected error occurred during deactivation."))
+
+    return redirect("main:phones_list")
 
 
 @login_required

@@ -7,9 +7,9 @@
 
 <!DOCTYPE html>
 {% if CURRENT_LANGUAGE == 'ar' %}
-<html lang="{{ CURRENT_LANGUAGE }}" style="overflow-x: hidden" dir="rtl" class="rtl dark primary-scrollbar ">
+    <html lang="{{ CURRENT_LANGUAGE }}" style="overflow-x: hidden" dir="rtl" class="rtl dark primary-scrollbar ">
 {% else %}
-<html lang="{{ CURRENT_LANGUAGE }}" style="overflow-x: hidden" dir="ltr" class="ltr dark primary-scrollbar ">
+    <html lang="{{ CURRENT_LANGUAGE }}" style="overflow-x: hidden" dir="ltr" class="ltr dark primary-scrollbar ">
 {% endif %}
 
 <head>
@@ -126,9 +126,9 @@
         {% endblock content %}
     </div>
 </div>
-
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+{% block js %}
+{% endblock %}
 </body>
 
 </html>

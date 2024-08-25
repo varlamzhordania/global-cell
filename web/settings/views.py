@@ -1,16 +1,32 @@
 import logging
+
+from django.shortcuts import get_object_or_404, render
+from django.db import transaction
 from rest_framework.generics import ListAPIView
 from rest_framework import status
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated
-from django.shortcuts import get_object_or_404
-from django.db import transaction
 
-from .models import Notification
+from .models import Notification, DynamicPage
 from .serializers import NotificationSerializer
 
 logger = logging.getLogger(__name__)
+
+
+def dynamic_page_view(request, slug, *args, **kwargs):
+    page = get_object_or_404(
+        DynamicPage.objects.prefetch_related('media'),
+        slug=slug,
+        is_active=True
+    )
+
+    context = {
+        "Title": page.title,
+        "page": page,
+    }
+
+    return render(request, 'pages/main/dynamic_pages.html', context)
 
 
 class NotificationList(ListAPIView):

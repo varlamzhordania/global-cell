@@ -1,7 +1,7 @@
 from django.urls import path
 from django.views.generic import TemplateView
 from .views import home_view, dashboard_view, phones_create, phones_list, financial_view, delete_payment_method_view, \
-    settings_view
+    settings_view, phones_deactivate
 
 app_name = 'main'
 
@@ -10,6 +10,7 @@ urlpatterns = [
     path('dashboard/', dashboard_view, name="dashboard"),
     path('phones/create/', phones_create, name="phones_create"),
     path('phones/list/', phones_list, name="phones_list"),
+    path('phones/<int:pk>/deactivate/', phones_deactivate, name="phones_deactivate"),
     path('financial/', financial_view, name="financial"),
     path('payment_method/delete/<int:pk>/', delete_payment_method_view, name="payment_method_delete"),
     path('settings/', settings_view, name="settings"),

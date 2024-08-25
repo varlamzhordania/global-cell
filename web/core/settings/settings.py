@@ -42,9 +42,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'accounts',
-    'main',
-    'settings',
+    'accounts.apps.AccountsConfig',
+    'main.apps.MainConfig',
+    'settings.apps.SettingsConfig',
     # Third Party
     'rosetta',
     'hijack',
@@ -241,4 +241,8 @@ LOGGING = {
         'level': 'DEBUG',
     },
 }
+
 STATIC_VERSION = "1"
+
+BACKEND_URL = os.getenv("BACKEND_DOMAIN", '')
+BASE_DOMAIN = os.getenv("BASE_DOMAIN", 'http://127.0.0.1:8000')

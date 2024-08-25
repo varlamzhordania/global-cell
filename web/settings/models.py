@@ -3,6 +3,8 @@ from django.utils.translation import gettext_lazy as _
 from django.utils import timezone
 from django.utils.timesince import timesince
 from django.contrib.auth import get_user_model
+from autoslug import AutoSlugField
+from django.shortcuts import resolve_url
 
 from parler.models import TranslatableModel, TranslatedFields
 
@@ -211,3 +213,64 @@ class Seo(TranslatableModel):
 
     def __str__(self):
         return str(self.id)
+
+
+class DynamicPage(BaseModel):
+    title = models.CharField(
+        max_length=255,
+        verbose_name=_("Title"),
+        blank=False,
+        null=False,
+        unique=True,
+        help_text=_("The title of the page."),
+    )
+    slug = AutoSlugField(
+        populate_from="title",
+        verbose_name=_("Slug"),
+        unique=True,
+        help_text=_("The slug of the page. will automatically created.")
+    )
+    content = models.TextField(
+        verbose_name=_("Content"),
+        blank=True,
+        null=True,
+        help_text=_("The content of the page"),
+    )
+    is_active = models.BooleanField(
+        default=False,
+        verbose_name=_("Is Published"),
+        help_text=_("Is this page active?, check if you want user to see this page")
+    )
+
+    class Meta:
+        verbose_name = _("Dynamic Page")
+        verbose_name_plural = _("Dynamic Pages")
+        ordering = ["-created_at"]
+
+    def __str__(self):
+        return self.title
+
+    def get_absolute_url(self):
+        return resolve_url("settings:dynamic_page", slug=self.slug)
+
+
+class Media(BaseModel):
+    class TypeChoices(models.TextChoices):
+        VIDEO = "video", _("Video")
+        IMAGE = "image", _("Image")
+        AUDIO = "audio", _("Audio")
+        DOCUMENT = "document", _("Document")
+
+    page = models.ForeignKey(DynamicPage, verbose_name=_("Page"), related_name='media', on_delete=models.CASCADE)
+    type = models.CharField(max_length=10, choices=TypeChoices.choices, verbose_name=_("Media Type"))
+    file = models.FileField(upload_to=UploadPath(folder="main", sub_path="dynamic"), verbose_name=_("File"))
+    caption = models.CharField(max_length=255, blank=True, null=True, verbose_name=_("Caption"))
+    order = models.PositiveIntegerField(default=0, verbose_name=_("Order"))
+
+    class Meta:
+        verbose_name = _("Media")
+        verbose_name_plural = _("Media")
+        ordering = ["order"]
+
+    def __str__(self):
+        return f"{self.type} - {self.caption or 'No caption'}"

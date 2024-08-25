@@ -3,6 +3,7 @@ from django.utils.html import format_html
 from django.shortcuts import redirect
 from django.urls import path
 from django.contrib.auth import get_user_model
+from django.utils.translation import gettext_lazy as _
 from import_export import resources
 from import_export.admin import ImportExportModelAdmin
 
@@ -113,16 +114,29 @@ class CountryAdmin(ImportExportModelAdmin):
 @admin.register(Device)
 class DeviceAdmin(ImportExportModelAdmin):
     list_display = (
-        'id', 'user', 'sim_number', 'mobile_carrier', 'plan_payment', 'plan_name', 'plan_cost', 'plan_length',
-        'is_unlimited_minutes',
+        'id', 'user', 'sim_number', 'mobile_carrier', 'plan_payment', 'plan_name', 'plan_cost',
+        'plan_length', 'is_unlimited_minutes', 'earned', 'used_minutes', 'last_updated',
         'is_verified', 'is_active',
     )
-    list_filter = ('is_unlimited_minutes', 'is_verified', 'is_active',)
-    search_fields = ("id", 'user', 'sim_number')
+    list_filter = ('is_unlimited_minutes', 'is_verified', 'is_active', 'last_updated')
+    search_fields = ("id", 'user__username', 'sim_number', 'mobile_carrier', 'plan_name')
     inlines = [NotificationInline]
     fieldsets = (
-        ('General', {"fields": ('user', 'is_verified', 'is_active')}),
+        ('General Information', {"fields": ('user', 'is_verified', 'is_active')}),
         ('SIM Information', {"fields": ('sim_number', 'mobile_carrier')}),
-        ('Plan', {"fields": ('plan_name', 'plan_payment', 'plan_cost', 'plan_length', 'is_unlimited_minutes')}),
+        ('Plan Details', {"fields": ('plan_name', 'plan_payment', 'plan_cost', 'plan_length', 'is_unlimited_minutes')}),
+        ('Financial Information', {"fields": ('earned', 'used_minutes', 'last_updated')}),
     )
     resource_classes = [DeviceResource]
+
+    actions = ['update_earned_action']
+
+    def update_earned_action(self, request, queryset):
+        updated_count = 0
+        for device in queryset:
+            if device.update_earned(force_update=True):
+                updated_count += 1
+
+        self.message_user(request, _(f"{updated_count} devices were successfully updated."))
+
+    update_earned_action.short_description = _("Update Earned for selected devices")

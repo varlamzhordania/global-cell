@@ -1,10 +1,13 @@
 from django.contrib import admin
+from django.contrib.admin import TabularInline
+from django.utils.html import mark_safe
+from django.conf import settings
 from import_export import resources
 from import_export.admin import ImportExportModelAdmin
 
 from parler.admin import TranslatableStackedInline, TranslatableAdmin
 
-from .models import Page, Seo, Slide, Notification
+from .models import Page, Seo, Slide, Notification, DynamicPage, Media
 
 
 # Register your models here.
@@ -59,5 +62,25 @@ class PageAdmin(ImportExportModelAdmin, TranslatableAdmin):
     list_filter = ["type", "is_active", "created_at", "updated_at"]
     inlines = [SeoStackedInline]
     fieldsets = (
-        ('General', {"fields": ('type', 'video', 'video_poster', 'is_active')}),
+        ('General', {"fields": ('type', 'application_file', 'video', 'video_poster', 'is_active')}),
     )
+
+
+class MediaInlineTabular(admin.TabularInline):
+    model = Media
+    extra = 1
+
+
+@admin.register(DynamicPage)
+class DynamicPageAdmin(admin.ModelAdmin):
+    list_display = ['title', 'slug', 'url', 'is_active', 'created_at', 'updated_at']
+    list_filter = ['is_active', 'created_at', 'updated_at']
+    search_fields = ['title', 'content']
+    inlines = [MediaInlineTabular]
+
+    def url(self, obj):
+        if obj.get_absolute_url():
+            return mark_safe(f"<a href='{obj.get_absolute_url()}'>{obj.get_absolute_url()}</a>")
+        return None
+
+    url.short_description = 'Page URL'
