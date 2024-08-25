@@ -9,8 +9,8 @@
     </section>
 
     <!-- Media Section -->
-    <section class="py-10 my-4 container w-full flex justify-center">
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-2 mb-6">
+    <section class="py-10 my-4 container w-full ">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-2 justify-stretch mb-6 ">
             {% for media in page.media.all %}
                 {% if media.type == 'image' %}
                     <div class="col-span-1">
