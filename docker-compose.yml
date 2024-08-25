@@ -9,7 +9,7 @@ services:
       - ./web/:/home/global-cell/web
       - ./cert/:/home/global-cell/cert
     command: >
-      bash -c "python manage.py makemigrations && python manage.py migrate && python manage.py collectstatic --noinput && gunicorn -c conf/gunicorn_conf.py core.wsgi:application"
+      bash -c "python manage.py makemigrations --noinput && python manage.py migrate --noinput && python manage.py collectstatic --noinput && gunicorn -c conf/gunicorn_conf.py core.wsgi:application"
     expose:
       - '8000'
     depends_on:
