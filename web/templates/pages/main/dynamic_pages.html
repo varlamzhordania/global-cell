@@ -4,7 +4,7 @@
     <section class="py-10 my-4 container w-full flex justify-center">
         <article class="prose lg:prose-xl text-center">
             <h1 class="text-highlight">{{ page.title }}</h1>
-            <p class="body1">{{ page.content }}</p>
+            <p class="body1" style="white-space: pre-wrap;">{{ page.content|safe }}</p>
         </article>
     </section>
 
