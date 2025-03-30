@@ -4,7 +4,7 @@ module.exports = {
         './node_modules/flowbite/**/*.js',
         './**/forms.py',
     ],
-    darkMode: "class",
+    darkMode: "selector",
     theme: {
         extend: {
             container: {

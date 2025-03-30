@@ -3,8 +3,9 @@ from django.utils.translation import gettext_lazy as _
 from django.utils import timezone
 from django.utils.timesince import timesince
 from django.contrib.auth import get_user_model
-from autoslug import AutoSlugField
 from django.shortcuts import resolve_url
+from autoslug import AutoSlugField
+from django_ckeditor_5.fields import CKEditor5Field
 
 from parler.models import TranslatableModel, TranslatedFields
 
@@ -215,27 +216,31 @@ class Seo(TranslatableModel):
         return str(self.id)
 
 
-class DynamicPage(BaseModel):
-    title = models.CharField(
-        max_length=255,
-        verbose_name=_("Title"),
-        blank=False,
-        null=False,
-        unique=True,
-        help_text=_("The title of the page."),
+class DynamicPage(TranslatableModel, BaseModel):
+    translations = TranslatedFields(
+        title=models.CharField(
+            max_length=255,
+            verbose_name=_("Title"),
+            blank=False,
+            null=False,
+            unique=True,
+            help_text=_("The title of the page."),
+        ),
+        slug=AutoSlugField(
+            populate_from="title",
+            verbose_name=_("Slug"),
+            unique=True,
+            help_text=_("The slug of the page. will automatically created.")
+        ),
+        content=CKEditor5Field(
+            verbose_name=_("Content"),
+            blank=True,
+            null=True,
+            help_text=_("The content of the page"),
+            config_name="admin",
+        )
     )
-    slug = AutoSlugField(
-        populate_from="title",
-        verbose_name=_("Slug"),
-        unique=True,
-        help_text=_("The slug of the page. will automatically created.")
-    )
-    content = models.TextField(
-        verbose_name=_("Content"),
-        blank=True,
-        null=True,
-        help_text=_("The content of the page"),
-    )
+
     is_active = models.BooleanField(
         default=False,
         verbose_name=_("Is Published"),
@@ -254,7 +259,7 @@ class DynamicPage(BaseModel):
         return resolve_url("settings:dynamic_page", slug=self.slug)
 
 
-class Media(BaseModel):
+class Media(TranslatableModel, BaseModel):
     class TypeChoices(models.TextChoices):
         VIDEO = "video", _("Video")
         IMAGE = "image", _("Image")
@@ -262,15 +267,18 @@ class Media(BaseModel):
         DOCUMENT = "document", _("Document")
 
     page = models.ForeignKey(DynamicPage, verbose_name=_("Page"), related_name='media', on_delete=models.CASCADE)
-    type = models.CharField(max_length=10, choices=TypeChoices.choices, verbose_name=_("Media Type"))
-    file = models.FileField(upload_to=UploadPath(folder="main", sub_path="dynamic"), verbose_name=_("File"))
-    caption = models.CharField(max_length=255, blank=True, null=True, verbose_name=_("Caption"))
-    order = models.PositiveIntegerField(default=0, verbose_name=_("Order"))
+
+    translations = TranslatedFields(
+        type=models.CharField(max_length=10, choices=TypeChoices.choices, verbose_name=_("Media Type")),
+        file=models.FileField(upload_to=UploadPath(folder="main", sub_path="dynamic"), verbose_name=_("File")),
+        caption=models.CharField(max_length=255, blank=True, null=True, verbose_name=_("Caption")),
+        order=models.PositiveIntegerField(default=0, verbose_name=_("Order")),
+    )
 
     class Meta:
         verbose_name = _("Media")
         verbose_name_plural = _("Media")
-        ordering = ["order"]
+        ordering = ["-id"]
 
     def __str__(self):
-        return f"{self.type} - {self.caption or 'No caption'}"
+        return f"{self.id}"

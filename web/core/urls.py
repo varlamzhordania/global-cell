@@ -59,6 +59,7 @@ urlpatterns = i18n_patterns(
     re_path(r'^rosetta/', include('rosetta.urls')),
     path("setlang/", set_language, name="set_language"),
     path('hijack/', include('hijack.urls')),
+    path("ckeditor5/", include('django_ckeditor_5.urls')),
 
 )
 

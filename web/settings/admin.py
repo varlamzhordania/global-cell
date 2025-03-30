@@ -1,7 +1,5 @@
 from django.contrib import admin
-from django.contrib.admin import TabularInline
 from django.utils.html import mark_safe
-from django.conf import settings
 from import_export import resources
 from import_export.admin import ImportExportModelAdmin
 
@@ -9,8 +7,6 @@ from parler.admin import TranslatableStackedInline, TranslatableAdmin
 
 from .models import Page, Seo, Slide, Notification, DynamicPage, Media
 
-
-# Register your models here.
 
 class NotificationResource(resources.ModelResource):
     class Meta:
@@ -66,17 +62,23 @@ class PageAdmin(ImportExportModelAdmin, TranslatableAdmin):
     )
 
 
-class MediaInlineTabular(admin.TabularInline):
+class MediaInlineTabular(TranslatableStackedInline):
     model = Media
     extra = 1
+    fieldsets = (
+        (None, {"fields": ("page", "type", "file", "caption", "order")}),
+    )
 
 
 @admin.register(DynamicPage)
-class DynamicPageAdmin(admin.ModelAdmin):
+class DynamicPageAdmin(TranslatableAdmin):
     list_display = ['title', 'slug', 'url', 'is_active', 'created_at', 'updated_at']
     list_filter = ['is_active', 'created_at', 'updated_at']
     search_fields = ['title', 'content']
     inlines = [MediaInlineTabular]
+    fieldsets = (
+        ('General', {"fields": ('title', 'content', 'is_active',)}),
+    )
 
     def url(self, obj):
         if obj.get_absolute_url():

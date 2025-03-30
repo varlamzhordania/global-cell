@@ -17,7 +17,7 @@ logger = logging.getLogger(__name__)
 def dynamic_page_view(request, slug, *args, **kwargs):
     page = get_object_or_404(
         DynamicPage.objects.prefetch_related('media'),
-        slug=slug,
+        translations__slug=slug,
         is_active=True
     )
 

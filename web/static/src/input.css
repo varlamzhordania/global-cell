@@ -5,8 +5,11 @@
 
 @layer base {
     body {
-        @apply
-        bg-[#030C1A] text-white
+        @apply bg-[#030C1A] !text-white;
+    }
+
+    strong {
+        color: inherit !important;
     }
 
     html {
