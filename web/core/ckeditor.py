@@ -258,6 +258,10 @@ BASE_CKEDITOR_5_CONFIGS = {
             "horizontalLine",
 
         ],
+        "fontFamily": {
+            "options": ['Default', 'Poppins', "ui-serif", "Georgia", "Cambria", "Times New Roman", "Times", "serif"],
+            "supportAllValues": True
+        },
         "fontColor": {
             "colors": custom_colors
         },
