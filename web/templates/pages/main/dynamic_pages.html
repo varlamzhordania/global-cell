@@ -1,20 +1,7 @@
 {% extends 'layouts/base.html' %}
 {% load static %}
 {% block content %}
-    {% if page.title %}
-        <section class="py-10 my-4 container w-full flex justify-center">
-            <article class="prose lg:prose-xl prose-gray ">
-                <h1 class="text-highlight text-center">{{ page.title }}</h1>
-
-                <div class="body1 text-gray-500 dark:text-slate-400 dark:prose-slate dark:prose-headings:text-slate-400"
-                     style="white-space: pre-wrap;">
-                    {{ page.content|safe }}
-                </div>
-            </article>
-        </section>
-    {% else %}
-        <div>
-            {{ page.content|safe }}
-        </div>
-    {% endif %}
+    <div>
+        {{ page.content|safe }}
+    </div>
 {% endblock %}
