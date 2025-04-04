@@ -56,8 +56,10 @@
             <script type="application/ld+json">
                 {{ seo.json_ld_data|safe }}
             </script>
-        {% else %}
+        {% elif Title %}
             <title>{% trans Title %}</title>
+        {% else %}
+            <title>GlobalCell</title>
         {% endif %}
 
     {% endwith %}

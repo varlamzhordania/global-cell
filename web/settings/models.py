@@ -221,9 +221,9 @@ class DynamicPage(TranslatableModel, BaseModel):
         title=models.CharField(
             max_length=255,
             verbose_name=_("Title"),
-            blank=False,
-            null=False,
-            unique=True,
+            blank=True,
+            null=True,
+            unique=False,
             help_text=_("The title of the page."),
         ),
         slug=AutoSlugField(
@@ -253,7 +253,7 @@ class DynamicPage(TranslatableModel, BaseModel):
         ordering = ["-created_at"]
 
     def __str__(self):
-        return self.title
+        return self.title or f"{self.id}"
 
     def get_absolute_url(self):
         return resolve_url("settings:dynamic_page", slug=self.slug)

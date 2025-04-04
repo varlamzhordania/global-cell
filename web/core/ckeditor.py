@@ -224,6 +224,7 @@ BASE_CKEDITOR_5_CONFIGS = {
             "|",
             "heading",
             "codeBlock",
+            "HtmlComment",
             "|",
             "outdent",
             "indent",
@@ -234,9 +235,12 @@ BASE_CKEDITOR_5_CONFIGS = {
             "underline",
             "strikethrough",
             "code",
+            "specialCharacters",
             "subscript",
             "superscript",
             "highlight",
+            "htmlEmbed",
+            "style",
             "|",
             "alignment",
             "bulletedList",
@@ -381,7 +385,8 @@ BASE_CKEDITOR_5_CONFIGS = {
             "Highlight", "TodoList",
             "ListProperties", "SourceEditing", "GeneralHtmlSupport", "ImageInsert", "WordCount", "Mention", "Style",
             "HorizontalLine",
-            "LinkImage"
+            "LinkImage",
+            "SpecialCharacters", "SpecialCharactersEssentials","HtmlEmbed","FullPage",
         ]
     }
 }

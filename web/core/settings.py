@@ -83,8 +83,9 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'core.wsgi.application'
 
-DB_ENGINE = env("DB_ENGINE", default="sqlite3")
 
+DEFAULT_CHARSET = 'utf-8'
+DB_ENGINE = env("DB_ENGINE", default="sqlite3")
 if DB_ENGINE == "postgresql":
     DATABASES = {
         'default': {
@@ -93,7 +94,10 @@ if DB_ENGINE == "postgresql":
             'USER': env('DB_USER', default='myuser'),
             'PASSWORD': env('DB_PASSWORD', default='mypassword'),
             'HOST': env('DB_HOST', default='localhost'),
-            'PORT': env('DB_PORT', default='5432'),  # Default port for PostgreSQL
+            'PORT': env('DB_PORT', default='5432'),
+            'OPTIONS': {
+                'client_encoding': 'UTF8',
+            },
         }
     }
 elif DB_ENGINE == "mysql":
@@ -104,7 +108,10 @@ elif DB_ENGINE == "mysql":
             'USER': env("DB_USER", default='myuser'),
             'PASSWORD': env("DB_PASSWORD", default='mypassword'),
             'HOST': env("DB_HOST", default='localhost'),
-            'PORT': env("DB_PORT", default='3306'),  # Default port for MySQL
+            'PORT': env("DB_PORT", default='3306'),
+            'OPTIONS': {
+                'charset': 'utf8mb4',
+            },
         }
     }
 else:
