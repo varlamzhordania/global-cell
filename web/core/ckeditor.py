@@ -223,6 +223,7 @@ BASE_CKEDITOR_5_CONFIGS = {
             "redo",
             "|",
             "heading",
+            "style",
             "codeBlock",
             "HtmlComment",
             "|",
@@ -240,7 +241,6 @@ BASE_CKEDITOR_5_CONFIGS = {
             "superscript",
             "highlight",
             "htmlEmbed",
-            "style",
             "|",
             "alignment",
             "bulletedList",
@@ -262,8 +262,13 @@ BASE_CKEDITOR_5_CONFIGS = {
             "horizontalLine",
 
         ],
+        "fontSize": {
+            "options": [
+                8, 10, 12, 14, 16, 18, 24, 36
+            ]
+        },
         "fontFamily": {
-            "options": ['Default', 'Poppins', "ui-serif", "Georgia", "Cambria", "Times New Roman", "Times", "serif"],
+            "options": ['Default', 'Poppins', 'Arial', 'Verdana', 'Georgia', 'Times New Roman', 'serif', 'sans-serif'],
             "supportAllValues": True
         },
         "fontColor": {
@@ -272,27 +277,12 @@ BASE_CKEDITOR_5_CONFIGS = {
         "fontBackgroundColor": {
             "colors": custom_colors
         },
-
         "image": {
             "toolbar": [
-                "imageTextAlternative",
-                "|",
-                "imageStyle:alignLeft",
-                "imageStyle:alignRight",
-                "imageStyle:alignCenter",
-                "imageStyle:full",
-                "imageStyle:side",
-                "|",
-                "toggleImageCaption",
-                "|"
+                "imageTextAlternative", "|", "imageStyle:alignLeft", "imageStyle:alignRight", "imageStyle:alignCenter",
+                "imageStyle:full", "imageStyle:side", "|", "toggleImageCaption", "|", "imageResize"
             ],
-            "styles": [
-                "full",
-                "side",
-                "alignLeft",
-                "alignRight",
-                "alignCenter"
-            ]
+            "styles": ["full", "side", "alignLeft", "alignRight", "alignCenter"]
         },
         "table": {
             "contentToolbar": [
@@ -372,21 +362,61 @@ BASE_CKEDITOR_5_CONFIGS = {
             "uploadUrl": "/upload/"
         },
         "link": {
-            "addTargetToExternalLinks": True
+            "addTargetToExternalLinks": True,
+            "defaultProtocol": "http://",
+            "decorators": [
+                {
+                    "mode": "manual",
+                    "label": "Open in new window",
+                    "attributes": {
+                        "target": "_blank",
+                        "rel": "noopener noreferrer"
+                    }
+                }
+            ]
         },
+        "autoFormat": {
+            "trigger": "/",
+            "replace": {
+                "": " ",
+                ":-)": "😊",
+                ":smile:": "😁"
+            }
+        },
+        "style": {
+            "definitions": [
+                {
+                    "name": "button",
+                    "element": "button",
+                    "classes": ["btn"]
+                },
+                {
+                    "name": "button primary",
+                    "element": "button",
+                    "classes": ["btn btn-primary"]
+                },
+                {
+                    "name": "button secondary",
+                    "element": "button",
+                    "classes": ["btn btn-secondary"]
+                },
+                {
+                    "name": "container",
+                    "element": "section",
+                    "classes": ["container"]
+                },
+            ]
+        },
+
         "extraPlugins": [
             "Essentials", "CodeBlock", "Autoformat", "Bold", "Italic", "Underline", "Strikethrough", "Code",
-            "Subscript",
-            "Superscript", "BlockQuote", "Heading", "Image", "ImageCaption", "ImageStyle", "ImageToolbar",
-            "ImageResize", "Link", "List",
-            "Paragraph", "Alignment", "Font", "PasteFromOffice", "SimpleUploadAdapter", "MediaEmbed", "RemoveFormat",
-            "Table",
-            "TableToolbar", "TableCaption", "TableProperties", "TableCellProperties", "Indent", "IndentBlock",
-            "Highlight", "TodoList",
-            "ListProperties", "SourceEditing", "GeneralHtmlSupport", "ImageInsert", "WordCount", "Mention", "Style",
-            "HorizontalLine",
-            "LinkImage",
-            "SpecialCharacters", "SpecialCharactersEssentials","HtmlEmbed","FullPage",
+            "Subscript", "Superscript", "BlockQuote", "Heading", "Image", "ImageCaption", "ImageStyle", "ImageToolbar",
+            "ImageResize", "Link", "List", "Paragraph", "Alignment", "Font", "PasteFromOffice", "SimpleUploadAdapter",
+            "MediaEmbed", "RemoveFormat", "Table", "TableToolbar", "TableCaption", "TableProperties",
+            "TableCellProperties",
+            "Indent", "IndentBlock", "Highlight", "TodoList", "ListProperties", "SourceEditing", "GeneralHtmlSupport",
+            "ImageInsert", "WordCount", "Mention", "Style", "HorizontalLine", "LinkImage", "SpecialCharacters",
+            "SpecialCharactersEssentials", "HtmlEmbed", "FullPage",
         ]
     }
 }
